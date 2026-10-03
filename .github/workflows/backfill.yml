@@ -38,5 +38,15 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add last_run.txt data/
           git diff --cached --quiet || git commit -m "chore: backfill run $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          git pull --rebase
+
+          if ! git pull --rebase; then
+            # Parquet(バイナリ)はgitでマージできずコンフリクトすることがある。
+            # 稀なタイミング被りで起きるケースなので、この回の分は諦めて
+            # リモートの最新状態に合わせ、ジョブは失敗扱いにしない
+            # (次回以降の実行は各店舗の保存済み進捗から普通に再開される)。
+            echo "::warning::pull --rebase failed (likely binary conflict in a parquet file). Discarding this run's commit and syncing to remote instead."
+            git rebase --abort || true
+            git reset --hard origin/main
+            exit 0
+          fi
           git push
