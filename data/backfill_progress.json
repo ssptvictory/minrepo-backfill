@@ -375,9 +375,9 @@
   "status": "pending"
  },
  "インタースクエア": {
-  "days_done": 82,
-  "next_url": "https://min-repo.com/3223368/",
-  "status": "in_progress"
+  "days_done": 86,
+  "next_url": null,
+  "status": "done"
  },
  "ウイング": {
   "days_done": 0,
@@ -1875,8 +1875,8 @@
   "status": "done"
  },
  "第一プラザ坂戸にっさい店": {
-  "days_done": 89,
-  "next_url": "https://min-repo.com/3209417/",
+  "days_done": 94,
+  "next_url": "https://min-repo.com/3198924/",
   "status": "in_progress"
  },
  "第一プラザ武州長瀬店": {
@@ -1885,8 +1885,8 @@
   "status": "in_progress"
  },
  "第一プラザ狭山店": {
-  "days_done": 81,
-  "next_url": "https://min-repo.com/3225475/",
+  "days_done": 86,
+  "next_url": "https://min-repo.com/3215350/",
   "status": "in_progress"
  },
  "第一プラザ笠幡店": {
