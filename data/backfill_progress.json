@@ -140,9 +140,9 @@
   "status": "pending"
  },
  "SAP草加": {
-  "days_done": 162,
-  "next_url": "https://min-repo.com/3058873/",
-  "status": "in_progress"
+  "days_done": 164,
+  "next_url": null,
+  "status": "done"
  },
  "SAP蒲生": {
   "days_done": 89,
@@ -240,8 +240,8 @@
   "status": "pending"
  },
  "やすだ三郷店": {
-  "days_done": 189,
-  "next_url": "https://min-repo.com/3006039/",
+  "days_done": 193,
+  "next_url": "https://min-repo.com/2997922/",
   "status": "in_progress"
  },
  "やすだ仲宿店": {
@@ -250,18 +250,18 @@
   "status": "pending"
  },
  "やすだ八潮店": {
-  "days_done": 171,
-  "next_url": "https://min-repo.com/3042585/",
+  "days_done": 175,
+  "next_url": "https://min-repo.com/3034462/",
   "status": "in_progress"
  },
  "やすだ戸田店": {
-  "days_done": 177,
-  "next_url": "https://min-repo.com/3030745/",
+  "days_done": 181,
+  "next_url": "https://min-repo.com/3022870/",
   "status": "in_progress"
  },
  "やすだ所沢店": {
-  "days_done": 179,
-  "next_url": "https://min-repo.com/3026626/",
+  "days_done": 183,
+  "next_url": "https://min-repo.com/3018760/",
   "status": "in_progress"
  },
  "やすだ朝霞店": {
@@ -270,8 +270,8 @@
   "status": "done"
  },
  "やすだ東大宮店": {
-  "days_done": 150,
-  "next_url": "https://min-repo.com/3082511/",
+  "days_done": 154,
+  "next_url": "https://min-repo.com/3074883/",
   "status": "in_progress"
  },
  "やすだ清水町店": {
@@ -365,8 +365,8 @@
   "status": "done"
  },
  "アリーナ桶川店": {
-  "days_done": 57,
-  "next_url": "https://min-repo.com/3275430/",
+  "days_done": 62,
+  "next_url": "https://min-repo.com/3265969/",
   "status": "in_progress"
  },
  "アリーナ鶴瀬店": {
@@ -385,13 +385,13 @@
   "status": "pending"
  },
  "ウイングキャッスル": {
-  "days_done": 24,
-  "next_url": "https://min-repo.com/3341234/",
+  "days_done": 28,
+  "next_url": "https://min-repo.com/3333510/",
   "status": "in_progress"
  },
  "ウイング蕨600": {
-  "days_done": 74,
-  "next_url": "https://min-repo.com/3241871/",
+  "days_done": 79,
+  "next_url": "https://min-repo.com/3231925/",
   "status": "in_progress"
  },
  "ウインベル・イースト・スロット": {
@@ -1275,13 +1275,13 @@
   "status": "pending"
  },
  "ピーアーク新田": {
-  "days_done": 87,
-  "next_url": "https://min-repo.com/3214971/",
+  "days_done": 91,
+  "next_url": "https://min-repo.com/3206790/",
   "status": "in_progress"
  },
  "ピーアーク春日部": {
-  "days_done": 19,
-  "next_url": "https://min-repo.com/3351615/",
+  "days_done": 22,
+  "next_url": "https://min-repo.com/3345523/",
   "status": "in_progress"
  },
  "ピーアーク朝霞": {
@@ -1290,8 +1290,8 @@
   "status": "pending"
  },
  "ピーアーク松原": {
-  "days_done": 40,
-  "next_url": "https://min-repo.com/3309121/",
+  "days_done": 45,
+  "next_url": "https://min-repo.com/3299525/",
   "status": "in_progress"
  },
  "ピーアーク竹ノ塚スタジオ": {
@@ -1505,8 +1505,8 @@
   "status": "pending"
  },
  "ミュー川口芝店": {
-  "days_done": 147,
-  "next_url": "https://min-repo.com/3091258/",
+  "days_done": 151,
+  "next_url": "https://min-repo.com/3082346/",
   "status": "in_progress"
  },
  "ミリオン1100朝霞店": {
