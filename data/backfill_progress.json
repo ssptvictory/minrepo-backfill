@@ -75,8 +75,8 @@
   "status": "pending"
  },
  "DAS蕨店": {
-  "days_done": 248,
-  "next_url": "https://min-repo.com/2881609/",
+  "days_done": 252,
+  "next_url": "https://min-repo.com/2873776/",
   "status": "in_progress"
  },
  "DELFEEL NEW TOKYO": {
@@ -117,7 +117,7 @@
  "R7STRONG": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "SANCO梅島店": {
   "days_done": 0,
@@ -147,12 +147,12 @@
  "SAP蒲生": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "TOHO川越店": {
-  "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "days_done": 4,
+  "next_url": "https://min-repo.com/3382590/",
+  "status": "in_progress"
  },
  "TOHO池袋店": {
   "days_done": 0,
@@ -310,9 +310,9 @@
   "status": "pending"
  },
  "アスカ杉戸店": {
-  "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "days_done": 4,
+  "next_url": "https://min-repo.com/3383583/",
+  "status": "in_progress"
  },
  "アスカ熊谷店": {
   "days_done": 146,
@@ -365,8 +365,8 @@
   "status": "done"
  },
  "アリーナ桶川店": {
-  "days_done": 341,
-  "next_url": "https://min-repo.com/2697583/",
+  "days_done": 345,
+  "next_url": "https://min-repo.com/2689312/",
   "status": "in_progress"
  },
  "アリーナ鶴瀬店": {
@@ -392,7 +392,7 @@
  "ウイング蕨600": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "ウインベル・イースト・スロット": {
   "days_done": 0,
@@ -510,9 +510,9 @@
   "status": "pending"
  },
  "オータ川島店": {
-  "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "days_done": 5,
+  "next_url": "https://min-repo.com/3381255/",
+  "status": "in_progress"
  },
  "オータ志木駅前店": {
   "days_done": 0,
@@ -705,9 +705,9 @@
   "status": "done"
  },
  "グランドオータ熊谷本店": {
-  "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "days_done": 3,
+  "next_url": "https://min-repo.com/3384727/",
+  "status": "in_progress"
  },
  "グランドシップ": {
   "days_done": 0,
@@ -852,17 +852,17 @@
  "ジャラン川口峯店": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "ジャラン川口弥平店": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "ジャラン武里店": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "ジャラン水元店": {
   "days_done": 0,
@@ -965,8 +965,8 @@
   "status": "pending"
  },
  "スーパーライブガーデン行田店": {
-  "days_done": 158,
-  "next_url": "https://min-repo.com/3041396/",
+  "days_done": 161,
+  "next_url": "https://min-repo.com/3035190/",
   "status": "in_progress"
  },
  "ダイナム西日暮里スロット館": {
@@ -985,8 +985,8 @@
   "status": "pending"
  },
  "チンジャラ会館": {
-  "days_done": 53,
-  "next_url": "https://min-repo.com/3284909/",
+  "days_done": 57,
+  "next_url": "https://min-repo.com/3276512/",
   "status": "in_progress"
  },
  "ディスカバリー": {
@@ -1002,7 +1002,7 @@
  "デルパラ2吉川店": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "デルパラ7堀之内": {
   "days_done": 0,
@@ -1060,8 +1060,8 @@
   "status": "pending"
  },
  "ニューひかり本店": {
-  "days_done": 57,
-  "next_url": "https://min-repo.com/3276591/",
+  "days_done": 62,
+  "next_url": "https://min-repo.com/3266668/",
   "status": "in_progress"
  },
  "ニュークラウン川越2号店": {
@@ -1092,7 +1092,7 @@
  "ニューダイエイ3": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "ニューヨーク": {
   "days_done": 130,
@@ -1152,7 +1152,7 @@
  "パチンコプラザラ・カータ上里店": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "パチンコ大王高島平店": {
   "days_done": 0,
@@ -1160,8 +1160,8 @@
   "status": "pending"
  },
  "パラッツォ三郷中央店": {
-  "days_done": 23,
-  "next_url": "https://min-repo.com/3345048/",
+  "days_done": 27,
+  "next_url": "https://min-repo.com/3337348/",
   "status": "in_progress"
  },
  "パラッツォ千川店": {
@@ -1170,8 +1170,8 @@
   "status": "pending"
  },
  "パラッツォ川越店": {
-  "days_done": 291,
-  "next_url": "https://min-repo.com/2798410/",
+  "days_done": 295,
+  "next_url": "https://min-repo.com/2790362/",
   "status": "in_progress"
  },
  "パラッツォ志村店": {
@@ -1190,13 +1190,13 @@
   "status": "pending"
  },
  "パラッツォ蕨店": {
-  "days_done": 234,
-  "next_url": "https://min-repo.com/2915436/",
+  "days_done": 238,
+  "next_url": "https://min-repo.com/2907305/",
   "status": "in_progress"
  },
  "パラッツォ鳩ヶ谷店": {
-  "days_done": 201,
-  "next_url": "https://min-repo.com/2983072/",
+  "days_done": 205,
+  "next_url": "https://min-repo.com/2974555/",
   "status": "in_progress"
  },
  "パーラーEX滑川店": {
@@ -1275,23 +1275,23 @@
   "status": "pending"
  },
  "ピーアーク新田": {
-  "days_done": 325,
-  "next_url": "https://min-repo.com/2729904/",
+  "days_done": 330,
+  "next_url": "https://min-repo.com/2719862/",
   "status": "in_progress"
  },
  "ピーアーク春日部": {
-  "days_done": 320,
-  "next_url": "https://min-repo.com/2740400/",
+  "days_done": 324,
+  "next_url": "https://min-repo.com/2732010/",
   "status": "in_progress"
  },
  "ピーアーク朝霞": {
-  "days_done": 137,
-  "next_url": "https://min-repo.com/3114174/",
+  "days_done": 141,
+  "next_url": "https://min-repo.com/3106389/",
   "status": "in_progress"
  },
  "ピーアーク松原": {
-  "days_done": 335,
-  "next_url": "https://min-repo.com/2709988/",
+  "days_done": 339,
+  "next_url": "https://min-repo.com/2701492/",
   "status": "in_progress"
  },
  "ピーアーク竹ノ塚スタジオ": {
@@ -1302,12 +1302,12 @@
  "ピーアーク草加": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "ピーアーク谷塚": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "ピーアーク越谷": {
   "days_done": 15,
@@ -1317,7 +1317,7 @@
  "ピークスゼロ": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "フォーチュンお花茶屋店": {
   "days_done": 0,
@@ -1647,11 +1647,11 @@
  "ライブガーデン上尾店": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "ライブガーデン幸手権現堂": {
-  "days_done": 44,
-  "next_url": "https://min-repo.com/3302662/",
+  "days_done": 49,
+  "next_url": "https://min-repo.com/3292751/",
   "status": "in_progress"
  },
  "ラ・カータ鶴ヶ島777": {
@@ -1807,7 +1807,7 @@
  "楽園大宮店": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "楽園池袋店": {
   "days_done": 0,
