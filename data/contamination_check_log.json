@@ -1,0 +1,806 @@
+{
+ "checks_performed": [
+  "tag_page_hall_name_match",
+  "day_to_day_count_anomaly",
+  "cross_hall_duplicate_fingerprint"
+ ],
+ "halls": {
+  "DAS蕨店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "R7STRONG": {
+   "checks_passed": [],
+   "last_checked": "2026-10-05",
+   "status": "previously_contaminated_reset_pending_rescrape"
+  },
+  "SAP草加": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "SAP蒲生": {
+   "checks_passed": [],
+   "last_checked": "2026-10-05",
+   "status": "previously_contaminated_reset_pending_rescrape"
+  },
+  "TOHO川越店": {
+   "checks_passed": [],
+   "last_checked": "2026-10-05",
+   "status": "previously_empty_reset_pending_rescrape"
+  },
+  "せんげん台DUO": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "みずほ台UNO店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "やすだ三郷店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "やすだ八潮店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "やすだ戸田店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "やすだ所沢店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "やすだ朝霞店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "やすだ東大宮店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "アスカ熊谷店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "アリーナ平塚店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "アリーナ桶川店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "インタースクエア": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "ウイングキャッスル": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "ウイング蕨600": {
+   "checks_passed": [],
+   "last_checked": "2026-10-05",
+   "status": "previously_contaminated_reset_pending_rescrape"
+  },
+  "オータ桶川駅前店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "ガイアネクスト越谷": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "キコーナ草加店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "キューデン・アネックス": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "グランドオータ新座駅前店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "コンサートホール上尾": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "コンサートホール北浦和": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "コンサートホール蓮田店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "ジャムフレンドクラブ朝霞": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "ジャラン川口峯店": {
+   "checks_passed": [],
+   "last_checked": "2026-10-05",
+   "status": "previously_contaminated_reset_pending_rescrape"
+  },
+  "ジャラン川口弥平店": {
+   "checks_passed": [],
+   "last_checked": "2026-10-05",
+   "status": "previously_contaminated_reset_pending_rescrape"
+  },
+  "ジャラン武里店": {
+   "checks_passed": [],
+   "last_checked": "2026-10-05",
+   "status": "previously_contaminated_reset_pending_rescrape"
+  },
+  "ジャラン若葉駅前店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "スカイプラザ大井店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "スカイプラザ富士見店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "スーパーライブガーデン行田店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "チンジャラ会館": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "ディスカバリー": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "デルパラ2吉川店": {
+   "checks_passed": [],
+   "last_checked": "2026-10-05",
+   "status": "previously_contaminated_reset_pending_rescrape"
+  },
+  "ニューひかり本店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "ニューダイエイ": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "ニューダイエイ3": {
+   "checks_passed": [],
+   "last_checked": "2026-10-05",
+   "status": "previously_contaminated_reset_pending_rescrape"
+  },
+  "ニューヨーク": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "ノア東松山店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "パチンコプラザラ・カータ上里店": {
+   "checks_passed": [],
+   "last_checked": "2026-10-05",
+   "status": "previously_contaminated_reset_pending_rescrape"
+  },
+  "パラッツォ三郷中央店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "パラッツォ川越店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "パラッツォ蕨店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "パラッツォ鳩ヶ谷店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "パーラーEX滑川店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "ピーアーク新田": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "ピーアーク春日部": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "ピーアーク朝霞": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "ピーアーク松原": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "ピーアーク草加": {
+   "checks_passed": [],
+   "last_checked": "2026-10-05",
+   "status": "previously_contaminated_reset_pending_rescrape"
+  },
+  "ピーアーク谷塚": {
+   "checks_passed": [],
+   "last_checked": "2026-10-05",
+   "status": "previously_contaminated_reset_pending_rescrape"
+  },
+  "ピーアーク越谷": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "ピークスゼロ": {
+   "checks_passed": [],
+   "last_checked": "2026-10-05",
+   "status": "previously_contaminated_reset_pending_rescrape"
+  },
+  "マルキ戸田店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "マルハン上里店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "マルハン入間店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "マルハン川口店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "マルハン川越店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "マルハン所沢店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "マルハン深谷店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "マルハン清河寺店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "マルハン鷲宮店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "ミュー川口芝店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "ミリオン1100朝霞店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "メガガイア岩槻店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "メガガイア越谷大里": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "メガボックス東松山店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "メビウス西川口店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "ライブガーデン上尾店": {
+   "checks_passed": [],
+   "last_checked": "2026-10-05",
+   "status": "previously_contaminated_reset_pending_rescrape"
+  },
+  "ライブガーデン幸手権現堂": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "上尾ウノ": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "上福岡UNO": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "北上尾UNO店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "北越谷UNO店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "将軍与野店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "有楽町DUO": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "朝霞ウノ": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "楽園南越谷店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "楽園大宮店": {
+   "checks_passed": [],
+   "last_checked": "2026-10-05",
+   "status": "previously_contaminated_reset_pending_rescrape"
+  },
+  "秋葉原UNO": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "第一プラザみずほ台店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "第一プラザ八潮店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "第一プラザ坂戸1000": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "第一プラザ坂戸にっさい店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "第一プラザ武州長瀬店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "第一プラザ狭山店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "第一プラザ笠幡店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "第一プラザ西浦和店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "第一プラザ霞ヶ関店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "虹のある街北本店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  },
+  "虹のある街川口店": {
+   "checks_passed": [
+    "tag_page_hall_name_match",
+    "day_to_day_count_anomaly",
+    "cross_hall_duplicate_fingerprint"
+   ],
+   "last_checked": "2026-10-05",
+   "status": "clean"
+  }
+ },
+ "last_run": "2026-10-05",
+ "note": "まだこのログに無い店舗(backfillが未completeの店舗)は、次回のチェック対象。バックフィル全体完了時に再度このスクリプトを実行し、新たにdone/in_progressになった店舗を検証すること。"
+}
