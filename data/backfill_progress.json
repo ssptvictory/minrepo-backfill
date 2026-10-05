@@ -150,9 +150,9 @@
   "status": "in_progress"
  },
  "TOHO川越店": {
-  "days_done": 365,
-  "next_url": "https://min-repo.com/2617570/",
-  "status": "done"
+  "days_done": 0,
+  "next_url": null,
+  "status": "pending"
  },
  "TOHO池袋店": {
   "days_done": 0,
