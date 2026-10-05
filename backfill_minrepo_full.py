@@ -204,9 +204,22 @@ def flush_unit_data():
 
 
 def get_latest_post_url(hall_name: str):
-    """タグページから最新の投稿URLを取得"""
+    """タグページから最新の投稿URLを取得
+
+    重要: この店名のタグページがmin-repo.com側に存在しない場合、サイトは
+    エラーを返さず、サイト全体の最新記事フィード(無関係な全国のホール)を
+    代わりに表示する。これに気づかずリンクを拾うと、完全に無関係な店舗の
+    データを延々と取得し続けてしまう(実際に14店舗でこの汚染が発生して
+    いたことが判明した)。そのため、取得したページに店名そのものが
+    含まれているかを必ず確認し、含まれていなければ「タグが存在しない」と
+    判断してNoneを返す。
+    """
     tag_url = f"https://min-repo.com/tag/{quote(hall_name, safe='')}/"
     resp = fetch(tag_url)
+
+    if hall_name not in resp.text:
+        return None
+
     soup = BeautifulSoup(resp.text, "html.parser")
 
     first = soup.select_one(".ichiran_title a") or soup.select_one("article h1 a")
