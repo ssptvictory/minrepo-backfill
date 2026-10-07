@@ -90,9 +90,9 @@
   "status": "pending"
  },
  "MGM国領店": {
-  "days_done": 96,
-  "next_url": "https://min-repo.com/3201290/",
-  "status": "in_progress"
+  "days_done": 97,
+  "next_url": null,
+  "status": "done"
  },
  "MGM浦和店": {
   "days_done": 0,
@@ -150,8 +150,8 @@
   "status": "not_found"
  },
  "TOHO川越店": {
-  "days_done": 254,
-  "next_url": "https://min-repo.com/2875507/",
+  "days_done": 258,
+  "next_url": "https://min-repo.com/2867478/",
   "status": "in_progress"
  },
  "TOHO池袋店": {
@@ -205,8 +205,8 @@
   "status": "pending"
  },
  "みとや水道橋": {
-  "days_done": 41,
-  "next_url": "https://min-repo.com/3312240/",
+  "days_done": 45,
+  "next_url": "https://min-repo.com/3304325/",
   "status": "in_progress"
  },
  "みとや浅草千束店": {
@@ -580,13 +580,13 @@
   "status": "pending"
  },
  "ガイアネクスト三軒茶屋I": {
-  "days_done": 8,
-  "next_url": "https://min-repo.com/3377734/",
+  "days_done": 11,
+  "next_url": "https://min-repo.com/3372051/",
   "status": "in_progress"
  },
  "ガイアネクスト三軒茶屋II": {
-  "days_done": 87,
-  "next_url": "https://min-repo.com/3219655/",
+  "days_done": 91,
+  "next_url": "https://min-repo.com/3211652/",
   "status": "in_progress"
  },
  "ガイアネクスト東小金井店": {
@@ -600,8 +600,8 @@
   "status": "done"
  },
  "ガイア大塚北口店": {
-  "days_done": 267,
-  "next_url": "https://min-repo.com/2850552/",
+  "days_done": 272,
+  "next_url": "https://min-repo.com/2840485/",
   "status": "in_progress"
  },
  "ガイア大島店": {
@@ -610,8 +610,8 @@
   "status": "in_progress"
  },
  "ガイア大泉学園店": {
-  "days_done": 114,
-  "next_url": "https://min-repo.com/3162526/",
+  "days_done": 119,
+  "next_url": "https://min-repo.com/3152624/",
   "status": "in_progress"
  },
  "ガイア富士見台南口店": {
@@ -620,8 +620,8 @@
   "status": "pending"
  },
  "ガイア曳舟": {
-  "days_done": 60,
-  "next_url": "https://min-repo.com/3272248/",
+  "days_done": 65,
+  "next_url": "https://min-repo.com/3262586/",
   "status": "in_progress"
  },
  "ガイア瑞江Ⅱ": {
@@ -630,8 +630,8 @@
   "status": "not_found"
  },
  "ガイア瑞江店": {
-  "days_done": 52,
-  "next_url": "https://min-repo.com/3290100/",
+  "days_done": 57,
+  "next_url": "https://min-repo.com/3280136/",
   "status": "in_progress"
  },
  "ガイア経堂店": {
@@ -1070,8 +1070,8 @@
   "status": "done"
  },
  "ニュークラウン綾瀬店": {
-  "days_done": 22,
-  "next_url": "https://min-repo.com/3350198/",
+  "days_done": 27,
+  "next_url": "https://min-repo.com/3340285/",
   "status": "in_progress"
  },
  "ニューグランド貫井店": {
@@ -1185,8 +1185,8 @@
   "status": "pending"
  },
  "パラッツォ葛西店": {
-  "days_done": 275,
-  "next_url": "https://min-repo.com/2834536/",
+  "days_done": 279,
+  "next_url": "https://min-repo.com/2827031/",
   "status": "in_progress"
  },
  "パラッツォ蕨店": {
@@ -1350,8 +1350,8 @@
   "status": "pending"
  },
  "ベガスベガス新宿東南口店": {
-  "days_done": 128,
-  "next_url": "https://min-repo.com/3136266/",
+  "days_done": 132,
+  "next_url": "https://min-repo.com/3128018/",
   "status": "in_progress"
  },
  "ベラジオ東十条店": {
@@ -1545,13 +1545,13 @@
   "status": "done"
  },
  "メガガイア明大前店": {
-  "days_done": 186,
-  "next_url": "https://min-repo.com/3018521/",
+  "days_done": 190,
+  "next_url": "https://min-repo.com/3010109/",
   "status": "in_progress"
  },
  "メガガイア調布店": {
-  "days_done": 71,
-  "next_url": "https://min-repo.com/3252440/",
+  "days_done": 75,
+  "next_url": "https://min-repo.com/3244177/",
   "status": "in_progress"
  },
  "メガガイア越谷大里": {
@@ -1770,18 +1770,18 @@
   "status": "pending"
  },
  "新橋UNO": {
-  "days_done": 220,
-  "next_url": "https://min-repo.com/2949179/",
+  "days_done": 224,
+  "next_url": "https://min-repo.com/2940855/",
   "status": "in_progress"
  },
  "有楽町DUO": {
-  "days_done": 343,
-  "next_url": "https://min-repo.com/2673764/",
+  "days_done": 347,
+  "next_url": "https://min-repo.com/2665623/",
   "status": "in_progress"
  },
  "有楽町ウノ": {
-  "days_done": 157,
-  "next_url": "https://min-repo.com/3076882/",
+  "days_done": 161,
+  "next_url": "https://min-repo.com/3068998/",
   "status": "in_progress"
  },
  "朝霞ウノ": {
@@ -1845,8 +1845,8 @@
   "status": "pending"
  },
  "清瀬UNO": {
-  "days_done": 308,
-  "next_url": "https://min-repo.com/2744963/",
+  "days_done": 313,
+  "next_url": "https://min-repo.com/2734661/",
   "status": "in_progress"
  },
  "王子龍龍": {
@@ -1855,8 +1855,8 @@
   "status": "pending"
  },
  "秋葉原UNO": {
-  "days_done": 330,
-  "next_url": "https://min-repo.com/2724640/",
+  "days_done": 334,
+  "next_url": "https://min-repo.com/2716020/",
   "status": "in_progress"
  },
  "第一プラザみずほ台店": {
