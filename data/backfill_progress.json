@@ -15,9 +15,9 @@
   "status": "pending"
  },
  "ARROW池上店": {
-  "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "days_done": 3,
+  "next_url": "https://min-repo.com/3391653/",
+  "status": "in_progress"
  },
  "BBステーション日暮里店": {
   "days_done": 0,
@@ -170,14 +170,14 @@
   "status": "pending"
  },
  "YASUDA7": {
-  "days_done": 17,
-  "next_url": "https://min-repo.com/3363940/",
+  "days_done": 21,
+  "next_url": "https://min-repo.com/3355939/",
   "status": "in_progress"
  },
  "YASUDA9": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "せんげん台DUO": {
   "days_done": 365,
@@ -205,13 +205,13 @@
   "status": "pending"
  },
  "みとや水道橋": {
-  "days_done": 212,
-  "next_url": "https://min-repo.com/2965367/",
+  "days_done": 216,
+  "next_url": "https://min-repo.com/2957113/",
   "status": "in_progress"
  },
  "みとや浅草千束店": {
-  "days_done": 82,
-  "next_url": "https://min-repo.com/3231769/",
+  "days_done": 87,
+  "next_url": "https://min-repo.com/3221613/",
   "status": "in_progress"
  },
  "みとや神田西口店": {
@@ -245,8 +245,8 @@
   "status": "done"
  },
  "やすだ仲宿店": {
-  "days_done": 106,
-  "next_url": "https://min-repo.com/3182423/",
+  "days_done": 110,
+  "next_url": "https://min-repo.com/3174083/",
   "status": "in_progress"
  },
  "やすだ八潮店": {
@@ -280,8 +280,8 @@
   "status": "pending"
  },
  "やすだ西池袋6号店": {
-  "days_done": 131,
-  "next_url": "https://min-repo.com/3129868/",
+  "days_done": 135,
+  "next_url": "https://min-repo.com/3121706/",
   "status": "in_progress"
  },
  "アイオン入間店": {
@@ -580,13 +580,13 @@
   "status": "pending"
  },
  "ガイアネクスト三軒茶屋I": {
-  "days_done": 179,
-  "next_url": "https://min-repo.com/3032200/",
+  "days_done": 183,
+  "next_url": "https://min-repo.com/3024823/",
   "status": "in_progress"
  },
  "ガイアネクスト三軒茶屋II": {
-  "days_done": 263,
-  "next_url": "https://min-repo.com/2860420/",
+  "days_done": 268,
+  "next_url": "https://min-repo.com/2850533/",
   "status": "in_progress"
  },
  "ガイアネクスト東小金井店": {
@@ -605,8 +605,8 @@
   "status": "done"
  },
  "ガイア大島店": {
-  "days_done": 156,
-  "next_url": "https://min-repo.com/3079324/",
+  "days_done": 161,
+  "next_url": "https://min-repo.com/3069145/",
   "status": "in_progress"
  },
  "ガイア大泉学園店": {
@@ -615,13 +615,13 @@
   "status": "done"
  },
  "ガイア富士見台南口店": {
-  "days_done": 14,
-  "next_url": "https://min-repo.com/3368072/",
+  "days_done": 19,
+  "next_url": "https://min-repo.com/3358168/",
   "status": "in_progress"
  },
  "ガイア曳舟": {
-  "days_done": 246,
-  "next_url": "https://min-repo.com/2893610/",
+  "days_done": 250,
+  "next_url": "https://min-repo.com/2885264/",
   "status": "in_progress"
  },
  "ガイア瑞江Ⅱ": {
@@ -635,8 +635,8 @@
   "status": "done"
  },
  "ガイア経堂店": {
-  "days_done": 128,
-  "next_url": "https://min-repo.com/3138156/",
+  "days_done": 133,
+  "next_url": "https://min-repo.com/3128099/",
   "status": "in_progress"
  },
  "ガリレオ": {
@@ -1350,8 +1350,8 @@
   "status": "pending"
  },
  "ベガスベガス新宿東南口店": {
-  "days_done": 290,
-  "next_url": "https://min-repo.com/2805793/",
+  "days_done": 294,
+  "next_url": "https://min-repo.com/2797315/",
   "status": "in_progress"
  },
  "ベラジオ東十条店": {
@@ -1420,18 +1420,18 @@
   "status": "done"
  },
  "マルハン八王子四谷店": {
-  "days_done": 24,
-  "next_url": "https://min-repo.com/3350026/",
+  "days_done": 28,
+  "next_url": "https://min-repo.com/3342010/",
   "status": "in_progress"
  },
  "マルハン大山店": {
-  "days_done": 18,
-  "next_url": "https://min-repo.com/3361974/",
+  "days_done": 23,
+  "next_url": "https://min-repo.com/3352037/",
   "status": "in_progress"
  },
  "マルハン小岩店": {
-  "days_done": 51,
-  "next_url": "https://min-repo.com/3294144/",
+  "days_done": 55,
+  "next_url": "https://min-repo.com/3286143/",
   "status": "in_progress"
  },
  "マルハン川口店": {
@@ -1550,8 +1550,8 @@
   "status": "done"
  },
  "メガガイア調布店": {
-  "days_done": 235,
-  "next_url": "https://min-repo.com/2917876/",
+  "days_done": 239,
+  "next_url": "https://min-repo.com/2909640/",
   "status": "in_progress"
  },
  "メガガイア越谷大里": {
@@ -1780,8 +1780,8 @@
   "status": "done"
  },
  "有楽町ウノ": {
-  "days_done": 324,
-  "next_url": "https://min-repo.com/2736617/",
+  "days_done": 329,
+  "next_url": "https://min-repo.com/2726710/",
   "status": "in_progress"
  },
  "朝霞ウノ": {
