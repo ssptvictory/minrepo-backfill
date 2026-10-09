@@ -165,9 +165,9 @@
   "status": "pending"
  },
  "YASUDA5": {
-  "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "days_done": 1,
+  "next_url": "https://min-repo.com/3396580/",
+  "status": "in_progress"
  },
  "YASUDA7": {
   "days_done": 89,
@@ -235,8 +235,8 @@
   "status": "pending"
  },
  "やすだひばりヶ丘店": {
-  "days_done": 171,
-  "next_url": "https://min-repo.com/3052932/",
+  "days_done": 175,
+  "next_url": "https://min-repo.com/3044547/",
   "status": "in_progress"
  },
  "やすだ三郷店": {
@@ -275,8 +275,8 @@
   "status": "done"
  },
  "やすだ清水町店": {
-  "days_done": 147,
-  "next_url": "https://min-repo.com/3103453/",
+  "days_done": 152,
+  "next_url": "https://min-repo.com/3093784/",
   "status": "in_progress"
  },
  "やすだ西池袋6号店": {
@@ -355,8 +355,8 @@
   "status": "pending"
  },
  "アムディ亀有": {
-  "days_done": 291,
-  "next_url": "https://min-repo.com/2803307/",
+  "days_done": 296,
+  "next_url": "https://min-repo.com/2793045/",
   "status": "in_progress"
  },
  "アリーナ平塚店": {
@@ -415,8 +415,8 @@
   "status": "pending"
  },
  "エクサファースト": {
-  "days_done": 320,
-  "next_url": "https://min-repo.com/2744820/",
+  "days_done": 325,
+  "next_url": "https://min-repo.com/2734736/",
   "status": "in_progress"
  },
  "エクスアリーナ東京": {
@@ -445,8 +445,8 @@
   "status": "pending"
  },
  "エスパス日拓新大久保駅前店": {
-  "days_done": 275,
-  "next_url": "https://min-repo.com/2839778/",
+  "days_done": 279,
+  "next_url": "https://min-repo.com/2831632/",
   "status": "in_progress"
  },
  "エスパス日拓新宿歌舞伎町店": {
@@ -710,13 +710,13 @@
   "status": "done"
  },
  "グランドシップ": {
-  "days_done": 221,
-  "next_url": "https://min-repo.com/2947753/",
+  "days_done": 226,
+  "next_url": "https://min-repo.com/2938301/",
   "status": "in_progress"
  },
  "グランドホール西高島平店": {
-  "days_done": 280,
-  "next_url": "https://min-repo.com/2825481/",
+  "days_done": 284,
+  "next_url": "https://min-repo.com/2817592/",
   "status": "in_progress"
  },
  "グランパ中野": {
@@ -870,8 +870,8 @@
   "status": "pending"
  },
  "ジャラン浅草店": {
-  "days_done": 311,
-  "next_url": "https://min-repo.com/2765937/",
+  "days_done": 315,
+  "next_url": "https://min-repo.com/2757670/",
   "status": "in_progress"
  },
  "ジャラン若葉駅前店": {
@@ -882,7 +882,7 @@
  "ジャラン谷在家店": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "ジャラン高島平店": {
   "days_done": 0,
@@ -925,8 +925,8 @@
   "status": "done"
  },
  "スパークルV": {
-  "days_done": 201,
-  "next_url": "https://min-repo.com/2993609/",
+  "days_done": 206,
+  "next_url": "https://min-repo.com/2982987/",
   "status": "in_progress"
  },
  "スパークル亀戸店": {
@@ -955,8 +955,8 @@
   "status": "pending"
  },
  "スロットジパング": {
-  "days_done": 282,
-  "next_url": "https://min-repo.com/2821359/",
+  "days_done": 286,
+  "next_url": "https://min-repo.com/2813259/",
   "status": "in_progress"
  },
  "スーパーセブン西八王子店": {
@@ -980,8 +980,8 @@
   "status": "pending"
  },
  "チャレンジャー野津田": {
-  "days_done": 249,
-  "next_url": "https://min-repo.com/2891633/",
+  "days_done": 253,
+  "next_url": "https://min-repo.com/2883026/",
   "status": "in_progress"
  },
  "チンジャラ会館": {
@@ -1080,8 +1080,8 @@
   "status": "pending"
  },
  "ニュースター一ツ家店": {
-  "days_done": 244,
-  "next_url": "https://min-repo.com/2899648/",
+  "days_done": 249,
+  "next_url": "https://min-repo.com/2889501/",
   "status": "in_progress"
  },
  "ニューダイエイ": {
@@ -1220,8 +1220,8 @@
   "status": "pending"
  },
  "パーラースーパーセブン新中野店": {
-  "days_done": 1,
-  "next_url": "https://min-repo.com/3392065/",
+  "days_done": 5,
+  "next_url": "https://min-repo.com/3385580/",
   "status": "in_progress"
  },
  "パーラースーパーセブン新高円寺店": {
@@ -1580,9 +1580,9 @@
   "status": "pending"
  },
  "メッセ奥戸店": {
-  "days_done": 16,
-  "next_url": "https://min-repo.com/3367020/",
-  "status": "in_progress"
+  "days_done": 20,
+  "next_url": null,
+  "status": "done"
  },
  "メッセ扇店": {
   "days_done": 0,
@@ -1605,8 +1605,8 @@
   "status": "pending"
  },
  "メッセ笹塚": {
-  "days_done": 5,
-  "next_url": "https://min-repo.com/3388563/",
+  "days_done": 9,
+  "next_url": "https://min-repo.com/3380928/",
   "status": "in_progress"
  },
  "メッセ荻窪店新館": {
@@ -1755,8 +1755,8 @@
   "status": "pending"
  },
  "巣鴨会館": {
-  "days_done": 131,
-  "next_url": "https://min-repo.com/3135364/",
+  "days_done": 136,
+  "next_url": "https://min-repo.com/3125131/",
   "status": "in_progress"
  },
  "戸越ミナト": {
@@ -1815,8 +1815,8 @@
   "status": "pending"
  },
  "楽園池袋店グリーンサイド": {
-  "days_done": 317,
-  "next_url": "https://min-repo.com/2750555/",
+  "days_done": 321,
+  "next_url": "https://min-repo.com/2742462/",
   "status": "in_progress"
  },
  "楽園渋谷道玄坂店": {
@@ -1950,8 +1950,8 @@
   "status": "pending"
  },
  "阿佐ヶ谷オーシャン": {
-  "days_done": 278,
-  "next_url": "https://min-repo.com/2833615/",
+  "days_done": 283,
+  "next_url": "https://min-repo.com/2822308/",
   "status": "in_progress"
  },
  "飯田橋プレサス": {
