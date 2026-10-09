@@ -107,7 +107,7 @@
  "P-PORT PREGO EX池袋南口": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "P-PORT PREGO立川店": {
   "days_done": 0,
@@ -156,8 +156,8 @@
  },
  "TOHO池袋店": {
   "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "next_url": "https://min-repo.com/3399103/",
+  "status": "in_progress"
  },
  "TOYO HALL": {
   "days_done": 0,
@@ -165,8 +165,8 @@
   "status": "pending"
  },
  "YASUDA5": {
-  "days_done": 100,
-  "next_url": "https://min-repo.com/3199232/",
+  "days_done": 101,
+  "next_url": "https://min-repo.com/3196941/",
   "status": "in_progress"
  },
  "YASUDA7": {
@@ -501,8 +501,8 @@
  },
  "オリエントヴィーナスホール": {
   "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "next_url": "https://min-repo.com/3398932/",
+  "status": "in_progress"
  },
  "オークラ新中野店": {
   "days_done": 0,
@@ -557,7 +557,7 @@
  "オーパ荻窪店": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "オーパ阿佐ヶ谷": {
   "days_done": 0,
@@ -566,8 +566,8 @@
  },
  "カレイド下北沢店": {
   "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "next_url": "https://min-repo.com/3398939/",
+  "status": "in_progress"
  },
  "カレイド新宿店": {
   "days_done": 2,
@@ -656,8 +656,8 @@
  },
  "キコーナ新宿三丁目店": {
   "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "next_url": "https://min-repo.com/3393478/",
+  "status": "in_progress"
  },
  "キコーナ草加店": {
   "days_done": 140,
@@ -665,8 +665,8 @@
   "status": "done"
  },
  "キコーナ蒲田店": {
-  "days_done": 92,
-  "next_url": "https://min-repo.com/3209052/",
+  "days_done": 94,
+  "next_url": "https://min-repo.com/3203780/",
   "status": "in_progress"
  },
  "キューデン・アネックス": {
@@ -675,8 +675,8 @@
   "status": "pending"
  },
  "キューデン東口店": {
-  "days_done": 48,
-  "next_url": "https://min-repo.com/3298073/",
+  "days_done": 49,
+  "next_url": "https://min-repo.com/3295954/",
   "status": "in_progress"
  },
  "キングNo.1世田谷店": {
@@ -726,8 +726,8 @@
  },
  "グランポート青物横丁店": {
   "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "next_url": "https://min-repo.com/3399117/",
+  "status": "in_progress"
  },
  "コア21": {
   "days_done": 56,
@@ -771,8 +771,8 @@
  },
  "コンサートホール荒川": {
   "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "next_url": "https://min-repo.com/3398986/",
+  "status": "in_progress"
  },
  "コンサートホール蓮田店": {
   "days_done": 159,
@@ -800,8 +800,8 @@
   "status": "pending"
  },
  "ゴードン祖師谷店": {
-  "days_done": 4,
-  "next_url": "https://min-repo.com/3392033/",
+  "days_done": 7,
+  "next_url": "https://min-repo.com/3386099/",
   "status": "in_progress"
  },
  "ゴードン西川口店": {
@@ -820,8 +820,8 @@
   "status": "done"
  },
  "サンパレス環七大杉店": {
-  "days_done": 3,
-  "next_url": "https://min-repo.com/3394470/",
+  "days_done": 5,
+  "next_url": "https://min-repo.com/3390763/",
   "status": "in_progress"
  },
  "サンラッキー三ノ輪店": {
@@ -891,8 +891,8 @@
  },
  "ジャンジャンマールゴット分倍河原駅前": {
   "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "next_url": "https://min-repo.com/3399144/",
+  "status": "in_progress"
  },
  "ジャンジャンマールゴット日野駅前店": {
   "days_done": 0,
@@ -905,9 +905,9 @@
   "status": "in_progress"
  },
  "ジャンボ": {
-  "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "days_done": 1,
+  "next_url": "https://min-repo.com/3397881/",
+  "status": "in_progress"
  },
  "ジュラク王子店": {
   "days_done": 0,
@@ -1075,9 +1075,9 @@
   "status": "done"
  },
  "ニューグランド貫井店": {
-  "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "days_done": 2,
+  "next_url": "https://min-repo.com/3396125/",
+  "status": "in_progress"
  },
  "ニュースター一ツ家店": {
   "days_done": 345,
@@ -1116,8 +1116,8 @@
  },
  "ニュー太平": {
   "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "next_url": "https://min-repo.com/3399398/",
+  "status": "in_progress"
  },
  "ノア東松山店": {
   "days_done": 14,
@@ -1230,8 +1230,8 @@
   "status": "pending"
  },
  "パーラーディオス下赤塚本店": {
-  "days_done": 26,
-  "next_url": "https://min-repo.com/3349257/",
+  "days_done": 28,
+  "next_url": "https://min-repo.com/3345400/",
   "status": "in_progress"
  },
  "ヒロキMAX蒲田店": {
@@ -1335,9 +1335,9 @@
   "status": "pending"
  },
  "プライム平井": {
-  "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "days_done": 3,
+  "next_url": "https://min-repo.com/3394749/",
+  "status": "in_progress"
  },
  "プラザ515": {
   "days_done": 0,
@@ -1362,7 +1362,7 @@
  "ベルシティ/ザシティ篠崎店": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "ベルシティザシティ南浦和店": {
   "days_done": 0,
@@ -1600,9 +1600,9 @@
   "status": "in_progress"
  },
  "メッセ竹の塚": {
-  "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "days_done": 2,
+  "next_url": "https://min-repo.com/3396409/",
+  "status": "in_progress"
  },
  "メッセ笹塚": {
   "days_done": 20,
@@ -1620,9 +1620,9 @@
   "status": "pending"
  },
  "メッセ西荻窪店": {
-  "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "days_done": 2,
+  "next_url": "https://min-repo.com/3395977/",
+  "status": "in_progress"
  },
  "メッセ西葛西": {
   "days_done": 19,
@@ -1630,8 +1630,8 @@
   "status": "done"
  },
  "メッセ高円寺店": {
-  "days_done": 18,
-  "next_url": "https://min-repo.com/3364871/",
+  "days_done": 20,
+  "next_url": "https://min-repo.com/3360607/",
   "status": "in_progress"
  },
  "メビウス西川口店": {
@@ -1741,8 +1741,8 @@
  },
  "将軍下赤塚店": {
   "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "next_url": "https://min-repo.com/3399120/",
+  "status": "in_progress"
  },
  "将軍与野店": {
   "days_done": 56,
@@ -1751,12 +1751,12 @@
  },
  "将軍葛西店": {
   "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "next_url": "https://min-repo.com/3399253/",
+  "status": "in_progress"
  },
  "巣鴨会館": {
-  "days_done": 233,
-  "next_url": "https://min-repo.com/2927529/",
+  "days_done": 236,
+  "next_url": "https://min-repo.com/2921226/",
   "status": "in_progress"
  },
  "戸越ミナト": {
@@ -1766,8 +1766,8 @@
  },
  "新世界": {
   "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "next_url": "https://min-repo.com/3399025/",
+  "status": "in_progress"
  },
  "新橋UNO": {
   "days_done": 365,
