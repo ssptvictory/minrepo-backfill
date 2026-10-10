@@ -165,8 +165,8 @@
   "status": "pending"
  },
  "YASUDA5": {
-  "days_done": 144,
-  "next_url": "https://min-repo.com/3108701/",
+  "days_done": 149,
+  "next_url": "https://min-repo.com/3099582/",
   "status": "in_progress"
  },
  "YASUDA7": {
@@ -235,9 +235,9 @@
   "status": "pending"
  },
  "やすだひばりヶ丘店": {
-  "days_done": 301,
-  "next_url": "https://min-repo.com/2787262/",
-  "status": "in_progress"
+  "days_done": 303,
+  "next_url": null,
+  "status": "done"
  },
  "やすだ三郷店": {
   "days_done": 290,
@@ -275,8 +275,8 @@
   "status": "done"
  },
  "やすだ清水町店": {
-  "days_done": 286,
-  "next_url": "https://min-repo.com/2819558/",
+  "days_done": 291,
+  "next_url": "https://min-repo.com/2809110/",
   "status": "in_progress"
  },
  "やすだ西池袋6号店": {
@@ -665,8 +665,8 @@
   "status": "done"
  },
  "キコーナ蒲田店": {
-  "days_done": 136,
-  "next_url": "https://min-repo.com/3119122/",
+  "days_done": 140,
+  "next_url": "https://min-repo.com/3110697/",
   "status": "in_progress"
  },
  "キューデン・アネックス": {
@@ -710,8 +710,8 @@
   "status": "done"
  },
  "グランドシップ": {
-  "days_done": 358,
-  "next_url": "https://min-repo.com/2668013/",
+  "days_done": 362,
+  "next_url": "https://min-repo.com/2661268/",
   "status": "in_progress"
  },
  "グランドホール西高島平店": {
@@ -800,8 +800,8 @@
   "status": "pending"
  },
  "ゴードン祖師谷店": {
-  "days_done": 57,
-  "next_url": "https://min-repo.com/3285809/",
+  "days_done": 62,
+  "next_url": "https://min-repo.com/3275982/",
   "status": "in_progress"
  },
  "ゴードン西川口店": {
@@ -820,8 +820,8 @@
   "status": "done"
  },
  "サンパレス環七大杉店": {
-  "days_done": 52,
-  "next_url": "https://min-repo.com/3296806/",
+  "days_done": 56,
+  "next_url": "https://min-repo.com/3289031/",
   "status": "in_progress"
  },
  "サンラッキー三ノ輪店": {
@@ -890,23 +890,23 @@
   "status": "pending"
  },
  "ジャンジャンマールゴット分倍河原駅前": {
-  "days_done": 29,
-  "next_url": "https://min-repo.com/3343063/",
+  "days_done": 34,
+  "next_url": "https://min-repo.com/3333112/",
   "status": "in_progress"
  },
  "ジャンジャンマールゴット日野駅前店": {
-  "days_done": 13,
-  "next_url": "https://min-repo.com/3375299/",
+  "days_done": 18,
+  "next_url": "https://min-repo.com/3365269/",
   "status": "in_progress"
  },
  "ジャンジャンマールゴット調布国領駅前店": {
-  "days_done": 123,
-  "next_url": "https://min-repo.com/3151918/",
+  "days_done": 127,
+  "next_url": "https://min-repo.com/3143516/",
   "status": "in_progress"
  },
  "ジャンボ": {
-  "days_done": 17,
-  "next_url": "https://min-repo.com/3367433/",
+  "days_done": 22,
+  "next_url": "https://min-repo.com/3357384/",
   "status": "in_progress"
  },
  "ジュラク王子店": {
@@ -995,8 +995,8 @@
   "status": "done"
  },
  "デルパラ10南大沢店": {
-  "days_done": 72,
-  "next_url": "https://min-repo.com/3257536/",
+  "days_done": 76,
+  "next_url": "https://min-repo.com/3248789/",
   "status": "in_progress"
  },
  "デルパラ2吉川店": {
@@ -1005,8 +1005,8 @@
   "status": "not_found"
  },
  "デルパラ7堀之内": {
-  "days_done": 98,
-  "next_url": "https://min-repo.com/3204635/",
+  "days_done": 102,
+  "next_url": "https://min-repo.com/3196226/",
   "status": "in_progress"
  },
  "デルパラ9東村山店": {
@@ -1180,8 +1180,8 @@
   "status": "in_progress"
  },
  "パラッツォ秋津店": {
-  "days_done": 9,
-  "next_url": "https://min-repo.com/3383143/",
+  "days_done": 13,
+  "next_url": "https://min-repo.com/3375287/",
   "status": "in_progress"
  },
  "パラッツォ葛西店": {
@@ -1225,13 +1225,13 @@
   "status": "done"
  },
  "パーラースーパーセブン新高円寺店": {
-  "days_done": 39,
-  "next_url": "https://min-repo.com/3314482/",
+  "days_done": 44,
+  "next_url": "https://min-repo.com/3304523/",
   "status": "in_progress"
  },
  "パーラーディオス下赤塚本店": {
-  "days_done": 75,
-  "next_url": "https://min-repo.com/3251429/",
+  "days_done": 79,
+  "next_url": "https://min-repo.com/3243261/",
   "status": "in_progress"
  },
  "ヒロキMAX蒲田店": {
@@ -1335,8 +1335,8 @@
   "status": "pending"
  },
  "プライム平井": {
-  "days_done": 29,
-  "next_url": "https://min-repo.com/3343011/",
+  "days_done": 34,
+  "next_url": "https://min-repo.com/3332654/",
   "status": "in_progress"
  },
  "プラザ515": {
@@ -1355,8 +1355,8 @@
   "status": "done"
  },
  "ベラジオ東十条店": {
-  "days_done": 34,
-  "next_url": "https://min-repo.com/3333250/",
+  "days_done": 39,
+  "next_url": "https://min-repo.com/3323074/",
   "status": "in_progress"
  },
  "ベルシティ/ザシティ篠崎店": {
@@ -1755,8 +1755,8 @@
   "status": "in_progress"
  },
  "巣鴨会館": {
-  "days_done": 282,
-  "next_url": "https://min-repo.com/2827289/",
+  "days_done": 286,
+  "next_url": "https://min-repo.com/2818241/",
   "status": "in_progress"
  },
  "戸越ミナト": {
