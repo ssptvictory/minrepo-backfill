@@ -12,7 +12,7 @@
  "AQUA H2O": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "ARROW池上店": {
   "days_done": 365,
@@ -112,7 +112,7 @@
  "P-PORT PREGO立川店": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "R7STRONG": {
   "days_done": 0,
@@ -345,9 +345,9 @@
   "status": "in_progress"
  },
  "アミューズメントパークジュラク2": {
-  "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "days_done": 2,
+  "next_url": "https://min-repo.com/3397939/",
+  "status": "in_progress"
  },
  "アミューズ浅草店": {
   "days_done": 0,
@@ -500,14 +500,14 @@
   "status": "in_progress"
  },
  "オリエントヴィーナスホール": {
-  "days_done": 0,
-  "next_url": "https://min-repo.com/3398932/",
+  "days_done": 1,
+  "next_url": "https://min-repo.com/3397467/",
   "status": "in_progress"
  },
  "オークラ新中野店": {
-  "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "days_done": 1,
+  "next_url": "https://min-repo.com/3398862/",
+  "status": "in_progress"
  },
  "オータ川島店": {
   "days_done": 224,
@@ -576,8 +576,8 @@
  },
  "カレイド経堂店": {
   "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "next_url": "https://min-repo.com/3400893/",
+  "status": "in_progress"
  },
  "ガイアネクスト三軒茶屋I": {
   "days_done": 270,
@@ -687,7 +687,7 @@
  "クラウン東京都": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "クリエ府中西原店": {
   "days_done": 0,
@@ -725,8 +725,8 @@
   "status": "pending"
  },
  "グランポート青物横丁店": {
-  "days_done": 125,
-  "next_url": "https://min-repo.com/3149007/",
+  "days_done": 128,
+  "next_url": "https://min-repo.com/3143158/",
   "status": "in_progress"
  },
  "コア21": {
@@ -740,9 +740,9 @@
   "status": "done"
  },
  "コンサートホールエフ成増": {
-  "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "days_done": 2,
+  "next_url": "https://min-repo.com/3397551/",
+  "status": "in_progress"
  },
  "コンサートホール上尾": {
   "days_done": 365,
@@ -820,8 +820,8 @@
   "status": "done"
  },
  "サンパレス環七大杉店": {
-  "days_done": 277,
-  "next_url": "https://min-repo.com/2838988/",
+  "days_done": 278,
+  "next_url": "https://min-repo.com/2836955/",
   "status": "in_progress"
  },
  "サンラッキー三ノ輪店": {
@@ -835,8 +835,8 @@
   "status": "pending"
  },
  "ジアス南大沢": {
-  "days_done": 3,
-  "next_url": "https://min-repo.com/3387503/",
+  "days_done": 5,
+  "next_url": "https://min-repo.com/3383745/",
   "status": "in_progress"
  },
  "ジャムフレンドクラブ朝霞": {
@@ -1110,13 +1110,13 @@
   "status": "pending"
  },
  "ニュー今津屋船堀店": {
-  "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "days_done": 1,
+  "next_url": "https://min-repo.com/3399729/",
+  "status": "in_progress"
  },
  "ニュー太平": {
-  "days_done": 228,
-  "next_url": "https://min-repo.com/2940208/",
+  "days_done": 229,
+  "next_url": "https://min-repo.com/2937859/",
   "status": "in_progress"
  },
  "ノア東松山店": {
@@ -1175,13 +1175,13 @@
   "status": "done"
  },
  "パラッツォ志村店": {
-  "days_done": 76,
-  "next_url": "https://min-repo.com/3249342/",
+  "days_done": 78,
+  "next_url": "https://min-repo.com/3244553/",
   "status": "in_progress"
  },
  "パラッツォ秋津店": {
-  "days_done": 245,
-  "next_url": "https://min-repo.com/2904865/",
+  "days_done": 246,
+  "next_url": "https://min-repo.com/2902831/",
   "status": "in_progress"
  },
  "パラッツォ葛西店": {
@@ -1272,7 +1272,7 @@
  "ピーアーク北綾瀬駅前": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "ピーアーク新田": {
   "days_done": 365,
@@ -1295,8 +1295,8 @@
   "status": "done"
  },
  "ピーアーク竹ノ塚スタジオ": {
-  "days_done": 1,
-  "next_url": "https://min-repo.com/3397807/",
+  "days_done": 2,
+  "next_url": "https://min-repo.com/3396420/",
   "status": "in_progress"
  },
  "ピーアーク草加": {
@@ -1341,8 +1341,8 @@
  },
  "プラザ515": {
   "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "next_url": "https://min-repo.com/3400487/",
+  "status": "in_progress"
  },
  "プラザ西台": {
   "days_done": 0,
@@ -1355,8 +1355,8 @@
   "status": "done"
  },
  "ベラジオ東十条店": {
-  "days_done": 257,
-  "next_url": "https://min-repo.com/2880686/",
+  "days_done": 258,
+  "next_url": "https://min-repo.com/2878475/",
   "status": "in_progress"
  },
  "ベルシティ/ザシティ篠崎店": {
@@ -1500,8 +1500,8 @@
   "status": "done"
  },
  "マルホン": {
-  "days_done": 1,
-  "next_url": "https://min-repo.com/3397434/",
+  "days_done": 2,
+  "next_url": "https://min-repo.com/3396011/",
   "status": "in_progress"
  },
  "ミュー川口芝店": {
@@ -1520,9 +1520,9 @@
   "status": "done"
  },
  "ミリオン平和台16号店": {
-  "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "days_done": 2,
+  "next_url": "https://min-repo.com/3397387/",
+  "status": "in_progress"
  },
  "ミリオン東武練馬店スロット館": {
   "days_done": 0,
@@ -1535,9 +1535,9 @@
   "status": "pending"
  },
  "ミリオン高円寺22号店": {
-  "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "days_done": 1,
+  "next_url": "https://min-repo.com/3399013/",
+  "status": "in_progress"
  },
  "メガガイア岩槻店": {
   "days_done": 243,
@@ -1585,8 +1585,8 @@
   "status": "done"
  },
  "メッセ扇店": {
-  "days_done": 0,
-  "next_url": "https://min-repo.com/3399516/",
+  "days_done": 1,
+  "next_url": "https://min-repo.com/3397666/",
   "status": "in_progress"
  },
  "メッセ昭島店": {
@@ -1700,9 +1700,9 @@
   "status": "done"
  },
  "出玉王田無店": {
-  "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "days_done": 2,
+  "next_url": "https://min-repo.com/3397668/",
+  "status": "in_progress"
  },
  "北上尾UNO店": {
   "days_done": 33,
@@ -1730,9 +1730,9 @@
   "status": "in_progress"
  },
  "大井ニュー東京東口店": {
-  "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "days_done": 2,
+  "next_url": "https://min-repo.com/3397823/",
+  "status": "in_progress"
  },
  "大山オーシャン": {
   "days_done": 0,
@@ -1740,8 +1740,8 @@
   "status": "pending"
  },
  "将軍下赤塚店": {
-  "days_done": 10,
-  "next_url": "https://min-repo.com/3380706/",
+  "days_done": 11,
+  "next_url": "https://min-repo.com/3378631/",
   "status": "in_progress"
  },
  "将軍与野店": {
@@ -1936,8 +1936,8 @@
  },
  "金時大森駅東口店": {
   "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "next_url": "https://min-repo.com/3400350/",
+  "status": "in_progress"
  },
  "金時蒲田東口店": {
   "days_done": 0,
