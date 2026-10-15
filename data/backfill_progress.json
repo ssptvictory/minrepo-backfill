@@ -27,7 +27,7 @@
  "BIGディッパー大井町店": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "BIGディッパー戸越銀座店": {
   "days_done": 0,
@@ -45,19 +45,19 @@
   "status": "pending"
  },
  "BIGディッパー木場店": {
-  "days_done": 0,
-  "next_url": null,
-  "status": "pending"
+  "days_done": 3,
+  "next_url": "https://min-repo.com/3402036/",
+  "status": "in_progress"
  },
  "BIGディッパー東中野店": {
-  "days_done": 109,
-  "next_url": "https://min-repo.com/3191307/",
+  "days_done": 113,
+  "next_url": "https://min-repo.com/3183215/",
   "status": "in_progress"
  },
  "BIGディッパー花小金井店": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "BIGディッパー門前仲町店": {
   "days_done": 0,
@@ -200,8 +200,8 @@
   "status": "done"
  },
  "みとや大森町店": {
-  "days_done": 225,
-  "next_url": "https://min-repo.com/2954032/",
+  "days_done": 229,
+  "next_url": "https://min-repo.com/2945664/",
   "status": "in_progress"
  },
  "みとや水道橋": {
@@ -400,8 +400,8 @@
   "status": "done"
  },
  "ウエスタン環七南葛西店": {
-  "days_done": 270,
-  "next_url": "https://min-repo.com/2861363/",
+  "days_done": 274,
+  "next_url": "https://min-repo.com/2852957/",
   "status": "in_progress"
  },
  "ウエスタン葛西店": {
@@ -435,13 +435,13 @@
   "status": "done"
  },
  "エスパス日拓上野新館": {
-  "days_done": 3,
-  "next_url": "https://min-repo.com/3402148/",
+  "days_done": 7,
+  "next_url": "https://min-repo.com/3396245/",
   "status": "in_progress"
  },
  "エスパス日拓上野本館": {
-  "days_done": 15,
-  "next_url": "https://min-repo.com/3380389/",
+  "days_done": 18,
+  "next_url": "https://min-repo.com/3374317/",
   "status": "in_progress"
  },
  "エスパス日拓新大久保駅前店": {
@@ -455,8 +455,8 @@
   "status": "pending"
  },
  "エスパス日拓渋谷駅前新館": {
-  "days_done": 248,
-  "next_url": "https://min-repo.com/2906620/",
+  "days_done": 252,
+  "next_url": "https://min-repo.com/2898090/",
   "status": "in_progress"
  },
  "エスパス日拓秋葉原駅前店": {
@@ -480,8 +480,8 @@
   "status": "pending"
  },
  "エムディー目黒": {
-  "days_done": 320,
-  "next_url": "https://min-repo.com/2759701/",
+  "days_done": 324,
+  "next_url": "https://min-repo.com/2751329/",
   "status": "in_progress"
  },
  "エンジェルV": {
@@ -670,9 +670,9 @@
   "status": "done"
  },
  "キューデン・アネックス": {
-  "days_done": 0,
+  "days_done": 1,
   "next_url": null,
-  "status": "pending"
+  "status": "done"
  },
  "キューデン東口店": {
   "days_done": 91,
@@ -945,8 +945,8 @@
   "status": "done"
  },
  "スロットエランドール田無店": {
-  "days_done": 72,
-  "next_url": "https://min-repo.com/3267412/",
+  "days_done": 76,
+  "next_url": "https://min-repo.com/3258857/",
   "status": "in_progress"
  },
  "スロットキング南浦和": {
@@ -1045,9 +1045,9 @@
   "status": "done"
  },
  "ドキわくランド中河原駅前店": {
-  "days_done": 0,
+  "days_done": 1,
   "next_url": null,
-  "status": "pending"
+  "status": "done"
  },
  "ドキわくランド聖蹟桜ヶ丘店": {
   "days_done": 0,
@@ -1320,8 +1320,8 @@
   "status": "not_found"
  },
  "フォーチュンお花茶屋店": {
-  "days_done": 345,
-  "next_url": "https://min-repo.com/2709216/",
+  "days_done": 349,
+  "next_url": "https://min-repo.com/2701164/",
   "status": "in_progress"
  },
  "フルハウス中延店": {
@@ -1330,8 +1330,8 @@
   "status": "pending"
  },
  "フルハウス戸越公園店": {
-  "days_done": 120,
-  "next_url": "https://min-repo.com/3167068/",
+  "days_done": 124,
+  "next_url": "https://min-repo.com/3158727/",
   "status": "in_progress"
  },
  "プライム平井": {
@@ -1665,8 +1665,8 @@
   "status": "done"
  },
  "レッドロック学芸大学駅前店": {
-  "days_done": 178,
-  "next_url": "https://min-repo.com/3050012/",
+  "days_done": 182,
+  "next_url": "https://min-repo.com/3041349/",
   "status": "in_progress"
  },
  "三ノ輪UNO": {
@@ -1720,8 +1720,8 @@
   "status": "pending"
  },
  "国際センター中野店": {
-  "days_done": 348,
-  "next_url": "https://min-repo.com/2703309/",
+  "days_done": 351,
+  "next_url": "https://min-repo.com/2696882/",
   "status": "in_progress"
  },
  "国際センター高田馬場店": {
@@ -1735,8 +1735,8 @@
   "status": "done"
  },
  "大山オーシャン": {
-  "days_done": 275,
-  "next_url": "https://min-repo.com/2850836/",
+  "days_done": 279,
+  "next_url": "https://min-repo.com/2842989/",
   "status": "in_progress"
  },
  "将軍下赤塚店": {
@@ -1810,8 +1810,8 @@
   "status": "not_found"
  },
  "楽園池袋店": {
-  "days_done": 46,
-  "next_url": "https://min-repo.com/3318764/",
+  "days_done": 50,
+  "next_url": "https://min-repo.com/3310556/",
   "status": "in_progress"
  },
  "楽園池袋店グリーンサイド": {
@@ -1905,8 +1905,8 @@
   "status": "done"
  },
  "練馬オーシャン": {
-  "days_done": 249,
-  "next_url": "https://min-repo.com/2904076/",
+  "days_done": 253,
+  "next_url": "https://min-repo.com/2896176/",
   "status": "in_progress"
  },
  "虹のある街北本店": {
@@ -1930,8 +1930,8 @@
   "status": "not_found"
  },
  "金時京急蒲田店": {
-  "days_done": 357,
-  "next_url": "https://min-repo.com/2684330/",
+  "days_done": 361,
+  "next_url": "https://min-repo.com/2676390/",
   "status": "in_progress"
  },
  "金時大森駅東口店": {
@@ -1940,8 +1940,8 @@
   "status": "done"
  },
  "金時蒲田東口店": {
-  "days_done": 345,
-  "next_url": "https://min-repo.com/2709072/",
+  "days_done": 349,
+  "next_url": "https://min-repo.com/2700561/",
   "status": "in_progress"
  },
  "門前仲町スターダスト": {
@@ -1957,6 +1957,6 @@
  "飯田橋プレサス": {
   "days_done": 0,
   "next_url": null,
-  "status": "pending"
+  "status": "not_found"
  }
 }
