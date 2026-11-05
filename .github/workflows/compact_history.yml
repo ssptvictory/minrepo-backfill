@@ -1,0 +1,35 @@
+name: Compact repository history
+
+on:
+  schedule:
+    - cron: "0 18 * * 0"
+  workflow_dispatch: {}
+
+concurrency:
+  group: backfill
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  compact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Squash history into a single commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git checkout --orphan compact-tmp
+          git add -A
+          git commit -m "chore: 自動履歴圧縮 $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
+          git branch -D main
+          git branch -m main
+          git push origin main --force
