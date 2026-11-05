@@ -168,10 +168,10 @@
   "status": "pending"
  },
  "SAP蒲生店": {
-  "days_done": 17,
+  "days_done": 30,
   "last_synced_at": "2026-11-05T12:56:29.954257",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2026-10-18",
+  "oldest_processed_date": "2026-10-05",
   "status": "in_progress"
  },
  "TOHO川越店": {
@@ -211,7 +211,8 @@
  },
  "せんげん台DUO": {
   "days_done": 365,
-  "newest_processed_date": "2026-09-19",
+  "last_synced_at": "2026-11-05T13:18:01.401967",
+  "newest_processed_date": "2026-09-26",
   "next_url": "https://min-repo.com/2619144/",
   "status": "done"
  },
@@ -223,7 +224,8 @@
  },
  "みずほ台UNO店": {
   "days_done": 356,
-  "newest_processed_date": "2026-09-18",
+  "last_synced_at": "2026-11-05T13:18:34.106952",
+  "newest_processed_date": "2026-09-26",
   "oldest_processed_date": "2025-09-21",
   "status": "done"
  },
@@ -426,7 +428,8 @@
  },
  "アリーナ平塚店": {
   "days_done": 356,
-  "newest_processed_date": "2026-09-18",
+  "last_synced_at": "2026-11-05T13:19:07.940096",
+  "newest_processed_date": "2026-09-25",
   "oldest_processed_date": "2025-09-23",
   "status": "done"
  },
@@ -621,7 +624,8 @@
  },
  "オータ桶川駅前店": {
   "days_done": 357,
-  "newest_processed_date": "2026-09-18",
+  "last_synced_at": "2026-11-05T13:19:40.699752",
+  "newest_processed_date": "2026-09-26",
   "oldest_processed_date": "2025-09-26",
   "status": "done"
  },
@@ -780,7 +784,8 @@
  },
  "キコーナ草加店": {
   "days_done": 359,
-  "newest_processed_date": "2026-09-18",
+  "last_synced_at": "2026-11-05T13:20:14.811820",
+  "newest_processed_date": "2026-09-22",
   "oldest_processed_date": "2025-09-24",
   "status": "done"
  },
@@ -1105,6 +1110,11 @@
   "oldest_processed_date": "2026-10-10",
   "status": "pending"
  },
+ "スポーツ館": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "not_found"
+ },
  "スマートプレゴ池袋": {
   "days_done": 365,
   "newest_processed_date": "2026-10-13",
@@ -1284,6 +1294,11 @@
   "days_done": 0,
   "oldest_processed_date": null,
   "status": "pending"
+ },
+ "ニューダイエイiii": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "not_found"
  },
  "ニューヨーク": {
   "days_done": 357,
@@ -1544,6 +1559,11 @@
   "oldest_processed_date": null,
   "status": "pending"
  },
+ "ピークス柳崎店": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "not_found"
+ },
  "フォーチュンお花茶屋店": {
   "days_done": 365,
   "newest_processed_date": "2026-10-15",
@@ -1613,6 +1633,11 @@
   "newest_processed_date": "2026-10-13",
   "next_url": "https://min-repo.com/2660076/",
   "status": "done"
+ },
+ "マイスポーツ館": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "not_found"
  },
  "マイニチWOW´ON": {
   "days_done": 1,
@@ -1768,9 +1793,9 @@
   "status": "done"
  },
  "ミリオン1100朝霞店": {
-  "days_done": 13,
+  "days_done": 25,
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2026-10-23",
+  "oldest_processed_date": "2026-10-11",
   "status": "in_progress"
  },
  "ミリオン和光10号店": {
@@ -1827,9 +1852,9 @@
   "status": "done"
  },
  "メガボックス東松山店": {
-  "days_done": 13,
+  "days_done": 26,
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2026-10-23",
+  "oldest_processed_date": "2026-10-10",
   "status": "in_progress"
  },
  "メッセ三鷹店": {
@@ -1925,6 +1950,11 @@
   "oldest_processed_date": null,
   "status": "pending"
  },
+ "ライブガーデン上尾スロット館": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "not_found"
+ },
  "ライブガーデン上尾店": {
   "days_done": 0,
   "oldest_processed_date": null,
@@ -1966,9 +1996,9 @@
   "status": "pending"
  },
  "上尾ウノ": {
-  "days_done": 13,
+  "days_done": 27,
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2026-10-23",
+  "oldest_processed_date": "2026-10-09",
   "status": "in_progress"
  },
  "上福岡UNO": {
@@ -1996,15 +2026,15 @@
   "status": "done"
  },
  "北上尾UNO店": {
-  "days_done": 13,
+  "days_done": 27,
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2026-10-23",
+  "oldest_processed_date": "2026-10-09",
   "status": "in_progress"
  },
  "北越谷UNO店": {
-  "days_done": 13,
+  "days_done": 28,
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2026-10-23",
+  "oldest_processed_date": "2026-10-08",
   "status": "in_progress"
  },
  "国際センター中村橋店": {
@@ -2044,9 +2074,9 @@
   "status": "done"
  },
  "将軍与野店": {
-  "days_done": 14,
+  "days_done": 28,
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2026-10-22",
+  "oldest_processed_date": "2026-10-08",
   "status": "in_progress"
  },
  "将軍葛西店": {
@@ -2119,6 +2149,11 @@
   "oldest_processed_date": null,
   "status": "pending"
  },
+ "楽園大宮新館": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "not_found"
+ },
  "楽園池袋店": {
   "days_done": 365,
   "newest_processed_date": "2026-10-16",
@@ -2180,9 +2215,9 @@
   "status": "done"
  },
  "第一プラザみずほ台店": {
-  "days_done": 14,
+  "days_done": 15,
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2026-10-22",
+  "oldest_processed_date": "2026-10-21",
   "status": "in_progress"
  },
  "第一プラザ八潮店": {
