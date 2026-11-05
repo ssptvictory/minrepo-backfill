@@ -1,0 +1,46 @@
+name: Match interview sources to own halls
+
+on:
+  schedule:
+    # P-WORLD/スロパイの日次取得(JST深夜0時)が終わっている想定のJST朝1時
+    - cron: "0 16 * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: match-interviews
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  match:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run matching script
+        run: python3 match_interviews.py
+
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/interview_matched.parquet
+          git diff --cached --quiet || git commit -m "chore: interview matching refresh $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
+          if ! git pull --rebase; then
+            echo "::warning::pull --rebase failed (likely binary conflict in a parquet file). Discarding this run's commit and syncing to remote instead."
+            git rebase --abort || true
+            git reset --hard origin/main
+            exit 0
+          fi
+          git push
