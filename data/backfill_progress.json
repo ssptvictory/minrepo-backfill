@@ -18,7 +18,8 @@
  },
  "ARROW池上店": {
   "days_done": 365,
-  "newest_processed_date": "2026-10-09",
+  "last_synced_at": "2026-11-05T20:54:29.140630",
+  "newest_processed_date": "2026-10-16",
   "next_url": "https://min-repo.com/2657381/",
   "status": "done"
  },
@@ -170,10 +171,10 @@
   "status": "pending"
  },
  "SAP蒲生店": {
-  "days_done": 269,
+  "days_done": 282,
   "last_synced_at": "2026-11-05T12:56:29.954257",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2026-02-07",
+  "oldest_processed_date": "2026-01-25",
   "status": "in_progress"
  },
  "TOHO川越店": {
@@ -758,7 +759,8 @@
  },
  "ガイア富士見台南口店": {
   "days_done": 365,
-  "newest_processed_date": "2026-10-06",
+  "last_synced_at": "2026-11-05T20:53:54.306445",
+  "newest_processed_date": "2026-10-13",
   "oldest_processed_date": "2025-10-05",
   "status": "done"
  },
@@ -1763,7 +1765,8 @@
  },
  "マルハン大山店": {
   "days_done": 365,
-  "newest_processed_date": "2026-10-07",
+  "last_synced_at": "2026-11-05T20:53:21.591580",
+  "newest_processed_date": "2026-10-14",
   "oldest_processed_date": "2025-10-04",
   "status": "done"
  },
@@ -1809,7 +1812,8 @@
  },
  "マルハン昭島店": {
   "days_done": 365,
-  "newest_processed_date": "2026-10-07",
+  "last_synced_at": "2026-11-05T20:55:03.550700",
+  "newest_processed_date": "2026-10-14",
   "oldest_processed_date": "2025-10-06",
   "status": "done"
  },
@@ -1871,10 +1875,10 @@
   "status": "done"
  },
  "ミリオン1100朝霞店": {
-  "days_done": 251,
+  "days_done": 262,
   "last_synced_at": "2026-11-05T15:04:11.517545",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2026-02-22",
+  "oldest_processed_date": "2026-02-11",
   "status": "in_progress"
  },
  "ミリオン和光10号店": {
@@ -1936,10 +1940,10 @@
   "status": "done"
  },
  "メガボックス東松山店": {
-  "days_done": 277,
+  "days_done": 289,
   "last_synced_at": "2026-11-05T15:05:21.395256",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2026-01-30",
+  "oldest_processed_date": "2026-01-18",
   "status": "in_progress"
  },
  "メッセ三鷹店": {
@@ -2086,10 +2090,10 @@
   "status": "pending"
  },
  "上尾ウノ": {
-  "days_done": 262,
+  "days_done": 274,
   "last_synced_at": "2026-11-05T15:05:57.388147",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2026-02-14",
+  "oldest_processed_date": "2026-02-02",
   "status": "in_progress"
  },
  "上福岡UNO": {
@@ -2119,17 +2123,17 @@
   "status": "done"
  },
  "北上尾UNO店": {
-  "days_done": 278,
+  "days_done": 290,
   "last_synced_at": "2026-11-05T15:35:29.418967",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2026-01-16",
+  "oldest_processed_date": "2026-01-04",
   "status": "in_progress"
  },
  "北越谷UNO店": {
-  "days_done": 285,
+  "days_done": 298,
   "last_synced_at": "2026-11-05T15:35:30.115685",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2026-01-10",
+  "oldest_processed_date": "2025-12-28",
   "status": "in_progress"
  },
  "国際センター中村橋店": {
@@ -2169,10 +2173,10 @@
   "status": "done"
  },
  "将軍与野店": {
-  "days_done": 286,
+  "days_done": 299,
   "last_synced_at": "2026-11-05T15:35:30.602715",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2026-01-05",
+  "oldest_processed_date": "2025-12-23",
   "status": "in_progress"
  },
  "将軍葛西店": {
@@ -2263,7 +2267,8 @@
  },
  "楽園池袋店グリーンサイド": {
   "days_done": 365,
-  "newest_processed_date": "2026-10-09",
+  "last_synced_at": "2026-11-05T20:55:36.660114",
+  "newest_processed_date": "2026-10-12",
   "next_url": "https://min-repo.com/2653276/",
   "status": "done"
  },
@@ -2318,10 +2323,10 @@
   "status": "done"
  },
  "第一プラザみずほ台店": {
-  "days_done": 84,
+  "days_done": 87,
   "last_synced_at": "2026-11-05T15:36:38.454644",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2026-08-12",
+  "oldest_processed_date": "2026-08-09",
   "status": "in_progress"
  },
  "第一プラザ八潮店": {
