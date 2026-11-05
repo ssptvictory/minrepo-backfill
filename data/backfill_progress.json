@@ -171,10 +171,10 @@
   "status": "pending"
  },
  "SAP蒲生店": {
-  "days_done": 295,
+  "days_done": 298,
   "last_synced_at": "2026-11-05T12:56:29.954257",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2026-01-12",
+  "oldest_processed_date": "2026-01-08",
   "status": "in_progress"
  },
  "TOHO川越店": {
@@ -880,7 +880,8 @@
  },
  "グランドシップ": {
   "days_done": 365,
-  "newest_processed_date": "2026-10-10",
+  "last_synced_at": "2026-11-05T21:38:04.646444",
+  "newest_processed_date": "2026-10-15",
   "next_url": "https://min-repo.com/2655209/",
   "status": "done"
  },
@@ -1184,7 +1185,8 @@
  },
  "スロットジパング": {
   "days_done": 365,
-  "newest_processed_date": "2026-10-09",
+  "last_synced_at": "2026-11-05T21:35:55.460552",
+  "newest_processed_date": "2026-10-16",
   "next_url": "https://min-repo.com/2653290/",
   "status": "done"
  },
@@ -1215,7 +1217,8 @@
  },
  "チャレンジャー野津田": {
   "days_done": 365,
-  "newest_processed_date": "2026-10-10",
+  "last_synced_at": "2026-11-05T21:37:00.933391",
+  "newest_processed_date": "2026-10-17",
   "next_url": "https://min-repo.com/2655393/",
   "status": "done"
  },
@@ -1337,7 +1340,8 @@
  },
  "ニュースター一ツ家店": {
   "days_done": 365,
-  "newest_processed_date": "2026-10-10",
+  "last_synced_at": "2026-11-05T21:37:32.380283",
+  "newest_processed_date": "2026-10-18",
   "next_url": "https://min-repo.com/2653341/",
   "status": "done"
  },
@@ -1501,6 +1505,7 @@
  },
  "パーラーオリエント秋川店": {
   "days_done": 365,
+  "last_synced_at": "2026-11-05T21:37:00.369871",
   "newest_processed_date": "2026-09-27",
   "oldest_processed_date": "2025-09-22",
   "status": "done"
@@ -1880,10 +1885,10 @@
   "status": "done"
  },
  "ミリオン1100朝霞店": {
-  "days_done": 274,
+  "days_done": 287,
   "last_synced_at": "2026-11-05T15:04:11.517545",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2026-01-30",
+  "oldest_processed_date": "2026-01-17",
   "status": "in_progress"
  },
  "ミリオン和光10号店": {
@@ -1945,10 +1950,10 @@
   "status": "done"
  },
  "メガボックス東松山店": {
-  "days_done": 303,
+  "days_done": 317,
   "last_synced_at": "2026-11-05T15:05:21.395256",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2026-01-04",
+  "oldest_processed_date": "2025-12-21",
   "status": "in_progress"
  },
  "メッセ三鷹店": {
@@ -2095,10 +2100,10 @@
   "status": "pending"
  },
  "上尾ウノ": {
-  "days_done": 286,
+  "days_done": 299,
   "last_synced_at": "2026-11-05T15:05:57.388147",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2026-01-21",
+  "oldest_processed_date": "2026-01-08",
   "status": "in_progress"
  },
  "上福岡UNO": {
@@ -2128,17 +2133,17 @@
   "status": "done"
  },
  "北上尾UNO店": {
-  "days_done": 304,
+  "days_done": 318,
   "last_synced_at": "2026-11-05T15:35:29.418967",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2025-12-21",
+  "oldest_processed_date": "2025-12-07",
   "status": "in_progress"
  },
  "北越谷UNO店": {
-  "days_done": 311,
+  "days_done": 324,
   "last_synced_at": "2026-11-05T15:35:30.115685",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2025-12-15",
+  "oldest_processed_date": "2025-12-02",
   "status": "in_progress"
  },
  "国際センター中村橋店": {
@@ -2178,10 +2183,10 @@
   "status": "done"
  },
  "将軍与野店": {
-  "days_done": 312,
+  "days_done": 326,
   "last_synced_at": "2026-11-05T15:35:30.602715",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2025-12-10",
+  "oldest_processed_date": "2025-11-26",
   "status": "in_progress"
  },
  "将軍葛西店": {
@@ -2328,10 +2333,10 @@
   "status": "done"
  },
  "第一プラザみずほ台店": {
-  "days_done": 90,
+  "days_done": 94,
   "last_synced_at": "2026-11-05T15:36:38.454644",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2026-08-06",
+  "oldest_processed_date": "2026-08-02",
   "status": "in_progress"
  },
  "第一プラザ八潮店": {
@@ -2445,7 +2450,8 @@
  },
  "阿佐ヶ谷オーシャン": {
   "days_done": 365,
-  "newest_processed_date": "2026-10-09",
+  "last_synced_at": "2026-11-05T21:36:26.562121",
+  "newest_processed_date": "2026-10-17",
   "next_url": "https://min-repo.com/2657070/",
   "status": "done"
  },
