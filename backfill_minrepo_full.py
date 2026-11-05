@@ -48,7 +48,7 @@ import random
 import re
 import time
 from collections import defaultdict
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 from urllib.parse import quote
 
@@ -81,6 +81,15 @@ HALL_TIME_BUDGET_SECONDS = 60  # 1店舗にこの秒数以上かけたら見切�
 #  ある詰まった店舗がTIME_BUDGET_SECONDS全体を使い切ってしまい、後続の店舗が
 #  何時間経っても一度も処理されない事態が実際に発生した。)
 
+# === 日次シンク(直近データの巡回チェック)用の予算 ===
+# バックフィル(過去を遡る処理)が店舗数分の時間を使い切ると、既にdone/in_progress
+# になった店舗の「今日・昨日の新しい結果」が永遠に取得されなくなる問題があった
+# (oldest_processed_dateより古い日しか見ないため、一覧の新しい側は二度と見ない)。
+# これを防ぐため、全体予算の後半SYNC_RESERVED_SECONDS秒は必ずシンク専用に確保し、
+# バックフィルがどれだけ詰まっていてもシンクが毎回必ず少しは進むようにする。
+SYNC_RESERVED_SECONDS = 150
+SYNC_HALL_TIME_BUDGET_SECONDS = 30
+
 _session = requests.Session()
 _start_time = time.time()
 
@@ -89,7 +98,15 @@ _start_time = time.time()
 _collected_rows = []
 
 
-def time_left():
+def backfill_time_left():
+    """バックフィル(過去を遡る処理)フェーズに使える残り時間。
+    全体予算からシンク専用の予約分を引いてあるため、バックフィルがどれだけ
+    続いてもシンクフェーズの取り分は必ず残る。"""
+    return (TIME_BUDGET_SECONDS - SYNC_RESERVED_SECONDS) - (time.time() - _start_time)
+
+
+def overall_time_left():
+    """シンクフェーズ用。バックフィルが早く終わった分の余り時間も使える。"""
     return TIME_BUDGET_SECONDS - (time.time() - _start_time)
 
 
@@ -373,7 +390,7 @@ def process_hall(hall_name: str, state: dict, today: date):
     for d, href in dated_pairs:
         if days_done >= DAYS_BACK:
             break
-        if time_left() <= 0 or hall_time_left() <= 0:
+        if backfill_time_left() <= 0 or hall_time_left() <= 0:
             break
 
         full_url = href if href.startswith("http") else f"https://min-repo.com{href}"
@@ -408,14 +425,89 @@ def process_hall(hall_name: str, state: dict, today: date):
         print(f"  [{hall_name}] {DAYS_BACK}日分に到達したため終了")
 
 
+def sync_hall(hall_name: str, state: dict, today: date):
+    """バックフィル(oldest_processed_date基準の後ろ向き取得)が終わった/進行中の
+    店舗について、一覧に新しく増えた日付(今日・昨日の結果など)がないか確認し、
+    あれば取得する。
+
+    process_hallのoldest_processed_date基準のループは「まだ遡っていない古い日」
+    しか見ないため、一覧の新しい側(まさに今日時点の最新結果)は初回処理時に
+    捉えた分より新しいものが増えても二度と見に行かれない。このnewest_processed_date
+    基準のチェックをstatusに関係なく(not_found以外)毎回少しずつ回すことで、
+    バックフィルが完了した後も含めて日次の新着データを継続的に追い続ける。
+    """
+    if state.get("status") == "not_found":
+        return
+
+    pairs = get_date_url_list(hall_name)
+    if pairs is False or pairs is None:
+        # 一時的な取得失敗、またはタグ不在の疑い。not_found化はprocess_hall側の
+        # 責務のみとし、ここでは状態を変更せず次回に回す。
+        return
+
+    newest_processed = state.get("newest_processed_date")
+    newest_processed_date = date.fromisoformat(newest_processed) if newest_processed else None
+
+    new_pairs = []
+    for date_text, href in pairs:
+        d = parse_date_from_label(date_text, today)
+        if d is None:
+            continue
+        if newest_processed_date is not None and d <= newest_processed_date:
+            continue
+        new_pairs.append((d, href))
+
+    state["last_synced_at"] = datetime.utcnow().isoformat()
+
+    if not new_pairs:
+        return
+    new_pairs.sort(key=lambda x: x[0])  # 古い順に処理(新着を連続して正しく積む)
+
+    hall_start = time.time()
+    max_date_done = newest_processed_date
+    for d, href in new_pairs:
+        if time.time() - hall_start > SYNC_HALL_TIME_BUDGET_SECONDS:
+            break
+        if overall_time_left() <= 0:
+            break
+
+        full_url = href if href.startswith("http") else f"https://min-repo.com{href}"
+        print(f"  [sync:{hall_name}] {d} {full_url}")
+
+        try:
+            resp = fetch(full_url)
+            if len(resp.text) < 2000:
+                print("    ! ベースページが異常に短い、この日はスキップして続行")
+                continue
+            all_url = f"{full_url.split('?')[0]}?kishu=all"
+            all_resp = fetch(all_url, referer=full_url)
+            if len(all_resp.text) < 2000:
+                print("    ! 全台データが異常に短い、この日はスキップして続行")
+                continue
+            unit_rows = parse_all_units_table(all_resp.text)
+            queue_unit_data(hall_name, d, unit_rows)
+            print(f"    {len(unit_rows)}台分")
+        except Exception as e:
+            print(f"    ! 取得失敗: {e}、この日はスキップして続行")
+            continue
+
+        if max_date_done is None or d > max_date_done:
+            max_date_done = d
+        time.sleep(2 + random.random() * 2)
+
+    if max_date_done is not None:
+        state["newest_processed_date"] = max_date_done.isoformat()
+
+
 def run():
     today = date.today()
     halls = load_halls()
     progress = load_progress()
 
     try:
+        print("=== フェーズ1: バックフィル(過去を遡る取得) ===")
         for hall_name in halls:
-            if time_left() <= 0:
+            if backfill_time_left() <= 0:
                 break
             state = progress.setdefault(
                 hall_name, {"status": "pending", "days_done": 0, "oldest_processed_date": None}
@@ -424,6 +516,24 @@ def run():
                 process_hall(hall_name, state, today)
             except Exception as e:
                 print(f"! {hall_name} で失敗: {e}")
+
+        print("=== フェーズ2: 日次シンク(直近データの巡回チェック) ===")
+        # not_found以外の全店舗が対象。最後にシンクした時刻が古いものを優先することで、
+        # 392店舗を何回かの実行に分けて公平に巡回する(全店舗doneになった後は
+        # この巡回だけが毎日の新着データ取得を担う)。
+        sync_targets = [
+            h for h in halls
+            if progress.get(h, {}).get("status") in ("in_progress", "done")
+        ]
+        sync_targets.sort(key=lambda h: progress[h].get("last_synced_at") or "")
+        for hall_name in sync_targets:
+            if overall_time_left() <= 0:
+                break
+            state = progress[hall_name]
+            try:
+                sync_hall(hall_name, state, today)
+            except Exception as e:
+                print(f"! [sync:{hall_name}] で失敗: {e}")
     finally:
         # 時間切れ・例外のいずれでも、ここまでに取得できた分は必ず保存する
         print("=== 取得データをParquetへ保存 ===")
