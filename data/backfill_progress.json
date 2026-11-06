@@ -25,8 +25,8 @@
  },
  "BBステーション日暮里店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-05T22:20:46.078560",
-  "newest_processed_date": "2026-10-11",
+  "last_synced_at": "2026-11-06T16:15:50.075144",
+  "newest_processed_date": "2026-10-19",
   "oldest_processed_date": "2025-10-05",
   "status": "done"
  },
@@ -135,10 +135,10 @@
   "status": "pending"
  },
  "R7-STRONG": {
-  "days_done": 123,
+  "days_done": 135,
   "last_synced_at": "2026-11-06T11:59:27.207684",
   "newest_processed_date": "2025-10-08",
-  "oldest_processed_date": "2026-07-06",
+  "oldest_processed_date": "2026-06-24",
   "status": "in_progress"
  },
  "R7STRONG": {
@@ -174,10 +174,10 @@
   "status": "in_progress"
  },
  "SAP草加": {
-  "days_done": 238,
+  "days_done": 248,
   "last_synced_at": "2026-11-06T02:01:02.117521",
   "newest_processed_date": "2026-10-06",
-  "oldest_processed_date": "2026-03-09",
+  "oldest_processed_date": "2026-02-27",
   "status": "in_progress"
  },
  "SAP蒲生": {
@@ -213,8 +213,8 @@
  },
  "YASUDA5": {
   "days_done": 322,
-  "last_synced_at": "2026-11-05T22:40:48.384438",
-  "newest_processed_date": "2026-10-16",
+  "last_synced_at": "2026-11-06T16:16:55.707093",
+  "newest_processed_date": "2026-10-20",
   "oldest_processed_date": "2025-11-19",
   "status": "done"
  },
@@ -348,10 +348,10 @@
   "status": "done"
  },
  "やすだ朝霞店": {
-  "days_done": 123,
+  "days_done": 132,
   "last_synced_at": "2026-11-06T11:37:29.862457",
   "newest_processed_date": "2026-10-09",
-  "oldest_processed_date": "2026-07-06",
+  "oldest_processed_date": "2026-06-24",
   "status": "in_progress"
  },
  "やすだ東大宮店": {
@@ -516,10 +516,10 @@
   "status": "done"
  },
  "ウイング蕨": {
-  "days_done": 134,
+  "days_done": 145,
   "last_synced_at": "2026-11-06T11:58:53.969939",
   "newest_processed_date": "2025-10-04",
-  "oldest_processed_date": "2026-06-25",
+  "oldest_processed_date": "2026-06-11",
   "status": "in_progress"
  },
  "ウイング蕨600": {
@@ -1506,10 +1506,10 @@
   "status": "pending"
  },
  "パチンコプラザ-ラ･カータ上里店": {
-  "days_done": 153,
+  "days_done": 163,
   "last_synced_at": "2026-11-06T08:46:16.136722",
   "newest_processed_date": "2020-10-30",
-  "oldest_processed_date": "2024-11-25",
+  "oldest_processed_date": "2024-10-10",
   "status": "in_progress"
  },
  "パチンコプラザラカータ大宮本店": {
@@ -1612,7 +1612,7 @@
  },
  "パーラースーパーセブン新中野店": {
   "days_done": 400,
-  "last_synced_at": "2026-11-05T22:40:25.937779",
+  "last_synced_at": "2026-11-06T16:16:55.086980",
   "newest_processed_date": "2026-11-05",
   "next_url": null,
   "status": "done"
@@ -1718,10 +1718,10 @@
   "status": "pending"
  },
  "ピーアーク草加ピーくんタウン": {
-  "days_done": 95,
+  "days_done": 108,
   "last_synced_at": "2026-11-06T12:20:08.737306",
   "newest_processed_date": "2025-10-06",
-  "oldest_processed_date": "2026-08-03",
+  "oldest_processed_date": "2026-07-21",
   "status": "in_progress"
  },
  "ピーアーク谷塚": {
@@ -1730,10 +1730,10 @@
   "status": "pending"
  },
  "ピーアーク谷塚ピーくんパーク": {
-  "days_done": 8,
+  "days_done": 11,
   "last_synced_at": "2026-11-06T13:45:27.261598",
   "newest_processed_date": "2025-10-05",
-  "oldest_processed_date": "2026-10-29",
+  "oldest_processed_date": "2026-10-26",
   "status": "in_progress"
  },
  "ピーアーク越谷": {
@@ -2086,8 +2086,8 @@
  },
  "メッセ南千住店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-05T22:19:40.767276",
-  "newest_processed_date": "2026-10-16",
+  "last_synced_at": "2026-11-06T16:14:43.254644",
+  "newest_processed_date": "2026-10-23",
   "oldest_processed_date": "2025-10-07",
   "status": "done"
  },
@@ -2331,8 +2331,8 @@
  },
  "巣鴨会館": {
   "days_done": 365,
-  "last_synced_at": "2026-11-05T22:20:14.474111",
-  "newest_processed_date": "2026-10-17",
+  "last_synced_at": "2026-11-06T16:15:17.727231",
+  "newest_processed_date": "2026-10-24",
   "next_url": "https://min-repo.com/2659002/",
   "status": "done"
  },
@@ -2456,10 +2456,10 @@
   "status": "pending"
  },
  "武里スポーツ館": {
-  "days_done": 85,
+  "days_done": 98,
   "last_synced_at": "2026-11-06T13:24:10.560892",
   "newest_processed_date": "2025-09-22",
-  "oldest_processed_date": "2026-08-12",
+  "oldest_processed_date": "2026-07-30",
   "status": "in_progress"
  },
  "清瀬UNO": {
@@ -2569,8 +2569,8 @@
  },
  "遊劇場3": {
   "days_done": 365,
-  "last_synced_at": "2026-11-05T22:39:52.285708",
-  "newest_processed_date": "2026-10-15",
+  "last_synced_at": "2026-11-06T16:16:22.393862",
+  "newest_processed_date": "2026-10-22",
   "oldest_processed_date": "2025-10-07",
   "status": "done"
  },
