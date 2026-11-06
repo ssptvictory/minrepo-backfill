@@ -103,6 +103,42 @@ def run():
                 **fields,
             }
 
+    # みんパチ・手動調査分は、検索時点で既に自店舗名(hall_name)に紐付け
+    # 済みのため、normalize()による再マッチは不要で直接キーで取り込む
+    direct_sources = []
+    minpachi_path = SCRIPT_DIR / "data" / "minpachi_hall_rules.parquet"
+    if minpachi_path.exists():
+        direct_sources.append(("minpachi", pd.read_parquet(minpachi_path)))
+    manual_path = SCRIPT_DIR / "data" / "manual_entry_rules.parquet"
+    if manual_path.exists():
+        direct_sources.append(("manual", pd.read_parquet(manual_path)))
+
+    for source_name, df in direct_sources:
+        for _, r in df.iterrows():
+            existing = rows.get(r["hall_name"])
+            if existing and existing["found"]:
+                existing["source"] = existing["source"] + "+" + source_name
+                continue
+            if source_name == "minpachi":
+                ticket = r.get("numbered_ticket", "")
+                method = r.get("method", "")
+                time_str = r.get("distribution_time", "")
+                entry_rule = f"整理券: {ticket}" + (f" / 方式: {method}" if method else "") + (f" / 時間: {time_str}" if time_str else "")
+                rule_detail = r.get("notes", "")
+            else:
+                entry_rule = r.get("entry_rule", "")
+                rule_detail = r.get("rule_detail", "")
+            rows[r["hall_name"]] = {
+                "hall_name": r["hall_name"],
+                "source": source_name,
+                "entry_rule": entry_rule,
+                "rule_detail": rule_detail,
+                "numbered_ticket": r.get("numbered_ticket", ""),
+                "address": "", "nearest_station": "", "access": "", "business_hours": "",
+                "last_checked_date": r["last_checked_date"],
+                "found": bool(entry_rule) or bool(rule_detail),
+            }
+
     all_our_names = set(norm_map.values())
     checked_date = pd.Timestamp.now().date()
     for name in all_our_names:
