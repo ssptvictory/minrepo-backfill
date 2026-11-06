@@ -134,6 +134,11 @@
   "oldest_processed_date": null,
   "status": "pending"
  },
+ "R7-STRONG": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "pending"
+ },
  "R7STRONG": {
   "days_done": 0,
   "oldest_processed_date": null,
@@ -506,6 +511,11 @@
   "newest_processed_date": "2026-10-16",
   "oldest_processed_date": "2025-09-03",
   "status": "done"
+ },
+ "ウイング蕨": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "pending"
  },
  "ウイング蕨600": {
   "days_done": 0,
@@ -1698,6 +1708,11 @@
   "status": "done"
  },
  "ピーアーク草加": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "pending"
+ },
+ "ピーアーク草加ピーくんタウン": {
   "days_done": 0,
   "oldest_processed_date": null,
   "status": "pending"
