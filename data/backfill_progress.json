@@ -6,8 +6,8 @@
  },
  "123笹塚店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T05:55:15.019602",
-  "newest_processed_date": "2026-10-20",
+  "last_synced_at": "2026-11-06T22:40:27.515518",
+  "newest_processed_date": "2026-10-28",
   "oldest_processed_date": "2025-10-05",
   "status": "done"
  },
@@ -135,11 +135,11 @@
   "status": "pending"
  },
  "R7-STRONG": {
-  "days_done": 364,
+  "days_done": 365,
   "last_synced_at": "2026-11-06T11:59:27.207684",
   "newest_processed_date": "2025-10-08",
-  "oldest_processed_date": "2025-11-07",
-  "status": "in_progress"
+  "oldest_processed_date": "2025-11-06",
+  "status": "done"
  },
  "R7STRONG": {
   "days_done": 0,
@@ -187,15 +187,15 @@
  },
  "SAP蒲生店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T05:55:48.831111",
-  "newest_processed_date": "2026-11-05",
+  "last_synced_at": "2026-11-06T22:41:01.382753",
+  "newest_processed_date": "2026-11-06",
   "oldest_processed_date": "2025-11-02",
   "status": "done"
  },
  "TOHO川越店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T05:55:54.723916",
-  "newest_processed_date": "2025-10-07",
+  "last_synced_at": "2026-11-06T22:41:07.037930",
+  "newest_processed_date": "2025-10-09",
   "next_url": "https://min-repo.com/2650109/",
   "status": "done"
  },
@@ -348,10 +348,10 @@
   "status": "done"
  },
  "やすだ朝霞店": {
-  "days_done": 329,
+  "days_done": 342,
   "last_synced_at": "2026-11-06T11:37:29.862457",
   "newest_processed_date": "2026-10-09",
-  "oldest_processed_date": "2022-02-15",
+  "oldest_processed_date": "2021-12-27",
   "status": "in_progress"
  },
  "やすだ東大宮店": {
@@ -360,6 +360,13 @@
   "newest_processed_date": "2026-10-13",
   "oldest_processed_date": "2021-10-31",
   "status": "done"
+ },
+ "やすだ東池袋9号店": {
+  "days_done": 14,
+  "last_synced_at": "2026-11-06T22:38:51.215376",
+  "newest_processed_date": "2025-09-30",
+  "oldest_processed_date": "2026-10-23",
+  "status": "in_progress"
  },
  "やすだ清水町店": {
   "days_done": 363,
@@ -832,10 +839,10 @@
   "status": "pending"
  },
  "ガイア瑞江ⅱ": {
-  "days_done": 3,
+  "days_done": 17,
   "last_synced_at": "2026-11-06T22:17:32.711779",
   "newest_processed_date": "2025-10-08",
-  "oldest_processed_date": "2026-11-03",
+  "oldest_processed_date": "2026-10-20",
   "status": "in_progress"
  },
  "ガイア瑞江店": {
@@ -918,6 +925,11 @@
   "newest_processed_date": "2026-10-13",
   "oldest_processed_date": null,
   "status": "pending"
+ },
+ "グランド ラ・カータ1111瑞穂": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "not_found"
  },
  "グランド ラ・カータ1111瑞穂店": {
   "days_done": 0,
@@ -1342,10 +1354,10 @@
   "status": "pending"
  },
  "デルパラ吉川店": {
-  "days_done": 46,
+  "days_done": 59,
   "last_synced_at": "2026-11-06T20:09:11.178225",
   "newest_processed_date": "2025-10-09",
-  "oldest_processed_date": "2026-09-22",
+  "oldest_processed_date": "2026-09-09",
   "status": "in_progress"
  },
  "デルパラ川口店": {
@@ -1732,10 +1744,10 @@
   "status": "pending"
  },
  "ピーアーク草加ピーくんタウン": {
-  "days_done": 324,
+  "days_done": 336,
   "last_synced_at": "2026-11-06T12:20:08.737306",
   "newest_processed_date": "2025-10-06",
-  "oldest_processed_date": "2025-12-16",
+  "oldest_processed_date": "2025-12-04",
   "status": "in_progress"
  },
  "ピーアーク谷塚": {
@@ -1744,10 +1756,10 @@
   "status": "pending"
  },
  "ピーアーク谷塚ピーくんパーク": {
-  "days_done": 140,
+  "days_done": 153,
   "last_synced_at": "2026-11-06T13:45:27.261598",
   "newest_processed_date": "2025-10-05",
-  "oldest_processed_date": "2026-06-19",
+  "oldest_processed_date": "2026-06-06",
   "status": "in_progress"
  },
  "ピーアーク越谷": {
@@ -1960,6 +1972,13 @@
   "newest_processed_date": "2026-10-21",
   "oldest_processed_date": "2025-10-06",
   "status": "done"
+ },
+ "マルハン東大和店": {
+  "days_done": 4,
+  "last_synced_at": "2026-11-06T22:39:22.445499",
+  "newest_processed_date": "2025-10-04",
+  "oldest_processed_date": "2026-11-02",
+  "status": "in_progress"
  },
  "マルハン池袋SLOT BASE": {
   "days_done": 0,
@@ -2458,8 +2477,8 @@
  },
  "楽園立川店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T05:36:13.321364",
-  "newest_processed_date": "2026-10-18",
+  "last_synced_at": "2026-11-06T22:39:53.877404",
+  "newest_processed_date": "2026-10-25",
   "next_url": "https://min-repo.com/2673635/",
   "status": "done"
  },
@@ -2470,10 +2489,10 @@
   "status": "pending"
  },
  "武里スポーツ館": {
-  "days_done": 326,
+  "days_done": 340,
   "last_synced_at": "2026-11-06T13:24:10.560892",
   "newest_processed_date": "2025-09-22",
-  "oldest_processed_date": "2025-11-30",
+  "oldest_processed_date": "2025-11-16",
   "status": "in_progress"
  },
  "清瀬UNO": {
