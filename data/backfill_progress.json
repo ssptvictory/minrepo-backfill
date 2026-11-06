@@ -167,10 +167,10 @@
   "status": "in_progress"
  },
  "SAP草加": {
-  "days_done": 27,
+  "days_done": 29,
   "last_synced_at": "2026-11-06T02:01:02.117521",
   "newest_processed_date": "2026-10-06",
-  "oldest_processed_date": "2026-10-09",
+  "oldest_processed_date": "2026-10-07",
   "status": "in_progress"
  },
  "SAP蒲生": {
@@ -347,10 +347,10 @@
   "status": "pending"
  },
  "やすだ東大宮店": {
-  "days_done": 141,
+  "days_done": 152,
   "last_synced_at": "2026-11-06T00:36:38.013122",
   "newest_processed_date": "2026-10-06",
-  "oldest_processed_date": "2026-06-18",
+  "oldest_processed_date": "2026-06-07",
   "status": "in_progress"
  },
  "やすだ清水町店": {
@@ -468,8 +468,8 @@
  },
  "アリーナ平塚店": {
   "days_done": 356,
-  "last_synced_at": "2026-11-05T13:19:07.940096",
-  "newest_processed_date": "2026-09-25",
+  "last_synced_at": "2026-11-06T06:16:25.898127",
+  "newest_processed_date": "2026-10-02",
   "oldest_processed_date": "2025-09-23",
   "status": "done"
  },
@@ -682,8 +682,8 @@
  },
  "オータ桶川駅前店": {
   "days_done": 357,
-  "last_synced_at": "2026-11-05T13:19:40.699752",
-  "newest_processed_date": "2026-09-26",
+  "last_synced_at": "2026-11-06T06:17:00.220784",
+  "newest_processed_date": "2026-10-02",
   "oldest_processed_date": "2025-09-26",
   "status": "done"
  },
@@ -770,10 +770,10 @@
   "status": "pending"
  },
  "ガイアネクスト越谷": {
-  "days_done": 163,
+  "days_done": 175,
   "last_synced_at": "2026-11-06T00:15:36.044233",
   "newest_processed_date": "2026-10-05",
-  "oldest_processed_date": "2026-05-26",
+  "oldest_processed_date": "2026-05-14",
   "status": "in_progress"
  },
  "ガイア大塚北口店": {
@@ -856,8 +856,8 @@
  },
  "キコーナ草加店": {
   "days_done": 359,
-  "last_synced_at": "2026-11-05T13:20:14.811820",
-  "newest_processed_date": "2026-09-22",
+  "last_synced_at": "2026-11-06T06:17:33.540858",
+  "newest_processed_date": "2026-09-29",
   "oldest_processed_date": "2025-09-24",
   "status": "done"
  },
@@ -967,8 +967,8 @@
  },
  "コンサートホール上尾": {
   "days_done": 365,
-  "last_synced_at": "2026-11-05T13:39:12.024264",
-  "newest_processed_date": "2026-09-28",
+  "last_synced_at": "2026-11-06T06:18:07.366179",
+  "newest_processed_date": "2026-10-05",
   "next_url": "https://min-repo.com/2618212/",
   "status": "done"
  },
@@ -980,8 +980,8 @@
  },
  "コンサートホール北浦和": {
   "days_done": 365,
-  "last_synced_at": "2026-11-05T13:39:46.260733",
-  "newest_processed_date": "2026-09-27",
+  "last_synced_at": "2026-11-06T06:18:39.447986",
+  "newest_processed_date": "2026-09-30",
   "next_url": "https://min-repo.com/2617796/",
   "status": "done"
  },
@@ -2441,24 +2441,24 @@
   "status": "done"
  },
  "第一プラザみずほ台店": {
-  "days_done": 297,
+  "days_done": 310,
   "last_synced_at": "2026-11-05T15:36:38.454644",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2025-12-31",
+  "oldest_processed_date": "2025-12-17",
   "status": "in_progress"
  },
  "第一プラザ八潮店": {
-  "days_done": 206,
+  "days_done": 217,
   "last_synced_at": "2026-11-05T15:36:39.118030",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2026-04-01",
+  "oldest_processed_date": "2026-03-21",
   "status": "in_progress"
  },
  "第一プラザ坂戸1000": {
-  "days_done": 194,
+  "days_done": 205,
   "last_synced_at": "2026-11-05T15:36:39.910551",
   "newest_processed_date": "2026-11-03",
-  "oldest_processed_date": "2026-04-16",
+  "oldest_processed_date": "2026-04-03",
   "status": "in_progress"
  },
  "第一プラザ坂戸にっさい店": {
@@ -2483,17 +2483,17 @@
   "status": "done"
  },
  "第一プラザ笠幡店": {
-  "days_done": 193,
+  "days_done": 205,
   "last_synced_at": "2026-11-05T23:32:48.583850",
   "newest_processed_date": "2026-09-26",
-  "oldest_processed_date": "2026-04-25",
+  "oldest_processed_date": "2026-04-12",
   "status": "in_progress"
  },
  "第一プラザ西浦和店": {
-  "days_done": 185,
+  "days_done": 196,
   "last_synced_at": "2026-11-05T23:33:28.543401",
   "newest_processed_date": "2026-10-02",
-  "oldest_processed_date": "2026-05-04",
+  "oldest_processed_date": "2026-04-23",
   "status": "in_progress"
  },
  "第一プラザ霞ヶ関店": {
