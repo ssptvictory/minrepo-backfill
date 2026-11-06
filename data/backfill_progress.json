@@ -347,10 +347,10 @@
   "status": "pending"
  },
  "やすだ東大宮店": {
-  "days_done": 161,
+  "days_done": 172,
   "last_synced_at": "2026-11-06T00:36:38.013122",
   "newest_processed_date": "2026-10-06",
-  "oldest_processed_date": "2026-05-29",
+  "oldest_processed_date": "2026-05-18",
   "status": "in_progress"
  },
  "やすだ清水町店": {
@@ -770,10 +770,10 @@
   "status": "pending"
  },
  "ガイアネクスト越谷": {
-  "days_done": 185,
+  "days_done": 195,
   "last_synced_at": "2026-11-06T00:15:36.044233",
   "newest_processed_date": "2026-10-05",
-  "oldest_processed_date": "2026-05-04",
+  "oldest_processed_date": "2026-04-23",
   "status": "in_progress"
  },
  "ガイア大塚北口店": {
@@ -1257,8 +1257,8 @@
  },
  "スーパーライブガーデン行田店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-05T14:01:25.434710",
-  "newest_processed_date": "2026-10-14",
+  "last_synced_at": "2026-11-06T06:58:59.536030",
+  "newest_processed_date": "2026-10-20",
   "next_url": "https://min-repo.com/2619706/",
   "status": "done"
  },
@@ -1290,8 +1290,8 @@
  },
  "ディスカバリー": {
   "days_done": 365,
-  "last_synced_at": "2026-11-05T14:02:01.528056",
-  "newest_processed_date": "2026-09-27",
+  "last_synced_at": "2026-11-06T06:59:34.834159",
+  "newest_processed_date": "2026-10-04",
   "next_url": "https://min-repo.com/2620595/",
   "status": "done"
  },
@@ -1413,8 +1413,8 @@
  },
  "ニューダイエイ": {
   "days_done": 359,
-  "last_synced_at": "2026-11-05T14:02:32.791017",
-  "newest_processed_date": "2026-09-23",
+  "last_synced_at": "2026-11-06T07:00:10.956507",
+  "newest_processed_date": "2026-09-29",
   "oldest_processed_date": "2025-08-17",
   "status": "done"
  },
@@ -1430,8 +1430,8 @@
  },
  "ニューヨーク": {
   "days_done": 357,
-  "last_synced_at": "2026-11-05T14:21:18.440939",
-  "newest_processed_date": "2026-09-27",
+  "last_synced_at": "2026-11-06T07:00:43.948285",
+  "newest_processed_date": "2026-10-05",
   "oldest_processed_date": "2025-09-27",
   "status": "done"
  },
@@ -1464,8 +1464,8 @@
  },
  "ノア東松山店": {
   "days_done": 358,
-  "last_synced_at": "2026-11-05T14:21:53.303845",
-  "newest_processed_date": "2026-09-27",
+  "last_synced_at": "2026-11-06T07:01:18.696035",
+  "newest_processed_date": "2026-09-29",
   "oldest_processed_date": "2025-09-14",
   "status": "done"
  },
@@ -2441,24 +2441,24 @@
   "status": "done"
  },
  "第一プラザみずほ台店": {
-  "days_done": 320,
+  "days_done": 331,
   "last_synced_at": "2026-11-05T15:36:38.454644",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2025-12-07",
+  "oldest_processed_date": "2025-11-26",
   "status": "in_progress"
  },
  "第一プラザ八潮店": {
-  "days_done": 228,
+  "days_done": 239,
   "last_synced_at": "2026-11-05T15:36:39.118030",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2026-03-10",
+  "oldest_processed_date": "2026-02-27",
   "status": "in_progress"
  },
  "第一プラザ坂戸1000": {
-  "days_done": 215,
+  "days_done": 225,
   "last_synced_at": "2026-11-05T15:36:39.910551",
   "newest_processed_date": "2026-11-03",
-  "oldest_processed_date": "2026-03-24",
+  "oldest_processed_date": "2026-03-14",
   "status": "in_progress"
  },
  "第一プラザ坂戸にっさい店": {
@@ -2483,17 +2483,17 @@
   "status": "done"
  },
  "第一プラザ笠幡店": {
-  "days_done": 215,
+  "days_done": 226,
   "last_synced_at": "2026-11-05T23:32:48.583850",
   "newest_processed_date": "2026-09-26",
-  "oldest_processed_date": "2026-04-02",
+  "oldest_processed_date": "2026-03-22",
   "status": "in_progress"
  },
  "第一プラザ西浦和店": {
-  "days_done": 206,
+  "days_done": 218,
   "last_synced_at": "2026-11-05T23:33:28.543401",
   "newest_processed_date": "2026-10-02",
-  "oldest_processed_date": "2026-04-12",
+  "oldest_processed_date": "2026-03-31",
   "status": "in_progress"
  },
  "第一プラザ霞ヶ関店": {
