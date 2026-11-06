@@ -2,8 +2,8 @@ name: Build combined entry rules dataset
 
 on:
   schedule:
-    # パチ7(月9:00)・p-town(月9:30)の後、JST月曜10:00=UTC月曜1:00
-    - cron: "0 1 * * 1"
+    # パチ7(月9:00)・p-town(月9:30)・P-WORLD(月9:45)の後、JST月曜10:15=UTC月曜1:15
+    - cron: "15 1 * * 1"
   workflow_dispatch: {}
 
 concurrency:

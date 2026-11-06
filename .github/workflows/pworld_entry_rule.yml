@@ -1,0 +1,46 @@
+name: Scrape P-WORLD hall entry rules (morning entry)
+
+on:
+  schedule:
+    # パチ7・p-townと同様、週1回(JST月曜朝9:45=UTC日曜深夜0:45)
+    - cron: "45 0 * * 1"
+  workflow_dispatch: {}
+
+concurrency:
+  group: pworld-entry-rule
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run P-WORLD entry rule scraper
+        run: python3 pworld_entry_rule_scraper.py
+
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/pworld_hall_rules.parquet data/pworld_hall_urls.json
+          git diff --cached --quiet || git commit -m "chore: P-WORLD entry rules refresh $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
+          if ! git pull --rebase; then
+            echo "::warning::pull --rebase failed (likely binary conflict in a parquet file). Discarding this run's commit and syncing to remote instead."
+            git rebase --abort || true
+            git reset --hard origin/main
+            exit 0
+          fi
+          git push
