@@ -167,10 +167,10 @@
   "status": "in_progress"
  },
  "SAP草加": {
-  "days_done": 94,
+  "days_done": 106,
   "last_synced_at": "2026-11-06T02:01:02.117521",
   "newest_processed_date": "2026-10-06",
-  "oldest_processed_date": "2026-08-03",
+  "oldest_processed_date": "2026-07-22",
   "status": "in_progress"
  },
  "SAP蒲生": {
@@ -347,10 +347,10 @@
   "status": "pending"
  },
  "やすだ東大宮店": {
-  "days_done": 270,
+  "days_done": 284,
   "last_synced_at": "2026-11-06T00:36:38.013122",
   "newest_processed_date": "2026-10-06",
-  "oldest_processed_date": "2026-02-09",
+  "oldest_processed_date": "2026-01-26",
   "status": "in_progress"
  },
  "やすだ清水町店": {
@@ -402,8 +402,8 @@
  },
  "アスカ杉戸店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-05T17:43:40.006204",
-  "newest_processed_date": "2026-10-12",
+  "last_synced_at": "2026-11-06T10:34:58.466365",
+  "newest_processed_date": "2026-10-19",
   "oldest_processed_date": "2021-04-28",
   "status": "done"
  },
@@ -661,8 +661,8 @@
  },
  "オータ川島店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-05T17:44:13.249054",
-  "newest_processed_date": "2026-10-12",
+  "last_synced_at": "2026-11-06T10:35:32.184087",
+  "newest_processed_date": "2026-10-15",
   "oldest_processed_date": "2025-10-04",
   "status": "done"
  },
@@ -770,10 +770,10 @@
   "status": "pending"
  },
  "ガイアネクスト越谷": {
-  "days_done": 291,
+  "days_done": 304,
   "last_synced_at": "2026-11-06T00:15:36.044233",
   "newest_processed_date": "2026-10-05",
-  "oldest_processed_date": "2026-01-17",
+  "oldest_processed_date": "2026-01-04",
   "status": "in_progress"
  },
  "ガイア大塚北口店": {
@@ -1283,8 +1283,8 @@
  },
  "チンジャラ会館": {
   "days_done": 365,
-  "last_synced_at": "2026-11-05T17:23:36.151159",
-  "newest_processed_date": "2026-10-11",
+  "last_synced_at": "2026-11-06T10:33:16.927585",
+  "newest_processed_date": "2026-10-19",
   "next_url": "https://min-repo.com/2650602/",
   "status": "done"
  },
@@ -1491,10 +1491,10 @@
   "status": "pending"
  },
  "パチンコプラザ-ラ･カータ上里店": {
-  "days_done": 10,
+  "days_done": 13,
   "last_synced_at": "2026-11-06T08:46:16.136722",
   "newest_processed_date": "2020-10-30",
-  "oldest_processed_date": "2026-09-10",
+  "oldest_processed_date": "2026-08-25",
   "status": "in_progress"
  },
  "パチンコプラザラカータ大宮本店": {
@@ -1516,8 +1516,8 @@
  },
  "パラッツォ三郷中央店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-05T17:43:07.005335",
-  "newest_processed_date": "2026-10-15",
+  "last_synced_at": "2026-11-06T10:34:23.196434",
+  "newest_processed_date": "2026-10-23",
   "next_url": "https://min-repo.com/2650960/",
   "status": "done"
  },
@@ -2159,8 +2159,8 @@
  },
  "ライブガーデン幸手権現堂": {
   "days_done": 365,
-  "last_synced_at": "2026-11-05T17:42:35.100799",
-  "newest_processed_date": "2026-10-14",
+  "last_synced_at": "2026-11-06T10:33:52.203453",
+  "newest_processed_date": "2026-10-21",
   "next_url": "https://min-repo.com/2650371/",
   "status": "done"
  },
@@ -2455,17 +2455,17 @@
   "status": "done"
  },
  "第一プラザ八潮店": {
-  "days_done": 338,
+  "days_done": 351,
   "last_synced_at": "2026-11-06T08:26:40.354778",
   "newest_processed_date": "2026-11-05",
-  "oldest_processed_date": "2025-11-18",
+  "oldest_processed_date": "2025-11-05",
   "status": "in_progress"
  },
  "第一プラザ坂戸1000": {
-  "days_done": 321,
+  "days_done": 334,
   "last_synced_at": "2026-11-06T08:26:45.730453",
   "newest_processed_date": "2026-11-05",
-  "oldest_processed_date": "2025-12-02",
+  "oldest_processed_date": "2025-11-18",
   "status": "in_progress"
  },
  "第一プラザ坂戸にっさい店": {
@@ -2490,17 +2490,17 @@
   "status": "done"
  },
  "第一プラザ笠幡店": {
-  "days_done": 329,
+  "days_done": 343,
   "last_synced_at": "2026-11-05T23:32:48.583850",
   "newest_processed_date": "2026-09-26",
-  "oldest_processed_date": "2025-12-08",
+  "oldest_processed_date": "2025-11-24",
   "status": "in_progress"
  },
  "第一プラザ西浦和店": {
-  "days_done": 321,
+  "days_done": 335,
   "last_synced_at": "2026-11-05T23:33:28.543401",
   "newest_processed_date": "2026-10-02",
-  "oldest_processed_date": "2025-12-17",
+  "oldest_processed_date": "2025-12-03",
   "status": "in_progress"
  },
  "第一プラザ霞ヶ関店": {
