@@ -135,10 +135,10 @@
   "status": "pending"
  },
  "R7-STRONG": {
-  "days_done": 281,
+  "days_done": 296,
   "last_synced_at": "2026-11-06T11:59:27.207684",
   "newest_processed_date": "2025-10-08",
-  "oldest_processed_date": "2026-01-29",
+  "oldest_processed_date": "2026-01-14",
   "status": "in_progress"
  },
  "R7STRONG": {
@@ -239,8 +239,8 @@
  },
  "つつじヶ丘ワールド": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T03:26:52.967592",
-  "newest_processed_date": "2026-10-21",
+  "last_synced_at": "2026-11-06T20:32:48.873759",
+  "newest_processed_date": "2026-10-26",
   "next_url": "https://min-repo.com/2668447/",
   "status": "done"
  },
@@ -348,10 +348,10 @@
   "status": "done"
  },
  "やすだ朝霞店": {
-  "days_done": 257,
+  "days_done": 269,
   "last_synced_at": "2026-11-06T11:37:29.862457",
   "newest_processed_date": "2026-10-09",
-  "oldest_processed_date": "2026-02-18",
+  "oldest_processed_date": "2026-02-06",
   "status": "in_progress"
  },
  "やすだ東大宮店": {
@@ -516,10 +516,10 @@
   "status": "done"
  },
  "ウイング蕨": {
-  "days_done": 286,
+  "days_done": 299,
   "last_synced_at": "2026-11-06T11:58:53.969939",
   "newest_processed_date": "2025-10-04",
-  "oldest_processed_date": "2026-01-21",
+  "oldest_processed_date": "2026-01-08",
   "status": "in_progress"
  },
  "ウイング蕨600": {
@@ -573,8 +573,8 @@
  },
  "エスパス1300新小岩北口駅前店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T03:05:55.086118",
-  "newest_processed_date": "2026-10-22",
+  "last_synced_at": "2026-11-06T20:30:38.007636",
+  "newest_processed_date": "2026-10-29",
   "next_url": "https://min-repo.com/2666613/",
   "status": "done"
  },
@@ -638,8 +638,8 @@
  },
  "エムディー目黒": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T03:07:06.665956",
-  "newest_processed_date": "2026-10-17",
+  "last_synced_at": "2026-11-06T20:31:45.106109",
+  "newest_processed_date": "2026-10-25",
   "next_url": "https://min-repo.com/2668177/",
   "status": "done"
  },
@@ -1335,10 +1335,10 @@
   "status": "pending"
  },
  "デルパラ吉川店": {
-  "days_done": 2,
+  "days_done": 6,
   "last_synced_at": "2026-11-06T20:09:11.178225",
   "newest_processed_date": "2025-10-09",
-  "oldest_processed_date": "2026-11-05",
+  "oldest_processed_date": "2026-11-01",
   "status": "in_progress"
  },
  "デルパラ川口店": {
@@ -1513,10 +1513,10 @@
   "status": "pending"
  },
  "パチンコプラザ-ラ･カータ上里店": {
-  "days_done": 309,
+  "days_done": 322,
   "last_synced_at": "2026-11-06T08:46:16.136722",
   "newest_processed_date": "2020-10-30",
-  "oldest_processed_date": "2023-05-05",
+  "oldest_processed_date": "2023-04-04",
   "status": "in_progress"
  },
  "パチンコプラザラカータ大宮本店": {
@@ -1725,10 +1725,10 @@
   "status": "pending"
  },
  "ピーアーク草加ピーくんタウン": {
-  "days_done": 245,
+  "days_done": 258,
   "last_synced_at": "2026-11-06T12:20:08.737306",
   "newest_processed_date": "2025-10-06",
-  "oldest_processed_date": "2026-03-05",
+  "oldest_processed_date": "2026-02-20",
   "status": "in_progress"
  },
  "ピーアーク谷塚": {
@@ -1737,10 +1737,10 @@
   "status": "pending"
  },
  "ピーアーク谷塚ピーくんパーク": {
-  "days_done": 63,
+  "days_done": 77,
   "last_synced_at": "2026-11-06T13:45:27.261598",
   "newest_processed_date": "2025-10-05",
-  "oldest_processed_date": "2026-09-04",
+  "oldest_processed_date": "2026-08-21",
   "status": "in_progress"
  },
  "ピーアーク越谷": {
@@ -2289,8 +2289,8 @@
  },
  "国際センター中野店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T03:06:33.396875",
-  "newest_processed_date": "2026-10-20",
+  "last_synced_at": "2026-11-06T20:31:10.358890",
+  "newest_processed_date": "2026-10-28",
   "next_url": "https://min-repo.com/2668486/",
   "status": "done"
  },
@@ -2463,10 +2463,10 @@
   "status": "pending"
  },
  "武里スポーツ館": {
-  "days_done": 245,
+  "days_done": 259,
   "last_synced_at": "2026-11-06T13:24:10.560892",
   "newest_processed_date": "2025-09-22",
-  "oldest_processed_date": "2026-03-02",
+  "oldest_processed_date": "2026-02-16",
   "status": "in_progress"
  },
  "清瀬UNO": {
@@ -2588,8 +2588,8 @@
  },
  "金時京急蒲田店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T03:26:17.419654",
-  "newest_processed_date": "2026-10-22",
+  "last_synced_at": "2026-11-06T20:32:16.618725",
+  "newest_processed_date": "2026-10-29",
   "next_url": "https://min-repo.com/2668061/",
   "status": "done"
  },
