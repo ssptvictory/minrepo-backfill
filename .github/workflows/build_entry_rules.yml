@@ -1,0 +1,46 @@
+name: Build combined entry rules dataset
+
+on:
+  schedule:
+    # パチ7(月9:00)・p-town(月9:30)の後、JST月曜10:00=UTC月曜1:00
+    - cron: "0 1 * * 1"
+  workflow_dispatch: {}
+
+concurrency:
+  group: build-entry-rules
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build entry rules dataset
+        run: python3 build_entry_rules.py
+
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/entry_rules.parquet
+          git diff --cached --quiet || git commit -m "chore: entry rules dataset refresh $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
+          if ! git pull --rebase; then
+            echo "::warning::pull --rebase failed (likely binary conflict in a parquet file). Discarding this run's commit and syncing to remote instead."
+            git rebase --abort || true
+            git reset --hard origin/main
+            exit 0
+          fi
+          git push

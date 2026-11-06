@@ -39,13 +39,25 @@ OUT_PATH = SCRIPT_DIR / "data" / "interview_matched.parquet"
 def normalize(s: str) -> str:
     s = unicodedata.normalize("NFKC", s)
     s = s.strip()
+    # p-town等は「DAS蕨店(蕨市 蕨駅)」のように市区町村・駅名を末尾の
+    # 括弧書きで付けてくることがある(入れ子の括弧「新田(埼玉県)駅」を
+    # 含む場合もあるため、最初の開き括弧以降を丸ごと削る)。店名の比較
+    # では無視する。
+    s = re.sub(r"[（(].*$", "", s)
+    s = s.strip()
     s = re.sub(r"\s+", "", s)
     s = s.lower()
-    for suffix in ["スロット館", "号店", "店"]:
+    # 「Aパチンコ館／Bスロット館」のように1施設が2種別に分かれて
+    # 表記される場合があるため、スラッシュ以降は無視する
+    s = s.split("／")[0].split("/")[0]
+    # UNO/ウノ、M-II/M-2のような表記ゆれ(意味が同一と確実に言えるもののみ)
+    s = s.replace("uno", "ウノ")
+    for suffix in ["スロット館", "スロット店", "パチンコ館", "号店", "本店", "店"]:
         if s.endswith(suffix):
             s = s[: -len(suffix)]
             break
     s = s.replace("・", "").replace("･", "").replace("-", "").replace("ー", "")
+    s = s.replace("．", "").replace(".", "")
     return s
 
 
