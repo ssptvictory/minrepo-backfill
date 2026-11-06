@@ -135,9 +135,11 @@
   "status": "pending"
  },
  "R7-STRONG": {
-  "days_done": 0,
-  "oldest_processed_date": null,
-  "status": "pending"
+  "days_done": 1,
+  "last_synced_at": "2026-11-06T11:59:27.207684",
+  "newest_processed_date": "2025-10-08",
+  "oldest_processed_date": "2026-11-05",
+  "status": "in_progress"
  },
  "R7STRONG": {
   "days_done": 0,
@@ -172,10 +174,10 @@
   "status": "in_progress"
  },
  "SAP草加": {
-  "days_done": 130,
+  "days_done": 143,
   "last_synced_at": "2026-11-06T02:01:02.117521",
   "newest_processed_date": "2026-10-06",
-  "oldest_processed_date": "2026-06-28",
+  "oldest_processed_date": "2026-06-15",
   "status": "in_progress"
  },
  "SAP蒲生": {
@@ -346,17 +348,17 @@
   "status": "done"
  },
  "やすだ朝霞店": {
-  "days_done": 8,
+  "days_done": 22,
   "last_synced_at": "2026-11-06T11:37:29.862457",
   "newest_processed_date": "2026-10-09",
-  "oldest_processed_date": "2026-10-29",
+  "oldest_processed_date": "2026-10-15",
   "status": "in_progress"
  },
  "やすだ東大宮店": {
-  "days_done": 311,
+  "days_done": 324,
   "last_synced_at": "2026-11-06T00:36:38.013122",
   "newest_processed_date": "2026-10-06",
-  "oldest_processed_date": "2025-12-30",
+  "oldest_processed_date": "2025-12-17",
   "status": "in_progress"
  },
  "やすだ清水町店": {
@@ -514,9 +516,11 @@
   "status": "done"
  },
  "ウイング蕨": {
-  "days_done": 0,
-  "oldest_processed_date": null,
-  "status": "pending"
+  "days_done": 14,
+  "last_synced_at": "2026-11-06T11:58:53.969939",
+  "newest_processed_date": "2025-10-04",
+  "oldest_processed_date": "2026-10-23",
+  "status": "in_progress"
  },
  "ウイング蕨600": {
   "days_done": 0,
@@ -781,10 +785,10 @@
   "status": "pending"
  },
  "ガイアネクスト越谷": {
-  "days_done": 328,
+  "days_done": 341,
   "last_synced_at": "2026-11-06T00:15:36.044233",
   "newest_processed_date": "2026-10-05",
-  "oldest_processed_date": "2025-12-11",
+  "oldest_processed_date": "2025-11-28",
   "status": "in_progress"
  },
  "ガイア大塚北口店": {
@@ -1502,10 +1506,10 @@
   "status": "pending"
  },
  "パチンコプラザ-ラ･カータ上里店": {
-  "days_done": 28,
+  "days_done": 41,
   "last_synced_at": "2026-11-06T08:46:16.136722",
   "newest_processed_date": "2020-10-30",
-  "oldest_processed_date": "2026-06-15",
+  "oldest_processed_date": "2026-04-10",
   "status": "in_progress"
  },
  "パチンコプラザラカータ大宮本店": {
@@ -2200,8 +2204,8 @@
  },
  "三ノ輪UNO": {
   "days_done": 365,
-  "last_synced_at": "2026-11-05T18:46:11.597693",
-  "newest_processed_date": "2026-10-11",
+  "last_synced_at": "2026-11-06T12:01:05.373377",
+  "newest_processed_date": "2026-10-14",
   "oldest_processed_date": "2025-10-02",
   "status": "done"
  },
@@ -2444,8 +2448,8 @@
  },
  "清瀬UNO": {
   "days_done": 365,
-  "last_synced_at": "2026-11-05T18:27:05.799945",
-  "newest_processed_date": "2026-10-11",
+  "last_synced_at": "2026-11-06T12:00:32.364816",
+  "newest_processed_date": "2026-10-18",
   "next_url": "https://min-repo.com/2629101/",
   "status": "done"
  },
@@ -2458,8 +2462,8 @@
  },
  "秋葉原UNO": {
   "days_done": 365,
-  "last_synced_at": "2026-11-05T18:26:34.470042",
-  "newest_processed_date": "2026-10-14",
+  "last_synced_at": "2026-11-06T12:00:00.589563",
+  "newest_processed_date": "2026-10-20",
   "next_url": "https://min-repo.com/2653808/",
   "status": "done"
  },
@@ -2478,11 +2482,11 @@
   "status": "done"
  },
  "第一プラザ坂戸1000": {
-  "days_done": 357,
+  "days_done": 365,
   "last_synced_at": "2026-11-06T08:26:45.730453",
   "newest_processed_date": "2026-11-05",
-  "oldest_processed_date": "2025-10-25",
-  "status": "in_progress"
+  "oldest_processed_date": "2025-10-16",
+  "status": "done"
  },
  "第一プラザ坂戸にっさい店": {
   "days_done": 365,
@@ -2513,11 +2517,11 @@
   "status": "done"
  },
  "第一プラザ西浦和店": {
-  "days_done": 359,
+  "days_done": 365,
   "last_synced_at": "2026-11-05T23:33:28.543401",
   "newest_processed_date": "2026-10-02",
-  "oldest_processed_date": "2025-11-08",
-  "status": "in_progress"
+  "oldest_processed_date": "2025-11-02",
+  "status": "done"
  },
  "第一プラザ霞ヶ関店": {
   "days_done": 365,
