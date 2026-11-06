@@ -839,10 +839,10 @@
   "status": "pending"
  },
  "ガイア瑞江ⅱ": {
-  "days_done": 45,
+  "days_done": 52,
   "last_synced_at": "2026-11-06T22:17:32.711779",
   "newest_processed_date": "2025-10-08",
-  "oldest_processed_date": "2026-09-22",
+  "oldest_processed_date": "2026-09-05",
   "status": "in_progress"
  },
  "ガイア瑞江店": {
@@ -1354,10 +1354,10 @@
   "status": "pending"
  },
  "デルパラ吉川店": {
-  "days_done": 83,
+  "days_done": 92,
   "last_synced_at": "2026-11-06T20:09:11.178225",
   "newest_processed_date": "2025-10-09",
-  "oldest_processed_date": "2026-08-16",
+  "oldest_processed_date": "2026-08-06",
   "status": "in_progress"
  },
  "デルパラ川口店": {
@@ -1744,11 +1744,11 @@
   "status": "pending"
  },
  "ピーアーク草加ピーくんタウン": {
-  "days_done": 361,
+  "days_done": 365,
   "last_synced_at": "2026-11-06T12:20:08.737306",
   "newest_processed_date": "2025-10-06",
-  "oldest_processed_date": "2025-11-09",
-  "status": "in_progress"
+  "oldest_processed_date": "2025-10-16",
+  "status": "done"
  },
  "ピーアーク谷塚": {
   "days_done": 0,
@@ -1756,10 +1756,10 @@
   "status": "pending"
  },
  "ピーアーク谷塚ピーくんパーク": {
-  "days_done": 181,
+  "days_done": 188,
   "last_synced_at": "2026-11-06T13:45:27.261598",
   "newest_processed_date": "2025-10-05",
-  "oldest_processed_date": "2026-05-09",
+  "oldest_processed_date": "2026-04-19",
   "status": "in_progress"
  },
  "ピーアーク越谷": {
@@ -1961,10 +1961,11 @@
   "status": "pending"
  },
  "マルハン日野店": {
-  "days_done": 0,
-  "newest_processed_date": "2026-10-07",
-  "oldest_processed_date": null,
-  "status": "pending"
+  "days_done": 4,
+  "last_synced_at": "2026-11-06T23:55:16.540641",
+  "newest_processed_date": "2026-10-19",
+  "oldest_processed_date": "2026-10-08",
+  "status": "in_progress"
  },
  "マルハン昭島店": {
   "days_done": 365,
@@ -1985,11 +1986,19 @@
   "oldest_processed_date": null,
   "status": "pending"
  },
+ "マルハン池袋SLOT-BASE": {
+  "days_done": 1,
+  "last_synced_at": "2026-11-06T23:55:54.801244",
+  "newest_processed_date": "2025-09-30",
+  "oldest_processed_date": "2026-11-04",
+  "status": "in_progress"
+ },
  "マルハン池袋店": {
-  "days_done": 0,
-  "newest_processed_date": "2026-10-05",
-  "oldest_processed_date": null,
-  "status": "pending"
+  "days_done": 7,
+  "last_synced_at": "2026-11-06T23:54:35.582334",
+  "newest_processed_date": "2026-10-12",
+  "oldest_processed_date": "2026-10-10",
+  "status": "in_progress"
  },
  "マルハン深谷店": {
   "days_done": 359,
@@ -2006,10 +2015,11 @@
   "status": "done"
  },
  "マルハン青梅新町店": {
-  "days_done": 0,
-  "newest_processed_date": "2026-10-05",
-  "oldest_processed_date": null,
-  "status": "pending"
+  "days_done": 5,
+  "last_synced_at": "2026-11-06T23:54:02.640038",
+  "newest_processed_date": "2026-10-14",
+  "oldest_processed_date": "2026-10-21",
+  "status": "in_progress"
  },
  "マルハン鷲宮店": {
   "days_done": 357,
