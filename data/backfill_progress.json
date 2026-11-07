@@ -362,10 +362,10 @@
   "status": "done"
  },
  "やすだ東池袋9号店": {
-  "days_done": 39,
+  "days_done": 50,
   "last_synced_at": "2026-11-06T22:38:51.215376",
   "newest_processed_date": "2025-09-30",
-  "oldest_processed_date": "2026-09-28",
+  "oldest_processed_date": "2026-09-17",
   "status": "in_progress"
  },
  "やすだ清水町店": {
@@ -839,10 +839,10 @@
   "status": "pending"
  },
  "ガイア瑞江ⅱ": {
-  "days_done": 52,
+  "days_done": 60,
   "last_synced_at": "2026-11-06T22:17:32.711779",
   "newest_processed_date": "2025-10-08",
-  "oldest_processed_date": "2026-09-05",
+  "oldest_processed_date": "2026-08-28",
   "status": "in_progress"
  },
  "ガイア瑞江店": {
@@ -1218,15 +1218,15 @@
  },
  "スカイプラザ大井店": {
   "days_done": 358,
-  "last_synced_at": "2026-11-06T06:39:27.303976",
-  "newest_processed_date": "2026-10-02",
+  "last_synced_at": "2026-11-07T00:15:19.925729",
+  "newest_processed_date": "2026-10-08",
   "oldest_processed_date": "2025-09-17",
   "status": "done"
  },
  "スカイプラザ富士見店": {
   "days_done": 357,
-  "last_synced_at": "2026-11-06T06:39:59.685885",
-  "newest_processed_date": "2026-09-29",
+  "last_synced_at": "2026-11-07T00:15:54.506884",
+  "newest_processed_date": "2026-10-05",
   "oldest_processed_date": "2025-09-17",
   "status": "done"
  },
@@ -1291,8 +1291,8 @@
  },
  "スーパーライブガーデン行田店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T06:58:59.536030",
-  "newest_processed_date": "2026-10-20",
+  "last_synced_at": "2026-11-07T00:16:28.231267",
+  "newest_processed_date": "2026-10-25",
   "next_url": "https://min-repo.com/2619706/",
   "status": "done"
  },
@@ -1324,8 +1324,8 @@
  },
  "ディスカバリー": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T06:59:34.834159",
-  "newest_processed_date": "2026-10-04",
+  "last_synced_at": "2026-11-07T00:17:00.145522",
+  "newest_processed_date": "2026-10-14",
   "next_url": "https://min-repo.com/2620595/",
   "status": "done"
  },
@@ -1354,10 +1354,10 @@
   "status": "pending"
  },
  "デルパラ吉川店": {
-  "days_done": 92,
+  "days_done": 101,
   "last_synced_at": "2026-11-06T20:09:11.178225",
   "newest_processed_date": "2025-10-09",
-  "oldest_processed_date": "2026-08-06",
+  "oldest_processed_date": "2026-07-27",
   "status": "in_progress"
  },
  "デルパラ川口店": {
@@ -1454,8 +1454,8 @@
  },
  "ニューダイエイ": {
   "days_done": 359,
-  "last_synced_at": "2026-11-06T07:00:10.956507",
-  "newest_processed_date": "2026-09-29",
+  "last_synced_at": "2026-11-07T00:17:34.690350",
+  "newest_processed_date": "2026-10-02",
   "oldest_processed_date": "2025-08-17",
   "status": "done"
  },
@@ -1756,10 +1756,10 @@
   "status": "pending"
  },
  "ピーアーク谷塚ピーくんパーク": {
-  "days_done": 188,
+  "days_done": 199,
   "last_synced_at": "2026-11-06T13:45:27.261598",
   "newest_processed_date": "2025-10-05",
-  "oldest_processed_date": "2026-04-19",
+  "oldest_processed_date": "2026-04-08",
   "status": "in_progress"
  },
  "ピーアーク越谷": {
@@ -1961,10 +1961,10 @@
   "status": "pending"
  },
  "マルハン日野店": {
-  "days_done": 4,
+  "days_done": 5,
   "last_synced_at": "2026-11-06T23:55:16.540641",
   "newest_processed_date": "2026-10-19",
-  "oldest_processed_date": "2026-10-08",
+  "oldest_processed_date": "2026-10-07",
   "status": "in_progress"
  },
  "マルハン昭島店": {
@@ -1975,10 +1975,10 @@
   "status": "done"
  },
  "マルハン東大和店": {
-  "days_done": 11,
+  "days_done": 21,
   "last_synced_at": "2026-11-06T22:39:22.445499",
   "newest_processed_date": "2025-10-04",
-  "oldest_processed_date": "2026-10-25",
+  "oldest_processed_date": "2026-10-15",
   "status": "in_progress"
  },
  "マルハン池袋SLOT BASE": {
@@ -1994,10 +1994,10 @@
   "status": "in_progress"
  },
  "マルハン池袋店": {
-  "days_done": 7,
+  "days_done": 17,
   "last_synced_at": "2026-11-06T23:54:35.582334",
   "newest_processed_date": "2026-10-12",
-  "oldest_processed_date": "2026-10-10",
+  "oldest_processed_date": "2026-09-29",
   "status": "in_progress"
  },
  "マルハン深谷店": {
@@ -2015,10 +2015,10 @@
   "status": "done"
  },
  "マルハン青梅新町店": {
-  "days_done": 5,
+  "days_done": 15,
   "last_synced_at": "2026-11-06T23:54:02.640038",
   "newest_processed_date": "2026-10-14",
-  "oldest_processed_date": "2026-10-21",
+  "oldest_processed_date": "2026-10-11",
   "status": "in_progress"
  },
  "マルハン鷲宮店": {
