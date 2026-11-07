@@ -18,8 +18,8 @@
  },
  "ARROW池上店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T14:49:29.705194",
-  "newest_processed_date": "2026-10-23",
+  "last_synced_at": "2026-11-07T07:35:09.422737",
+  "newest_processed_date": "2026-10-30",
   "next_url": "https://min-repo.com/2657381/",
   "status": "done"
  },
@@ -362,10 +362,10 @@
   "status": "done"
  },
  "やすだ東池袋9号店": {
-  "days_done": 285,
+  "days_done": 296,
   "last_synced_at": "2026-11-06T22:38:51.215376",
   "newest_processed_date": "2025-09-30",
-  "oldest_processed_date": "2026-01-07",
+  "oldest_processed_date": "2025-12-27",
   "status": "in_progress"
  },
  "やすだ清水町店": {
@@ -821,8 +821,8 @@
  },
  "ガイア富士見台南口店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T14:30:29.075323",
-  "newest_processed_date": "2026-10-14",
+  "last_synced_at": "2026-11-07T07:34:37.600479",
+  "newest_processed_date": "2026-10-21",
   "oldest_processed_date": "2025-10-05",
   "status": "done"
  },
@@ -839,10 +839,10 @@
   "status": "pending"
  },
  "ガイア瑞江ⅱ": {
-  "days_done": 306,
+  "days_done": 317,
   "last_synced_at": "2026-11-06T22:17:32.711779",
   "newest_processed_date": "2025-10-08",
-  "oldest_processed_date": "2025-12-09",
+  "oldest_processed_date": "2025-11-28",
   "status": "in_progress"
  },
  "ガイア瑞江店": {
@@ -1354,10 +1354,10 @@
   "status": "pending"
  },
  "デルパラ吉川店": {
-  "days_done": 334,
+  "days_done": 344,
   "last_synced_at": "2026-11-06T20:09:11.178225",
   "newest_processed_date": "2025-10-09",
-  "oldest_processed_date": "2025-11-24",
+  "oldest_processed_date": "2025-11-14",
   "status": "in_progress"
  },
  "デルパラ川口店": {
@@ -1921,8 +1921,8 @@
  },
  "マルハン大山店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T14:29:51.583309",
-  "newest_processed_date": "2026-10-20",
+  "last_synced_at": "2026-11-07T07:34:06.162709",
+  "newest_processed_date": "2026-10-26",
   "oldest_processed_date": "2025-10-04",
   "status": "done"
  },
@@ -1961,24 +1961,24 @@
   "status": "pending"
  },
  "マルハン日野店": {
-  "days_done": 102,
+  "days_done": 112,
   "last_synced_at": "2026-11-06T23:55:16.540641",
   "newest_processed_date": "2026-10-19",
-  "oldest_processed_date": "2026-07-01",
+  "oldest_processed_date": "2026-06-21",
   "status": "in_progress"
  },
  "マルハン昭島店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T14:50:03.678059",
-  "newest_processed_date": "2026-10-21",
+  "last_synced_at": "2026-11-07T07:35:43.592686",
+  "newest_processed_date": "2026-10-29",
   "oldest_processed_date": "2025-10-06",
   "status": "done"
  },
  "マルハン東大和店": {
-  "days_done": 241,
+  "days_done": 251,
   "last_synced_at": "2026-11-06T22:39:22.445499",
   "newest_processed_date": "2025-10-04",
-  "oldest_processed_date": "2026-03-08",
+  "oldest_processed_date": "2026-02-26",
   "status": "in_progress"
  },
  "マルハン池袋SLOT BASE": {
@@ -1987,17 +1987,17 @@
   "status": "pending"
  },
  "マルハン池袋SLOT-BASE": {
-  "days_done": 17,
+  "days_done": 19,
   "last_synced_at": "2026-11-06T23:55:54.801244",
   "newest_processed_date": "2025-09-30",
-  "oldest_processed_date": "2026-09-08",
+  "oldest_processed_date": "2026-09-06",
   "status": "in_progress"
  },
  "マルハン池袋店": {
-  "days_done": 261,
+  "days_done": 273,
   "last_synced_at": "2026-11-06T23:54:35.582334",
   "newest_processed_date": "2026-10-12",
-  "oldest_processed_date": "2025-12-28",
+  "oldest_processed_date": "2025-12-16",
   "status": "in_progress"
  },
  "マルハン深谷店": {
@@ -2015,10 +2015,10 @@
   "status": "done"
  },
  "マルハン青梅新町店": {
-  "days_done": 236,
+  "days_done": 246,
   "last_synced_at": "2026-11-06T23:54:02.640038",
   "newest_processed_date": "2026-10-14",
-  "oldest_processed_date": "2026-02-13",
+  "oldest_processed_date": "2026-02-03",
   "status": "in_progress"
  },
  "マルハン鷲宮店": {
@@ -2460,8 +2460,8 @@
  },
  "楽園池袋店グリーンサイド": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T14:50:40.378320",
-  "newest_processed_date": "2026-10-19",
+  "last_synced_at": "2026-11-07T07:36:16.336056",
+  "newest_processed_date": "2026-10-23",
   "next_url": "https://min-repo.com/2653276/",
   "status": "done"
  },
