@@ -58,8 +58,8 @@
  },
  "BIGディッパー東中野店": {
   "days_done": 299,
-  "last_synced_at": "2026-11-06T21:14:41.503077",
-  "newest_processed_date": "2026-10-24",
+  "last_synced_at": "2026-11-07T15:27:49.847311",
+  "newest_processed_date": "2026-10-26",
   "oldest_processed_date": "2025-12-19",
   "status": "done"
  },
@@ -260,8 +260,8 @@
  },
  "みとや大森町店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T21:13:33.007790",
-  "newest_processed_date": "2026-10-28",
+  "last_synced_at": "2026-11-07T15:26:37.829680",
+  "newest_processed_date": "2026-11-04",
   "next_url": "https://min-repo.com/2668033/",
   "status": "done"
  },
@@ -1386,10 +1386,10 @@
   "status": "pending"
  },
  "トワーズ西八店": {
-  "days_done": 78,
+  "days_done": 88,
   "last_synced_at": "2026-11-07T12:12:17.435368",
   "newest_processed_date": "2026-10-22",
-  "oldest_processed_date": "2026-04-11",
+  "oldest_processed_date": "2026-03-16",
   "status": "in_progress"
  },
  "トワーズ青梅IC店": {
@@ -1675,10 +1675,10 @@
   "status": "pending"
  },
  "ビッグアップル秋葉原店": {
-  "days_done": 89,
+  "days_done": 97,
   "last_synced_at": "2026-11-07T10:46:47.813331",
   "newest_processed_date": "2026-10-12",
-  "oldest_processed_date": "2026-08-10",
+  "oldest_processed_date": "2026-08-02",
   "status": "in_progress"
  },
  "ピーアーク三田": {
@@ -1888,10 +1888,10 @@
   "status": "not_found"
  },
  "マルハンメガシティ2000蒲田7": {
-  "days_done": 132,
+  "days_done": 140,
   "last_synced_at": "2026-11-07T09:21:16.815043",
   "newest_processed_date": "2026-10-12",
-  "oldest_processed_date": "2026-06-25",
+  "oldest_processed_date": "2026-06-17",
   "status": "in_progress"
  },
  "マルハンメガシティ東大和": {
@@ -1963,17 +1963,17 @@
   "status": "done"
  },
  "マルハン新宿東宝ビル店": {
-  "days_done": 120,
+  "days_done": 128,
   "last_synced_at": "2026-11-07T10:25:22.613559",
   "newest_processed_date": "2026-10-11",
-  "oldest_processed_date": "2026-07-08",
+  "oldest_processed_date": "2026-06-30",
   "status": "in_progress"
  },
  "マルハン日野店": {
-  "days_done": 306,
+  "days_done": 309,
   "last_synced_at": "2026-11-06T23:55:16.540641",
   "newest_processed_date": "2026-10-19",
-  "oldest_processed_date": "2025-12-09",
+  "oldest_processed_date": "2025-12-05",
   "status": "in_progress"
  },
  "マルハン昭島店": {
@@ -1996,10 +1996,10 @@
   "status": "pending"
  },
  "マルハン池袋SLOT-BASE": {
-  "days_done": 197,
+  "days_done": 207,
   "last_synced_at": "2026-11-06T23:55:54.801244",
   "newest_processed_date": "2025-09-30",
-  "oldest_processed_date": "2026-03-11",
+  "oldest_processed_date": "2026-03-01",
   "status": "in_progress"
  },
  "マルハン池袋店": {
@@ -2038,10 +2038,10 @@
   "status": "done"
  },
  "マルハン鹿浜店": {
-  "days_done": 154,
+  "days_done": 163,
   "last_synced_at": "2026-11-07T00:58:04.136499",
   "newest_processed_date": "2026-10-18",
-  "oldest_processed_date": "2026-06-02",
+  "oldest_processed_date": "2026-05-24",
   "status": "in_progress"
  },
  "マルホン": {
@@ -2222,10 +2222,10 @@
   "status": "done"
  },
  "ライオン": {
-  "days_done": 9,
+  "days_done": 11,
   "last_synced_at": "2026-11-07T12:12:52.943587",
   "newest_processed_date": "2026-10-14",
-  "oldest_processed_date": "2026-10-29",
+  "oldest_processed_date": "2026-10-27",
   "status": "in_progress"
  },
  "ライブガーデン上尾スロット館": {
@@ -2260,8 +2260,8 @@
  },
  "レッドロック学芸大学駅前店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T21:14:08.657119",
-  "newest_processed_date": "2026-10-28",
+  "last_synced_at": "2026-11-07T15:27:13.425746",
+  "newest_processed_date": "2026-11-04",
   "next_url": "https://min-repo.com/2668914/",
   "status": "done"
  },
@@ -2357,8 +2357,8 @@
  },
  "大山オーシャン": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T20:53:52.524725",
-  "newest_processed_date": "2026-10-29",
+  "last_synced_at": "2026-11-07T15:25:27.589525",
+  "newest_processed_date": "2026-11-05",
   "next_url": "https://min-repo.com/2668343/",
   "status": "done"
  },
@@ -2602,8 +2602,8 @@
  },
  "練馬オーシャン": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T20:54:24.026386",
-  "newest_processed_date": "2026-10-25",
+  "last_synced_at": "2026-11-07T15:26:02.814832",
+  "newest_processed_date": "2026-10-31",
   "next_url": "https://min-repo.com/2668407/",
   "status": "done"
  },
