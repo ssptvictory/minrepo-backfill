@@ -417,8 +417,8 @@
  },
  "アスカ杉戸店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T04:11:32.859407",
-  "newest_processed_date": "2026-10-26",
+  "last_synced_at": "2026-11-07T22:15:09.008892",
+  "newest_processed_date": "2026-11-01",
   "oldest_processed_date": "2021-04-28",
   "status": "done"
  },
@@ -510,10 +510,10 @@
   "status": "done"
  },
  "ウイング": {
-  "days_done": 37,
+  "days_done": 48,
   "last_synced_at": "2026-11-07T20:26:10.432400",
   "newest_processed_date": "2026-10-14",
-  "oldest_processed_date": "2026-09-30",
+  "oldest_processed_date": "2026-09-19",
   "status": "in_progress"
  },
  "ウイングキャッスル": {
@@ -684,8 +684,8 @@
  },
  "オータ川島店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T04:12:08.385638",
-  "newest_processed_date": "2026-10-22",
+  "last_synced_at": "2026-11-07T22:15:40.096612",
+  "newest_processed_date": "2026-10-24",
   "oldest_processed_date": "2025-10-04",
   "status": "done"
  },
@@ -1318,8 +1318,8 @@
  },
  "チンジャラ会館": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T03:51:06.373545",
-  "newest_processed_date": "2026-10-26",
+  "last_synced_at": "2026-11-07T22:13:22.021613",
+  "newest_processed_date": "2026-11-02",
   "next_url": "https://min-repo.com/2650602/",
   "status": "done"
  },
@@ -1375,10 +1375,10 @@
   "status": "pending"
  },
  "トワーズ東久留米店": {
-  "days_done": 99,
+  "days_done": 110,
   "last_synced_at": "2026-11-07T17:34:55.931217",
   "newest_processed_date": "2026-10-30",
-  "oldest_processed_date": "2025-06-18",
+  "oldest_processed_date": "2025-04-20",
   "status": "in_progress"
  },
  "トワーズ羽村店": {
@@ -1388,10 +1388,10 @@
   "status": "pending"
  },
  "トワーズ西八店": {
-  "days_done": 336,
+  "days_done": 344,
   "last_synced_at": "2026-11-07T12:12:17.435368",
   "newest_processed_date": "2026-10-22",
-  "oldest_processed_date": "2024-09-14",
+  "oldest_processed_date": "2024-09-06",
   "status": "in_progress"
  },
  "トワーズ青梅IC店": {
@@ -1560,8 +1560,8 @@
  },
  "パラッツォ三郷中央店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T04:11:01.032015",
-  "newest_processed_date": "2026-10-30",
+  "last_synced_at": "2026-11-07T22:14:33.480643",
+  "newest_processed_date": "2026-11-05",
   "next_url": "https://min-repo.com/2650960/",
   "status": "done"
  },
@@ -1677,10 +1677,10 @@
   "status": "pending"
  },
  "ビッグアップル秋葉原店": {
-  "days_done": 319,
+  "days_done": 329,
   "last_synced_at": "2026-11-07T10:46:47.813331",
   "newest_processed_date": "2026-10-12",
-  "oldest_processed_date": "2024-09-25",
+  "oldest_processed_date": "2024-09-15",
   "status": "in_progress"
  },
  "ピーアーク三田": {
@@ -1890,10 +1890,10 @@
   "status": "not_found"
  },
  "マルハンメガシティ2000蒲田7": {
-  "days_done": 347,
+  "days_done": 357,
   "last_synced_at": "2026-11-07T09:21:16.815043",
   "newest_processed_date": "2026-10-12",
-  "oldest_processed_date": "2025-11-22",
+  "oldest_processed_date": "2025-11-12",
   "status": "in_progress"
  },
  "マルハンメガシティ東大和": {
@@ -1965,10 +1965,10 @@
   "status": "done"
  },
  "マルハン新宿東宝ビル店": {
-  "days_done": 333,
+  "days_done": 342,
   "last_synced_at": "2026-11-07T10:25:22.613559",
   "newest_processed_date": "2026-10-11",
-  "oldest_processed_date": "2025-12-07",
+  "oldest_processed_date": "2025-11-28",
   "status": "in_progress"
  },
  "マルハン日野店": {
@@ -2224,10 +2224,10 @@
   "status": "done"
  },
  "ライオン": {
-  "days_done": 202,
+  "days_done": 210,
   "last_synced_at": "2026-11-07T12:12:52.943587",
   "newest_processed_date": "2026-10-14",
-  "oldest_processed_date": "2026-04-16",
+  "oldest_processed_date": "2026-04-08",
   "status": "in_progress"
  },
  "ライブガーデン上尾スロット館": {
@@ -2244,8 +2244,8 @@
  },
  "ライブガーデン幸手権現堂": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T03:51:39.840735",
-  "newest_processed_date": "2026-10-28",
+  "last_synced_at": "2026-11-07T22:14:00.445566",
+  "newest_processed_date": "2026-11-03",
   "next_url": "https://min-repo.com/2650371/",
   "status": "done"
  },
@@ -2275,10 +2275,10 @@
   "status": "done"
  },
  "三栄ホール": {
-  "days_done": 7,
+  "days_done": 9,
   "last_synced_at": "2026-11-07T21:30:49.230424",
   "newest_processed_date": "2026-10-14",
-  "oldest_processed_date": "2026-11-01",
+  "oldest_processed_date": "2026-10-30",
   "status": "in_progress"
  },
  "上尾ウノ": {
