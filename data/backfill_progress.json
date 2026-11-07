@@ -2636,6 +2636,11 @@
   "oldest_processed_date": null,
   "status": "pending"
  },
+ "遊劇場ⅱ": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "pending"
+ },
  "金時京急蒲田店": {
   "days_done": 365,
   "last_synced_at": "2026-11-07T15:04:11.512508",
