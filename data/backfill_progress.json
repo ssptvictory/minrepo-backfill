@@ -510,16 +510,16 @@
   "status": "done"
  },
  "ウイング": {
-  "days_done": 10,
+  "days_done": 23,
   "last_synced_at": "2026-11-07T20:26:10.432400",
   "newest_processed_date": "2026-10-14",
-  "oldest_processed_date": "2026-10-28",
+  "oldest_processed_date": "2026-10-15",
   "status": "in_progress"
  },
  "ウイングキャッスル": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T03:08:38.431783",
-  "newest_processed_date": "2026-10-19",
+  "last_synced_at": "2026-11-07T21:31:21.070551",
+  "newest_processed_date": "2026-10-26",
   "oldest_processed_date": "2025-09-03",
   "status": "done"
  },
@@ -1375,10 +1375,10 @@
   "status": "pending"
  },
  "トワーズ東久留米店": {
-  "days_done": 73,
+  "days_done": 86,
   "last_synced_at": "2026-11-07T17:34:55.931217",
   "newest_processed_date": "2026-10-30",
-  "oldest_processed_date": "2025-10-28",
+  "oldest_processed_date": "2025-08-20",
   "status": "in_progress"
  },
  "トワーズ羽村店": {
@@ -1388,10 +1388,10 @@
   "status": "pending"
  },
  "トワーズ西八店": {
-  "days_done": 308,
+  "days_done": 322,
   "last_synced_at": "2026-11-07T12:12:17.435368",
   "newest_processed_date": "2026-10-22",
-  "oldest_processed_date": "2024-10-12",
+  "oldest_processed_date": "2024-09-28",
   "status": "in_progress"
  },
  "トワーズ青梅IC店": {
@@ -1573,8 +1573,8 @@
  },
  "パラッツォ川越店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T03:28:32.395251",
-  "newest_processed_date": "2026-10-27",
+  "last_synced_at": "2026-11-07T21:32:26.570589",
+  "newest_processed_date": "2026-11-02",
   "next_url": "https://min-repo.com/2648579/",
   "status": "done"
  },
@@ -1600,8 +1600,8 @@
  },
  "パラッツォ蕨店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T03:29:05.511435",
-  "newest_processed_date": "2026-10-21",
+  "last_synced_at": "2026-11-07T21:32:58.337360",
+  "newest_processed_date": "2026-10-25",
   "next_url": "https://min-repo.com/2648091/",
   "status": "done"
  },
@@ -1677,10 +1677,10 @@
   "status": "pending"
  },
  "ビッグアップル秋葉原店": {
-  "days_done": 296,
+  "days_done": 307,
   "last_synced_at": "2026-11-07T10:46:47.813331",
   "newest_processed_date": "2026-10-12",
-  "oldest_processed_date": "2024-10-18",
+  "oldest_processed_date": "2024-10-07",
   "status": "in_progress"
  },
  "ピーアーク三田": {
@@ -1716,8 +1716,8 @@
  },
  "ピーアーク春日部": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T03:28:01.086697",
-  "newest_processed_date": "2026-10-25",
+  "last_synced_at": "2026-11-07T21:31:54.051554",
+  "newest_processed_date": "2026-11-01",
   "next_url": "https://min-repo.com/2648593/",
   "status": "done"
  },
@@ -1890,10 +1890,10 @@
   "status": "not_found"
  },
  "マルハンメガシティ2000蒲田7": {
-  "days_done": 324,
+  "days_done": 335,
   "last_synced_at": "2026-11-07T09:21:16.815043",
   "newest_processed_date": "2026-10-12",
-  "oldest_processed_date": "2025-12-15",
+  "oldest_processed_date": "2025-12-04",
   "status": "in_progress"
  },
  "マルハンメガシティ東大和": {
@@ -1965,10 +1965,10 @@
   "status": "done"
  },
  "マルハン新宿東宝ビル店": {
-  "days_done": 309,
+  "days_done": 321,
   "last_synced_at": "2026-11-07T10:25:22.613559",
   "newest_processed_date": "2026-10-11",
-  "oldest_processed_date": "2025-12-31",
+  "oldest_processed_date": "2025-12-19",
   "status": "in_progress"
  },
  "マルハン日野店": {
@@ -2224,10 +2224,10 @@
   "status": "done"
  },
  "ライオン": {
-  "days_done": 174,
+  "days_done": 187,
   "last_synced_at": "2026-11-07T12:12:52.943587",
   "newest_processed_date": "2026-10-14",
-  "oldest_processed_date": "2026-05-14",
+  "oldest_processed_date": "2026-05-01",
   "status": "in_progress"
  },
  "ライブガーデン上尾スロット館": {
@@ -2275,10 +2275,11 @@
   "status": "done"
  },
  "三栄ホール": {
-  "days_done": 0,
-  "newest_processed_date": "2026-10-05",
-  "oldest_processed_date": null,
-  "status": "pending"
+  "days_done": 4,
+  "last_synced_at": "2026-11-07T21:30:49.230424",
+  "newest_processed_date": "2026-10-14",
+  "oldest_processed_date": "2026-11-04",
+  "status": "in_progress"
  },
  "上尾ウノ": {
   "days_done": 365,
