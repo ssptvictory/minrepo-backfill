@@ -973,8 +973,8 @@
  },
  "グランポート青物横丁店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T17:20:51.852348",
-  "newest_processed_date": "2026-10-18",
+  "last_synced_at": "2026-11-07T10:49:10.511615",
+  "newest_processed_date": "2026-10-19",
   "next_url": "https://min-repo.com/2660563/",
   "status": "done"
  },
@@ -1193,8 +1193,8 @@
  },
  "ジャンジャンマールゴット日野駅前店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T17:19:44.412422",
-  "newest_processed_date": "2026-10-22",
+  "last_synced_at": "2026-11-07T10:47:58.612352",
+  "newest_processed_date": "2026-10-29",
   "next_url": "https://min-repo.com/2660603/",
   "status": "done"
  },
@@ -1498,8 +1498,8 @@
  },
  "ニュー太平": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T17:20:16.166960",
-  "newest_processed_date": "2026-10-22",
+  "last_synced_at": "2026-11-07T10:48:34.331254",
+  "newest_processed_date": "2026-10-29",
   "next_url": "https://min-repo.com/2660684/",
   "status": "done"
  },
@@ -1674,10 +1674,11 @@
   "status": "pending"
  },
  "ビッグアップル秋葉原店": {
-  "days_done": 0,
-  "newest_processed_date": "2026-10-05",
-  "oldest_processed_date": null,
-  "status": "pending"
+  "days_done": 2,
+  "last_synced_at": "2026-11-07T10:46:47.813331",
+  "newest_processed_date": "2026-10-12",
+  "oldest_processed_date": "2026-11-05",
+  "status": "in_progress"
  },
  "ピーアーク三田": {
   "days_done": 0,
@@ -1801,8 +1802,8 @@
  },
  "プライム平井": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T17:19:11.000766",
-  "newest_processed_date": "2026-10-18",
+  "last_synced_at": "2026-11-07T10:47:24.257405",
+  "newest_processed_date": "2026-10-25",
   "next_url": "https://min-repo.com/2660737/",
   "status": "done"
  },
@@ -1883,13 +1884,13 @@
  "マルハンメガシティ2000-蒲田1": {
   "days_done": 0,
   "oldest_processed_date": null,
-  "status": "pending"
+  "status": "not_found"
  },
  "マルハンメガシティ2000蒲田7": {
-  "days_done": 27,
+  "days_done": 37,
   "last_synced_at": "2026-11-07T09:21:16.815043",
   "newest_processed_date": "2026-10-12",
-  "oldest_processed_date": "2026-10-09",
+  "oldest_processed_date": "2026-09-29",
   "status": "in_progress"
  },
  "マルハンメガシティ東大和": {
@@ -1961,17 +1962,17 @@
   "status": "done"
  },
  "マルハン新宿東宝ビル店": {
-  "days_done": 11,
+  "days_done": 22,
   "last_synced_at": "2026-11-07T10:25:22.613559",
   "newest_processed_date": "2026-10-11",
-  "oldest_processed_date": "2026-10-26",
+  "oldest_processed_date": "2026-10-15",
   "status": "in_progress"
  },
  "マルハン日野店": {
-  "days_done": 195,
+  "days_done": 205,
   "last_synced_at": "2026-11-06T23:55:16.540641",
   "newest_processed_date": "2026-10-19",
-  "oldest_processed_date": "2026-03-30",
+  "oldest_processed_date": "2026-03-20",
   "status": "in_progress"
  },
  "マルハン昭島店": {
@@ -1982,10 +1983,10 @@
   "status": "done"
  },
  "マルハン東大和店": {
-  "days_done": 332,
+  "days_done": 342,
   "last_synced_at": "2026-11-06T22:39:22.445499",
   "newest_processed_date": "2025-10-04",
-  "oldest_processed_date": "2025-12-07",
+  "oldest_processed_date": "2025-11-27",
   "status": "in_progress"
  },
  "マルハン池袋SLOT BASE": {
@@ -1994,10 +1995,10 @@
   "status": "pending"
  },
  "マルハン池袋SLOT-BASE": {
-  "days_done": 83,
+  "days_done": 92,
   "last_synced_at": "2026-11-06T23:55:54.801244",
   "newest_processed_date": "2025-09-30",
-  "oldest_processed_date": "2026-07-03",
+  "oldest_processed_date": "2026-06-24",
   "status": "in_progress"
  },
  "マルハン池袋店": {
@@ -2022,10 +2023,10 @@
   "status": "done"
  },
  "マルハン青梅新町店": {
-  "days_done": 329,
+  "days_done": 339,
   "last_synced_at": "2026-11-06T23:54:02.640038",
   "newest_processed_date": "2026-10-14",
-  "oldest_processed_date": "2025-11-12",
+  "oldest_processed_date": "2025-11-02",
   "status": "in_progress"
  },
  "マルハン鷲宮店": {
@@ -2036,10 +2037,10 @@
   "status": "done"
  },
  "マルハン鹿浜店": {
-  "days_done": 46,
+  "days_done": 53,
   "last_synced_at": "2026-11-07T00:58:04.136499",
   "newest_processed_date": "2026-10-18",
-  "oldest_processed_date": "2026-09-19",
+  "oldest_processed_date": "2026-09-12",
   "status": "in_progress"
  },
  "マルホン": {
