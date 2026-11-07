@@ -1,0 +1,47 @@
+name: Scrape NAVITIME train timetables
+
+on:
+  schedule:
+    # Crawl-delay:10を守るため1回の実行で25分ほどかけてゆっくり進める。
+    # 15分おきに起動(cron-job.orgからも叩く前提)、concurrencyで多重起動は防ぐ
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: navitime-timetable
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run NAVITIME timetable scraper
+        run: python3 navitime_timetable_scraper.py
+
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/navitime_timetable.parquet data/navitime_progress.json data/navitime_lines.json data/navitime_stations.json
+          git diff --cached --quiet || git commit -m "chore: NAVITIME timetable scrape $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
+          if ! git pull --rebase; then
+            echo "::warning::pull --rebase failed (likely binary conflict in a parquet file). Discarding this run's commit and syncing to remote instead."
+            git rebase --abort || true
+            git reset --hard origin/main
+            exit 0
+          fi
+          git push
