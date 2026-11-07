@@ -213,8 +213,8 @@
  },
  "YASUDA5": {
   "days_done": 322,
-  "last_synced_at": "2026-11-06T16:16:55.707093",
-  "newest_processed_date": "2026-10-20",
+  "last_synced_at": "2026-11-07T09:22:32.230755",
+  "newest_processed_date": "2026-10-27",
   "oldest_processed_date": "2025-11-19",
   "status": "done"
  },
@@ -362,10 +362,10 @@
   "status": "done"
  },
  "やすだ東池袋9号店": {
-  "days_done": 345,
+  "days_done": 358,
   "last_synced_at": "2026-11-06T22:38:51.215376",
   "newest_processed_date": "2025-09-30",
-  "oldest_processed_date": "2025-11-08",
+  "oldest_processed_date": "2025-10-22",
   "status": "in_progress"
  },
  "やすだ清水町店": {
@@ -892,8 +892,8 @@
  },
  "キコーナ蒲田店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T16:35:56.673972",
-  "newest_processed_date": "2026-10-20",
+  "last_synced_at": "2026-11-07T09:23:03.374691",
+  "newest_processed_date": "2026-10-28",
   "oldest_processed_date": "2025-10-03",
   "status": "done"
  },
@@ -1200,8 +1200,8 @@
  },
  "ジャンジャンマールゴット調布国領駅前店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T16:36:31.430466",
-  "newest_processed_date": "2026-10-27",
+  "last_synced_at": "2026-11-07T09:23:37.528581",
+  "newest_processed_date": "2026-10-29",
   "next_url": "https://min-repo.com/2659036/",
   "status": "done"
  },
@@ -1638,8 +1638,8 @@
  },
  "パーラースーパーセブン新中野店": {
   "days_done": 400,
-  "last_synced_at": "2026-11-06T16:16:55.086980",
-  "newest_processed_date": "2026-11-05",
+  "last_synced_at": "2026-11-07T09:22:27.769496",
+  "newest_processed_date": "2026-11-06",
   "next_url": null,
   "status": "done"
  },
@@ -1881,10 +1881,11 @@
   "status": "pending"
  },
  "マルハンメガシティ2000蒲田7": {
-  "days_done": 0,
-  "newest_processed_date": "2026-10-05",
-  "oldest_processed_date": null,
-  "status": "pending"
+  "days_done": 4,
+  "last_synced_at": "2026-11-07T09:21:16.815043",
+  "newest_processed_date": "2026-10-12",
+  "oldest_processed_date": "2026-11-03",
+  "status": "in_progress"
  },
  "マルハンメガシティ東大和": {
   "days_done": 0,
@@ -1961,10 +1962,10 @@
   "status": "pending"
  },
  "マルハン日野店": {
-  "days_done": 159,
+  "days_done": 172,
   "last_synced_at": "2026-11-06T23:55:16.540641",
   "newest_processed_date": "2026-10-19",
-  "oldest_processed_date": "2026-05-05",
+  "oldest_processed_date": "2026-04-22",
   "status": "in_progress"
  },
  "マルハン昭島店": {
@@ -1975,10 +1976,10 @@
   "status": "done"
  },
  "マルハン東大和店": {
-  "days_done": 298,
+  "days_done": 309,
   "last_synced_at": "2026-11-06T22:39:22.445499",
   "newest_processed_date": "2025-10-04",
-  "oldest_processed_date": "2026-01-10",
+  "oldest_processed_date": "2025-12-30",
   "status": "in_progress"
  },
  "マルハン池袋SLOT BASE": {
@@ -1987,17 +1988,17 @@
   "status": "pending"
  },
  "マルハン池袋SLOT-BASE": {
-  "days_done": 47,
+  "days_done": 59,
   "last_synced_at": "2026-11-06T23:55:54.801244",
   "newest_processed_date": "2025-09-30",
-  "oldest_processed_date": "2026-08-08",
+  "oldest_processed_date": "2026-07-27",
   "status": "in_progress"
  },
  "マルハン池袋店": {
-  "days_done": 324,
+  "days_done": 338,
   "last_synced_at": "2026-11-06T23:54:35.582334",
   "newest_processed_date": "2026-10-12",
-  "oldest_processed_date": "2025-10-25",
+  "oldest_processed_date": "2025-10-11",
   "status": "in_progress"
  },
  "マルハン深谷店": {
@@ -2015,10 +2016,10 @@
   "status": "done"
  },
  "マルハン青梅新町店": {
-  "days_done": 294,
+  "days_done": 306,
   "last_synced_at": "2026-11-06T23:54:02.640038",
   "newest_processed_date": "2026-10-14",
-  "oldest_processed_date": "2025-12-17",
+  "oldest_processed_date": "2025-12-05",
   "status": "in_progress"
  },
  "マルハン鷲宮店": {
@@ -2029,10 +2030,10 @@
   "status": "done"
  },
  "マルハン鹿浜店": {
-  "days_done": 8,
+  "days_done": 21,
   "last_synced_at": "2026-11-07T00:58:04.136499",
   "newest_processed_date": "2026-10-18",
-  "oldest_processed_date": "2026-10-28",
+  "oldest_processed_date": "2026-10-14",
   "status": "in_progress"
  },
  "マルホン": {
@@ -2613,8 +2614,8 @@
  },
  "遊劇場3": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T16:16:22.393862",
-  "newest_processed_date": "2026-10-22",
+  "last_synced_at": "2026-11-07T09:21:52.695788",
+  "newest_processed_date": "2026-10-30",
   "oldest_processed_date": "2025-10-07",
   "status": "done"
  },
