@@ -1324,8 +1324,8 @@
  },
  "ディスカバリー": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T00:17:00.145522",
-  "newest_processed_date": "2026-10-14",
+  "last_synced_at": "2026-11-07T18:39:00.280746",
+  "newest_processed_date": "2026-10-22",
   "next_url": "https://min-repo.com/2620595/",
   "status": "done"
  },
@@ -1374,10 +1374,10 @@
   "status": "pending"
  },
  "トワーズ東久留米店": {
-  "days_done": 7,
+  "days_done": 11,
   "last_synced_at": "2026-11-07T17:34:55.931217",
   "newest_processed_date": "2026-10-30",
-  "oldest_processed_date": "2026-09-30",
+  "oldest_processed_date": "2026-09-10",
   "status": "in_progress"
  },
  "トワーズ羽村店": {
@@ -1387,10 +1387,10 @@
   "status": "pending"
  },
  "トワーズ西八店": {
-  "days_done": 196,
+  "days_done": 209,
   "last_synced_at": "2026-11-07T12:12:17.435368",
   "newest_processed_date": "2026-10-22",
-  "oldest_processed_date": "2025-06-06",
+  "oldest_processed_date": "2025-04-30",
   "status": "in_progress"
  },
  "トワーズ青梅IC店": {
@@ -1456,8 +1456,8 @@
  },
  "ニューダイエイ": {
   "days_done": 359,
-  "last_synced_at": "2026-11-07T00:17:34.690350",
-  "newest_processed_date": "2026-10-02",
+  "last_synced_at": "2026-11-07T18:39:34.096162",
+  "newest_processed_date": "2026-10-11",
   "oldest_processed_date": "2025-08-17",
   "status": "done"
  },
@@ -1473,8 +1473,8 @@
  },
  "ニューヨーク": {
   "days_done": 357,
-  "last_synced_at": "2026-11-07T00:36:42.661564",
-  "newest_processed_date": "2026-10-11",
+  "last_synced_at": "2026-11-07T18:40:06.827726",
+  "newest_processed_date": "2026-10-18",
   "oldest_processed_date": "2025-09-27",
   "status": "done"
  },
@@ -1507,8 +1507,8 @@
  },
  "ノア東松山店": {
   "days_done": 358,
-  "last_synced_at": "2026-11-07T00:37:18.525377",
-  "newest_processed_date": "2026-10-17",
+  "last_synced_at": "2026-11-07T18:40:38.050391",
+  "newest_processed_date": "2026-10-25",
   "oldest_processed_date": "2025-09-14",
   "status": "done"
  },
@@ -1613,8 +1613,8 @@
  },
  "パーラーEX滑川店": {
   "days_done": 359,
-  "last_synced_at": "2026-11-07T00:37:52.972022",
-  "newest_processed_date": "2026-10-07",
+  "last_synced_at": "2026-11-07T18:41:12.068529",
+  "newest_processed_date": "2026-10-11",
   "oldest_processed_date": "2025-09-24",
   "status": "done"
  },
@@ -1676,10 +1676,10 @@
   "status": "pending"
  },
  "ビッグアップル秋葉原店": {
-  "days_done": 192,
+  "days_done": 204,
   "last_synced_at": "2026-11-07T10:46:47.813331",
   "newest_processed_date": "2026-10-12",
-  "oldest_processed_date": "2025-04-11",
+  "oldest_processed_date": "2025-03-30",
   "status": "in_progress"
  },
  "ピーアーク三田": {
@@ -1889,10 +1889,10 @@
   "status": "not_found"
  },
  "マルハンメガシティ2000蒲田7": {
-  "days_done": 227,
+  "days_done": 239,
   "last_synced_at": "2026-11-07T09:21:16.815043",
   "newest_processed_date": "2026-10-12",
-  "oldest_processed_date": "2026-03-22",
+  "oldest_processed_date": "2026-03-10",
   "status": "in_progress"
  },
  "マルハンメガシティ東大和": {
@@ -1964,10 +1964,10 @@
   "status": "done"
  },
  "マルハン新宿東宝ビル店": {
-  "days_done": 217,
+  "days_done": 228,
   "last_synced_at": "2026-11-07T10:25:22.613559",
   "newest_processed_date": "2026-10-11",
-  "oldest_processed_date": "2026-04-02",
+  "oldest_processed_date": "2026-03-22",
   "status": "in_progress"
  },
  "マルハン日野店": {
@@ -1997,10 +1997,10 @@
   "status": "pending"
  },
  "マルハン池袋SLOT-BASE": {
-  "days_done": 304,
+  "days_done": 317,
   "last_synced_at": "2026-11-07T18:18:09.704332",
   "newest_processed_date": "2025-10-07",
-  "oldest_processed_date": "2025-11-24",
+  "oldest_processed_date": "2025-11-11",
   "status": "in_progress"
  },
  "マルハン池袋店": {
@@ -2039,10 +2039,10 @@
   "status": "done"
  },
  "マルハン鹿浜店": {
-  "days_done": 259,
+  "days_done": 271,
   "last_synced_at": "2026-11-07T00:58:04.136499",
   "newest_processed_date": "2026-10-18",
-  "oldest_processed_date": "2026-02-17",
+  "oldest_processed_date": "2026-02-05",
   "status": "in_progress"
  },
  "マルホン": {
@@ -2223,10 +2223,10 @@
   "status": "done"
  },
  "ライオン": {
-  "days_done": 63,
+  "days_done": 77,
   "last_synced_at": "2026-11-07T12:12:52.943587",
   "newest_processed_date": "2026-10-14",
-  "oldest_processed_date": "2026-09-03",
+  "oldest_processed_date": "2026-08-20",
   "status": "in_progress"
  },
  "ライブガーデン上尾スロット館": {
