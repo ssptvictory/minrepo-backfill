@@ -106,8 +106,8 @@
  },
  "MGM国領店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T13:03:01.108402",
-  "newest_processed_date": "2026-10-18",
+  "last_synced_at": "2026-11-07T05:59:40.283192",
+  "newest_processed_date": "2026-10-25",
   "oldest_processed_date": "2025-10-04",
   "status": "done"
  },
@@ -362,10 +362,10 @@
   "status": "done"
  },
  "やすだ東池袋9号店": {
-  "days_done": 229,
+  "days_done": 239,
   "last_synced_at": "2026-11-06T22:38:51.215376",
   "newest_processed_date": "2025-09-30",
-  "oldest_processed_date": "2026-03-04",
+  "oldest_processed_date": "2026-02-22",
   "status": "in_progress"
  },
  "やすだ清水町店": {
@@ -780,8 +780,8 @@
  },
  "ガイアネクスト三軒茶屋II": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T13:03:38.240751",
-  "newest_processed_date": "2026-10-18",
+  "last_synced_at": "2026-11-07T06:00:13.374705",
+  "newest_processed_date": "2026-10-20",
   "oldest_processed_date": "2025-10-04",
   "status": "done"
  },
@@ -814,8 +814,8 @@
  },
  "ガイア大泉学園店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T12:43:50.610828",
-  "newest_processed_date": "2026-10-09",
+  "last_synced_at": "2026-11-07T05:59:06.494895",
+  "newest_processed_date": "2026-10-16",
   "oldest_processed_date": "2025-10-03",
   "status": "done"
  },
@@ -839,10 +839,10 @@
   "status": "pending"
  },
  "ガイア瑞江ⅱ": {
-  "days_done": 248,
+  "days_done": 259,
   "last_synced_at": "2026-11-06T22:17:32.711779",
   "newest_processed_date": "2025-10-08",
-  "oldest_processed_date": "2026-02-05",
+  "oldest_processed_date": "2026-01-25",
   "status": "in_progress"
  },
  "ガイア瑞江店": {
@@ -1354,10 +1354,10 @@
   "status": "pending"
  },
  "デルパラ吉川店": {
-  "days_done": 278,
+  "days_done": 289,
   "last_synced_at": "2026-11-06T20:09:11.178225",
   "newest_processed_date": "2025-10-09",
-  "oldest_processed_date": "2026-01-19",
+  "oldest_processed_date": "2026-01-08",
   "status": "in_progress"
  },
  "デルパラ川口店": {
@@ -1821,8 +1821,8 @@
  },
  "ベガスベガス新宿東南口店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T12:43:15.006858",
-  "newest_processed_date": "2026-10-22",
+  "last_synced_at": "2026-11-07T05:58:30.487517",
+  "newest_processed_date": "2026-10-29",
   "next_url": "https://min-repo.com/2653466/",
   "status": "done"
  },
@@ -1961,10 +1961,10 @@
   "status": "pending"
  },
  "マルハン日野店": {
-  "days_done": 49,
+  "days_done": 59,
   "last_synced_at": "2026-11-06T23:55:16.540641",
   "newest_processed_date": "2026-10-19",
-  "oldest_processed_date": "2026-08-24",
+  "oldest_processed_date": "2026-08-14",
   "status": "in_progress"
  },
  "マルハン昭島店": {
@@ -1975,10 +1975,10 @@
   "status": "done"
  },
  "マルハン東大和店": {
-  "days_done": 187,
+  "days_done": 197,
   "last_synced_at": "2026-11-06T22:39:22.445499",
   "newest_processed_date": "2025-10-04",
-  "oldest_processed_date": "2026-05-01",
+  "oldest_processed_date": "2026-04-21",
   "status": "in_progress"
  },
  "マルハン池袋SLOT BASE": {
@@ -1987,17 +1987,17 @@
   "status": "pending"
  },
  "マルハン池袋SLOT-BASE": {
-  "days_done": 5,
+  "days_done": 7,
   "last_synced_at": "2026-11-06T23:55:54.801244",
   "newest_processed_date": "2025-09-30",
-  "oldest_processed_date": "2026-09-21",
+  "oldest_processed_date": "2026-09-19",
   "status": "in_progress"
  },
  "マルハン池袋店": {
-  "days_done": 201,
+  "days_done": 212,
   "last_synced_at": "2026-11-06T23:54:35.582334",
   "newest_processed_date": "2026-10-12",
-  "oldest_processed_date": "2026-02-26",
+  "oldest_processed_date": "2026-02-15",
   "status": "in_progress"
  },
  "マルハン深谷店": {
@@ -2015,10 +2015,10 @@
   "status": "done"
  },
  "マルハン青梅新町店": {
-  "days_done": 182,
+  "days_done": 192,
   "last_synced_at": "2026-11-06T23:54:02.640038",
   "newest_processed_date": "2026-10-14",
-  "oldest_processed_date": "2026-04-08",
+  "oldest_processed_date": "2026-03-29",
   "status": "in_progress"
  },
  "マルハン鷲宮店": {
@@ -2410,8 +2410,8 @@
  },
  "有楽町ウノ": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T12:42:41.095402",
-  "newest_processed_date": "2026-10-22",
+  "last_synced_at": "2026-11-07T05:57:55.240241",
+  "newest_processed_date": "2026-10-29",
   "next_url": "https://min-repo.com/2653760/",
   "status": "done"
  },
