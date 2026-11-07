@@ -356,8 +356,8 @@
  },
  "やすだ東大宮店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T18:01:19.130504",
-  "newest_processed_date": "2026-10-13",
+  "last_synced_at": "2026-11-07T11:29:37.190999",
+  "newest_processed_date": "2026-10-20",
   "oldest_processed_date": "2021-10-31",
   "status": "done"
  },
@@ -752,8 +752,8 @@
  },
  "カレイド下北沢店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T18:03:31.248744",
-  "newest_processed_date": "2026-10-19",
+  "last_synced_at": "2026-11-07T11:31:50.738806",
+  "newest_processed_date": "2026-10-22",
   "next_url": "https://min-repo.com/2660133/",
   "status": "done"
  },
@@ -1062,8 +1062,8 @@
  },
  "コーシン神田店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T18:01:53.470488",
-  "newest_processed_date": "2026-10-20",
+  "last_synced_at": "2026-11-07T11:30:12.684417",
+  "newest_processed_date": "2026-10-26",
   "oldest_processed_date": "2025-10-06",
   "status": "done"
  },
@@ -1122,8 +1122,8 @@
  },
  "ジアス南大沢": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T18:02:58.085259",
-  "newest_processed_date": "2026-10-22",
+  "last_synced_at": "2026-11-07T11:31:18.363391",
+  "newest_processed_date": "2026-10-28",
   "next_url": "https://min-repo.com/2653405/",
   "status": "done"
  },
@@ -1440,8 +1440,8 @@
  },
  "ニューグランド貫井店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T18:02:26.024956",
-  "newest_processed_date": "2026-10-23",
+  "last_synced_at": "2026-11-07T11:30:45.363059",
+  "newest_processed_date": "2026-10-29",
   "next_url": "https://min-repo.com/2659935/",
   "status": "done"
  },
@@ -1674,10 +1674,10 @@
   "status": "pending"
  },
  "ビッグアップル秋葉原店": {
-  "days_done": 5,
+  "days_done": 7,
   "last_synced_at": "2026-11-07T10:46:47.813331",
   "newest_processed_date": "2026-10-12",
-  "oldest_processed_date": "2026-11-02",
+  "oldest_processed_date": "2026-10-31",
   "status": "in_progress"
  },
  "ピーアーク三田": {
@@ -1887,10 +1887,10 @@
   "status": "not_found"
  },
  "マルハンメガシティ2000蒲田7": {
-  "days_done": 49,
+  "days_done": 59,
   "last_synced_at": "2026-11-07T09:21:16.815043",
   "newest_processed_date": "2026-10-12",
-  "oldest_processed_date": "2026-09-17",
+  "oldest_processed_date": "2026-09-07",
   "status": "in_progress"
  },
  "マルハンメガシティ東大和": {
@@ -1962,17 +1962,17 @@
   "status": "done"
  },
  "マルハン新宿東宝ビル店": {
-  "days_done": 33,
+  "days_done": 44,
   "last_synced_at": "2026-11-07T10:25:22.613559",
   "newest_processed_date": "2026-10-11",
-  "oldest_processed_date": "2026-10-04",
+  "oldest_processed_date": "2026-09-23",
   "status": "in_progress"
  },
  "マルハン日野店": {
-  "days_done": 215,
+  "days_done": 225,
   "last_synced_at": "2026-11-06T23:55:16.540641",
   "newest_processed_date": "2026-10-19",
-  "oldest_processed_date": "2026-03-10",
+  "oldest_processed_date": "2026-02-28",
   "status": "in_progress"
  },
  "マルハン昭島店": {
@@ -1983,10 +1983,10 @@
   "status": "done"
  },
  "マルハン東大和店": {
-  "days_done": 352,
+  "days_done": 354,
   "last_synced_at": "2026-11-06T22:39:22.445499",
   "newest_processed_date": "2025-10-04",
-  "oldest_processed_date": "2025-11-17",
+  "oldest_processed_date": "2025-11-14",
   "status": "in_progress"
  },
  "マルハン池袋SLOT BASE": {
@@ -1995,10 +1995,10 @@
   "status": "pending"
  },
  "マルハン池袋SLOT-BASE": {
-  "days_done": 103,
+  "days_done": 113,
   "last_synced_at": "2026-11-06T23:55:54.801244",
   "newest_processed_date": "2025-09-30",
-  "oldest_processed_date": "2026-06-13",
+  "oldest_processed_date": "2026-06-03",
   "status": "in_progress"
  },
  "マルハン池袋店": {
@@ -2023,10 +2023,10 @@
   "status": "done"
  },
  "マルハン青梅新町店": {
-  "days_done": 350,
+  "days_done": 360,
   "last_synced_at": "2026-11-06T23:54:02.640038",
   "newest_processed_date": "2026-10-14",
-  "oldest_processed_date": "2025-10-22",
+  "oldest_processed_date": "2025-10-12",
   "status": "in_progress"
  },
  "マルハン鷲宮店": {
@@ -2037,10 +2037,10 @@
   "status": "done"
  },
  "マルハン鹿浜店": {
-  "days_done": 64,
+  "days_done": 74,
   "last_synced_at": "2026-11-07T00:58:04.136499",
   "newest_processed_date": "2026-10-18",
-  "oldest_processed_date": "2026-09-01",
+  "oldest_processed_date": "2026-08-22",
   "status": "in_progress"
  },
  "マルホン": {
