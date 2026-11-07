@@ -267,8 +267,8 @@
  },
  "みとや水道橋": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T13:24:47.769313",
-  "newest_processed_date": "2026-10-21",
+  "last_synced_at": "2026-11-07T06:10:56.450879",
+  "newest_processed_date": "2026-10-22",
   "next_url": "https://min-repo.com/2653599/",
   "status": "done"
  },
@@ -362,10 +362,10 @@
   "status": "done"
  },
  "やすだ東池袋9号店": {
-  "days_done": 239,
+  "days_done": 250,
   "last_synced_at": "2026-11-06T22:38:51.215376",
   "newest_processed_date": "2025-09-30",
-  "oldest_processed_date": "2026-02-22",
+  "oldest_processed_date": "2026-02-11",
   "status": "in_progress"
  },
  "やすだ清水町店": {
@@ -828,8 +828,8 @@
  },
  "ガイア曳舟": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T13:04:46.666493",
-  "newest_processed_date": "2026-10-23",
+  "last_synced_at": "2026-11-07T06:09:09.248902",
+  "newest_processed_date": "2026-10-30",
   "next_url": "https://min-repo.com/2651560/",
   "status": "done"
  },
@@ -839,16 +839,16 @@
   "status": "pending"
  },
  "ガイア瑞江ⅱ": {
-  "days_done": 259,
+  "days_done": 270,
   "last_synced_at": "2026-11-06T22:17:32.711779",
   "newest_processed_date": "2025-10-08",
-  "oldest_processed_date": "2026-01-25",
+  "oldest_processed_date": "2026-01-14",
   "status": "in_progress"
  },
  "ガイア瑞江店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T13:05:21.435761",
-  "newest_processed_date": "2026-10-09",
+  "last_synced_at": "2026-11-07T06:09:44.946384",
+  "newest_processed_date": "2026-10-16",
   "oldest_processed_date": "2025-10-03",
   "status": "done"
  },
@@ -1354,10 +1354,10 @@
   "status": "pending"
  },
  "デルパラ吉川店": {
-  "days_done": 289,
+  "days_done": 300,
   "last_synced_at": "2026-11-06T20:09:11.178225",
   "newest_processed_date": "2025-10-09",
-  "oldest_processed_date": "2026-01-08",
+  "oldest_processed_date": "2025-12-28",
   "status": "in_progress"
  },
  "デルパラ川口店": {
@@ -1961,10 +1961,10 @@
   "status": "pending"
  },
  "マルハン日野店": {
-  "days_done": 59,
+  "days_done": 69,
   "last_synced_at": "2026-11-06T23:55:16.540641",
   "newest_processed_date": "2026-10-19",
-  "oldest_processed_date": "2026-08-14",
+  "oldest_processed_date": "2026-08-03",
   "status": "in_progress"
  },
  "マルハン昭島店": {
@@ -1975,10 +1975,10 @@
   "status": "done"
  },
  "マルハン東大和店": {
-  "days_done": 197,
+  "days_done": 206,
   "last_synced_at": "2026-11-06T22:39:22.445499",
   "newest_processed_date": "2025-10-04",
-  "oldest_processed_date": "2026-04-21",
+  "oldest_processed_date": "2026-04-12",
   "status": "in_progress"
  },
  "マルハン池袋SLOT BASE": {
@@ -1987,17 +1987,17 @@
   "status": "pending"
  },
  "マルハン池袋SLOT-BASE": {
-  "days_done": 7,
+  "days_done": 9,
   "last_synced_at": "2026-11-06T23:55:54.801244",
   "newest_processed_date": "2025-09-30",
-  "oldest_processed_date": "2026-09-19",
+  "oldest_processed_date": "2026-09-17",
   "status": "in_progress"
  },
  "マルハン池袋店": {
-  "days_done": 212,
+  "days_done": 224,
   "last_synced_at": "2026-11-06T23:54:35.582334",
   "newest_processed_date": "2026-10-12",
-  "oldest_processed_date": "2026-02-15",
+  "oldest_processed_date": "2026-02-03",
   "status": "in_progress"
  },
  "マルハン深谷店": {
@@ -2015,10 +2015,10 @@
   "status": "done"
  },
  "マルハン青梅新町店": {
-  "days_done": 192,
+  "days_done": 203,
   "last_synced_at": "2026-11-06T23:54:02.640038",
   "newest_processed_date": "2026-10-14",
-  "oldest_processed_date": "2026-03-29",
+  "oldest_processed_date": "2026-03-18",
   "status": "in_progress"
  },
  "マルハン鷲宮店": {
@@ -2103,8 +2103,8 @@
  },
  "メガガイア調布店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T13:04:12.821196",
-  "newest_processed_date": "2026-10-18",
+  "last_synced_at": "2026-11-07T06:08:37.717589",
+  "newest_processed_date": "2026-10-24",
   "oldest_processed_date": "2025-10-05",
   "status": "done"
  },
@@ -2501,8 +2501,8 @@
  },
  "武里スポーツ館": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T13:24:10.560892",
-  "newest_processed_date": "2025-09-22",
+  "last_synced_at": "2026-11-07T06:10:21.932723",
+  "newest_processed_date": "2025-09-29",
   "oldest_processed_date": "2025-10-22",
   "status": "done"
  },
