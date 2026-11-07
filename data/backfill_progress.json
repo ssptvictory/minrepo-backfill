@@ -424,8 +424,8 @@
  },
  "アスカ熊谷店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T02:45:58.005062",
-  "newest_processed_date": "2026-10-22",
+  "last_synced_at": "2026-11-07T20:49:23.286467",
+  "newest_processed_date": "2026-10-30",
   "oldest_processed_date": "2022-11-28",
   "status": "done"
  },
@@ -510,10 +510,10 @@
   "status": "done"
  },
  "ウイング": {
-  "days_done": 2,
+  "days_done": 6,
   "last_synced_at": "2026-11-07T20:26:10.432400",
   "newest_processed_date": "2026-10-14",
-  "oldest_processed_date": "2026-11-05",
+  "oldest_processed_date": "2026-11-01",
   "status": "in_progress"
  },
  "ウイングキャッスル": {
@@ -1375,10 +1375,10 @@
   "status": "pending"
  },
  "トワーズ東久留米店": {
-  "days_done": 44,
+  "days_done": 59,
   "last_synced_at": "2026-11-07T17:34:55.931217",
   "newest_processed_date": "2026-10-30",
-  "oldest_processed_date": "2026-03-28",
+  "oldest_processed_date": "2026-01-08",
   "status": "in_progress"
  },
  "トワーズ羽村店": {
@@ -1388,10 +1388,10 @@
   "status": "pending"
  },
  "トワーズ西八店": {
-  "days_done": 279,
+  "days_done": 294,
   "last_synced_at": "2026-11-07T12:12:17.435368",
   "newest_processed_date": "2026-10-22",
-  "oldest_processed_date": "2024-11-10",
+  "oldest_processed_date": "2024-10-26",
   "status": "in_progress"
  },
  "トワーズ青梅IC店": {
@@ -1677,10 +1677,10 @@
   "status": "pending"
  },
  "ビッグアップル秋葉原店": {
-  "days_done": 269,
+  "days_done": 282,
   "last_synced_at": "2026-11-07T10:46:47.813331",
   "newest_processed_date": "2026-10-12",
-  "oldest_processed_date": "2024-11-24",
+  "oldest_processed_date": "2024-11-07",
   "status": "in_progress"
  },
  "ピーアーク三田": {
@@ -1890,10 +1890,10 @@
   "status": "not_found"
  },
  "マルハンメガシティ2000蒲田7": {
-  "days_done": 300,
+  "days_done": 312,
   "last_synced_at": "2026-11-07T09:21:16.815043",
   "newest_processed_date": "2026-10-12",
-  "oldest_processed_date": "2026-01-08",
+  "oldest_processed_date": "2025-12-27",
   "status": "in_progress"
  },
  "マルハンメガシティ東大和": {
@@ -1965,10 +1965,10 @@
   "status": "done"
  },
  "マルハン新宿東宝ビル店": {
-  "days_done": 286,
+  "days_done": 297,
   "last_synced_at": "2026-11-07T10:25:22.613559",
   "newest_processed_date": "2026-10-11",
-  "oldest_processed_date": "2026-01-23",
+  "oldest_processed_date": "2026-01-12",
   "status": "in_progress"
  },
  "マルハン日野店": {
@@ -2040,10 +2040,10 @@
   "status": "done"
  },
  "マルハン鹿浜店": {
-  "days_done": 338,
+  "days_done": 352,
   "last_synced_at": "2026-11-07T19:01:32.369772",
   "newest_processed_date": "2026-10-25",
-  "oldest_processed_date": "2025-11-30",
+  "oldest_processed_date": "2025-11-16",
   "status": "in_progress"
  },
  "マルホン": {
@@ -2055,8 +2055,8 @@
  },
  "ミュー川口芝店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T02:46:29.092512",
-  "newest_processed_date": "2026-10-22",
+  "last_synced_at": "2026-11-07T20:49:56.516183",
+  "newest_processed_date": "2026-10-27",
   "oldest_processed_date": "2025-10-01",
   "status": "done"
  },
@@ -2224,10 +2224,10 @@
   "status": "done"
  },
  "ライオン": {
-  "days_done": 145,
+  "days_done": 159,
   "last_synced_at": "2026-11-07T12:12:52.943587",
   "newest_processed_date": "2026-10-14",
-  "oldest_processed_date": "2026-06-12",
+  "oldest_processed_date": "2026-05-29",
   "status": "in_progress"
  },
  "ライブガーデン上尾スロット館": {
@@ -2562,22 +2562,22 @@
  },
  "第一プラザ坂戸にっさい店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T02:25:24.087967",
-  "newest_processed_date": "2026-10-22",
+  "last_synced_at": "2026-11-07T20:47:44.528908",
+  "newest_processed_date": "2026-10-30",
   "oldest_processed_date": "2025-09-25",
   "status": "done"
  },
  "第一プラザ武州長瀬店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T02:45:26.925796",
-  "newest_processed_date": "2026-10-24",
+  "last_synced_at": "2026-11-07T20:48:51.519311",
+  "newest_processed_date": "2026-11-01",
   "oldest_processed_date": "2025-10-01",
   "status": "done"
  },
  "第一プラザ狭山店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T02:44:54.034576",
-  "newest_processed_date": "2026-10-25",
+  "last_synced_at": "2026-11-07T20:48:18.880099",
+  "newest_processed_date": "2026-11-02",
   "oldest_processed_date": "2025-10-01",
   "status": "done"
  },
