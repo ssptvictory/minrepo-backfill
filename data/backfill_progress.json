@@ -362,10 +362,10 @@
   "status": "done"
  },
  "やすだ東池袋9号店": {
-  "days_done": 309,
+  "days_done": 321,
   "last_synced_at": "2026-11-06T22:38:51.215376",
   "newest_processed_date": "2025-09-30",
-  "oldest_processed_date": "2025-12-14",
+  "oldest_processed_date": "2025-12-02",
   "status": "in_progress"
  },
  "やすだ清水町店": {
@@ -839,10 +839,10 @@
   "status": "pending"
  },
  "ガイア瑞江ⅱ": {
-  "days_done": 330,
+  "days_done": 343,
   "last_synced_at": "2026-11-06T22:17:32.711779",
   "newest_processed_date": "2025-10-08",
-  "oldest_processed_date": "2025-11-15",
+  "oldest_processed_date": "2025-11-02",
   "status": "in_progress"
  },
  "ガイア瑞江店": {
@@ -952,8 +952,8 @@
  },
  "グランドシップ": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T15:33:19.517178",
-  "newest_processed_date": "2026-10-19",
+  "last_synced_at": "2026-11-07T08:18:57.413295",
+  "newest_processed_date": "2026-10-23",
   "next_url": "https://min-repo.com/2655209/",
   "status": "done"
  },
@@ -1278,8 +1278,8 @@
  },
  "スロットジパング": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T15:12:21.490957",
-  "newest_processed_date": "2026-10-20",
+  "last_synced_at": "2026-11-07T08:16:47.606830",
+  "newest_processed_date": "2026-10-27",
   "next_url": "https://min-repo.com/2653290/",
   "status": "done"
  },
@@ -1310,8 +1310,8 @@
  },
  "チャレンジャー野津田": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T15:32:04.825727",
-  "newest_processed_date": "2026-10-22",
+  "last_synced_at": "2026-11-07T08:17:55.016089",
+  "newest_processed_date": "2026-10-29",
   "next_url": "https://min-repo.com/2655393/",
   "status": "done"
  },
@@ -1354,10 +1354,10 @@
   "status": "pending"
  },
  "デルパラ吉川店": {
-  "days_done": 348,
+  "days_done": 360,
   "last_synced_at": "2026-11-06T20:09:11.178225",
   "newest_processed_date": "2025-10-09",
-  "oldest_processed_date": "2025-11-09",
+  "oldest_processed_date": "2025-10-28",
   "status": "in_progress"
  },
  "デルパラ川口店": {
@@ -1447,8 +1447,8 @@
  },
  "ニュースター一ツ家店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T15:32:42.297139",
-  "newest_processed_date": "2026-10-23",
+  "last_synced_at": "2026-11-07T08:18:26.158262",
+  "newest_processed_date": "2026-10-30",
   "next_url": "https://min-repo.com/2653341/",
   "status": "done"
  },
@@ -1625,7 +1625,7 @@
  },
  "パーラーオリエント秋川店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T15:32:02.862848",
+  "last_synced_at": "2026-11-07T08:17:54.290412",
   "newest_processed_date": "2026-09-27",
   "oldest_processed_date": "2025-09-22",
   "status": "done"
@@ -1961,10 +1961,10 @@
   "status": "pending"
  },
  "マルハン日野店": {
-  "days_done": 124,
+  "days_done": 136,
   "last_synced_at": "2026-11-06T23:55:16.540641",
   "newest_processed_date": "2026-10-19",
-  "oldest_processed_date": "2026-06-09",
+  "oldest_processed_date": "2026-05-28",
   "status": "in_progress"
  },
  "マルハン昭島店": {
@@ -1975,10 +1975,10 @@
   "status": "done"
  },
  "マルハン東大和店": {
-  "days_done": 262,
+  "days_done": 274,
   "last_synced_at": "2026-11-06T22:39:22.445499",
   "newest_processed_date": "2025-10-04",
-  "oldest_processed_date": "2026-02-15",
+  "oldest_processed_date": "2026-02-03",
   "status": "in_progress"
  },
  "マルハン池袋SLOT BASE": {
@@ -1987,17 +1987,17 @@
   "status": "pending"
  },
  "マルハン池袋SLOT-BASE": {
-  "days_done": 22,
+  "days_done": 25,
   "last_synced_at": "2026-11-06T23:55:54.801244",
   "newest_processed_date": "2025-09-30",
-  "oldest_processed_date": "2026-09-03",
+  "oldest_processed_date": "2026-08-31",
   "status": "in_progress"
  },
  "マルハン池袋店": {
-  "days_done": 286,
+  "days_done": 298,
   "last_synced_at": "2026-11-06T23:54:35.582334",
   "newest_processed_date": "2026-10-12",
-  "oldest_processed_date": "2025-12-02",
+  "oldest_processed_date": "2025-11-20",
   "status": "in_progress"
  },
  "マルハン深谷店": {
@@ -2015,10 +2015,10 @@
   "status": "done"
  },
  "マルハン青梅新町店": {
-  "days_done": 258,
+  "days_done": 270,
   "last_synced_at": "2026-11-06T23:54:02.640038",
   "newest_processed_date": "2026-10-14",
-  "oldest_processed_date": "2026-01-22",
+  "oldest_processed_date": "2026-01-10",
   "status": "in_progress"
  },
  "マルハン鷲宮店": {
@@ -2653,8 +2653,8 @@
  },
  "阿佐ヶ谷オーシャン": {
   "days_done": 365,
-  "last_synced_at": "2026-11-06T15:12:55.804361",
-  "newest_processed_date": "2026-10-19",
+  "last_synced_at": "2026-11-07T08:17:20.614567",
+  "newest_processed_date": "2026-10-26",
   "next_url": "https://min-repo.com/2657070/",
   "status": "done"
  },
