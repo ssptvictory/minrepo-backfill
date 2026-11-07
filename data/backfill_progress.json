@@ -1880,6 +1880,11 @@
   "oldest_processed_date": null,
   "status": "pending"
  },
+ "マルハンメガシティ2000-蒲田1": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "pending"
+ },
  "マルハンメガシティ2000蒲田7": {
   "days_done": 15,
   "last_synced_at": "2026-11-07T09:21:16.815043",
