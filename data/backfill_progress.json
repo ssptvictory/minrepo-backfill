@@ -5,10 +5,10 @@
   "status": "pending"
  },
  "123n東雲店": {
-  "days_done": 4,
+  "days_done": 11,
   "last_synced_at": "2026-11-08T00:42:53.543211",
   "newest_processed_date": "2025-10-06",
-  "oldest_processed_date": "2026-11-04",
+  "oldest_processed_date": "2026-10-02",
   "status": "in_progress"
  },
  "123笹塚店": {
@@ -260,8 +260,8 @@
  },
  "みとやジャックポット錦糸町": {
   "days_done": 355,
-  "last_synced_at": "2026-11-07T05:37:11.678528",
-  "newest_processed_date": "2026-10-26",
+  "last_synced_at": "2026-11-08T01:05:46.898368",
+  "newest_processed_date": "2026-11-02",
   "oldest_processed_date": "2025-09-22",
   "status": "done"
  },
@@ -1692,6 +1692,13 @@
   "oldest_processed_date": "2024-08-19",
   "status": "in_progress"
  },
+ "ビッグスポーツ館": {
+  "days_done": 10,
+  "last_synced_at": "2026-11-08T01:05:11.157295",
+  "newest_processed_date": "2025-10-06",
+  "oldest_processed_date": "2026-10-29",
+  "status": "in_progress"
+ },
  "ピーアーク三田": {
   "days_done": 0,
   "newest_processed_date": "2026-10-09",
@@ -2116,8 +2123,8 @@
  },
  "メガガイア明大前店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T05:38:55.206235",
-  "newest_processed_date": "2026-10-20",
+  "last_synced_at": "2026-11-08T01:06:23.129108",
+  "newest_processed_date": "2026-10-22",
   "oldest_processed_date": "2025-10-03",
   "status": "done"
  },
@@ -2161,9 +2168,10 @@
   "status": "pending"
  },
  "メッセ奥戸店": {
-  "days_done": 4,
-  "newest_processed_date": "2026-10-08",
-  "oldest_processed_date": "2026-10-31",
+  "days_done": 12,
+  "last_synced_at": "2026-11-08T01:04:04.188932",
+  "newest_processed_date": "2026-10-13",
+  "oldest_processed_date": "2026-10-22",
   "status": "in_progress"
  },
  "メッセ扇店": {
@@ -2192,10 +2200,11 @@
   "status": "pending"
  },
  "メッセ笹塚": {
-  "days_done": 0,
-  "newest_processed_date": "2026-10-08",
-  "oldest_processed_date": null,
-  "status": "pending"
+  "days_done": 9,
+  "last_synced_at": "2026-11-08T01:04:37.268488",
+  "newest_processed_date": "2026-10-13",
+  "oldest_processed_date": "2026-10-30",
+  "status": "in_progress"
  },
  "メッセ荻窪店新館": {
   "days_done": 0,
@@ -2647,10 +2656,10 @@
   "status": "pending"
  },
  "遊劇場ⅱ": {
-  "days_done": 1,
+  "days_done": 5,
   "last_synced_at": "2026-11-08T00:01:38.622066",
   "newest_processed_date": "2025-10-02",
-  "oldest_processed_date": "2026-11-07",
+  "oldest_processed_date": "2026-10-02",
   "status": "in_progress"
  },
  "金時京急蒲田店": {
