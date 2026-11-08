@@ -5,10 +5,10 @@
   "status": "pending"
  },
  "123n東雲店": {
-  "days_done": 140,
+  "days_done": 151,
   "last_synced_at": "2026-11-08T00:42:53.543211",
   "newest_processed_date": "2025-10-06",
-  "oldest_processed_date": "2026-05-26",
+  "oldest_processed_date": "2026-05-15",
   "status": "in_progress"
  },
  "123笹塚店": {
@@ -182,8 +182,8 @@
  },
  "SAP草加": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T12:57:19.181145",
-  "newest_processed_date": "2026-10-17",
+  "last_synced_at": "2026-11-08T08:35:50.250135",
+  "newest_processed_date": "2026-10-23",
   "oldest_processed_date": "2025-10-30",
   "status": "done"
  },
@@ -463,8 +463,8 @@
  },
  "アバンザ十条": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T13:16:38.536653",
-  "newest_processed_date": "2026-11-03",
+  "last_synced_at": "2026-11-08T08:36:25.240181",
+  "newest_processed_date": "2026-11-07",
   "next_url": "https://min-repo.com/2660313/",
   "status": "done"
  },
@@ -517,10 +517,10 @@
   "status": "done"
  },
  "ウイング": {
-  "days_done": 274,
+  "days_done": 284,
   "last_synced_at": "2026-11-07T20:26:10.432400",
   "newest_processed_date": "2026-10-14",
-  "oldest_processed_date": "2026-02-04",
+  "oldest_processed_date": "2026-01-25",
   "status": "in_progress"
  },
  "ウイングキャッスル": {
@@ -1693,10 +1693,10 @@
   "status": "done"
  },
  "ビッグスポーツ館": {
-  "days_done": 72,
+  "days_done": 83,
   "last_synced_at": "2026-11-08T01:05:11.157295",
   "newest_processed_date": "2025-10-06",
-  "oldest_processed_date": "2026-08-25",
+  "oldest_processed_date": "2026-08-14",
   "status": "in_progress"
  },
  "ピーアーク三田": {
@@ -1828,8 +1828,8 @@
  },
  "プラザ515": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T13:17:13.297962",
-  "newest_processed_date": "2026-10-30",
+  "last_synced_at": "2026-11-08T08:36:46.312696",
+  "newest_processed_date": "2026-11-06",
   "next_url": "https://min-repo.com/2662258/",
   "status": "done"
  },
@@ -1872,8 +1872,8 @@
  },
  "ベルシティザシティ雑色店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T13:18:22.311576",
-  "newest_processed_date": "2026-10-31",
+  "last_synced_at": "2026-11-08T08:37:54.595024",
+  "newest_processed_date": "2026-11-04",
   "next_url": "https://min-repo.com/2660076/",
   "status": "done"
  },
@@ -2163,10 +2163,10 @@
   "status": "done"
  },
  "メッセ吉祥寺店": {
-  "days_done": 7,
+  "days_done": 10,
   "last_synced_at": "2026-11-08T07:09:03.512467",
   "newest_processed_date": "2025-10-04",
-  "oldest_processed_date": "2026-11-01",
+  "oldest_processed_date": "2026-10-29",
   "status": "in_progress"
  },
  "メッセ吉祥寺店本館": {
@@ -2175,10 +2175,10 @@
   "status": "pending"
  },
  "メッセ奥戸店": {
-  "days_done": 126,
+  "days_done": 137,
   "last_synced_at": "2026-11-08T01:04:04.188932",
   "newest_processed_date": "2026-10-13",
-  "oldest_processed_date": "2026-06-29",
+  "oldest_processed_date": "2026-06-18",
   "status": "in_progress"
  },
  "メッセ扇店": {
@@ -2207,10 +2207,10 @@
   "status": "pending"
  },
  "メッセ笹塚": {
-  "days_done": 78,
+  "days_done": 88,
   "last_synced_at": "2026-11-08T01:04:37.268488",
   "newest_processed_date": "2026-10-13",
-  "oldest_processed_date": "2026-08-21",
+  "oldest_processed_date": "2026-08-11",
   "status": "in_progress"
  },
  "メッセ荻窪店新館": {
@@ -2230,10 +2230,10 @@
   "status": "pending"
  },
  "メッセ西葛西": {
-  "days_done": 200,
+  "days_done": 210,
   "last_synced_at": "2026-11-08T00:00:51.713565",
   "newest_processed_date": "2026-10-11",
-  "oldest_processed_date": "2026-04-17",
+  "oldest_processed_date": "2026-04-07",
   "status": "in_progress"
  },
  "メッセ高円寺店": {
@@ -2372,8 +2372,8 @@
  },
  "国際センター高田馬場店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T13:17:48.648442",
-  "newest_processed_date": "2026-10-29",
+  "last_synced_at": "2026-11-08T08:37:22.011286",
+  "newest_processed_date": "2026-11-04",
   "oldest_processed_date": "2025-10-09",
   "status": "done"
  },
@@ -2663,10 +2663,10 @@
   "status": "pending"
  },
  "遊劇場ⅱ": {
-  "days_done": 204,
+  "days_done": 216,
   "last_synced_at": "2026-11-08T00:01:38.622066",
   "newest_processed_date": "2025-10-02",
-  "oldest_processed_date": "2026-03-14",
+  "oldest_processed_date": "2026-03-02",
   "status": "in_progress"
  },
  "金時京急蒲田店": {
