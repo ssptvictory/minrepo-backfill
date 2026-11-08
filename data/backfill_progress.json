@@ -5,10 +5,10 @@
   "status": "pending"
  },
  "123n東雲店": {
-  "days_done": 312,
+  "days_done": 321,
   "last_synced_at": "2026-11-08T00:42:53.543211",
   "newest_processed_date": "2025-10-06",
-  "oldest_processed_date": "2025-12-04",
+  "oldest_processed_date": "2025-11-25",
   "status": "in_progress"
  },
  "123笹塚店": {
@@ -168,10 +168,10 @@
   "status": "done"
  },
  "SAP日野": {
-  "days_done": 49,
+  "days_done": 61,
   "last_synced_at": "2026-11-08T12:10:45.640621",
   "newest_processed_date": "2026-10-29",
-  "oldest_processed_date": "2026-06-04",
+  "oldest_processed_date": "2026-04-28",
   "status": "in_progress"
  },
  "SAP立川店": {
@@ -322,8 +322,8 @@
  },
  "やすだ三郷店": {
   "days_done": 350,
-  "last_synced_at": "2026-11-07T20:27:17.761277",
-  "newest_processed_date": "2026-10-31",
+  "last_synced_at": "2026-11-08T15:45:58.287848",
+  "newest_processed_date": "2026-11-04",
   "oldest_processed_date": "2020-07-08",
   "status": "done"
  },
@@ -343,8 +343,8 @@
  },
  "やすだ戸田店": {
   "days_done": 351,
-  "last_synced_at": "2026-11-07T20:27:52.760928",
-  "newest_processed_date": "2026-10-25",
+  "last_synced_at": "2026-11-08T15:46:31.012455",
+  "newest_processed_date": "2026-10-31",
   "oldest_processed_date": "2020-07-07",
   "status": "done"
  },
@@ -512,8 +512,8 @@
  },
  "インタースクエア": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T20:28:26.083715",
-  "newest_processed_date": "2026-10-27",
+  "last_synced_at": "2026-11-08T15:47:09.886483",
+  "newest_processed_date": "2026-11-03",
   "oldest_processed_date": "2025-10-02",
   "status": "done"
  },
@@ -678,10 +678,10 @@
   "status": "done"
  },
  "オリエンタルパサージュ荻窪426": {
-  "days_done": 3,
+  "days_done": 7,
   "last_synced_at": "2026-11-08T15:03:02.955193",
   "newest_processed_date": "2025-10-04",
-  "oldest_processed_date": "2026-11-05",
+  "oldest_processed_date": "2026-11-01",
   "status": "in_progress"
  },
  "オリエントヴィーナスホール": {
@@ -920,10 +920,10 @@
   "status": "pending"
  },
  "キューデン東口店": {
-  "days_done": 18,
+  "days_done": 31,
   "last_synced_at": "2026-11-08T14:20:16.595141",
   "newest_processed_date": "2026-10-13",
-  "oldest_processed_date": "2026-10-21",
+  "oldest_processed_date": "2026-10-08",
   "status": "in_progress"
  },
  "キングNo.1世田谷店": {
@@ -1702,10 +1702,10 @@
   "status": "done"
  },
  "ビッグスポーツ館": {
-  "days_done": 262,
+  "days_done": 274,
   "last_synced_at": "2026-11-08T01:05:11.157295",
   "newest_processed_date": "2025-10-06",
-  "oldest_processed_date": "2026-02-16",
+  "oldest_processed_date": "2026-02-04",
   "status": "in_progress"
  },
  "ピーアーク三田": {
@@ -1899,8 +1899,8 @@
  },
  "マルキ戸田店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T20:28:25.575812",
-  "newest_processed_date": "2026-11-03",
+  "last_synced_at": "2026-11-08T15:47:05.130916",
+  "newest_processed_date": "2026-11-08",
   "oldest_processed_date": "2022-06-18",
   "status": "done"
  },
@@ -2172,10 +2172,10 @@
   "status": "done"
  },
  "メッセ吉祥寺店": {
-  "days_done": 113,
+  "days_done": 124,
   "last_synced_at": "2026-11-08T07:09:03.512467",
   "newest_processed_date": "2025-10-04",
-  "oldest_processed_date": "2026-07-17",
+  "oldest_processed_date": "2026-07-06",
   "status": "in_progress"
  },
  "メッセ吉祥寺店本館": {
@@ -2184,10 +2184,10 @@
   "status": "pending"
  },
  "メッセ奥戸店": {
-  "days_done": 315,
+  "days_done": 322,
   "last_synced_at": "2026-11-08T01:04:04.188932",
   "newest_processed_date": "2026-10-13",
-  "oldest_processed_date": "2025-12-20",
+  "oldest_processed_date": "2025-12-13",
   "status": "in_progress"
  },
  "メッセ扇店": {
@@ -2216,10 +2216,10 @@
   "status": "pending"
  },
  "メッセ笹塚": {
-  "days_done": 261,
+  "days_done": 271,
   "last_synced_at": "2026-11-08T01:04:37.268488",
   "newest_processed_date": "2026-10-13",
-  "oldest_processed_date": "2026-02-17",
+  "oldest_processed_date": "2026-02-07",
   "status": "in_progress"
  },
  "メッセ荻窪店新館": {
@@ -2598,8 +2598,8 @@
  },
  "第一プラザ坂戸にっさい店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T20:47:44.528908",
-  "newest_processed_date": "2026-10-30",
+  "last_synced_at": "2026-11-08T15:47:41.872697",
+  "newest_processed_date": "2026-11-04",
   "oldest_processed_date": "2025-09-25",
   "status": "done"
  },
@@ -2612,8 +2612,8 @@
  },
  "第一プラザ狭山店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T20:48:18.880099",
-  "newest_processed_date": "2026-11-02",
+  "last_synced_at": "2026-11-08T15:48:15.007195",
+  "newest_processed_date": "2026-11-04",
   "oldest_processed_date": "2025-10-01",
   "status": "done"
  },
