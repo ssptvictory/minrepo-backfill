@@ -143,8 +143,8 @@
  },
  "R7-STRONG": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T23:39:42.462451",
-  "newest_processed_date": "2025-10-15",
+  "last_synced_at": "2026-11-08T19:00:53.501147",
+  "newest_processed_date": "2025-10-21",
   "oldest_processed_date": "2025-11-06",
   "status": "done"
  },
@@ -168,10 +168,10 @@
   "status": "done"
  },
  "SAP日野": {
-  "days_done": 131,
+  "days_done": 144,
   "last_synced_at": "2026-11-08T12:10:45.640621",
   "newest_processed_date": "2026-10-29",
-  "oldest_processed_date": "2025-09-08",
+  "oldest_processed_date": "2025-07-28",
   "status": "in_progress"
  },
  "SAP立川店": {
@@ -533,8 +533,8 @@
  },
  "ウイング蕨": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T23:38:54.502929",
-  "newest_processed_date": "2025-10-14",
+  "last_synced_at": "2026-11-08T19:00:22.160363",
+  "newest_processed_date": "2025-10-20",
   "oldest_processed_date": "2025-11-03",
   "status": "done"
  },
@@ -678,10 +678,10 @@
   "status": "done"
  },
  "オリエンタルパサージュ荻窪426": {
-  "days_done": 49,
+  "days_done": 62,
   "last_synced_at": "2026-11-08T15:03:02.955193",
   "newest_processed_date": "2025-10-04",
-  "oldest_processed_date": "2026-09-20",
+  "oldest_processed_date": "2026-09-06",
   "status": "in_progress"
  },
  "オリエントヴィーナスホール": {
@@ -920,10 +920,10 @@
   "status": "pending"
  },
  "キューデン東口店": {
-  "days_done": 106,
+  "days_done": 120,
   "last_synced_at": "2026-11-08T14:20:16.595141",
   "newest_processed_date": "2026-10-13",
-  "oldest_processed_date": "2026-07-23",
+  "oldest_processed_date": "2026-07-09",
   "status": "in_progress"
  },
  "キングNo.1世田谷店": {
@@ -1302,8 +1302,8 @@
  },
  "スーパーセブン西八王子店": {
   "days_done": 116,
-  "last_synced_at": "2026-11-07T23:59:29.902152",
-  "newest_processed_date": "2026-10-11",
+  "last_synced_at": "2026-11-08T19:02:00.114349",
+  "newest_processed_date": "2026-10-12",
   "oldest_processed_date": "2026-07-01",
   "status": "done"
  },
@@ -1702,10 +1702,10 @@
   "status": "done"
  },
  "ビッグスポーツ館": {
-  "days_done": 348,
+  "days_done": 359,
   "last_synced_at": "2026-11-08T01:05:11.157295",
   "newest_processed_date": "2025-10-06",
-  "oldest_processed_date": "2025-11-22",
+  "oldest_processed_date": "2025-11-11",
   "status": "in_progress"
  },
  "ピーアーク三田": {
@@ -2159,10 +2159,10 @@
   "status": "done"
  },
  "メッセ三鷹店": {
-  "days_done": 5,
+  "days_done": 8,
   "last_synced_at": "2026-11-08T18:16:53.574825",
   "newest_processed_date": "2026-10-16",
-  "oldest_processed_date": "2026-11-04",
+  "oldest_processed_date": "2026-11-01",
   "status": "in_progress"
  },
  "メッセ南千住店": {
@@ -2173,10 +2173,10 @@
   "status": "done"
  },
  "メッセ吉祥寺店": {
-  "days_done": 191,
+  "days_done": 203,
   "last_synced_at": "2026-11-08T07:09:03.512467",
   "newest_processed_date": "2025-10-04",
-  "oldest_processed_date": "2026-04-30",
+  "oldest_processed_date": "2026-04-18",
   "status": "in_progress"
  },
  "メッセ吉祥寺店本館": {
@@ -2217,10 +2217,10 @@
   "status": "pending"
  },
  "メッセ笹塚": {
-  "days_done": 332,
+  "days_done": 343,
   "last_synced_at": "2026-11-08T01:04:37.268488",
   "newest_processed_date": "2026-10-13",
-  "oldest_processed_date": "2025-12-07",
+  "oldest_processed_date": "2025-11-26",
   "status": "in_progress"
  },
  "メッセ荻窪店新館": {
@@ -2247,10 +2247,10 @@
   "status": "done"
  },
  "メッセ高円寺店": {
-  "days_done": 27,
+  "days_done": 40,
   "last_synced_at": "2026-11-08T18:16:18.416615",
   "newest_processed_date": "2026-10-16",
-  "oldest_processed_date": "2026-10-13",
+  "oldest_processed_date": "2026-09-30",
   "status": "in_progress"
  },
  "メビウス西川口店": {
@@ -2341,8 +2341,8 @@
  },
  "仙川UNO": {
   "days_done": 343,
-  "last_synced_at": "2026-11-07T22:58:00.570047",
-  "newest_processed_date": "2026-10-28",
+  "last_synced_at": "2026-11-08T18:59:35.082767",
+  "newest_processed_date": "2026-11-03",
   "oldest_processed_date": "2025-09-28",
   "status": "done"
  },
@@ -2453,8 +2453,8 @@
  },
  "有楽町DUO": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T23:38:14.184757",
-  "newest_processed_date": "2026-11-04",
+  "last_synced_at": "2026-11-08T19:00:07.417044",
+  "newest_processed_date": "2026-11-07",
   "next_url": "https://min-repo.com/2629067/",
   "status": "done"
  },
@@ -2572,8 +2572,8 @@
  },
  "秋葉原UNO": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T23:40:31.082704",
-  "newest_processed_date": "2026-10-29",
+  "last_synced_at": "2026-11-08T19:01:24.924149",
+  "newest_processed_date": "2026-11-05",
   "next_url": "https://min-repo.com/2653808/",
   "status": "done"
  },
