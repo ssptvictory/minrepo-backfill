@@ -168,10 +168,10 @@
   "status": "done"
  },
  "SAP日野": {
-  "days_done": 223,
+  "days_done": 237,
   "last_synced_at": "2026-11-08T12:10:45.640621",
   "newest_processed_date": "2026-10-29",
-  "oldest_processed_date": "2024-11-21",
+  "oldest_processed_date": "2024-10-12",
   "status": "in_progress"
  },
  "SAP立川店": {
@@ -282,8 +282,8 @@
  },
  "みとや浅草千束店": {
   "days_done": 239,
-  "last_synced_at": "2026-11-08T03:12:53.834052",
-  "newest_processed_date": "2026-11-02",
+  "last_synced_at": "2026-11-08T21:32:05.793974",
+  "newest_processed_date": "2026-11-07",
   "oldest_processed_date": "2026-02-10",
   "status": "done"
  },
@@ -329,8 +329,8 @@
  },
  "やすだ仲宿店": {
   "days_done": 322,
-  "last_synced_at": "2026-11-08T02:53:49.241120",
-  "newest_processed_date": "2026-10-22",
+  "last_synced_at": "2026-11-08T21:31:31.867408",
+  "newest_processed_date": "2026-10-30",
   "oldest_processed_date": "2021-08-26",
   "status": "done"
  },
@@ -385,8 +385,8 @@
  },
  "やすだ西池袋6号店": {
   "days_done": 361,
-  "last_synced_at": "2026-11-08T02:52:04.746945",
-  "newest_processed_date": "2026-10-30",
+  "last_synced_at": "2026-11-08T21:30:00.657536",
+  "newest_processed_date": "2026-11-06",
   "oldest_processed_date": "2020-07-06",
   "status": "done"
  },
@@ -678,10 +678,10 @@
   "status": "done"
  },
  "オリエンタルパサージュ荻窪426": {
-  "days_done": 140,
+  "days_done": 154,
   "last_synced_at": "2026-11-08T15:03:02.955193",
   "newest_processed_date": "2025-10-04",
-  "oldest_processed_date": "2026-06-20",
+  "oldest_processed_date": "2026-06-06",
   "status": "in_progress"
  },
  "オリエントヴィーナスホール": {
@@ -775,8 +775,8 @@
  },
  "カレイド新宿店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-08T02:53:16.355336",
-  "newest_processed_date": "2026-10-30",
+  "last_synced_at": "2026-11-08T21:30:58.457513",
+  "newest_processed_date": "2026-11-07",
   "oldest_processed_date": "2025-09-30",
   "status": "done"
  },
@@ -870,8 +870,8 @@
  },
  "ガイア経堂店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-08T02:52:42.597051",
-  "newest_processed_date": "2026-11-01",
+  "last_synced_at": "2026-11-08T21:30:32.989530",
+  "newest_processed_date": "2026-11-07",
   "oldest_processed_date": "2025-10-05",
   "status": "done"
  },
@@ -920,10 +920,10 @@
   "status": "pending"
  },
  "キューデン東口店": {
-  "days_done": 202,
+  "days_done": 216,
   "last_synced_at": "2026-11-08T14:20:16.595141",
   "newest_processed_date": "2026-10-13",
-  "oldest_processed_date": "2026-04-17",
+  "oldest_processed_date": "2026-04-03",
   "status": "in_progress"
  },
  "キングNo.1世田谷店": {
@@ -1413,10 +1413,10 @@
   "status": "done"
  },
  "トワーズ青梅IC店": {
-  "days_done": 62,
+  "days_done": 75,
   "last_synced_at": "2026-11-08T19:42:49.535235",
   "newest_processed_date": "2026-10-30",
-  "oldest_processed_date": "2025-12-21",
+  "oldest_processed_date": "2025-10-28",
   "status": "in_progress"
  },
  "ドキわくランド中河原駅前店": {
@@ -1936,8 +1936,8 @@
  },
  "マルハン亀有店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-08T03:13:28.697035",
-  "newest_processed_date": "2026-10-28",
+  "last_synced_at": "2026-11-08T21:32:25.093133",
+  "newest_processed_date": "2026-10-29",
   "oldest_processed_date": "2025-10-01",
   "status": "done"
  },
@@ -2160,10 +2160,10 @@
   "status": "done"
  },
  "メッセ三鷹店": {
-  "days_done": 79,
+  "days_done": 92,
   "last_synced_at": "2026-11-08T18:16:53.574825",
   "newest_processed_date": "2026-10-16",
-  "oldest_processed_date": "2026-08-20",
+  "oldest_processed_date": "2026-08-07",
   "status": "in_progress"
  },
  "メッセ南千住店": {
@@ -2174,10 +2174,10 @@
   "status": "done"
  },
  "メッセ吉祥寺店": {
-  "days_done": 273,
+  "days_done": 287,
   "last_synced_at": "2026-11-08T07:09:03.512467",
   "newest_processed_date": "2025-10-04",
-  "oldest_processed_date": "2026-02-06",
+  "oldest_processed_date": "2026-01-23",
   "status": "in_progress"
  },
  "メッセ吉祥寺店本館": {
@@ -2206,10 +2206,10 @@
   "status": "done"
  },
  "メッセ武蔵境店": {
-  "days_done": 11,
+  "days_done": 14,
   "last_synced_at": "2026-11-08T20:04:08.002945",
   "newest_processed_date": "2026-10-16",
-  "oldest_processed_date": "2026-10-29",
+  "oldest_processed_date": "2026-10-26",
   "status": "in_progress"
  },
  "メッセ竹の塚": {
@@ -2249,10 +2249,10 @@
   "status": "done"
  },
  "メッセ高円寺店": {
-  "days_done": 121,
+  "days_done": 135,
   "last_synced_at": "2026-11-08T18:16:18.416615",
   "newest_processed_date": "2026-10-16",
-  "oldest_processed_date": "2026-07-09",
+  "oldest_processed_date": "2026-06-25",
   "status": "in_progress"
  },
  "メビウス西川口店": {
