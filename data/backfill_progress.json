@@ -5,10 +5,10 @@
   "status": "pending"
  },
  "123n東雲店": {
-  "days_done": 286,
+  "days_done": 296,
   "last_synced_at": "2026-11-08T00:42:53.543211",
   "newest_processed_date": "2025-10-06",
-  "oldest_processed_date": "2025-12-30",
+  "oldest_processed_date": "2025-12-20",
   "status": "in_progress"
  },
  "123笹塚店": {
@@ -168,10 +168,10 @@
   "status": "done"
  },
  "SAP日野": {
-  "days_done": 15,
+  "days_done": 24,
   "last_synced_at": "2026-11-08T12:10:45.640621",
   "newest_processed_date": "2026-10-29",
-  "oldest_processed_date": "2026-09-18",
+  "oldest_processed_date": "2026-08-22",
   "status": "in_progress"
  },
  "SAP立川店": {
@@ -918,10 +918,11 @@
   "status": "pending"
  },
  "キューデン東口店": {
-  "days_done": 0,
-  "newest_processed_date": "2026-10-05",
-  "oldest_processed_date": null,
-  "status": "pending"
+  "days_done": 1,
+  "last_synced_at": "2026-11-08T14:20:16.595141",
+  "newest_processed_date": "2026-10-13",
+  "oldest_processed_date": "2026-11-07",
+  "status": "in_progress"
  },
  "キングNo.1世田谷店": {
   "days_done": 0,
@@ -1699,10 +1700,10 @@
   "status": "done"
  },
  "ビッグスポーツ館": {
-  "days_done": 228,
+  "days_done": 235,
   "last_synced_at": "2026-11-08T01:05:11.157295",
   "newest_processed_date": "2025-10-06",
-  "oldest_processed_date": "2026-03-22",
+  "oldest_processed_date": "2026-03-15",
   "status": "in_progress"
  },
  "ピーアーク三田": {
@@ -2035,15 +2036,15 @@
  },
  "マルハン深谷店": {
   "days_done": 359,
-  "last_synced_at": "2026-11-07T19:22:19.077566",
-  "newest_processed_date": "2026-10-18",
+  "last_synced_at": "2026-11-08T14:20:55.679905",
+  "newest_processed_date": "2026-10-24",
   "oldest_processed_date": "2025-09-26",
   "status": "done"
  },
  "マルハン清河寺店": {
   "days_done": 359,
-  "last_synced_at": "2026-11-07T19:22:51.758603",
-  "newest_processed_date": "2026-10-13",
+  "last_synced_at": "2026-11-08T14:21:31.340213",
+  "newest_processed_date": "2026-10-18",
   "oldest_processed_date": "2025-09-25",
   "status": "done"
  },
@@ -2056,8 +2057,8 @@
  },
  "マルハン鷲宮店": {
   "days_done": 357,
-  "last_synced_at": "2026-11-07T19:23:24.570318",
-  "newest_processed_date": "2026-10-17",
+  "last_synced_at": "2026-11-08T14:22:05.730290",
+  "newest_processed_date": "2026-10-22",
   "oldest_processed_date": "2025-09-25",
   "status": "done"
  },
@@ -2084,7 +2085,7 @@
  },
  "ミリオン1100朝霞店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T19:23:55.483078",
+  "last_synced_at": "2026-11-08T14:22:41.862949",
   "newest_processed_date": "2026-11-07",
   "oldest_processed_date": "2025-10-31",
   "status": "done"
@@ -2169,10 +2170,10 @@
   "status": "done"
  },
  "メッセ吉祥寺店": {
-  "days_done": 81,
+  "days_done": 90,
   "last_synced_at": "2026-11-08T07:09:03.512467",
   "newest_processed_date": "2025-10-04",
-  "oldest_processed_date": "2026-08-18",
+  "oldest_processed_date": "2026-08-09",
   "status": "in_progress"
  },
  "メッセ吉祥寺店本館": {
@@ -2181,10 +2182,10 @@
   "status": "pending"
  },
  "メッセ奥戸店": {
-  "days_done": 285,
+  "days_done": 294,
   "last_synced_at": "2026-11-08T01:04:04.188932",
   "newest_processed_date": "2026-10-13",
-  "oldest_processed_date": "2026-01-20",
+  "oldest_processed_date": "2026-01-11",
   "status": "in_progress"
  },
  "メッセ扇店": {
@@ -2213,10 +2214,10 @@
   "status": "pending"
  },
  "メッセ笹塚": {
-  "days_done": 228,
+  "days_done": 238,
   "last_synced_at": "2026-11-08T01:04:37.268488",
   "newest_processed_date": "2026-10-13",
-  "oldest_processed_date": "2026-03-23",
+  "oldest_processed_date": "2026-03-12",
   "status": "in_progress"
  },
  "メッセ荻窪店新館": {
@@ -2236,10 +2237,10 @@
   "status": "pending"
  },
  "メッセ西葛西": {
-  "days_done": 349,
+  "days_done": 358,
   "last_synced_at": "2026-11-08T00:00:51.713565",
   "newest_processed_date": "2026-10-11",
-  "oldest_processed_date": "2025-11-16",
+  "oldest_processed_date": "2025-11-07",
   "status": "in_progress"
  },
  "メッセ高円寺店": {
