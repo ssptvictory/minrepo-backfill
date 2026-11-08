@@ -5,10 +5,10 @@
   "status": "pending"
  },
  "123n東雲店": {
-  "days_done": 321,
+  "days_done": 332,
   "last_synced_at": "2026-11-08T00:42:53.543211",
   "newest_processed_date": "2025-10-06",
-  "oldest_processed_date": "2025-11-25",
+  "oldest_processed_date": "2025-11-14",
   "status": "in_progress"
  },
  "123笹塚店": {
@@ -168,10 +168,10 @@
   "status": "done"
  },
  "SAP日野": {
-  "days_done": 61,
+  "days_done": 73,
   "last_synced_at": "2026-11-08T12:10:45.640621",
   "newest_processed_date": "2026-10-29",
-  "oldest_processed_date": "2026-04-28",
+  "oldest_processed_date": "2026-03-22",
   "status": "in_progress"
  },
  "SAP立川店": {
@@ -432,8 +432,8 @@
  },
  "アスカ熊谷店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T20:49:23.286467",
-  "newest_processed_date": "2026-10-30",
+  "last_synced_at": "2026-11-08T16:29:28.152029",
+  "newest_processed_date": "2026-11-06",
   "oldest_processed_date": "2022-11-28",
   "status": "done"
  },
@@ -678,10 +678,10 @@
   "status": "done"
  },
  "オリエンタルパサージュ荻窪426": {
-  "days_done": 7,
+  "days_done": 11,
   "last_synced_at": "2026-11-08T15:03:02.955193",
   "newest_processed_date": "2025-10-04",
-  "oldest_processed_date": "2026-11-01",
+  "oldest_processed_date": "2026-10-28",
   "status": "in_progress"
  },
  "オリエントヴィーナスホール": {
@@ -920,10 +920,10 @@
   "status": "pending"
  },
  "キューデン東口店": {
-  "days_done": 31,
+  "days_done": 43,
   "last_synced_at": "2026-11-08T14:20:16.595141",
   "newest_processed_date": "2026-10-13",
-  "oldest_processed_date": "2026-10-08",
+  "oldest_processed_date": "2026-09-24",
   "status": "in_progress"
  },
  "キングNo.1世田谷店": {
@@ -1702,10 +1702,10 @@
   "status": "done"
  },
  "ビッグスポーツ館": {
-  "days_done": 274,
+  "days_done": 286,
   "last_synced_at": "2026-11-08T01:05:11.157295",
   "newest_processed_date": "2025-10-06",
-  "oldest_processed_date": "2026-02-04",
+  "oldest_processed_date": "2026-01-23",
   "status": "in_progress"
  },
  "ピーアーク三田": {
@@ -1793,8 +1793,8 @@
  },
  "ピーアーク越谷": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T21:09:54.649469",
-  "newest_processed_date": "2026-10-30",
+  "last_synced_at": "2026-11-08T16:31:07.409811",
+  "newest_processed_date": "2026-11-03",
   "oldest_processed_date": "2025-10-01",
   "status": "done"
  },
@@ -2080,8 +2080,8 @@
  },
  "ミュー川口芝店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T20:49:56.516183",
-  "newest_processed_date": "2026-10-27",
+  "last_synced_at": "2026-11-08T16:30:03.368778",
+  "newest_processed_date": "2026-11-03",
   "oldest_processed_date": "2025-10-01",
   "status": "done"
  },
@@ -2172,10 +2172,10 @@
   "status": "done"
  },
  "メッセ吉祥寺店": {
-  "days_done": 124,
+  "days_done": 134,
   "last_synced_at": "2026-11-08T07:09:03.512467",
   "newest_processed_date": "2025-10-04",
-  "oldest_processed_date": "2026-07-06",
+  "oldest_processed_date": "2026-06-26",
   "status": "in_progress"
  },
  "メッセ吉祥寺店本館": {
@@ -2184,10 +2184,10 @@
   "status": "pending"
  },
  "メッセ奥戸店": {
-  "days_done": 322,
+  "days_done": 333,
   "last_synced_at": "2026-11-08T01:04:04.188932",
   "newest_processed_date": "2026-10-13",
-  "oldest_processed_date": "2025-12-13",
+  "oldest_processed_date": "2025-12-02",
   "status": "in_progress"
  },
  "メッセ扇店": {
@@ -2216,10 +2216,10 @@
   "status": "pending"
  },
  "メッセ笹塚": {
-  "days_done": 271,
+  "days_done": 281,
   "last_synced_at": "2026-11-08T01:04:37.268488",
   "newest_processed_date": "2026-10-13",
-  "oldest_processed_date": "2026-02-07",
+  "oldest_processed_date": "2026-01-28",
   "status": "in_progress"
  },
  "メッセ荻窪店新館": {
@@ -2605,8 +2605,8 @@
  },
  "第一プラザ武州長瀬店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T20:48:51.519311",
-  "newest_processed_date": "2026-11-01",
+  "last_synced_at": "2026-11-08T16:28:58.503543",
+  "newest_processed_date": "2026-11-07",
   "oldest_processed_date": "2025-10-01",
   "status": "done"
  },
@@ -2633,8 +2633,8 @@
  },
  "第一プラザ霞ヶ関店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-07T21:09:19.854471",
-  "newest_processed_date": "2026-10-31",
+  "last_synced_at": "2026-11-08T16:30:35.132326",
+  "newest_processed_date": "2026-11-06",
   "oldest_processed_date": "2025-09-29",
   "status": "done"
  },
