@@ -343,8 +343,8 @@
  },
  "やすだ戸田店": {
   "days_done": 351,
-  "last_synced_at": "2026-11-08T15:46:31.012455",
-  "newest_processed_date": "2026-10-31",
+  "last_synced_at": "2026-11-09T08:06:31.400756",
+  "newest_processed_date": "2026-11-06",
   "oldest_processed_date": "2020-07-07",
   "status": "done"
  },
@@ -432,8 +432,8 @@
  },
  "アスカ熊谷店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-08T16:29:28.152029",
-  "newest_processed_date": "2026-11-06",
+  "last_synced_at": "2026-11-09T08:08:20.134623",
+  "newest_processed_date": "2026-11-08",
   "oldest_processed_date": "2022-11-28",
   "status": "done"
  },
@@ -512,8 +512,8 @@
  },
  "インタースクエア": {
   "days_done": 365,
-  "last_synced_at": "2026-11-08T15:47:09.886483",
-  "newest_processed_date": "2026-11-03",
+  "last_synced_at": "2026-11-09T08:07:06.702965",
+  "newest_processed_date": "2026-11-08",
   "oldest_processed_date": "2025-10-02",
   "status": "done"
  },
@@ -733,10 +733,10 @@
   "status": "done"
  },
  "オーパ": {
-  "days_done": 82,
+  "days_done": 92,
   "last_synced_at": "2026-11-09T03:36:14.350801",
   "newest_processed_date": "2025-10-07",
-  "oldest_processed_date": "2026-08-19",
+  "oldest_processed_date": "2026-08-09",
   "status": "in_progress"
  },
  "オーパス・ワンアネックス立石店": {
@@ -1210,10 +1210,10 @@
   "status": "pending"
  },
  "ジャンジャンマールゴット分倍河原駅前": {
-  "days_done": 180,
+  "days_done": 191,
   "last_synced_at": "2026-11-09T01:27:16.966004",
   "newest_processed_date": "2026-10-16",
-  "oldest_processed_date": "2026-05-13",
+  "oldest_processed_date": "2026-05-02",
   "status": "in_progress"
  },
  "ジャンジャンマールゴット日野駅前店": {
@@ -1231,10 +1231,10 @@
   "status": "done"
  },
  "ジャンボ": {
-  "days_done": 47,
+  "days_done": 59,
   "last_synced_at": "2026-11-09T05:56:47.532562",
   "newest_processed_date": "2026-10-15",
-  "oldest_processed_date": "2026-09-23",
+  "oldest_processed_date": "2026-09-11",
   "status": "in_progress"
  },
  "ジュラク王子店": {
@@ -1910,7 +1910,7 @@
  },
  "マルキ戸田店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-08T15:47:05.130916",
+  "last_synced_at": "2026-11-09T08:07:05.037295",
   "newest_processed_date": "2026-11-08",
   "oldest_processed_date": "2022-06-18",
   "status": "done"
@@ -2091,8 +2091,8 @@
  },
  "ミュー川口芝店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-08T16:30:03.368778",
-  "newest_processed_date": "2026-11-03",
+  "last_synced_at": "2026-11-09T08:08:28.839752",
+  "newest_processed_date": "2026-11-08",
   "oldest_processed_date": "2025-10-01",
   "status": "done"
  },
@@ -2170,10 +2170,10 @@
   "status": "done"
  },
  "メッセ三鷹店": {
-  "days_done": 349,
+  "days_done": 360,
   "last_synced_at": "2026-11-08T18:16:53.574825",
   "newest_processed_date": "2026-10-16",
-  "oldest_processed_date": "2025-11-20",
+  "oldest_processed_date": "2025-11-09",
   "status": "in_progress"
  },
  "メッセ南千住店": {
@@ -2216,17 +2216,17 @@
   "status": "done"
  },
  "メッセ武蔵境店": {
-  "days_done": 225,
+  "days_done": 234,
   "last_synced_at": "2026-11-08T20:04:08.002945",
   "newest_processed_date": "2026-10-16",
-  "oldest_processed_date": "2026-03-27",
+  "oldest_processed_date": "2026-03-17",
   "status": "in_progress"
  },
  "メッセ竹の塚": {
-  "days_done": 169,
+  "days_done": 180,
   "last_synced_at": "2026-11-09T01:26:44.943518",
   "newest_processed_date": "2026-10-14",
-  "oldest_processed_date": "2026-05-22",
+  "oldest_processed_date": "2026-05-11",
   "status": "in_progress"
  },
  "メッセ笹塚": {
@@ -2247,10 +2247,10 @@
   "status": "pending"
  },
  "メッセ西荻窪店": {
-  "days_done": 159,
+  "days_done": 169,
   "last_synced_at": "2026-11-09T01:48:13.733927",
   "newest_processed_date": "2026-10-15",
-  "oldest_processed_date": "2026-06-02",
+  "oldest_processed_date": "2026-05-23",
   "status": "in_progress"
  },
  "メッセ西葛西": {
@@ -2614,22 +2614,22 @@
  },
  "第一プラザ坂戸にっさい店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-08T15:47:41.872697",
-  "newest_processed_date": "2026-11-04",
+  "last_synced_at": "2026-11-09T08:07:30.995224",
+  "newest_processed_date": "2026-11-08",
   "oldest_processed_date": "2025-09-25",
   "status": "done"
  },
  "第一プラザ武州長瀬店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-08T16:28:58.503543",
-  "newest_processed_date": "2026-11-07",
+  "last_synced_at": "2026-11-09T08:08:13.366658",
+  "newest_processed_date": "2026-11-08",
   "oldest_processed_date": "2025-10-01",
   "status": "done"
  },
  "第一プラザ狭山店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-08T15:48:15.007195",
-  "newest_processed_date": "2026-11-04",
+  "last_synced_at": "2026-11-09T08:07:52.434160",
+  "newest_processed_date": "2026-11-08",
   "oldest_processed_date": "2025-10-01",
   "status": "done"
  },
@@ -2649,8 +2649,8 @@
  },
  "第一プラザ霞ヶ関店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-08T16:30:35.132326",
-  "newest_processed_date": "2026-11-06",
+  "last_synced_at": "2026-11-09T08:08:55.499947",
+  "newest_processed_date": "2026-11-07",
   "oldest_processed_date": "2025-09-29",
   "status": "done"
  },
