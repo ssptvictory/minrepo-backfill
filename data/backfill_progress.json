@@ -105,10 +105,10 @@
   "status": "pending"
  },
  "DELFEEL-NEW-TOKYO": {
-  "days_done": 27,
+  "days_done": 40,
   "last_synced_at": "2026-11-09T16:50:00.031946",
   "newest_processed_date": "2025-10-10",
-  "oldest_processed_date": "2026-10-14",
+  "oldest_processed_date": "2026-10-01",
   "status": "in_progress"
  },
  "K-1赤羽店": {
@@ -149,10 +149,10 @@
   "status": "pending"
  },
  "P-PORT-PREGO-EX池袋南口": {
-  "days_done": 162,
+  "days_done": 175,
   "last_synced_at": "2026-11-09T13:09:50.718036",
   "newest_processed_date": "2025-10-11",
-  "oldest_processed_date": "2026-05-31",
+  "oldest_processed_date": "2026-05-18",
   "status": "in_progress"
  },
  "R7-STRONG": {
@@ -915,10 +915,10 @@
   "status": "pending"
  },
  "キコーナ新宿三丁目店": {
-  "days_done": 202,
+  "days_done": 214,
   "last_synced_at": "2026-11-09T08:49:51.765854",
   "newest_processed_date": "2026-10-12",
-  "oldest_processed_date": "2026-04-20",
+  "oldest_processed_date": "2026-04-08",
   "status": "in_progress"
  },
  "キコーナ草加店": {
@@ -1629,10 +1629,10 @@
   "status": "done"
  },
  "パラッツォ秋津店": {
-  "days_done": 337,
+  "days_done": 348,
   "last_synced_at": "2026-11-09T17:33:54.740770",
   "newest_processed_date": "2026-10-23",
-  "oldest_processed_date": "2025-12-07",
+  "oldest_processed_date": "2025-11-26",
   "status": "in_progress"
  },
  "パラッツォ葛西店": {
@@ -1657,10 +1657,10 @@
   "status": "done"
  },
  "パルコ": {
-  "days_done": 3,
+  "days_done": 7,
   "last_synced_at": "2026-11-09T17:33:21.631383",
   "newest_processed_date": "2025-10-11",
-  "oldest_processed_date": "2026-11-07",
+  "oldest_processed_date": "2026-11-03",
   "status": "in_progress"
  },
  "パーラーEX滑川店": {
@@ -1748,10 +1748,10 @@
   "status": "pending"
  },
  "ピーアーク北千住": {
-  "days_done": 136,
+  "days_done": 149,
   "last_synced_at": "2026-11-09T13:53:07.718877",
   "newest_processed_date": "2026-10-17",
-  "oldest_processed_date": "2026-06-25",
+  "oldest_processed_date": "2026-06-12",
   "status": "in_progress"
  },
  "ピーアーク北千住SSS": {
@@ -1897,10 +1897,10 @@
   "status": "done"
  },
  "ベルシティ-ザシティ篠崎店": {
-  "days_done": 68,
+  "days_done": 81,
   "last_synced_at": "2026-11-09T14:36:10.918847",
   "newest_processed_date": "2025-10-02",
-  "oldest_processed_date": "2026-08-25",
+  "oldest_processed_date": "2026-08-12",
   "status": "in_progress"
  },
  "ベルシティ/ザシティ篠崎店": {
@@ -2128,8 +2128,8 @@
  },
  "ミリオン1100朝霞店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-09T06:42:26.412966",
-  "newest_processed_date": "2026-11-08",
+  "last_synced_at": "2026-11-09T17:55:04.470739",
+  "newest_processed_date": "2026-11-09",
   "oldest_processed_date": "2025-10-31",
   "status": "done"
  },
@@ -2166,8 +2166,8 @@
  },
  "メガガイア岩槻店": {
   "days_done": 358,
-  "last_synced_at": "2026-11-09T07:01:35.171812",
-  "newest_processed_date": "2026-10-23",
+  "last_synced_at": "2026-11-09T17:55:10.605373",
+  "newest_processed_date": "2026-10-29",
   "oldest_processed_date": "2025-09-22",
   "status": "done"
  },
@@ -2179,10 +2179,10 @@
   "status": "done"
  },
  "メガガイア東村山店": {
-  "days_done": 113,
+  "days_done": 125,
   "last_synced_at": "2026-11-09T14:14:38.991893",
   "newest_processed_date": "2025-10-11",
-  "oldest_processed_date": "2026-07-19",
+  "oldest_processed_date": "2026-07-07",
   "status": "in_progress"
  },
  "メガガイア調布店": {
@@ -2194,15 +2194,15 @@
  },
  "メガガイア越谷大里": {
   "days_done": 358,
-  "last_synced_at": "2026-11-09T07:02:11.957810",
-  "newest_processed_date": "2026-10-20",
+  "last_synced_at": "2026-11-09T17:55:44.298786",
+  "newest_processed_date": "2026-10-27",
   "oldest_processed_date": "2025-09-27",
   "status": "done"
  },
  "メガボックス東松山店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-09T07:02:43.485664",
-  "newest_processed_date": "2026-11-08",
+  "last_synced_at": "2026-11-09T17:56:18.914414",
+  "newest_processed_date": "2026-11-09",
   "oldest_processed_date": "2025-11-03",
   "status": "done"
  },
@@ -2306,8 +2306,8 @@
  },
  "メビウス西川口店": {
   "days_done": 358,
-  "last_synced_at": "2026-11-09T07:02:50.621906",
-  "newest_processed_date": "2026-10-30",
+  "last_synced_at": "2026-11-09T17:56:23.365277",
+  "newest_processed_date": "2026-11-06",
   "oldest_processed_date": "2025-09-26",
   "status": "done"
  },
@@ -2371,15 +2371,15 @@
  },
  "上尾ウノ": {
   "days_done": 365,
-  "last_synced_at": "2026-11-09T07:03:25.733610",
-  "newest_processed_date": "2026-11-07",
+  "last_synced_at": "2026-11-09T17:56:54.333695",
+  "newest_processed_date": "2026-11-08",
   "oldest_processed_date": "2025-11-02",
   "status": "done"
  },
  "上福岡UNO": {
   "days_done": 357,
-  "last_synced_at": "2026-11-09T07:03:26.556506",
-  "newest_processed_date": "2026-10-22",
+  "last_synced_at": "2026-11-09T17:56:59.692029",
+  "newest_processed_date": "2026-10-30",
   "oldest_processed_date": "2025-09-27",
   "status": "done"
  },
