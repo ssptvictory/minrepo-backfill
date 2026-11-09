@@ -102,7 +102,7 @@ JR_LINE_FILTER = [
 
 # クロール間隔(robots.txtのCrawl-delay:10を守る)
 CRAWL_DELAY = 10.5
-TIME_BUDGET_SECONDS = 1500
+TIME_BUDGET_SECONDS = int(os.environ.get("NAVITIME_TIME_BUDGET", "1500"))
 
 _session = requests.Session()
 _start_time = time.time()
