@@ -322,7 +322,7 @@
  },
  "やすだ三郷店": {
   "days_done": 350,
-  "last_synced_at": "2026-11-08T15:45:58.287848",
+  "last_synced_at": "2026-11-09T07:47:11.791866",
   "newest_processed_date": "2026-11-04",
   "oldest_processed_date": "2020-07-08",
   "status": "done"
@@ -336,8 +336,8 @@
  },
  "やすだ八潮店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-08T15:26:50.476492",
-  "newest_processed_date": "2026-10-31",
+  "last_synced_at": "2026-11-09T07:46:34.135818",
+  "newest_processed_date": "2026-11-06",
   "oldest_processed_date": "2021-06-21",
   "status": "done"
  },
@@ -350,8 +350,8 @@
  },
  "やすだ所沢店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-08T15:25:38.040445",
-  "newest_processed_date": "2026-10-24",
+  "last_synced_at": "2026-11-09T07:45:24.053610",
+  "newest_processed_date": "2026-10-30",
   "oldest_processed_date": "2020-08-27",
   "status": "done"
  },
@@ -519,8 +519,8 @@
  },
  "ウイング": {
   "days_done": 365,
-  "last_synced_at": "2026-11-08T15:26:17.242797",
-  "newest_processed_date": "2026-10-19",
+  "last_synced_at": "2026-11-09T07:45:58.485392",
+  "newest_processed_date": "2026-10-25",
   "oldest_processed_date": "2025-11-05",
   "status": "done"
  },
@@ -733,10 +733,10 @@
   "status": "done"
  },
  "オーパ": {
-  "days_done": 72,
+  "days_done": 82,
   "last_synced_at": "2026-11-09T03:36:14.350801",
   "newest_processed_date": "2025-10-07",
-  "oldest_processed_date": "2026-08-29",
+  "oldest_processed_date": "2026-08-19",
   "status": "in_progress"
  },
  "オーパス・ワンアネックス立石店": {
@@ -1210,10 +1210,10 @@
   "status": "pending"
  },
  "ジャンジャンマールゴット分倍河原駅前": {
-  "days_done": 169,
+  "days_done": 180,
   "last_synced_at": "2026-11-09T01:27:16.966004",
   "newest_processed_date": "2026-10-16",
-  "oldest_processed_date": "2026-05-24",
+  "oldest_processed_date": "2026-05-13",
   "status": "in_progress"
  },
  "ジャンジャンマールゴット日野駅前店": {
@@ -1231,10 +1231,10 @@
   "status": "done"
  },
  "ジャンボ": {
-  "days_done": 37,
+  "days_done": 47,
   "last_synced_at": "2026-11-09T05:56:47.532562",
   "newest_processed_date": "2026-10-15",
-  "oldest_processed_date": "2026-10-03",
+  "oldest_processed_date": "2026-09-23",
   "status": "in_progress"
  },
  "ジュラク王子店": {
@@ -1564,8 +1564,8 @@
  },
  "パチンコプラザ-ラ･カータ上里店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-08T15:25:02.910868",
-  "newest_processed_date": "2021-02-10",
+  "last_synced_at": "2026-11-09T07:44:45.312248",
+  "newest_processed_date": "2021-03-15",
   "oldest_processed_date": "2021-05-05",
   "status": "done"
  },
@@ -1614,10 +1614,10 @@
   "status": "done"
  },
  "パラッツォ秋津店": {
-  "days_done": 7,
+  "days_done": 9,
   "last_synced_at": "2026-11-09T06:40:07.429810",
   "newest_processed_date": "2026-10-15",
-  "oldest_processed_date": "2026-11-02",
+  "oldest_processed_date": "2026-10-31",
   "status": "in_progress"
  },
  "パラッツォ葛西店": {
@@ -2170,10 +2170,10 @@
   "status": "done"
  },
  "メッセ三鷹店": {
-  "days_done": 340,
+  "days_done": 349,
   "last_synced_at": "2026-11-08T18:16:53.574825",
   "newest_processed_date": "2026-10-16",
-  "oldest_processed_date": "2025-11-29",
+  "oldest_processed_date": "2025-11-20",
   "status": "in_progress"
  },
  "メッセ南千住店": {
@@ -2216,17 +2216,17 @@
   "status": "done"
  },
  "メッセ武蔵境店": {
-  "days_done": 215,
+  "days_done": 225,
   "last_synced_at": "2026-11-08T20:04:08.002945",
   "newest_processed_date": "2026-10-16",
-  "oldest_processed_date": "2026-04-06",
+  "oldest_processed_date": "2026-03-27",
   "status": "in_progress"
  },
  "メッセ竹の塚": {
-  "days_done": 161,
+  "days_done": 169,
   "last_synced_at": "2026-11-09T01:26:44.943518",
   "newest_processed_date": "2026-10-14",
-  "oldest_processed_date": "2026-05-30",
+  "oldest_processed_date": "2026-05-22",
   "status": "in_progress"
  },
  "メッセ笹塚": {
@@ -2247,10 +2247,10 @@
   "status": "pending"
  },
  "メッセ西荻窪店": {
-  "days_done": 148,
+  "days_done": 159,
   "last_synced_at": "2026-11-09T01:48:13.733927",
   "newest_processed_date": "2026-10-15",
-  "oldest_processed_date": "2026-06-13",
+  "oldest_processed_date": "2026-06-02",
   "status": "in_progress"
  },
  "メッセ西葛西": {
