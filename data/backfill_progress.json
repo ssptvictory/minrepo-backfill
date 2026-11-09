@@ -295,8 +295,8 @@
  },
  "みとや錦糸町北口店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-08T09:40:20.533469",
-  "newest_processed_date": "2026-10-31",
+  "last_synced_at": "2026-11-09T02:32:40.030569",
+  "newest_processed_date": "2026-11-04",
   "next_url": "https://min-repo.com/2666160/",
   "status": "done"
  },
@@ -678,10 +678,10 @@
   "status": "done"
  },
  "オリエンタルパサージュ荻窪426": {
-  "days_done": 298,
+  "days_done": 307,
   "last_synced_at": "2026-11-08T15:03:02.955193",
   "newest_processed_date": "2025-10-04",
-  "oldest_processed_date": "2026-01-09",
+  "oldest_processed_date": "2025-12-31",
   "status": "in_progress"
  },
  "オリエントヴィーナスホール": {
@@ -920,11 +920,11 @@
   "status": "pending"
  },
  "キューデン東口店": {
-  "days_done": 364,
+  "days_done": 365,
   "last_synced_at": "2026-11-08T14:20:16.595141",
   "newest_processed_date": "2026-10-13",
-  "oldest_processed_date": "2025-11-06",
-  "status": "in_progress"
+  "oldest_processed_date": "2025-11-05",
+  "status": "done"
  },
  "キングNo.1世田谷店": {
   "days_done": 0,
@@ -1203,10 +1203,10 @@
   "status": "pending"
  },
  "ジャンジャンマールゴット分倍河原駅前": {
-  "days_done": 23,
+  "days_done": 30,
   "last_synced_at": "2026-11-09T01:27:16.966004",
   "newest_processed_date": "2026-10-16",
-  "oldest_processed_date": "2026-10-17",
+  "oldest_processed_date": "2026-10-10",
   "status": "in_progress"
  },
  "ジャンジャンマールゴット日野駅前店": {
@@ -1374,8 +1374,8 @@
  },
  "デルパラ吉川店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-08T09:20:24.339967",
-  "newest_processed_date": "2025-10-20",
+  "last_synced_at": "2026-11-09T02:31:38.613226",
+  "newest_processed_date": "2025-10-24",
   "oldest_processed_date": "2025-10-23",
   "status": "done"
  },
@@ -2161,10 +2161,10 @@
   "status": "done"
  },
  "メッセ三鷹店": {
-  "days_done": 221,
+  "days_done": 228,
   "last_synced_at": "2026-11-08T18:16:53.574825",
   "newest_processed_date": "2026-10-16",
-  "oldest_processed_date": "2026-03-30",
+  "oldest_processed_date": "2026-03-23",
   "status": "in_progress"
  },
  "メッセ南千住店": {
@@ -2207,17 +2207,17 @@
   "status": "done"
  },
  "メッセ武蔵境店": {
-  "days_done": 84,
+  "days_done": 91,
   "last_synced_at": "2026-11-08T20:04:08.002945",
   "newest_processed_date": "2026-10-16",
-  "oldest_processed_date": "2026-08-16",
+  "oldest_processed_date": "2026-08-09",
   "status": "in_progress"
  },
  "メッセ竹の塚": {
-  "days_done": 32,
+  "days_done": 37,
   "last_synced_at": "2026-11-09T01:26:44.943518",
   "newest_processed_date": "2026-10-14",
-  "oldest_processed_date": "2026-10-08",
+  "oldest_processed_date": "2026-10-03",
   "status": "in_progress"
  },
  "メッセ笹塚": {
@@ -2238,10 +2238,10 @@
   "status": "pending"
  },
  "メッセ西荻窪店": {
-  "days_done": 5,
+  "days_done": 13,
   "last_synced_at": "2026-11-09T01:48:13.733927",
   "newest_processed_date": "2026-10-15",
-  "oldest_processed_date": "2026-11-04",
+  "oldest_processed_date": "2026-10-27",
   "status": "in_progress"
  },
  "メッセ西葛西": {
@@ -2252,10 +2252,10 @@
   "status": "done"
  },
  "メッセ高円寺店": {
-  "days_done": 267,
+  "days_done": 274,
   "last_synced_at": "2026-11-08T18:16:18.416615",
   "newest_processed_date": "2026-10-16",
-  "oldest_processed_date": "2026-02-12",
+  "oldest_processed_date": "2026-02-05",
   "status": "in_progress"
  },
  "メビウス西川口店": {
@@ -2479,8 +2479,8 @@
  },
  "楽園アメ横店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-08T09:41:22.752784",
-  "newest_processed_date": "2026-11-05",
+  "last_synced_at": "2026-11-09T02:33:33.961006",
+  "newest_processed_date": "2026-11-08",
   "next_url": "https://min-repo.com/2667236/",
   "status": "done"
  },
@@ -2522,15 +2522,15 @@
  },
  "楽園渋谷道玄坂店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-08T09:40:51.900434",
-  "newest_processed_date": "2026-11-07",
+  "last_synced_at": "2026-11-09T02:33:21.274318",
+  "newest_processed_date": "2026-11-08",
   "next_url": "https://min-repo.com/2661827/",
   "status": "done"
  },
  "楽園渋谷駅前店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-08T09:20:57.838940",
-  "newest_processed_date": "2026-11-06",
+  "last_synced_at": "2026-11-09T02:32:17.607307",
+  "newest_processed_date": "2026-11-08",
   "next_url": "https://min-repo.com/2661828/",
   "status": "done"
  },
