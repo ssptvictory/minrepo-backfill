@@ -30,10 +30,23 @@ requests+BeautifulSoupで完全に取得できる。
 出力:
   data/navitime_lines.json          {line_id: {name, company}}
   data/navitime_stations.json       {line_id: [{node_id, name}, ...]} (駅順)
-  data/navitime_timetable.parquet   station_node_id, line_id, updown,
-                                     day_type, hour, minute, train_type,
-                                     dest_name, dest_node_id, is_first
+  data/navitime_shards/shard_{run_id}.parquet  このrunで取得した時刻表行
+  data/navitime_shards/shard_{run_id}.json     このrunで完了したキー一覧
+
+このデータはshardに分けて保存する(1本の時刻表parquetに毎回上書き
+保存するのではない)。理由: GitHub Actionsのschedule実行は15分おき
+だが、別の頻度の高いワークフロー(backfill.yml、20分おきに自データを
+コミット)と同じリポジトリにコミットするため、`git pull --rebase`が
+頻繁に衝突する。parquetはバイナリファイルでgitが3-way mergeできない
+ため、衝突時は「このrunのコミットを丸ごと破棄してorigin側に合わせる」
+という設計にしていた結果、1回目のローカルpush分(129件)以降は実質
+何も進んでいなかった(5回の"成功"run全てが自分の成果を破棄していた)。
+各runが自分のrun_idだけのユニークなファイル名に書き込むようにすれば、
+他runのコミットと絶対に衝突しない(ファイルパス自体が別なので)。
+後で読む側(セグメント所要時間算出・NetworkXグラフ構築)は
+data/navitime_shards/*.parquetを全部concatして使う想定。
 """
+import os
 import random
 import re
 import time
@@ -49,8 +62,13 @@ from bs4 import BeautifulSoup
 SCRIPT_DIR = Path(__file__).resolve().parent
 LINES_PATH = SCRIPT_DIR / "data" / "navitime_lines.json"
 STATIONS_PATH = SCRIPT_DIR / "data" / "navitime_stations.json"
-TIMETABLE_PATH = SCRIPT_DIR / "data" / "navitime_timetable.parquet"
-PROGRESS_PATH = SCRIPT_DIR / "data" / "navitime_progress.json"
+SHARDS_DIR = SCRIPT_DIR / "data" / "navitime_shards"
+
+# GitHub Actions実行ごとにユニークなGITHUB_RUN_IDが振られる。
+# これをshardファイル名に使うことで他runのコミットと絶対に衝突しない。
+RUN_ID = os.environ.get("GITHUB_RUN_ID") or f"local{int(time.time())}"
+SHARD_TIMETABLE_PATH = SHARDS_DIR / f"shard_{RUN_ID}.parquet"
+SHARD_PROGRESS_PATH = SHARDS_DIR / f"shard_{RUN_ID}.json"
 
 HEADERS = {
     "User-Agent": (
@@ -202,9 +220,17 @@ def parse_timetable(html: str, node_id: str, line_id: str, updown: str):
     return rows
 
 
+def load_all_done() -> set:
+    """全shard(過去の全run分)から完了済みキーを集める。"""
+    done = set()
+    if SHARDS_DIR.exists():
+        for p in SHARDS_DIR.glob("shard_*.json"):
+            done.update(load_json(p, {"done": []}).get("done", []))
+    return done
+
+
 def scrape_timetables(lines: dict, stations_by_line: dict):
-    progress = load_json(PROGRESS_PATH, {"done": []})
-    done = set(progress["done"])
+    done = load_all_done()
 
     targets = []
     for line_id, stations in stations_by_line.items():
@@ -217,7 +243,7 @@ def scrape_timetables(lines: dict, stations_by_line: dict):
     print(f"対象(駅×路線×方向): {len(targets)}件(うち完了済み{len(done)}件)")
 
     all_rows = []
-    today = date.today()
+    shard_done = []
     for i, (node_id, line_id, updown, key) in enumerate(targets):
         if time_left() <= 0:
             print(f"時間切れ、{i}/{len(targets)}件まで処理")
@@ -226,7 +252,7 @@ def scrape_timetables(lines: dict, stations_by_line: dict):
             resp = fetch(f"https://www.navitime.co.jp/diagram/timetable?node={node_id}&lineId={line_id}&updown={updown}")
             rows = parse_timetable(resp.text, node_id, line_id, updown)
             all_rows.extend(rows)
-            done.add(key)
+            shard_done.append(key)
             if (i + 1) % 20 == 0:
                 print(f"  [{i+1}/{len(targets)}] 処理済み(直近: {len(rows)}件)")
         except Exception as e:
@@ -235,34 +261,26 @@ def scrape_timetables(lines: dict, stations_by_line: dict):
 
         # 100件ごとに中間保存(途中で止まっても進捗とデータが残るように)
         if (i + 1) % 100 == 0:
-            _save_timetable_rows(all_rows)
+            _save_shard(all_rows, shard_done)
             all_rows = []
-            progress["done"] = sorted(done)
-            save_json(PROGRESS_PATH, progress)
 
-    _save_timetable_rows(all_rows)
-    progress["done"] = sorted(done)
-    save_json(PROGRESS_PATH, progress)
-    print(f"\n完了済み合計: {len(done)}件")
+    _save_shard(all_rows, shard_done)
+    print(f"\nこのrunで完了: {len(shard_done)}件 / 全体完了: {len(done) + len(shard_done)}件")
 
 
-def _save_timetable_rows(rows):
-    if not rows:
-        return
-    new_df = pd.DataFrame(rows)
-    if TIMETABLE_PATH.exists():
-        existing = pq.read_table(TIMETABLE_PATH).to_pandas()
-        combined = pd.concat([existing, new_df], ignore_index=True)
-        combined = combined.drop_duplicates(
-            subset=["station_node_id", "line_id", "updown", "day_type", "hour", "minute", "dest_node_id"],
-            keep="last",
-        )
-    else:
-        combined = new_df
-    TIMETABLE_PATH.parent.mkdir(parents=True, exist_ok=True)
-    table = pa.Table.from_pandas(combined, preserve_index=False)
-    pq.write_table(table, TIMETABLE_PATH, compression="zstd", compression_level=15)
-    print(f"  保存: {TIMETABLE_PATH.name} ({len(combined)}行)")
+def _save_shard(rows, shard_done):
+    SHARDS_DIR.mkdir(parents=True, exist_ok=True)
+    if rows:
+        new_df = pd.DataFrame(rows)
+        if SHARD_TIMETABLE_PATH.exists():
+            existing = pq.read_table(SHARD_TIMETABLE_PATH).to_pandas()
+            combined = pd.concat([existing, new_df], ignore_index=True)
+        else:
+            combined = new_df
+        table = pa.Table.from_pandas(combined, preserve_index=False)
+        pq.write_table(table, SHARD_TIMETABLE_PATH, compression="zstd", compression_level=15)
+        print(f"  保存: {SHARD_TIMETABLE_PATH.name} ({len(combined)}行)")
+    save_json(SHARD_PROGRESS_PATH, {"done": shard_done})
 
 
 def run():

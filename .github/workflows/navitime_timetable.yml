@@ -35,13 +35,19 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/navitime_timetable.parquet data/navitime_progress.json data/navitime_lines.json data/navitime_stations.json
+          git add data/navitime_shards/ data/navitime_lines.json data/navitime_stations.json
           git diff --cached --quiet || git commit -m "chore: NAVITIME timetable scrape $(date -u +%Y-%m-%dT%H:%M:%SZ)"
 
-          if ! git pull --rebase; then
-            echo "::warning::pull --rebase failed (likely binary conflict in a parquet file). Discarding this run's commit and syncing to remote instead."
+          # 各runは自分のGITHUB_RUN_IDだけのユニークなshardファイルに書くので
+          # 他ワークフロー(backfill.yml等)のコミットと衝突することは原理上ない。
+          # それでもpush競合(同時実行)に備えて軽くリトライする。
+          for attempt in 1 2 3; do
+            if git pull --rebase && git push; then
+              exit 0
+            fi
+            echo "::warning::push attempt $attempt failed, retrying"
             git rebase --abort || true
-            git reset --hard origin/main
-            exit 0
-          fi
-          git push
+            sleep 5
+          done
+          echo "::error::failed to push after retries"
+          exit 1
