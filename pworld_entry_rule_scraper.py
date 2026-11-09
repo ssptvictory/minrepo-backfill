@@ -104,11 +104,15 @@ def discover_hall_urls():
 
 def parse_hall_page(html: str):
     soup = BeautifulSoup(html, "html.parser")
-    h1 = soup.find("h1")
-    hall_name = h1.get_text(strip=True) if h1 else ""
+    # <title>は店名そのもの(例:"北越谷ＵＮＯ店")が入っており信頼できる。
+    # <h1>は多くのページで存在しないが、一部チェーン(ニラク等)のページ
+    # ではh1が複数存在し、最初のh1が「最新情報」等の無関係な見出しに
+    # なっているため、h1を優先すると誤った店名を取得してしまう。
+    title = soup.title.get_text(strip=True) if soup.title else ""
+    hall_name = title.split("｜")[0].strip() if title and title != "P-WORLD Not Found" else ""
     if not hall_name:
-        title = soup.title.get_text() if soup.title else ""
-        hall_name = title.split("｜")[0].strip() if title else ""
+        h1 = soup.find("h1")
+        hall_name = h1.get_text(strip=True) if h1 else ""
 
     morning_entry = ""
     trs = soup.find_all("tr")

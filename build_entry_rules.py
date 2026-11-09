@@ -1,7 +1,8 @@
 """
 パチ7(pachi7_hall_rules.parquet)・DMMぱちタウン(ptown_hall_rules.parquet)・
 P-WORLD(pworld_hall_rules.parquet)の入場ルール・抽選情報を、
-halls_export.csvの392店と名寄せして1つに統合する。
+halls_export.csvの392店(ミンレポにデータがあるコア店舗)と名寄せして
+1つに統合する。
 
 単独では情報が見つかる店舗が少なく、店長の裁量で公開状況がバラバラ
 という構造的な制約があるため、3サイトを合算(OR)して最大限のカバー
@@ -14,10 +15,20 @@ halls_export.csvの392店と名寄せして1つに統合する。
 (過去に発生した「別ホールのデータを誤って紐付ける」事故を避けるため、
 衝突する可能性がある正規化結果は自動マッチ対象から除外している)。
 
+392店に加えて、各スクレイパーは元々ミンレポ非掲載の店舗も多数発見
+している(pachi7:907件、ptown:738件、P-WORLD:731件、392店はその部分
+集合)。ミンレポに機械データがない店でも、ユーザーがその店の抽選だけ
+気にするケースに対応するため、392店以外で入場ルール情報が見つかった
+店も`in_core_392=False`として別途そのまま出力する。ただしコア外の
+店舗名は正規化キーが別の実店舗と衝突するリスク(同じチェーン名が
+複数地域に存在する等)があるため、392店向けのnorm_mapのような安全な
+名寄せ台帳がなく、ソース間の統合は行わない(同じ店が複数ソースに
+載っていれば単純に複数行になる。将来的に住所ベースの統合を検討)。
+
 出力: data/entry_rules.parquet
   列: hall_name, source(pachi7/ptown/both), entry_rule, rule_detail,
       numbered_ticket, address, nearest_station, access, business_hours,
-      last_checked_date, found
+      last_checked_date, found, in_core_392
 """
 from pathlib import Path
 
@@ -81,6 +92,7 @@ def run():
     ]
 
     rows = {}
+    extra_rows = []
     for source_name, df, has_info_fn, to_fields_fn in sources:
         df = df.copy()
         df["norm"] = df["hall_name"].apply(normalize)
@@ -100,8 +112,25 @@ def run():
                 "source": source_name,
                 "last_checked_date": r["last_checked_date"],
                 "found": has_info,
+                "in_core_392": True,
                 **fields,
             }
+
+        # コア392店以外: 安全な名寄せ台帳がないためソース間統合はせず、
+        # 情報が見つかった行だけをそのまま追加する(重複は許容)
+        df_extra = df[~df["norm"].isin(norm_map)]
+        for _, r in df_extra.iterrows():
+            if not has_info_fn(r):
+                continue
+            fields = to_fields_fn(r)
+            extra_rows.append({
+                "hall_name": r["hall_name"],
+                "source": source_name,
+                "last_checked_date": r["last_checked_date"],
+                "found": True,
+                "in_core_392": False,
+                **fields,
+            })
 
     # みんパチ・手動調査分は、検索時点で既に自店舗名(hall_name)に紐付け
     # 済みのため、normalize()による再マッチは不要で直接キーで取り込む
@@ -137,6 +166,7 @@ def run():
                 "address": "", "nearest_station": "", "access": "", "business_hours": "",
                 "last_checked_date": r["last_checked_date"],
                 "found": bool(entry_rule) or bool(rule_detail),
+                "in_core_392": True,
             }
 
     all_our_names = set(norm_map.values())
@@ -155,15 +185,22 @@ def run():
                 "business_hours": "",
                 "last_checked_date": checked_date,
                 "found": False,
+                "in_core_392": True,
             }
 
-    df = pd.DataFrame(rows.values()).sort_values("hall_name")
-    found_count = df["found"].sum()
-    print(f"情報あり: {found_count}/{len(df)}店 ({found_count/len(df)*100:.1f}%)")
+    core_df = pd.DataFrame(rows.values())
+    extra_df = pd.DataFrame(extra_rows)
+    df = pd.concat([core_df, extra_df], ignore_index=True).sort_values(
+        ["in_core_392", "hall_name"], ascending=[False, True]
+    )
+
+    core_found = core_df["found"].sum()
+    print(f"コア392店 情報あり: {core_found}/{len(core_df)}店 ({core_found/len(core_df)*100:.1f}%)")
+    print(f"コア外(ミンレポ非掲載)で入場ルール情報が見つかった店: {len(extra_df)}件")
 
     table = pa.Table.from_pandas(df, preserve_index=False)
     pq.write_table(table, OUT_PATH, compression="zstd", compression_level=15)
-    print(f"保存: {OUT_PATH.name}")
+    print(f"保存: {OUT_PATH.name} (合計{len(df)}行)")
 
 
 if __name__ == "__main__":
