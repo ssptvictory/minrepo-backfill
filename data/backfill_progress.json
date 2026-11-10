@@ -156,10 +156,10 @@
   "status": "done"
  },
  "P-PORT-PREGO立川店": {
-  "days_done": 258,
+  "days_done": 269,
   "last_synced_at": "2026-11-10T08:02:23.545300",
   "newest_processed_date": "2025-10-17",
-  "oldest_processed_date": "2026-02-25",
+  "oldest_processed_date": "2026-02-14",
   "status": "in_progress"
  },
  "R7-STRONG": {
@@ -969,10 +969,10 @@
   "status": "pending"
  },
  "クラウン-東京都": {
-  "days_done": 53,
+  "days_done": 64,
   "last_synced_at": "2026-11-10T05:09:18.447138",
   "newest_processed_date": "2025-10-11",
-  "oldest_processed_date": "2026-09-18",
+  "oldest_processed_date": "2026-09-07",
   "status": "in_progress"
  },
  "クラウン東京都": {
@@ -1625,10 +1625,10 @@
   "status": "pending"
  },
  "パチンコ大王-高島平店": {
-  "days_done": 170,
-  "last_synced_at": "2026-11-10T03:42:00.186938",
-  "newest_processed_date": "2025-10-11",
-  "oldest_processed_date": "2026-05-24",
+  "days_done": 181,
+  "last_synced_at": "2026-11-10T09:51:35.533980",
+  "newest_processed_date": "2025-10-17",
+  "oldest_processed_date": "2026-05-13",
   "status": "in_progress"
  },
  "パチンコ大王高島平店": {
@@ -1644,10 +1644,10 @@
   "status": "done"
  },
  "パラッツォ千川店": {
-  "days_done": 247,
+  "days_done": 259,
   "last_synced_at": "2026-11-10T08:46:34.007182",
   "newest_processed_date": "2026-10-26",
-  "oldest_processed_date": "2026-03-05",
+  "oldest_processed_date": "2026-02-21",
   "status": "in_progress"
  },
  "パラッツォ川越店": {
@@ -1666,8 +1666,8 @@
  },
  "パラッツォ秋津店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-10T03:21:48.855740",
-  "newest_processed_date": "2026-10-30",
+  "last_synced_at": "2026-11-10T09:50:43.420249",
+  "newest_processed_date": "2026-11-06",
   "oldest_processed_date": "2025-11-09",
   "status": "done"
  },
@@ -1778,10 +1778,10 @@
   "status": "done"
  },
  "ピーアーク三田": {
-  "days_done": 213,
+  "days_done": 226,
   "last_synced_at": "2026-11-10T09:29:45.048145",
   "newest_processed_date": "2026-10-23",
-  "oldest_processed_date": "2026-04-10",
+  "oldest_processed_date": "2026-03-28",
   "status": "in_progress"
  },
  "ピーアーク北千住": {
@@ -1799,10 +1799,10 @@
   "status": "in_progress"
  },
  "ピーアーク北綾瀬ピーくんガーデン": {
-  "days_done": 291,
+  "days_done": 303,
   "last_synced_at": "2026-11-10T07:40:30.395001",
   "newest_processed_date": "2025-10-11",
-  "oldest_processed_date": "2026-01-17",
+  "oldest_processed_date": "2026-01-05",
   "status": "in_progress"
  },
  "ピーアーク北綾瀬駅前": {
@@ -2123,15 +2123,15 @@
  },
  "マルハン深谷店": {
   "days_done": 359,
-  "last_synced_at": "2026-11-10T03:22:20.568998",
+  "last_synced_at": "2026-11-10T09:51:17.722815",
   "newest_processed_date": "2026-11-08",
   "oldest_processed_date": "2025-09-26",
   "status": "done"
  },
  "マルハン清河寺店": {
   "days_done": 359,
-  "last_synced_at": "2026-11-10T03:22:27.112394",
-  "newest_processed_date": "2026-11-04",
+  "last_synced_at": "2026-11-10T09:51:18.517553",
+  "newest_processed_date": "2026-11-08",
   "oldest_processed_date": "2025-09-25",
   "status": "done"
  },
@@ -2144,8 +2144,8 @@
  },
  "マルハン鷲宮店": {
   "days_done": 357,
-  "last_synced_at": "2026-11-10T03:42:31.535469",
-  "newest_processed_date": "2026-11-07",
+  "last_synced_at": "2026-11-10T09:52:10.938008",
+  "newest_processed_date": "2026-11-08",
   "oldest_processed_date": "2025-09-25",
   "status": "done"
  },
@@ -2172,7 +2172,7 @@
  },
  "ミリオン1100朝霞店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-10T03:43:02.701564",
+  "last_synced_at": "2026-11-10T09:52:17.397543",
   "newest_processed_date": "2026-11-09",
   "oldest_processed_date": "2025-10-31",
   "status": "done"
@@ -2210,8 +2210,8 @@
  },
  "メガガイア岩槻店": {
   "days_done": 358,
-  "last_synced_at": "2026-11-10T03:43:03.323345",
-  "newest_processed_date": "2026-11-04",
+  "last_synced_at": "2026-11-10T09:52:18.113592",
+  "newest_processed_date": "2026-11-09",
   "oldest_processed_date": "2025-09-22",
   "status": "done"
  },
@@ -2238,8 +2238,8 @@
  },
  "メガガイア越谷大里": {
   "days_done": 358,
-  "last_synced_at": "2026-11-10T03:43:36.459488",
-  "newest_processed_date": "2026-11-03",
+  "last_synced_at": "2026-11-10T09:52:44.029539",
+  "newest_processed_date": "2026-11-08",
   "oldest_processed_date": "2025-09-27",
   "status": "done"
  },
