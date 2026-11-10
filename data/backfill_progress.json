@@ -24,10 +24,10 @@
   "status": "pending"
  },
  "AQUA-H2O": {
-  "days_done": 193,
+  "days_done": 206,
   "last_synced_at": "2026-11-10T18:09:54.745897",
   "newest_processed_date": "2025-10-14",
-  "oldest_processed_date": "2026-04-27",
+  "oldest_processed_date": "2026-04-14",
   "status": "in_progress"
  },
  "ARROW池上店": {
@@ -88,10 +88,10 @@
   "status": "pending"
  },
  "DAS小山": {
-  "days_done": 216,
+  "days_done": 229,
   "last_synced_at": "2026-11-10T18:09:49.491350",
   "newest_processed_date": "2026-11-10",
-  "oldest_processed_date": "2023-11-10",
+  "oldest_processed_date": "2023-09-05",
   "status": "in_progress"
  },
  "DAS東十条店": {
@@ -499,10 +499,10 @@
   "status": "done"
  },
  "アミューズメントコミュニティ-juraku王子店": {
-  "days_done": 258,
+  "days_done": 271,
   "last_synced_at": "2026-11-10T19:16:41.990614",
   "newest_processed_date": "2025-10-12",
-  "oldest_processed_date": "2026-02-14",
+  "oldest_processed_date": "2026-02-01",
   "status": "in_progress"
  },
  "アミューズメントパークジュラク2": {
@@ -594,10 +594,10 @@
   "status": "done"
  },
  "ウエスタン葛西店": {
-  "days_done": 21,
+  "days_done": 22,
   "last_synced_at": "2026-11-10T17:04:07.571202",
   "newest_processed_date": "2026-10-19",
-  "oldest_processed_date": "2026-10-21",
+  "oldest_processed_date": "2026-10-20",
   "status": "in_progress"
  },
  "ウエスタン西葛西店": {
@@ -716,8 +716,8 @@
  },
  "オリエンタルパサージュ荻窪426": {
   "days_done": 365,
-  "last_synced_at": "2026-11-10T14:55:45.724388",
-  "newest_processed_date": "2025-10-30",
+  "last_synced_at": "2026-11-10T19:39:56.556751",
+  "newest_processed_date": "2025-11-04",
   "oldest_processed_date": "2025-11-02",
   "status": "done"
  },
@@ -729,10 +729,10 @@
   "status": "done"
  },
  "オークラ新中野店": {
-  "days_done": 112,
-  "last_synced_at": "2026-11-10T14:54:23.846931",
-  "newest_processed_date": "2026-10-17",
-  "oldest_processed_date": "2026-07-20",
+  "days_done": 124,
+  "last_synced_at": "2026-11-10T19:38:25.924254",
+  "newest_processed_date": "2026-10-25",
+  "oldest_processed_date": "2026-07-08",
   "status": "in_progress"
  },
  "オータ川島店": {
@@ -979,10 +979,10 @@
   "status": "pending"
  },
  "クラウン-東京都": {
-  "days_done": 334,
+  "days_done": 345,
   "last_synced_at": "2026-11-10T15:38:12.339553",
   "newest_processed_date": "2025-10-23",
-  "oldest_processed_date": "2025-12-11",
+  "oldest_processed_date": "2025-11-30",
   "status": "in_progress"
  },
  "クラウン東京都": {
@@ -1077,10 +1077,10 @@
   "status": "done"
  },
  "コンサートホール北千住": {
-  "days_done": 210,
+  "days_done": 222,
   "last_synced_at": "2026-11-10T16:43:39.183608",
   "newest_processed_date": "2026-10-20",
-  "oldest_processed_date": "2026-04-12",
+  "oldest_processed_date": "2026-03-31",
   "status": "in_progress"
  },
  "コンサートホール北浦和": {
@@ -1637,8 +1637,8 @@
  },
  "パチンコ大王-高島平店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-10T14:54:59.029324",
-  "newest_processed_date": "2025-10-22",
+  "last_synced_at": "2026-11-10T19:39:01.559736",
+  "newest_processed_date": "2025-10-28",
   "oldest_processed_date": "2025-11-08",
   "status": "done"
  },
@@ -2134,14 +2134,14 @@
  },
  "マルハン深谷店": {
   "days_done": 359,
-  "last_synced_at": "2026-11-10T14:54:57.923244",
+  "last_synced_at": "2026-11-10T19:38:59.751576",
   "newest_processed_date": "2026-11-08",
   "oldest_processed_date": "2025-09-26",
   "status": "done"
  },
  "マルハン清河寺店": {
   "days_done": 359,
-  "last_synced_at": "2026-11-10T14:54:58.507746",
+  "last_synced_at": "2026-11-10T19:39:00.470795",
   "newest_processed_date": "2026-11-08",
   "oldest_processed_date": "2025-09-25",
   "status": "done"
@@ -2155,7 +2155,7 @@
  },
  "マルハン鷲宮店": {
   "days_done": 357,
-  "last_synced_at": "2026-11-10T14:55:32.436513",
+  "last_synced_at": "2026-11-10T19:39:34.630994",
   "newest_processed_date": "2026-11-08",
   "oldest_processed_date": "2025-09-25",
   "status": "done"
@@ -2183,8 +2183,8 @@
  },
  "ミリオン1100朝霞店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-10T14:55:32.953558",
-  "newest_processed_date": "2026-11-09",
+  "last_synced_at": "2026-11-10T19:39:35.904123",
+  "newest_processed_date": "2026-11-10",
   "oldest_processed_date": "2025-10-31",
   "status": "done"
  },
@@ -2214,15 +2214,15 @@
   "status": "pending"
  },
  "ミリオン高円寺22号店": {
-  "days_done": 168,
-  "last_synced_at": "2026-11-10T14:53:52.831795",
-  "newest_processed_date": "2026-10-17",
-  "oldest_processed_date": "2026-05-26",
+  "days_done": 181,
+  "last_synced_at": "2026-11-10T19:37:52.219613",
+  "newest_processed_date": "2026-10-24",
+  "oldest_processed_date": "2026-05-13",
   "status": "in_progress"
  },
  "メガガイア岩槻店": {
   "days_done": 358,
-  "last_synced_at": "2026-11-10T14:55:33.504005",
+  "last_synced_at": "2026-11-10T19:39:42.733145",
   "newest_processed_date": "2026-11-09",
   "oldest_processed_date": "2025-09-22",
   "status": "done"
@@ -2250,15 +2250,15 @@
  },
  "メガガイア越谷大里": {
   "days_done": 358,
-  "last_synced_at": "2026-11-10T14:55:34.011785",
+  "last_synced_at": "2026-11-10T19:39:43.918234",
   "newest_processed_date": "2026-11-09",
   "oldest_processed_date": "2025-09-27",
   "status": "done"
  },
  "メガボックス東松山店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-10T14:55:40.944921",
-  "newest_processed_date": "2026-11-09",
+  "last_synced_at": "2026-11-10T19:39:45.328502",
+  "newest_processed_date": "2026-11-10",
   "oldest_processed_date": "2025-11-03",
   "status": "done"
  },
@@ -2363,8 +2363,8 @@
  },
  "メビウス西川口店": {
   "days_done": 358,
-  "last_synced_at": "2026-11-10T14:55:41.695764",
-  "newest_processed_date": "2026-11-09",
+  "last_synced_at": "2026-11-10T19:39:50.318420",
+  "newest_processed_date": "2026-11-10",
   "oldest_processed_date": "2025-09-26",
   "status": "done"
  },
@@ -2428,14 +2428,14 @@
  },
  "上尾ウノ": {
   "days_done": 365,
-  "last_synced_at": "2026-11-10T14:55:42.281102",
+  "last_synced_at": "2026-11-10T19:39:55.077271",
   "newest_processed_date": "2026-11-09",
   "oldest_processed_date": "2025-11-02",
   "status": "done"
  },
  "上福岡UNO": {
   "days_done": 357,
-  "last_synced_at": "2026-11-10T14:55:42.862152",
+  "last_synced_at": "2026-11-10T19:39:55.848256",
   "newest_processed_date": "2026-11-09",
   "oldest_processed_date": "2025-09-27",
   "status": "done"
