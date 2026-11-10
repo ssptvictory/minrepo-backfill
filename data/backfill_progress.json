@@ -24,10 +24,10 @@
   "status": "pending"
  },
  "AQUA-H2O": {
-  "days_done": 43,
+  "days_done": 57,
   "last_synced_at": "2026-11-10T13:27:34.166439",
   "newest_processed_date": "2025-10-07",
-  "oldest_processed_date": "2026-09-28",
+  "oldest_processed_date": "2026-09-14",
   "status": "in_progress"
  },
  "ARROW池上店": {
@@ -88,10 +88,10 @@
   "status": "pending"
  },
  "DAS小山": {
-  "days_done": 72,
+  "days_done": 85,
   "last_synced_at": "2026-11-10T13:27:05.575957",
   "newest_processed_date": "2026-11-05",
-  "oldest_processed_date": "2025-11-05",
+  "oldest_processed_date": "2025-08-30",
   "status": "in_progress"
  },
  "DAS東十条店": {
@@ -172,8 +172,8 @@
  },
  "R7-STRONG": {
   "days_done": 365,
-  "last_synced_at": "2026-11-10T10:58:25.031996",
-  "newest_processed_date": "2025-11-10",
+  "last_synced_at": "2026-11-10T15:40:04.377054",
+  "newest_processed_date": "2025-11-11",
   "oldest_processed_date": "2025-11-06",
   "status": "done"
  },
@@ -386,7 +386,7 @@
  },
  "やすだ朝霞店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-10T10:57:17.123675",
+  "last_synced_at": "2026-11-10T15:38:46.748149",
   "newest_processed_date": "2026-11-09",
   "oldest_processed_date": "2021-10-15",
   "status": "done"
@@ -499,10 +499,10 @@
   "status": "done"
  },
  "アミューズメントコミュニティ-juraku王子店": {
-  "days_done": 122,
+  "days_done": 134,
   "last_synced_at": "2026-11-10T14:32:27.612125",
   "newest_processed_date": "2025-10-06",
-  "oldest_processed_date": "2026-06-30",
+  "oldest_processed_date": "2026-06-18",
   "status": "in_progress"
  },
  "アミューズメントパークジュラク2": {
@@ -569,8 +569,8 @@
  },
  "ウイング蕨": {
   "days_done": 365,
-  "last_synced_at": "2026-11-10T10:57:52.431050",
-  "newest_processed_date": "2025-11-15",
+  "last_synced_at": "2026-11-10T15:39:30.136306",
+  "newest_processed_date": "2025-11-22",
   "oldest_processed_date": "2025-11-03",
   "status": "done"
  },
@@ -728,10 +728,10 @@
   "status": "done"
  },
  "オークラ新中野店": {
-  "days_done": 6,
+  "days_done": 8,
   "last_synced_at": "2026-11-10T14:54:23.846931",
   "newest_processed_date": "2026-10-17",
-  "oldest_processed_date": "2026-11-04",
+  "oldest_processed_date": "2026-11-02",
   "status": "in_progress"
  },
  "オータ川島店": {
@@ -978,10 +978,10 @@
   "status": "pending"
  },
  "クラウン-東京都": {
-  "days_done": 214,
-  "last_synced_at": "2026-11-10T10:56:39.247539",
-  "newest_processed_date": "2025-10-17",
-  "oldest_processed_date": "2026-04-10",
+  "days_done": 224,
+  "last_synced_at": "2026-11-10T15:38:12.339553",
+  "newest_processed_date": "2025-10-23",
+  "oldest_processed_date": "2026-03-31",
   "status": "in_progress"
  },
  "クラウン東京都": {
@@ -1076,10 +1076,10 @@
   "status": "done"
  },
  "コンサートホール北千住": {
-  "days_done": 76,
+  "days_done": 88,
   "last_synced_at": "2026-11-10T12:22:11.531582",
   "newest_processed_date": "2026-10-15",
-  "oldest_processed_date": "2026-08-26",
+  "oldest_processed_date": "2026-08-13",
   "status": "in_progress"
  },
  "コンサートホール北浦和": {
@@ -1151,7 +1151,7 @@
  },
  "ゴードン西川口店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-10T10:57:16.434172",
+  "last_synced_at": "2026-11-10T15:38:46.183134",
   "newest_processed_date": "2026-11-09",
   "next_url": "https://min-repo.com/2628529/",
   "status": "done"
@@ -1435,8 +1435,8 @@
  },
  "デルパラ川口店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-10T10:57:17.776703",
-  "newest_processed_date": "2025-11-10",
+  "last_synced_at": "2026-11-10T15:38:47.422478",
+  "newest_processed_date": "2025-11-17",
   "oldest_processed_date": "2025-10-31",
   "status": "done"
  },
@@ -1503,8 +1503,8 @@
  },
  "ニュークラウン川越2号店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-10T10:56:00.487424",
-  "newest_processed_date": "2026-06-15",
+  "last_synced_at": "2026-11-10T15:37:38.295813",
+  "newest_processed_date": "2026-06-20",
   "oldest_processed_date": "2025-11-01",
   "status": "done"
  },
@@ -1635,10 +1635,10 @@
   "status": "pending"
  },
  "パチンコ大王-高島平店": {
-  "days_done": 332,
+  "days_done": 335,
   "last_synced_at": "2026-11-10T14:54:59.029324",
   "newest_processed_date": "2025-10-22",
-  "oldest_processed_date": "2025-12-12",
+  "oldest_processed_date": "2025-12-08",
   "status": "in_progress"
  },
  "パチンコ大王高島平店": {
@@ -2189,8 +2189,8 @@
  },
  "ミリオン和光10号店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-10T10:57:50.346226",
-  "newest_processed_date": "2026-11-09",
+  "last_synced_at": "2026-11-10T15:39:23.428791",
+  "newest_processed_date": "2026-11-10",
   "next_url": "https://min-repo.com/2652997/",
   "status": "done"
  },
@@ -2213,10 +2213,10 @@
   "status": "pending"
  },
  "ミリオン高円寺22号店": {
-  "days_done": 25,
+  "days_done": 39,
   "last_synced_at": "2026-11-10T14:53:52.831795",
   "newest_processed_date": "2026-10-17",
-  "oldest_processed_date": "2026-10-16",
+  "oldest_processed_date": "2026-10-02",
   "status": "in_progress"
  },
  "メガガイア岩槻店": {
@@ -2448,7 +2448,7 @@
  },
  "仙川UNO": {
   "days_done": 343,
-  "last_synced_at": "2026-11-10T10:57:51.092054",
+  "last_synced_at": "2026-11-10T15:39:28.954594",
   "newest_processed_date": "2026-11-09",
   "oldest_processed_date": "2025-09-28",
   "status": "done"
@@ -2560,7 +2560,7 @@
  },
  "有楽町DUO": {
   "days_done": 365,
-  "last_synced_at": "2026-11-10T10:57:51.826167",
+  "last_synced_at": "2026-11-10T15:39:29.553995",
   "newest_processed_date": "2026-11-09",
   "next_url": "https://min-repo.com/2629067/",
   "status": "done"
