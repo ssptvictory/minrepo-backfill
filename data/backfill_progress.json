@@ -114,8 +114,8 @@
  },
  "DELFEEL-NEW-TOKYO": {
   "days_done": 365,
-  "last_synced_at": "2026-11-11T06:25:22.179845",
-  "newest_processed_date": "2025-11-11",
+  "last_synced_at": "2026-11-11T11:05:11.791005",
+  "newest_processed_date": "2025-11-17",
   "oldest_processed_date": "2025-11-09",
   "status": "done"
  },
@@ -501,8 +501,8 @@
  },
  "アミューズメントコミュニティ-juraku王子店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-11T06:26:23.733587",
-  "newest_processed_date": "2025-10-24",
+  "last_synced_at": "2026-11-11T11:05:49.908809",
+  "newest_processed_date": "2025-10-30",
   "oldest_processed_date": "2025-10-30",
   "status": "done"
  },
@@ -680,10 +680,10 @@
   "status": "pending"
  },
  "エスパス日拓赤坂見附駅前新館": {
-  "days_done": 49,
+  "days_done": 62,
   "last_synced_at": "2026-11-11T08:55:48.156017",
   "newest_processed_date": "2026-10-16",
-  "oldest_processed_date": "2026-09-23",
+  "oldest_processed_date": "2026-09-10",
   "status": "in_progress"
  },
  "エスパス日拓高田馬場本店": {
@@ -733,8 +733,8 @@
  },
  "オークラ新中野店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-11T06:47:26.550149",
-  "newest_processed_date": "2026-11-03",
+  "last_synced_at": "2026-11-11T11:07:14.141161",
+  "newest_processed_date": "2026-11-09",
   "oldest_processed_date": "2025-10-29",
   "status": "done"
  },
@@ -970,16 +970,16 @@
  },
  "キューデン東口店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-11T06:46:19.887799",
+  "last_synced_at": "2026-11-11T11:06:26.544603",
   "newest_processed_date": "2026-11-10",
   "oldest_processed_date": "2025-11-05",
   "status": "done"
  },
  "キングNo.1世田谷店": {
-  "days_done": 330,
+  "days_done": 342,
   "last_synced_at": "2026-11-11T09:39:42.140036",
   "newest_processed_date": "2026-10-27",
-  "oldest_processed_date": "2025-11-28",
+  "oldest_processed_date": "2025-11-16",
   "status": "in_progress"
  },
  "クラウン-東京都": {
@@ -1256,10 +1256,10 @@
   "status": "pending"
  },
  "ジャラン高島平店": {
-  "days_done": 317,
+  "days_done": 329,
   "last_synced_at": "2026-11-11T10:01:03.277617",
   "newest_processed_date": "2026-10-30",
-  "oldest_processed_date": "2025-12-09",
+  "oldest_processed_date": "2025-11-27",
   "status": "in_progress"
  },
  "ジャンジャンマールゴット分倍河原駅前": {
@@ -1285,7 +1285,7 @@
  },
  "ジャンボ": {
   "days_done": 365,
-  "last_synced_at": "2026-11-11T06:25:21.511645",
+  "last_synced_at": "2026-11-11T11:05:11.145122",
   "newest_processed_date": "2026-11-10",
   "oldest_processed_date": "2025-11-05",
   "status": "done"
@@ -1297,14 +1297,14 @@
  },
  "スカイプラザ大井店": {
   "days_done": 358,
-  "last_synced_at": "2026-11-11T06:25:17.026580",
+  "last_synced_at": "2026-11-11T11:05:07.813673",
   "newest_processed_date": "2026-11-10",
   "oldest_processed_date": "2025-09-17",
   "status": "done"
  },
  "スカイプラザ富士見店": {
   "days_done": 357,
-  "last_synced_at": "2026-11-11T06:25:17.742346",
+  "last_synced_at": "2026-11-11T11:05:08.454788",
   "newest_processed_date": "2026-11-10",
   "oldest_processed_date": "2025-09-17",
   "status": "done"
@@ -1371,7 +1371,7 @@
  },
  "スーパーライブガーデン行田店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-11T06:25:18.540110",
+  "last_synced_at": "2026-11-11T11:05:09.125470",
   "newest_processed_date": "2026-11-10",
   "next_url": "https://min-repo.com/2619706/",
   "status": "done"
@@ -1404,7 +1404,7 @@
  },
  "ディスカバリー": {
   "days_done": 365,
-  "last_synced_at": "2026-11-11T06:25:20.125955",
+  "last_synced_at": "2026-11-11T11:05:09.867664",
   "newest_processed_date": "2026-11-10",
   "next_url": "https://min-repo.com/2620595/",
   "status": "done"
@@ -1538,7 +1538,7 @@
  },
  "ニューダイエイ": {
   "days_done": 359,
-  "last_synced_at": "2026-11-11T06:25:20.824884",
+  "last_synced_at": "2026-11-11T11:05:10.505073",
   "newest_processed_date": "2026-11-10",
   "oldest_processed_date": "2025-08-17",
   "status": "done"
@@ -1555,7 +1555,7 @@
  },
  "ニューヨーク": {
   "days_done": 357,
-  "last_synced_at": "2026-11-11T06:25:57.113181",
+  "last_synced_at": "2026-11-11T11:05:43.028079",
   "newest_processed_date": "2026-11-10",
   "oldest_processed_date": "2025-09-27",
   "status": "done"
@@ -1589,7 +1589,7 @@
  },
  "ノア東松山店": {
   "days_done": 358,
-  "last_synced_at": "2026-11-11T06:25:57.879792",
+  "last_synced_at": "2026-11-11T11:05:43.754938",
   "newest_processed_date": "2026-11-01",
   "oldest_processed_date": "2025-09-14",
   "status": "done"
@@ -1683,7 +1683,7 @@
  },
  "パラッツォ秋津店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-11T06:46:53.802327",
+  "last_synced_at": "2026-11-11T11:07:00.709316",
   "newest_processed_date": "2026-11-10",
   "oldest_processed_date": "2025-11-09",
   "status": "done"
@@ -1711,14 +1711,14 @@
  },
  "パルコ": {
   "days_done": 365,
-  "last_synced_at": "2026-11-11T06:46:20.631859",
-  "newest_processed_date": "2025-11-20",
+  "last_synced_at": "2026-11-11T11:06:27.288469",
+  "newest_processed_date": "2025-11-26",
   "oldest_processed_date": "2025-11-09",
   "status": "done"
  },
  "パーラーEX滑川店": {
   "days_done": 359,
-  "last_synced_at": "2026-11-11T06:25:58.594751",
+  "last_synced_at": "2026-11-11T11:05:44.388681",
   "newest_processed_date": "2026-11-10",
   "oldest_processed_date": "2025-09-24",
   "status": "done"
@@ -1775,10 +1775,10 @@
   "status": "pending"
  },
  "ヒロキ蒲田西口店": {
-  "days_done": 213,
+  "days_done": 218,
   "last_synced_at": "2026-11-11T10:01:37.516819",
   "newest_processed_date": "2026-11-02",
-  "oldest_processed_date": "2026-04-11",
+  "oldest_processed_date": "2026-04-05",
   "status": "in_progress"
  },
  "ビックディッパー門前仲町店": {
@@ -1804,7 +1804,7 @@
  },
  "ピーアーク三田": {
   "days_done": 365,
-  "last_synced_at": "2026-11-11T06:46:19.215558",
+  "last_synced_at": "2026-11-11T11:06:25.812319",
   "newest_processed_date": "2026-11-10",
   "oldest_processed_date": "2025-11-09",
   "status": "done"
@@ -2038,7 +2038,7 @@
  },
  "マルハン上里店": {
   "days_done": 359,
-  "last_synced_at": "2026-11-11T06:25:59.269848",
+  "last_synced_at": "2026-11-11T11:05:45.051095",
   "newest_processed_date": "2026-11-10",
   "oldest_processed_date": "2025-09-24",
   "status": "done"
@@ -2052,7 +2052,7 @@
  },
  "マルハン入間店": {
   "days_done": 359,
-  "last_synced_at": "2026-11-11T06:26:04.065011",
+  "last_synced_at": "2026-11-11T11:05:45.753042",
   "newest_processed_date": "2026-11-10",
   "oldest_processed_date": "2025-09-24",
   "status": "done"
@@ -2080,21 +2080,21 @@
  },
  "マルハン川口店": {
   "days_done": 360,
-  "last_synced_at": "2026-11-11T06:26:12.201246",
+  "last_synced_at": "2026-11-11T11:05:47.216692",
   "newest_processed_date": "2026-11-10",
   "oldest_processed_date": "2025-09-25",
   "status": "done"
  },
  "マルハン川越店": {
   "days_done": 358,
-  "last_synced_at": "2026-11-11T06:26:17.927708",
+  "last_synced_at": "2026-11-11T11:05:47.873864",
   "newest_processed_date": "2026-11-10",
   "oldest_processed_date": "2025-09-18",
   "status": "done"
  },
  "マルハン所沢店": {
   "days_done": 359,
-  "last_synced_at": "2026-11-11T06:26:56.692288",
+  "last_synced_at": "2026-11-11T11:06:25.065235",
   "newest_processed_date": "2026-11-10",
   "oldest_processed_date": "2025-09-25",
   "status": "done"
@@ -2176,7 +2176,7 @@
  },
  "マルハン鹿浜店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-11T06:26:09.702780",
+  "last_synced_at": "2026-11-11T11:05:46.471262",
   "newest_processed_date": "2026-11-10",
   "oldest_processed_date": "2025-11-03",
   "status": "done"
@@ -2222,16 +2222,16 @@
   "status": "pending"
  },
  "ミリオン石神井公園店スロット館": {
-  "days_done": 94,
+  "days_done": 104,
   "last_synced_at": "2026-11-11T10:23:51.272248",
   "newest_processed_date": "2026-10-23",
-  "oldest_processed_date": "2026-07-07",
+  "oldest_processed_date": "2026-06-23",
   "status": "in_progress"
  },
  "ミリオン高円寺22号店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-11T06:46:54.856501",
-  "newest_processed_date": "2026-11-07",
+  "last_synced_at": "2026-11-11T11:07:01.331659",
+  "newest_processed_date": "2026-11-10",
   "oldest_processed_date": "2025-11-05",
   "status": "done"
  },
@@ -2410,10 +2410,10 @@
   "status": "done"
  },
  "ライブガーデン篠崎店": {
-  "days_done": 314,
+  "days_done": 325,
   "last_synced_at": "2026-11-11T09:18:10.369031",
   "newest_processed_date": "2025-10-23",
-  "oldest_processed_date": "2025-12-31",
+  "oldest_processed_date": "2025-12-20",
   "status": "in_progress"
  },
  "ラ・カータ鶴ヶ島777": {
@@ -2422,10 +2422,10 @@
   "status": "pending"
  },
  "レイトギャップ": {
-  "days_done": 286,
+  "days_done": 297,
   "last_synced_at": "2026-11-11T10:23:16.568484",
   "newest_processed_date": "2026-10-30",
-  "oldest_processed_date": "2026-01-08",
+  "oldest_processed_date": "2025-12-28",
   "status": "in_progress"
  },
  "レッドロック学芸大学駅前店": {
