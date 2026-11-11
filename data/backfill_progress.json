@@ -248,6 +248,11 @@
   "oldest_processed_date": null,
   "status": "pending"
  },
+ "TOYO-HALL": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "pending"
+ },
  "YASUDA5": {
   "days_done": 322,
   "last_synced_at": "2026-11-11T12:53:58.821557",
@@ -2217,6 +2222,11 @@
   "newest_processed_date": "2026-11-10",
   "next_url": "https://min-repo.com/2662685/",
   "status": "done"
+ },
+ "ミリオン東武練馬13号店": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "pending"
  },
  "ミリオン東武練馬店スロット館": {
   "days_done": 0,
