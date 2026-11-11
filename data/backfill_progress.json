@@ -317,10 +317,10 @@
   "status": "done"
  },
  "みとや神田西口店": {
-  "days_done": 43,
+  "days_done": 48,
   "last_synced_at": "2026-11-10T20:42:25.709033",
   "newest_processed_date": "2026-10-17",
-  "oldest_processed_date": "2026-08-25",
+  "oldest_processed_date": "2026-07-29",
   "status": "in_progress"
  },
  "みとや錦糸町北口店": {
@@ -595,10 +595,10 @@
   "status": "done"
  },
  "ウエスタン葛西店": {
-  "days_done": 130,
+  "days_done": 134,
   "last_synced_at": "2026-11-10T22:30:47.848310",
   "newest_processed_date": "2026-10-26",
-  "oldest_processed_date": "2026-06-20",
+  "oldest_processed_date": "2026-05-24",
   "status": "in_progress"
  },
  "ウエスタン西葛西店": {
@@ -667,10 +667,11 @@
   "status": "pending"
  },
  "エスパス日拓秋葉原駅前店": {
-  "days_done": 0,
-  "newest_processed_date": "2026-10-13",
-  "oldest_processed_date": null,
-  "status": "pending"
+  "days_done": 4,
+  "last_synced_at": "2026-11-11T01:02:17.907997",
+  "newest_processed_date": "2026-10-20",
+  "oldest_processed_date": "2026-11-04",
+  "status": "in_progress"
  },
  "エスパス日拓西武新宿駅前": {
   "days_done": 0,
@@ -1079,10 +1080,10 @@
   "status": "done"
  },
  "コンサートホール北千住": {
-  "days_done": 342,
+  "days_done": 344,
   "last_synced_at": "2026-11-10T21:49:15.772465",
   "newest_processed_date": "2026-10-24",
-  "oldest_processed_date": "2025-11-29",
+  "oldest_processed_date": "2025-10-28",
   "status": "in_progress"
  },
  "コンサートホール北浦和": {
@@ -1208,10 +1209,11 @@
   "status": "done"
  },
  "ジャラン五反田店": {
-  "days_done": 0,
-  "newest_processed_date": "2026-10-12",
-  "oldest_processed_date": null,
-  "status": "pending"
+  "days_done": 5,
+  "last_synced_at": "2026-11-11T01:01:45.265846",
+  "newest_processed_date": "2026-10-16",
+  "oldest_processed_date": "2026-09-14",
+  "status": "in_progress"
  },
  "ジャラン川口峯店": {
   "days_done": 0,
@@ -1778,6 +1780,11 @@
   "oldest_processed_date": "2026-11-10",
   "status": "in_progress"
  },
+ "ビックディッパー門前仲町店": {
+  "days_done": 2,
+  "oldest_processed_date": "2026-11-08",
+  "status": "in_progress"
+ },
  "ビッグアップル秋葉原店": {
   "days_done": 365,
   "last_synced_at": "2026-11-10T22:30:17.421980",
@@ -2212,10 +2219,11 @@
   "status": "pending"
  },
  "ミリオン石神井公園店スロット館": {
-  "days_done": 0,
-  "newest_processed_date": "2026-10-10",
-  "oldest_processed_date": null,
-  "status": "pending"
+  "days_done": 2,
+  "last_synced_at": "2026-11-11T01:01:06.128341",
+  "newest_processed_date": "2026-10-14",
+  "oldest_processed_date": "2026-10-07",
+  "status": "in_progress"
  },
  "ミリオン高円寺22号店": {
   "days_done": 317,
@@ -2411,9 +2419,10 @@
   "status": "pending"
  },
  "レイトギャップ": {
-  "days_done": 2,
-  "newest_processed_date": "2026-10-10",
-  "oldest_processed_date": "2026-11-03",
+  "days_done": 7,
+  "last_synced_at": "2026-11-11T01:00:29.731891",
+  "newest_processed_date": "2026-10-16",
+  "oldest_processed_date": "2026-10-15",
   "status": "in_progress"
  },
  "レッドロック学芸大学駅前店": {
