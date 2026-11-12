@@ -1794,6 +1794,11 @@
   "oldest_processed_date": "2025-11-05",
   "status": "done"
  },
+ "ビックディッパー大井町店": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "pending"
+ },
  "ビックディッパー戸越銀座店": {
   "days_done": 319,
   "last_synced_at": "2026-11-12T15:12:04.398360",
@@ -1981,6 +1986,11 @@
  "プラザ西台": {
   "days_done": 0,
   "newest_processed_date": "2026-10-14",
+  "oldest_processed_date": null,
+  "status": "pending"
+ },
+ "プレサス": {
+  "days_done": 0,
   "oldest_processed_date": null,
   "status": "pending"
  },
