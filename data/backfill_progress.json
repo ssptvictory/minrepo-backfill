@@ -1792,6 +1792,16 @@
   "oldest_processed_date": "2025-11-05",
   "status": "done"
  },
+ "ビックディッパー戸越銀座店": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "pending"
+ },
+ "ビックディッパー新橋1号店": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "pending"
+ },
  "ビックディッパー門前仲町店": {
   "days_done": 355,
   "last_synced_at": "2026-11-11T22:11:02.521577",
