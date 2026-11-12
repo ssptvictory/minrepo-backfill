@@ -1,0 +1,206 @@
+{
+ "done": {
+  "SAP蒲生店": {
+   "found": true,
+   "raw_text": "5のつく日、、11日",
+   "days": [
+    11
+   ],
+   "patterns": [
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465100/"
+  },
+  "TOHO川越店": {
+   "found": true,
+   "raw_text": "4のつく日",
+   "days": [],
+   "patterns": [
+    "4のつく日"
+   ],
+   "source_url": "https://min-repo.com/3450937/"
+  },
+  "せんげん台DUO": {
+   "found": true,
+   "raw_text": "2のつく日、、13日",
+   "days": [
+    13
+   ],
+   "patterns": [
+    "2のつく日"
+   ],
+   "source_url": "https://min-repo.com/3466214/"
+  },
+  "みずほ台UNO店": {
+   "found": true,
+   "raw_text": "1のつく日、、17日",
+   "days": [
+    17
+   ],
+   "patterns": [
+    "1のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465877/"
+  },
+  "アリーナ平塚店": {
+   "found": true,
+   "raw_text": "5のつく日",
+   "days": [],
+   "patterns": [
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3458924/"
+  },
+  "オータ桶川駅前店": {
+   "found": true,
+   "raw_text": "0のつく日",
+   "days": [],
+   "patterns": [
+    "0のつく日"
+   ],
+   "source_url": "https://min-repo.com/3462406/"
+  },
+  "キコーナ草加店": {
+   "found": true,
+   "raw_text": "3のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3460960/"
+  },
+  "コンサートホール上尾": {
+   "found": true,
+   "raw_text": "7のつく日",
+   "days": [],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3457272/"
+  },
+  "コンサートホール北浦和": {
+   "found": true,
+   "raw_text": "7のつく日",
+   "days": [],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3457265/"
+  },
+  "コンサートホール蓮田店": {
+   "found": true,
+   "raw_text": "7のつく日",
+   "days": [],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3457225/"
+  },
+  "ジャムフレンドクラブ朝霞": {
+   "found": true,
+   "raw_text": "6のつく日",
+   "days": [],
+   "patterns": [
+    "6のつく日"
+   ],
+   "source_url": "https://min-repo.com/3454604/"
+  },
+  "ジャラン若葉駅前店": {
+   "found": true,
+   "raw_text": "9のつく日",
+   "days": [],
+   "patterns": [
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3460618/"
+  },
+  "スカイプラザ大井店": {
+   "found": true,
+   "raw_text": "5のつく日、、11日、、22日、、月と日がゾロ目の日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [
+    "5のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3464745/"
+  },
+  "スカイプラザ富士見店": {
+   "found": true,
+   "raw_text": "5のつく日",
+   "days": [],
+   "patterns": [
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3461556/"
+  },
+  "スーパーライブガーデン行田店": {
+   "found": true,
+   "raw_text": "21日",
+   "days": [
+    21
+   ],
+   "patterns": [],
+   "source_url": "https://min-repo.com/3439573/"
+  },
+  "ディスカバリー": {
+   "found": true,
+   "raw_text": "1日、、11日、、13日、、21日、、27日",
+   "days": [
+    1,
+    11,
+    13,
+    21,
+    27
+   ],
+   "patterns": [],
+   "source_url": "https://min-repo.com/3465575/"
+  },
+  "ニューダイエイ": {
+   "found": true,
+   "raw_text": "1日、、11日、、21日",
+   "days": [
+    1,
+    11,
+    21
+   ],
+   "patterns": [],
+   "source_url": "https://min-repo.com/3465686/"
+  },
+  "ニューヨーク": {
+   "found": true,
+   "raw_text": "4のつく日、、9のつく日、、1日、、11日、、21日",
+   "days": [
+    1,
+    11,
+    21
+   ],
+   "patterns": [
+    "4のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464440/"
+  },
+  "ノア東松山店": {
+   "found": true,
+   "raw_text": "0のつく日",
+   "days": [],
+   "patterns": [
+    "0のつく日"
+   ],
+   "source_url": "https://min-repo.com/3441659/"
+  },
+  "パーラーEX滑川店": {
+   "found": true,
+   "raw_text": "大安の日",
+   "days": [],
+   "patterns": [
+    "大安の日"
+   ],
+   "source_url": "https://min-repo.com/3463213/"
+  }
+ }
+}
