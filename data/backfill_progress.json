@@ -1807,6 +1807,11 @@
   "oldest_processed_date": "2026-05-01",
   "status": "in_progress"
  },
+ "ビックディッパー花小金井店": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "pending"
+ },
  "ビックディッパー門前仲町店": {
   "days_done": 365,
   "last_synced_at": "2026-11-12T10:50:49.148839",
@@ -2672,6 +2677,11 @@
   "days_done": 0,
   "oldest_processed_date": null,
   "status": "not_found"
+ },
+ "楽園大山店": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "pending"
  },
  "楽園池袋店": {
   "days_done": 365,
