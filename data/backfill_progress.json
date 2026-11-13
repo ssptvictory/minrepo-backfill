@@ -13,8 +13,8 @@
  },
  "123笹塚店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-13T15:01:40.653687",
-  "newest_processed_date": "2026-11-12",
+  "last_synced_at": "2026-11-13T23:39:40.558362",
+  "newest_processed_date": "2026-11-13",
   "oldest_processed_date": "2025-10-05",
   "status": "done"
  },
@@ -136,10 +136,10 @@
   "status": "done"
  },
  "MGM浦和店": {
-  "days_done": 143,
+  "days_done": 152,
   "last_synced_at": "2026-11-13T17:52:29.142630",
   "newest_processed_date": "2026-11-06",
-  "oldest_processed_date": "2024-11-25",
+  "oldest_processed_date": "2024-10-06",
   "status": "in_progress"
  },
  "MGM綾瀬西口店": {
@@ -227,15 +227,15 @@
  },
  "SAP蒲生店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-13T15:01:41.217918",
+  "last_synced_at": "2026-11-13T23:39:50.080853",
   "newest_processed_date": "2026-11-12",
   "oldest_processed_date": "2025-11-02",
   "status": "done"
  },
  "TOHO川越店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-13T15:01:41.763276",
-  "newest_processed_date": "2026-01-08",
+  "last_synced_at": "2026-11-13T23:39:56.148250",
+  "newest_processed_date": "2026-01-12",
   "next_url": "https://min-repo.com/2650109/",
   "status": "done"
  },
@@ -278,16 +278,16 @@
   "status": "pending"
  },
  "eスペース熊谷駅前店": {
-  "days_done": 197,
+  "days_done": 205,
   "last_synced_at": "2026-11-13T20:03:15.831368",
   "newest_processed_date": "2023-02-28",
-  "oldest_processed_date": "2024-05-05",
+  "oldest_processed_date": "2024-03-25",
   "status": "in_progress"
  },
  "せんげん台DUO": {
   "days_done": 365,
-  "last_synced_at": "2026-11-13T15:02:12.802762",
-  "newest_processed_date": "2026-11-12",
+  "last_synced_at": "2026-11-13T23:40:38.939935",
+  "newest_processed_date": "2026-11-13",
   "next_url": "https://min-repo.com/2619144/",
   "status": "done"
  },
@@ -505,10 +505,10 @@
   "status": "done"
  },
  "アスカ蕨駅前店": {
-  "days_done": 112,
+  "days_done": 118,
   "last_synced_at": "2026-11-13T19:19:55.082726",
   "newest_processed_date": "2026-11-08",
-  "oldest_processed_date": "2023-08-18",
+  "oldest_processed_date": "2023-06-08",
   "status": "in_progress"
  },
  "アバンザ十条": {
@@ -548,8 +548,8 @@
  },
  "アリーナ平塚店": {
   "days_done": 356,
-  "last_synced_at": "2026-11-13T15:02:13.305353",
-  "newest_processed_date": "2026-11-12",
+  "last_synced_at": "2026-11-13T23:40:48.899391",
+  "newest_processed_date": "2026-11-13",
   "oldest_processed_date": "2025-09-23",
   "status": "done"
  },
@@ -641,10 +641,10 @@
   "status": "pending"
  },
  "エスタディオ東松山": {
-  "days_done": 30,
+  "days_done": 37,
   "last_synced_at": "2026-11-13T20:25:02.493394",
   "newest_processed_date": "2026-11-03",
-  "oldest_processed_date": "2026-01-23",
+  "oldest_processed_date": "2025-10-23",
   "status": "in_progress"
  },
  "エスパス1300新小岩北口駅前店": {
@@ -785,8 +785,8 @@
  },
  "オータ桶川駅前店": {
   "days_done": 357,
-  "last_synced_at": "2026-11-13T15:02:14.116154",
-  "newest_processed_date": "2026-11-12",
+  "last_synced_at": "2026-11-13T23:41:00.620506",
+  "newest_processed_date": "2026-11-13",
   "oldest_processed_date": "2025-09-26",
   "status": "done"
  },
@@ -928,8 +928,8 @@
  },
  "ガイア瑞江ⅱ": {
   "days_done": 365,
-  "last_synced_at": "2026-11-13T15:01:08.936756",
-  "newest_processed_date": "2026-02-12",
+  "last_synced_at": "2026-11-13T23:39:01.721325",
+  "newest_processed_date": "2026-02-16",
   "oldest_processed_date": "2025-10-11",
   "status": "done"
  },
@@ -1117,16 +1117,16 @@
  },
  "コンサートホール北浦和": {
   "days_done": 365,
-  "last_synced_at": "2026-11-13T15:02:14.739520",
-  "newest_processed_date": "2026-11-12",
+  "last_synced_at": "2026-11-13T23:41:09.946978",
+  "newest_processed_date": "2026-11-13",
   "next_url": "https://min-repo.com/2617796/",
   "status": "done"
  },
  "コンサートホール岩槻": {
-  "days_done": 1,
+  "days_done": 7,
   "last_synced_at": "2026-11-13T22:55:32.538251",
   "newest_processed_date": "2026-11-05",
-  "oldest_processed_date": "2026-11-05",
+  "oldest_processed_date": "2026-08-25",
   "status": "in_progress"
  },
  "コンサートホール志村": {
@@ -1484,7 +1484,7 @@
  },
  "トワーズ東久留米店": {
   "days_done": 133,
-  "last_synced_at": "2026-11-13T15:02:13.577366",
+  "last_synced_at": "2026-11-13T23:40:58.341021",
   "newest_processed_date": "2026-11-10",
   "oldest_processed_date": "2024-12-02",
   "status": "done"
@@ -1668,17 +1668,17 @@
   "status": "done"
  },
  "パチンコプラザ-ラ･カータ坂戸店": {
-  "days_done": 308,
+  "days_done": 311,
   "last_synced_at": "2026-11-13T17:09:28.180197",
   "newest_processed_date": "2020-03-15",
-  "oldest_processed_date": "2021-06-15",
+  "oldest_processed_date": "2021-05-15",
   "status": "in_progress"
  },
  "パチンコプラザ-ラ･カータ大宮駅前店": {
-  "days_done": 277,
+  "days_done": 288,
   "last_synced_at": "2026-11-13T19:41:20.455831",
   "newest_processed_date": "2020-10-26",
-  "oldest_processed_date": "2023-02-22",
+  "oldest_processed_date": "2022-12-06",
   "status": "in_progress"
  },
  "パチンコプラザ-ラ･カータ鶴ヶ島店": {
