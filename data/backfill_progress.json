@@ -1647,6 +1647,11 @@
   "oldest_processed_date": "2021-05-05",
   "status": "done"
  },
+ "パチンコプラザ-ラ･カータ坂戸店": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "pending"
+ },
  "パチンコプラザラカータ大宮本店": {
   "days_done": 365,
   "last_synced_at": "2026-11-13T04:48:41.461494",
