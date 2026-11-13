@@ -66,8 +66,8 @@
  },
  "BIGディッパー木場店": {
   "days_done": 112,
-  "last_synced_at": "2026-11-13T12:28:09.265615",
-  "newest_processed_date": "2026-10-28",
+  "last_synced_at": "2026-11-13T18:59:01.409945",
+  "newest_processed_date": "2026-11-05",
   "oldest_processed_date": "2026-07-24",
   "status": "done"
  },
@@ -136,10 +136,10 @@
   "status": "done"
  },
  "MGM浦和店": {
-  "days_done": 4,
+  "days_done": 12,
   "last_synced_at": "2026-11-13T17:52:29.142630",
   "newest_processed_date": "2026-11-06",
-  "oldest_processed_date": "2026-10-25",
+  "oldest_processed_date": "2026-09-15",
   "status": "in_progress"
  },
  "MGM綾瀬西口店": {
@@ -278,10 +278,10 @@
   "status": "pending"
  },
  "eスペース熊谷駅前店": {
-  "days_done": 47,
+  "days_done": 60,
   "last_synced_at": "2026-11-13T13:31:12.671508",
   "newest_processed_date": "2021-04-25",
-  "oldest_processed_date": "2026-06-05",
+  "oldest_processed_date": "2026-04-08",
   "status": "in_progress"
  },
  "せんげん台DUO": {
@@ -458,10 +458,10 @@
   "status": "done"
  },
  "アイランド秋葉原店": {
-  "days_done": 238,
+  "days_done": 250,
   "last_synced_at": "2026-11-13T18:15:27.692496",
   "newest_processed_date": "2026-11-03",
-  "oldest_processed_date": "2026-03-19",
+  "oldest_processed_date": "2026-03-07",
   "status": "in_progress"
  },
  "アサヒ幡ヶ谷2号店": {
@@ -532,11 +532,11 @@
   "status": "done"
  },
  "アミューズ浅草店": {
-  "days_done": 359,
+  "days_done": 365,
   "last_synced_at": "2026-11-13T14:17:54.212983",
   "newest_processed_date": "2026-10-28",
-  "oldest_processed_date": "2025-11-18",
-  "status": "in_progress"
+  "oldest_processed_date": "2025-11-12",
+  "status": "done"
  },
  "アムディ亀有": {
   "days_done": 365,
@@ -952,10 +952,10 @@
   "status": "pending"
  },
  "キコーナ平井店": {
-  "days_done": 323,
+  "days_done": 335,
   "last_synced_at": "2026-11-13T17:52:59.134552",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2025-12-23",
+  "oldest_processed_date": "2025-12-11",
   "status": "in_progress"
  },
  "キコーナ府中店": {
@@ -988,8 +988,8 @@
  },
  "キューデン・アネックス": {
   "days_done": 365,
-  "last_synced_at": "2026-11-13T12:27:36.848353",
-  "newest_processed_date": "2026-11-04",
+  "last_synced_at": "2026-11-13T18:58:27.839000",
+  "newest_processed_date": "2026-11-11",
   "oldest_processed_date": "2025-11-07",
   "status": "done"
  },
@@ -1390,7 +1390,7 @@
  },
  "スーパーセブン西八王子店": {
   "days_done": 116,
-  "last_synced_at": "2026-11-13T12:26:57.864476",
+  "last_synced_at": "2026-11-13T18:57:51.727888",
   "newest_processed_date": "2026-11-12",
   "oldest_processed_date": "2026-07-01",
   "status": "done"
@@ -1488,7 +1488,7 @@
  },
  "トワーズ羽村店": {
   "days_done": 163,
-  "last_synced_at": "2026-11-13T12:26:58.288050",
+  "last_synced_at": "2026-11-13T18:57:52.090156",
   "newest_processed_date": "2026-11-10",
   "oldest_processed_date": "2024-04-28",
   "status": "done"
@@ -1502,7 +1502,7 @@
  },
  "トワーズ青梅IC店": {
   "days_done": 187,
-  "last_synced_at": "2026-11-13T12:48:15.092896",
+  "last_synced_at": "2026-11-13T19:00:12.768183",
   "newest_processed_date": "2026-11-10",
   "oldest_processed_date": "2024-04-22",
   "status": "done"
@@ -1663,17 +1663,17 @@
   "status": "done"
  },
  "パチンコプラザ-ラ･カータ坂戸店": {
-  "days_done": 164,
+  "days_done": 177,
   "last_synced_at": "2026-11-13T17:09:28.180197",
   "newest_processed_date": "2020-03-15",
-  "oldest_processed_date": "2023-12-25",
+  "oldest_processed_date": "2023-08-15",
   "status": "in_progress"
  },
  "パチンコプラザ-ラ･カータ大宮駅前店": {
-  "days_done": 131,
+  "days_done": 144,
   "last_synced_at": "2026-11-13T13:09:26.096919",
   "newest_processed_date": "2020-09-25",
-  "oldest_processed_date": "2024-09-16",
+  "oldest_processed_date": "2024-07-15",
   "status": "in_progress"
  },
  "パチンコプラザラカータ大宮本店": {
@@ -1737,8 +1737,8 @@
  },
  "パラッツォ葛西店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-13T12:48:16.072842",
-  "newest_processed_date": "2026-11-12",
+  "last_synced_at": "2026-11-13T19:00:13.594110",
+  "newest_processed_date": "2026-11-13",
   "next_url": "https://min-repo.com/2652341/",
   "status": "done"
  },
@@ -1785,10 +1785,10 @@
   "status": "done"
  },
  "パーラーコスミック八王子2号店": {
-  "days_done": 351,
+  "days_done": 364,
   "last_synced_at": "2026-11-13T16:47:48.006473",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2025-11-26",
+  "oldest_processed_date": "2025-11-13",
   "status": "in_progress"
  },
  "パーラースーパーセブン新中野店": {
@@ -1953,8 +1953,8 @@
  },
  "ピーアーク草加ピーくんタウン": {
   "days_done": 365,
-  "last_synced_at": "2026-11-13T12:47:39.942562",
-  "newest_processed_date": "2026-02-04",
+  "last_synced_at": "2026-11-13T18:59:38.738659",
+  "newest_processed_date": "2026-02-11",
   "oldest_processed_date": "2025-10-16",
   "status": "done"
  },
@@ -2455,7 +2455,7 @@
  },
  "メッセ西葛西": {
   "days_done": 365,
-  "last_synced_at": "2026-11-13T12:26:59.048574",
+  "last_synced_at": "2026-11-13T18:57:52.894323",
   "newest_processed_date": "2026-11-12",
   "oldest_processed_date": "2025-10-31",
   "status": "done"
@@ -2535,7 +2535,7 @@
  },
  "三ノ輪UNO": {
   "days_done": 365,
-  "last_synced_at": "2026-11-13T12:47:39.509277",
+  "last_synced_at": "2026-11-13T18:59:38.133716",
   "newest_processed_date": "2026-11-12",
   "oldest_processed_date": "2025-10-02",
   "status": "done"
@@ -2794,7 +2794,7 @@
  },
  "清瀬UNO": {
   "days_done": 365,
-  "last_synced_at": "2026-11-13T12:47:38.795380",
+  "last_synced_at": "2026-11-13T18:59:37.431754",
   "newest_processed_date": "2026-11-12",
   "next_url": "https://min-repo.com/2629101/",
   "status": "done"
@@ -2808,7 +2808,7 @@
  },
  "秋葉原UNO": {
   "days_done": 365,
-  "last_synced_at": "2026-11-13T12:26:57.540056",
+  "last_synced_at": "2026-11-13T18:57:51.363910",
   "newest_processed_date": "2026-11-12",
   "next_url": "https://min-repo.com/2653808/",
   "status": "done"
@@ -2911,8 +2911,8 @@
  },
  "遊劇場ⅱ": {
   "days_done": 365,
-  "last_synced_at": "2026-11-13T12:26:59.742573",
-  "newest_processed_date": "2026-01-21",
+  "last_synced_at": "2026-11-13T18:57:53.644882",
+  "newest_processed_date": "2026-01-28",
   "oldest_processed_date": "2025-10-04",
   "status": "done"
  },
