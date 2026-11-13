@@ -1680,6 +1680,11 @@
   "oldest_processed_date": "2023-07-15",
   "status": "in_progress"
  },
+ "パチンコプラザ-ラ･カータ鶴ヶ島店": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "pending"
+ },
  "パチンコプラザラカータ大宮本店": {
   "days_done": 365,
   "last_synced_at": "2026-11-13T14:39:33.438153",
