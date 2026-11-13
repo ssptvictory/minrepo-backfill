@@ -136,10 +136,10 @@
   "status": "done"
  },
  "MGM浦和店": {
-  "days_done": 2,
+  "days_done": 4,
   "last_synced_at": "2026-11-13T17:52:29.142630",
   "newest_processed_date": "2026-11-06",
-  "oldest_processed_date": "2026-11-05",
+  "oldest_processed_date": "2026-10-25",
   "status": "in_progress"
  },
  "MGM綾瀬西口店": {
@@ -175,8 +175,8 @@
  },
  "R7-STRONG": {
   "days_done": 365,
-  "last_synced_at": "2026-11-13T12:06:06.166211",
-  "newest_processed_date": "2026-01-16",
+  "last_synced_at": "2026-11-13T18:14:52.169737",
+  "newest_processed_date": "2026-01-23",
   "oldest_processed_date": "2025-11-06",
   "status": "done"
  },
@@ -278,10 +278,10 @@
   "status": "pending"
  },
  "eスペース熊谷駅前店": {
-  "days_done": 39,
+  "days_done": 47,
   "last_synced_at": "2026-11-13T13:31:12.671508",
   "newest_processed_date": "2021-04-25",
-  "oldest_processed_date": "2026-06-28",
+  "oldest_processed_date": "2026-06-05",
   "status": "in_progress"
  },
  "せんげん台DUO": {
@@ -458,10 +458,10 @@
   "status": "done"
  },
  "アイランド秋葉原店": {
-  "days_done": 227,
-  "last_synced_at": "2026-11-13T12:25:52.090575",
-  "newest_processed_date": "2026-10-27",
-  "oldest_processed_date": "2026-03-30",
+  "days_done": 238,
+  "last_synced_at": "2026-11-13T18:15:27.692496",
+  "newest_processed_date": "2026-11-03",
+  "oldest_processed_date": "2026-03-19",
   "status": "in_progress"
  },
  "アサヒ幡ヶ谷2号店": {
@@ -532,10 +532,10 @@
   "status": "done"
  },
  "アミューズ浅草店": {
-  "days_done": 350,
+  "days_done": 359,
   "last_synced_at": "2026-11-13T14:17:54.212983",
   "newest_processed_date": "2026-10-28",
-  "oldest_processed_date": "2025-11-27",
+  "oldest_processed_date": "2025-11-18",
   "status": "in_progress"
  },
  "アムディ亀有": {
@@ -589,8 +589,8 @@
  },
  "ウイング蕨": {
   "days_done": 365,
-  "last_synced_at": "2026-11-13T12:05:28.683692",
-  "newest_processed_date": "2026-02-02",
+  "last_synced_at": "2026-11-13T18:14:14.496897",
+  "newest_processed_date": "2026-02-08",
   "oldest_processed_date": "2025-11-03",
   "status": "done"
  },
@@ -952,10 +952,10 @@
   "status": "pending"
  },
  "キコーナ平井店": {
-  "days_done": 312,
+  "days_done": 323,
   "last_synced_at": "2026-11-13T17:52:59.134552",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2026-01-03",
+  "oldest_processed_date": "2025-12-23",
   "status": "in_progress"
  },
  "キコーナ府中店": {
@@ -1663,17 +1663,17 @@
   "status": "done"
  },
  "パチンコプラザ-ラ･カータ坂戸店": {
-  "days_done": 153,
+  "days_done": 164,
   "last_synced_at": "2026-11-13T17:09:28.180197",
   "newest_processed_date": "2020-03-15",
-  "oldest_processed_date": "2024-04-15",
+  "oldest_processed_date": "2023-12-25",
   "status": "in_progress"
  },
  "パチンコプラザ-ラ･カータ大宮駅前店": {
-  "days_done": 122,
+  "days_done": 131,
   "last_synced_at": "2026-11-13T13:09:26.096919",
   "newest_processed_date": "2020-09-25",
-  "oldest_processed_date": "2024-11-06",
+  "oldest_processed_date": "2024-09-16",
   "status": "in_progress"
  },
  "パチンコプラザラカータ大宮本店": {
@@ -1785,10 +1785,10 @@
   "status": "done"
  },
  "パーラーコスミック八王子2号店": {
-  "days_done": 342,
+  "days_done": 351,
   "last_synced_at": "2026-11-13T16:47:48.006473",
   "newest_processed_date": "2026-11-04",
-  "oldest_processed_date": "2025-12-05",
+  "oldest_processed_date": "2025-11-26",
   "status": "in_progress"
  },
  "パーラースーパーセブン新中野店": {
@@ -2528,8 +2528,8 @@
  },
  "ヴィーナス南水元1号店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-13T12:26:23.998852",
-  "newest_processed_date": "2025-11-06",
+  "last_synced_at": "2026-11-13T18:15:59.165300",
+  "newest_processed_date": "2025-11-13",
   "oldest_processed_date": "2025-11-12",
   "status": "done"
  },
@@ -2570,7 +2570,7 @@
  },
  "仙川UNO": {
   "days_done": 343,
-  "last_synced_at": "2026-11-13T12:05:26.102652",
+  "last_synced_at": "2026-11-13T18:14:11.460677",
   "newest_processed_date": "2026-11-12",
   "oldest_processed_date": "2025-09-28",
   "status": "done"
@@ -2682,7 +2682,7 @@
  },
  "有楽町DUO": {
   "days_done": 365,
-  "last_synced_at": "2026-11-13T12:05:26.872343",
+  "last_synced_at": "2026-11-13T18:14:13.484099",
   "newest_processed_date": "2026-11-12",
   "next_url": "https://min-repo.com/2629067/",
   "status": "done"
