@@ -1649,6 +1649,11 @@
   "oldest_processed_date": null,
   "status": "pending"
  },
+ "パチンコプラザ-ラ・カータ浦和店": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "pending"
+ },
  "パチンコプラザ-ラ･カータ上里店": {
   "days_done": 365,
   "last_synced_at": "2026-11-13T11:42:52.830002",
