@@ -276,6 +276,11 @@
   "oldest_processed_date": null,
   "status": "pending"
  },
+ "eスペース熊谷駅前店": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "pending"
+ },
  "せんげん台DUO": {
   "days_done": 365,
   "last_synced_at": "2026-11-13T10:15:34.226151",
@@ -1650,6 +1655,11 @@
   "status": "done"
  },
  "パチンコプラザ-ラ･カータ坂戸店": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "pending"
+ },
+ "パチンコプラザ-ラ･カータ大宮駅前店": {
   "days_done": 0,
   "oldest_processed_date": null,
   "status": "pending"
