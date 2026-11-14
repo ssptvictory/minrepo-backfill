@@ -641,6 +641,11 @@
   "oldest_processed_date": null,
   "status": "pending"
  },
+ "エクス・アリーナ東京": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "pending"
+ },
  "エスタディオ東松山": {
   "days_done": 122,
   "last_synced_at": "2026-11-14T15:52:43.739836",
@@ -2470,6 +2475,11 @@
   "newest_processed_date": "2026-11-13",
   "oldest_processed_date": "2025-11-04",
   "status": "done"
+ },
+ "メッセ荻窪": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "pending"
  },
  "メッセ荻窪店新館": {
   "days_done": 0,
