@@ -1741,6 +1741,11 @@
   "oldest_processed_date": null,
   "status": "pending"
  },
+ "パチンコ弘城東口店": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "pending"
+ },
  "パラッツォ三郷中央店": {
   "days_done": 365,
   "last_synced_at": "2026-11-14T20:12:55.434861",
@@ -1890,6 +1895,11 @@
   "newest_processed_date": "2025-11-24",
   "oldest_processed_date": "2025-11-12",
   "status": "done"
+ },
+ "ビックディッパー新橋2号店": {
+  "days_done": 0,
+  "oldest_processed_date": null,
+  "status": "pending"
  },
  "ビックディッパー花小金井店": {
   "days_done": 365,
