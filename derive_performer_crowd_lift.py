@@ -8,6 +8,12 @@
 その基準からどれくらい(比率で)増えるかをlift値として算出し、サンプル
 数が少ないタグはベイズ的縮小で0(=変化なし)方向に寄せる。
 
+ryome_crowd_sizes.parquet(ryomemoblogの記事から抽出した、ホールごとの
+「通常日」「特定日」の並び人数レンジ)はanoslot_queueと違い日次の実測
+データではなく、特定の演者/タグに紐づけられないため、本スクリプトの
+演者別lift計算には使わない(別途、ホール単位の特定日/通常日比率として
+derive_hall_event_crowd_multiplier.pyで活用する)。
+
 出力: data/performer_crowd_lift.parquet
   列: entity, raw_lift_ratio, shrunk_lift_ratio, n_samples
   (lift_ratioは「平常時の並び人数に対する倍率」。1.0なら変化なし、
