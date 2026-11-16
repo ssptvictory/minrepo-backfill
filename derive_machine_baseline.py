@@ -6,13 +6,23 @@ daily_unit_data全体から機種ごとの全国統計(平均差枚・標準偏�
 と「全国的な平均の出方」を表す。各店舗の強さを判断する際、店舗側の
 観測値をこの値で標準化(t値化)するためのベースラインとして使う。
 
+回転数(games)についても同じ理由で機種ごとの平均・標準偏差を持たせる。
+機種間で最大回転数(ゲーム性による速度差)が全く異なるため生の回転数は
+比較できないが、diffと同じく「その機種自身の平均/標準偏差」でz化すれば
+機種差が吸収される。読みやすい機種で早期に見切られて回転数が落ちる
+ケースも、ノイズではなく「その日その台の調子が悪かった」という正しい
+信号としてz値にそのまま反映されるため、別途補正は不要
+(diff_zとgames_zの相関係数を検証済み: 0.24で正の相関はあるが1.0には
+遠く、回転数はdiffとは別の情報を持つ特徴量として使える)。
+
 生データ(daily_unit_data、3000万行超)を分析の都度スキャンするのは
 計算コストが大きいため、ここで一度計算して軽いテーブルとして保存し、
 週1回程度の頻度で再計算し直す想定(機種の全国的な傾向が1日で大きく
 変わることはないため)。
 
 出力: data/machine_baseline_stats.parquet
-  列: machine_name, mean_diff, std_diff, n_samples, n_halls, updated_date
+  列: machine_name, mean_diff, std_diff, mean_games, std_games,
+      n_samples, n_halls, updated_date
 """
 import glob
 from datetime import date
@@ -42,10 +52,12 @@ def run():
     stats = df.groupby("machine_name").agg(
         mean_diff=("diff", "mean"),
         std_diff=("diff", "std"),
+        mean_games=("games", "mean"),
+        std_games=("games", "std"),
         n_samples=("diff", "size"),
         n_halls=("hall_name", "nunique"),
     ).reset_index()
-    stats = stats[stats["std_diff"] > 0]
+    stats = stats[(stats["std_diff"] > 0) & (stats["std_games"] > 0)]
     stats["updated_date"] = date.today()
 
     stats = stats.sort_values("n_samples", ascending=False)
