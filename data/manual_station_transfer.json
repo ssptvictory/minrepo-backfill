@@ -1,0 +1,47 @@
+[
+  {
+    "station": "横浜",
+    "line_a": "JR線",
+    "line_b": "京急線",
+    "walk_minutes_min": 1,
+    "walk_minutes_max": 3,
+    "note": "専用の連絡改札利用の場合",
+    "source": "web_search"
+  },
+  {
+    "station": "横浜",
+    "line_a": "東急東横線・みなとみらい線",
+    "line_b": "JR線",
+    "walk_minutes_min": 4,
+    "walk_minutes_max": 5,
+    "note": "北改札・中央北改札からJR連絡へ向かうと早い",
+    "source": "web_search"
+  },
+  {
+    "station": "横浜",
+    "line_a": "京急線",
+    "line_b": "横浜市営地下鉄ブルーライン",
+    "walk_minutes_min": 4,
+    "walk_minutes_max": 5,
+    "note": "京急の中央改札から地下鉄ブルーラインの改札へ移動",
+    "source": "web_search"
+  },
+  {
+    "station": "横浜",
+    "line_a": "JR線・東急線",
+    "line_b": "相鉄線",
+    "walk_minutes_min": 5,
+    "walk_minutes_max": 7,
+    "note": "相鉄線は1階に改札があり、JRや東急からは少し距離がある",
+    "source": "web_search"
+  },
+  {
+    "station": "有楽町",
+    "line_a": "JR線",
+    "line_b": "東京メトロ有楽町線",
+    "walk_minutes_min": 4,
+    "walk_minutes_max": 5,
+    "note": "wadattsu261.comで確認済み、双方向とも同程度",
+    "source": "wadattsu261.com"
+  }
+]
