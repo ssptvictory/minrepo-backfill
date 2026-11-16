@@ -201,6 +201,3293 @@
     "大安の日"
    ],
    "source_url": "https://min-repo.com/3463213/"
+  },
+  "マルハン上里店": {
+   "found": true,
+   "raw_text": "7のつく日",
+   "days": [],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464187/"
+  },
+  "マルハン入間店": {
+   "found": true,
+   "raw_text": "7のつく日、、3のつく日、、9のつく日、、1日、、11日、、21日",
+   "days": [
+    1,
+    11,
+    21
+   ],
+   "patterns": [
+    "7のつく日",
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3466314/"
+  },
+  "マルハン川口店": {
+   "found": true,
+   "raw_text": "7のつく日、、25日",
+   "days": [
+    25
+   ],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3466325/"
+  },
+  "マルハン川越店": {
+   "found": true,
+   "raw_text": "7のつく日",
+   "days": [],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3458289/"
+  },
+  "マルハン所沢店": {
+   "found": true,
+   "raw_text": "7のつく日",
+   "days": [],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465985/"
+  },
+  "マルハン深谷店": {
+   "found": true,
+   "raw_text": "7のつく日",
+   "days": [],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465949/"
+  },
+  "マルハン清河寺店": {
+   "found": true,
+   "raw_text": "5のつく日、、7のつく日",
+   "days": [],
+   "patterns": [
+    "5のつく日",
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465910/"
+  },
+  "マルハン鷲宮店": {
+   "found": true,
+   "raw_text": "7のつく日",
+   "days": [],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3457879/"
+  },
+  "ミリオン1100朝霞店": {
+   "found": true,
+   "raw_text": "7のつく日",
+   "days": [],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3456760/"
+  },
+  "メガガイア岩槻店": {
+   "found": true,
+   "raw_text": "3のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3462343/"
+  },
+  "メガガイア越谷大里": {
+   "found": true,
+   "raw_text": "3のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464337/"
+  },
+  "メガボックス東松山店": {
+   "found": true,
+   "raw_text": "11日、、22日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [],
+   "source_url": "https://min-repo.com/3464739/"
+  },
+  "メビウス西川口店": {
+   "found": true,
+   "raw_text": "0のつく日",
+   "days": [],
+   "patterns": [
+    "0のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464672/"
+  },
+  "上尾ウノ": {
+   "found": true,
+   "raw_text": "1のつく日、、4日",
+   "days": [
+    4
+   ],
+   "patterns": [
+    "1のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465527/"
+  },
+  "上福岡UNO": {
+   "found": true,
+   "raw_text": "1のつく日、、8日",
+   "days": [
+    8
+   ],
+   "patterns": [
+    "1のつく日"
+   ],
+   "source_url": "https://min-repo.com/3466212/"
+  },
+  "北上尾UNO店": {
+   "found": true,
+   "raw_text": "1のつく日、、29日",
+   "days": [
+    29
+   ],
+   "patterns": [
+    "1のつく日"
+   ],
+   "source_url": "https://min-repo.com/3466195/"
+  },
+  "北越谷UNO店": {
+   "found": true,
+   "raw_text": "1のつく日、、10日",
+   "days": [
+    10
+   ],
+   "patterns": [
+    "1のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465370/"
+  },
+  "将軍与野店": {
+   "found": true,
+   "raw_text": "4のつく日",
+   "days": [],
+   "patterns": [
+    "4のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465144/"
+  },
+  "朝霞ウノ": {
+   "found": true,
+   "raw_text": "1のつく日、、20日",
+   "days": [
+    20
+   ],
+   "patterns": [
+    "1のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464675/"
+  },
+  "楽園南越谷店": {
+   "found": true,
+   "raw_text": "11日、、22日、、月と日がゾロ目の日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3464734/"
+  },
+  "第一プラザみずほ台店": {
+   "found": true,
+   "raw_text": "1のつく日",
+   "days": [],
+   "patterns": [
+    "1のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465820/"
+  },
+  "第一プラザ八潮店": {
+   "found": true,
+   "raw_text": "1のつく日",
+   "days": [],
+   "patterns": [
+    "1のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465626/"
+  },
+  "第一プラザ坂戸1000": {
+   "found": true,
+   "raw_text": "1のつく日、、8のつく日",
+   "days": [],
+   "patterns": [
+    "1のつく日",
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465624/"
+  },
+  "第一プラザ笠幡店": {
+   "found": true,
+   "raw_text": "4のつく日、、1日、、11日、、21日",
+   "days": [
+    1,
+    11,
+    21
+   ],
+   "patterns": [
+    "4のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465677/"
+  },
+  "第一プラザ西浦和店": {
+   "found": true,
+   "raw_text": "1のつく日",
+   "days": [],
+   "patterns": [
+    "1のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465547/"
+  },
+  "虹のある街川口店": {
+   "found": true,
+   "raw_text": "4のつく日、、8のつく日",
+   "days": [],
+   "patterns": [
+    "4のつく日",
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3461193/"
+  },
+  "DAS蕨店": {
+   "found": true,
+   "raw_text": "5のつく日、、6のつく日",
+   "days": [],
+   "patterns": [
+    "5のつく日",
+    "6のつく日"
+   ],
+   "source_url": "https://min-repo.com/3462835/"
+  },
+  "ガイアネクスト越谷": {
+   "found": true,
+   "raw_text": "3のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3466230/"
+  },
+  "やすだ東大宮店": {
+   "found": true,
+   "raw_text": "1のつく日、、3のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "1のつく日",
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464799/"
+  },
+  "SAP草加": {
+   "found": true,
+   "raw_text": "11日、、28日",
+   "days": [
+    11,
+    28
+   ],
+   "patterns": [],
+   "source_url": "https://min-repo.com/3466227/"
+  },
+  "やすだ朝霞店": {
+   "found": true,
+   "raw_text": "5のつく日、、7のつく日、、11日、、21日、、22日",
+   "days": [
+    11,
+    21,
+    22
+   ],
+   "patterns": [
+    "5のつく日",
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465378/"
+  },
+  "やすだ所沢店": {
+   "found": true,
+   "raw_text": "7のつく日、、月と日がゾロ目の日",
+   "days": [],
+   "patterns": [
+    "7のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3465777/"
+  },
+  "やすだ八潮店": {
+   "found": true,
+   "raw_text": "1のつく日、、8のつく日、、2のつく日",
+   "days": [],
+   "patterns": [
+    "1のつく日",
+    "8のつく日",
+    "2のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465324/"
+  },
+  "やすだ三郷店": {
+   "found": true,
+   "raw_text": "8のつく日",
+   "days": [],
+   "patterns": [
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3459987/"
+  },
+  "やすだ戸田店": {
+   "found": true,
+   "raw_text": "8のつく日",
+   "days": [],
+   "patterns": [
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3459984/"
+  },
+  "マルキ戸田店": {
+   "found": true,
+   "raw_text": "0のつく日、、8のつく日",
+   "days": [],
+   "patterns": [
+    "0のつく日",
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3463583/"
+  },
+  "インタースクエア": {
+   "found": true,
+   "raw_text": "情報募集中",
+   "days": [],
+   "patterns": [
+    "情報募集中"
+   ],
+   "source_url": "https://min-repo.com/3453160/"
+  },
+  "第一プラザ坂戸にっさい店": {
+   "found": true,
+   "raw_text": "1のつく日、、2のつく日",
+   "days": [],
+   "patterns": [
+    "1のつく日",
+    "2のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465699/"
+  },
+  "第一プラザ狭山店": {
+   "found": true,
+   "raw_text": "1日、、11日、、21日",
+   "days": [
+    1,
+    11,
+    21
+   ],
+   "patterns": [],
+   "source_url": "https://min-repo.com/3465538/"
+  },
+  "第一プラザ武州長瀬店": {
+   "found": true,
+   "raw_text": "1日、、11日、、21日",
+   "days": [
+    1,
+    11,
+    21
+   ],
+   "patterns": [],
+   "source_url": "https://min-repo.com/3465779/"
+  },
+  "アスカ熊谷店": {
+   "found": true,
+   "raw_text": "8のつく日",
+   "days": [],
+   "patterns": [
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3461847/"
+  },
+  "ミュー川口芝店": {
+   "found": true,
+   "raw_text": "3のつく日、、30日、、31日",
+   "days": [
+    30,
+    31
+   ],
+   "patterns": [
+    "3のつく日"
+   ],
+   "source_url": "https://min-repo.com/3455996/"
+  },
+  "第一プラザ霞ヶ関店": {
+   "found": true,
+   "raw_text": "1のつく日、、6のつく日",
+   "days": [],
+   "patterns": [
+    "1のつく日",
+    "6のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465321/"
+  },
+  "ピーアーク越谷": {
+   "found": true,
+   "raw_text": "11日、、22日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [],
+   "source_url": "https://min-repo.com/3465027/"
+  },
+  "ピーアーク新田": {
+   "found": true,
+   "raw_text": "5のつく日",
+   "days": [],
+   "patterns": [
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3453499/"
+  },
+  "アリーナ桶川店": {
+   "found": true,
+   "raw_text": "5のつく日",
+   "days": [],
+   "patterns": [
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3453497/"
+  },
+  "ピーアーク松原": {
+   "found": true,
+   "raw_text": "11日、、22日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [],
+   "source_url": "https://min-repo.com/3464882/"
+  },
+  "ピーアーク春日部": {
+   "found": true,
+   "raw_text": "5のつく日",
+   "days": [],
+   "patterns": [
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3453427/"
+  },
+  "パラッツォ川越店": {
+   "found": true,
+   "raw_text": "2のつく日、、8のつく日",
+   "days": [],
+   "patterns": [
+    "2のつく日",
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3459431/"
+  },
+  "パラッツォ蕨店": {
+   "found": true,
+   "raw_text": "2のつく日、、8のつく日、、15日",
+   "days": [
+    15
+   ],
+   "patterns": [
+    "2のつく日",
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3459550/"
+  },
+  "パラッツォ鳩ヶ谷店": {
+   "found": true,
+   "raw_text": "2のつく日、、8のつく日、、25日、、土曜日",
+   "days": [
+    25
+   ],
+   "patterns": [
+    "2のつく日",
+    "8のつく日",
+    "土曜日"
+   ],
+   "source_url": "https://min-repo.com/3459548/"
+  },
+  "ピーアーク朝霞": {
+   "found": true,
+   "raw_text": "5のつく日、、19日",
+   "days": [
+    19
+   ],
+   "patterns": [
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3462355/"
+  },
+  "グランドオータ新座駅前店": {
+   "found": true,
+   "raw_text": "0のつく日、、5のつく日",
+   "days": [],
+   "patterns": [
+    "0のつく日",
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3453155/"
+  },
+  "ニューひかり本店": {
+   "found": true,
+   "raw_text": "2のつく日",
+   "days": [],
+   "patterns": [
+    "2のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464393/"
+  },
+  "チンジャラ会館": {
+   "found": true,
+   "raw_text": "8のつく日、、最終土曜日",
+   "days": [],
+   "patterns": [
+    "8のつく日",
+    "最終土曜日"
+   ],
+   "source_url": "https://min-repo.com/3461010/"
+  },
+  "ライブガーデン幸手権現堂": {
+   "found": true,
+   "raw_text": "2のつく日、、8のつく日、、21日",
+   "days": [
+    21
+   ],
+   "patterns": [
+    "2のつく日",
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464713/"
+  },
+  "パラッツォ三郷中央店": {
+   "found": true,
+   "raw_text": "2のつく日",
+   "days": [],
+   "patterns": [
+    "2のつく日"
+   ],
+   "source_url": "https://min-repo.com/3461290/"
+  },
+  "アスカ杉戸店": {
+   "found": true,
+   "raw_text": "8のつく日",
+   "days": [],
+   "patterns": [
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465646/"
+  },
+  "オータ川島店": {
+   "found": true,
+   "raw_text": "0のつく日",
+   "days": [],
+   "patterns": [
+    "0のつく日"
+   ],
+   "source_url": "https://min-repo.com/3462921/"
+  },
+  "グランドオータ熊谷本店": {
+   "found": true,
+   "raw_text": "0のつく日、、6のつく日",
+   "days": [],
+   "patterns": [
+    "0のつく日",
+    "6のつく日"
+   ],
+   "source_url": "https://min-repo.com/3462691/"
+  },
+  "オータ狭山スロット館": {
+   "found": true,
+   "raw_text": "0のつく日",
+   "days": [],
+   "patterns": [
+    "0のつく日"
+   ],
+   "source_url": "https://min-repo.com/3462919/"
+  },
+  "オータ志木駅前店": {
+   "found": true,
+   "raw_text": "0のつく日",
+   "days": [],
+   "patterns": [
+    "0のつく日"
+   ],
+   "source_url": "https://min-repo.com/3462920/"
+  },
+  "ニュークラウン川越2号店": {
+   "found": true,
+   "raw_text": "3のつく日、、9のつく日、、月と日がゾロ目の日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "9のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3464533/"
+  },
+  "ゴードン西川口店": {
+   "found": true,
+   "raw_text": "5のつく日",
+   "days": [],
+   "patterns": [
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465188/"
+  },
+  "デルパラ川口店": {
+   "found": true,
+   "raw_text": "3のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日"
+   ],
+   "source_url": "https://min-repo.com/3449490/"
+  },
+  "ミリオン和光10号店": {
+   "found": true,
+   "raw_text": "0のつく日",
+   "days": [],
+   "patterns": [
+    "0のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464826/"
+  },
+  "仙川UNO": {
+   "found": true,
+   "raw_text": "1のつく日、、20日",
+   "days": [
+    20
+   ],
+   "patterns": [
+    "1のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465875/"
+  },
+  "有楽町DUO": {
+   "found": true,
+   "raw_text": "2のつく日、、28日",
+   "days": [
+    28
+   ],
+   "patterns": [
+    "2のつく日"
+   ],
+   "source_url": "https://min-repo.com/3466084/"
+  },
+  "秋葉原UNO": {
+   "found": true,
+   "raw_text": "1のつく日、、4日",
+   "days": [
+    4
+   ],
+   "patterns": [
+    "1のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465995/"
+  },
+  "清瀬UNO": {
+   "found": true,
+   "raw_text": "1のつく日、、12日",
+   "days": [
+    12
+   ],
+   "patterns": [
+    "1のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465650/"
+  },
+  "三ノ輪UNO": {
+   "found": true,
+   "raw_text": "1のつく日、、20日",
+   "days": [
+    20
+   ],
+   "patterns": [
+    "1のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465711/"
+  },
+  "パラッツォ葛西店": {
+   "found": true,
+   "raw_text": "2のつく日、、8のつく日",
+   "days": [],
+   "patterns": [
+    "2のつく日",
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3459116/"
+  },
+  "ガイア大塚北口店": {
+   "found": true,
+   "raw_text": "3のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3461928/"
+  },
+  "みとやジャックポット錦糸町": {
+   "found": true,
+   "raw_text": "4のつく日",
+   "days": [],
+   "patterns": [
+    "4のつく日"
+   ],
+   "source_url": "https://min-repo.com/3466220/"
+  },
+  "サイバーパチンコ秋葉原昭和通り口店": {
+   "found": true,
+   "raw_text": "3のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464131/"
+  },
+  "新橋UNO": {
+   "found": true,
+   "raw_text": "1のつく日、、25日",
+   "days": [
+    25
+   ],
+   "patterns": [
+    "1のつく日"
+   ],
+   "source_url": "https://min-repo.com/3466083/"
+  },
+  "メガガイア明大前店": {
+   "found": true,
+   "raw_text": "3のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3461930/"
+  },
+  "有楽町ウノ": {
+   "found": true,
+   "raw_text": "1のつく日、、25日",
+   "days": [
+    25
+   ],
+   "patterns": [
+    "1のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465086/"
+  },
+  "ベガスベガス新宿東南口店": {
+   "found": true,
+   "raw_text": "5のつく日",
+   "days": [],
+   "patterns": [
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3454436/"
+  },
+  "ガイア大泉学園店": {
+   "found": true,
+   "raw_text": "3のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3461840/"
+  },
+  "MGM国領店": {
+   "found": true,
+   "raw_text": "6のつく日",
+   "days": [],
+   "patterns": [
+    "6のつく日"
+   ],
+   "source_url": "https://min-repo.com/3466210/"
+  },
+  "ガイアネクスト三軒茶屋II": {
+   "found": true,
+   "raw_text": "3のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3466243/"
+  },
+  "メガガイア調布店": {
+   "found": true,
+   "raw_text": "3のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3461865/"
+  },
+  "ガイア曳舟": {
+   "found": true,
+   "raw_text": "3のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3461599/"
+  },
+  "ガイア瑞江店": {
+   "found": true,
+   "raw_text": "3のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464167/"
+  },
+  "みとや水道橋": {
+   "found": true,
+   "raw_text": "4のつく日",
+   "days": [],
+   "patterns": [
+    "4のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465645/"
+  },
+  "ニュークラウン綾瀬店": {
+   "found": true,
+   "raw_text": "6のつく日",
+   "days": [],
+   "patterns": [
+    "6のつく日"
+   ],
+   "source_url": "https://min-repo.com/3455906/"
+  },
+  "ガイアネクスト三軒茶屋I": {
+   "found": true,
+   "raw_text": "3のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3461767/"
+  },
+  "アイオン豊田店": {
+   "found": true,
+   "raw_text": "3のつく日、、9のつく日、、22日",
+   "days": [
+    22
+   ],
+   "patterns": [
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3461206/"
+  },
+  "ガイア大島店": {
+   "found": true,
+   "raw_text": "3のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3461723/"
+  },
+  "サンドラ大塚店": {
+   "found": true,
+   "raw_text": "5のつく日",
+   "days": [],
+   "patterns": [
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464073/"
+  },
+  "やすだ西池袋6号店": {
+   "found": true,
+   "raw_text": "6のつく日",
+   "days": [],
+   "patterns": [
+    "6のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464844/"
+  },
+  "ガイア経堂店": {
+   "found": true,
+   "raw_text": "3のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3461695/"
+  },
+  "カレイド新宿店": {
+   "found": true,
+   "raw_text": "16日、、月と日がゾロ目の日、、第4土曜日",
+   "days": [
+    16
+   ],
+   "patterns": [
+    "月と日がゾロ目の日",
+    "第4土曜日"
+   ],
+   "source_url": "https://min-repo.com/3465771/"
+  },
+  "やすだ仲宿店": {
+   "found": true,
+   "raw_text": "6のつく日",
+   "days": [],
+   "patterns": [
+    "6のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465281/"
+  },
+  "みとや浅草千束店": {
+   "found": true,
+   "raw_text": "4のつく日",
+   "days": [],
+   "patterns": [
+    "4のつく日"
+   ],
+   "source_url": "https://min-repo.com/3466150/"
+  },
+  "マルハン亀有店": {
+   "found": true,
+   "raw_text": "3のつく日、、5のつく日、、7のつく日、、8のつく日、、1日、、11日、、14日、、22日、、月と日がゾロ目の日",
+   "days": [
+    1,
+    11,
+    14,
+    22
+   ],
+   "patterns": [
+    "3のつく日",
+    "5のつく日",
+    "7のつく日",
+    "8のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3466289/"
+  },
+  "マルハン小岩店": {
+   "found": true,
+   "raw_text": "3のつく日、、7のつく日、、1日、、11日、、22日、、26日、、月と日がゾロ目の日",
+   "days": [
+    1,
+    11,
+    22,
+    26
+   ],
+   "patterns": [
+    "3のつく日",
+    "7のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3466306/"
+  },
+  "マルハン八王子四谷店": {
+   "found": true,
+   "raw_text": "0のつく日、、5のつく日、、7のつく日、、4日、、11日、、22日、、26日、、月と日がゾロ目の日",
+   "days": [
+    4,
+    11,
+    22,
+    26
+   ],
+   "patterns": [
+    "0のつく日",
+    "5のつく日",
+    "7のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3466296/"
+  },
+  "YASUDA7": {
+   "found": true,
+   "raw_text": "7のつく日",
+   "days": [],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464971/"
+  },
+  "マルハン大山店": {
+   "found": true,
+   "raw_text": "7のつく日、、1日、、10日、、11日、、21日、、22日、、月と日がゾロ目の日",
+   "days": [
+    1,
+    10,
+    11,
+    21,
+    22
+   ],
+   "patterns": [
+    "7のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3466290/"
+  },
+  "ガイア富士見台南口店": {
+   "found": true,
+   "raw_text": "3のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3463893/"
+  },
+  "ARROW池上店": {
+   "found": true,
+   "raw_text": "8のつく日、、11日、、22日、、月と日がゾロ目の日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [
+    "8のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3465623/"
+  },
+  "マルハン昭島店": {
+   "found": true,
+   "raw_text": "7のつく日、、1日、、22日、、23日",
+   "days": [
+    1,
+    22,
+    23
+   ],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3466055/"
+  },
+  "マルハン青梅新町店": {
+   "found": true,
+   "raw_text": "7のつく日、、1日、、11日、、12日、、22日、、月と日がゾロ目の日",
+   "days": [
+    1,
+    11,
+    12,
+    22
+   ],
+   "patterns": [
+    "7のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3466112/"
+  },
+  "マルハン池袋店": {
+   "found": true,
+   "raw_text": "7のつく日、、11日、、22日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3466114/"
+  },
+  "マルハン日野店": {
+   "found": true,
+   "raw_text": "5のつく日、、7のつく日、、月と日がゾロ目の日、、1日、、11日、、22日",
+   "days": [
+    1,
+    11,
+    22
+   ],
+   "patterns": [
+    "5のつく日",
+    "7のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3466139/"
+  },
+  "マルハン鹿浜店": {
+   "found": true,
+   "raw_text": "7のつく日、、月と日がゾロ目の日、、1日、、11日、、21日、、22日",
+   "days": [
+    1,
+    11,
+    21,
+    22
+   ],
+   "patterns": [
+    "7のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3466116/"
+  },
+  "マルハンメガシティ2000蒲田7": {
+   "found": true,
+   "raw_text": "7のつく日、、1日、、11日、、21日、、30日",
+   "days": [
+    1,
+    11,
+    21,
+    30
+   ],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3466091/"
+  },
+  "マルハン新宿東宝ビル店": {
+   "found": true,
+   "raw_text": "3のつく日、、5のつく日、、7のつく日、、1日、、6日、、11日、、21日、、22日、、24日、、月と日がゾロ目の日",
+   "days": [
+    1,
+    6,
+    11,
+    21,
+    22,
+    24
+   ],
+   "patterns": [
+    "3のつく日",
+    "5のつく日",
+    "7のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3466087/"
+  },
+  "楽園池袋店グリーンサイド": {
+   "found": true,
+   "raw_text": "1日、、11日、、21日、、22日、、月と日がゾロ目の日",
+   "days": [
+    1,
+    11,
+    21,
+    22
+   ],
+   "patterns": [
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3465510/"
+  },
+  "エクサファースト": {
+   "found": true,
+   "raw_text": "7のつく日、、1日、、11日、、21日、、26日",
+   "days": [
+    1,
+    11,
+    21,
+    26
+   ],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465318/"
+  },
+  "ビッグアップル秋葉原店": {
+   "found": true,
+   "raw_text": "6のつく日、、20日、、月の最終日",
+   "days": [
+    20
+   ],
+   "patterns": [
+    "6のつく日",
+    "月の最終日"
+   ],
+   "source_url": "https://min-repo.com/3455048/"
+  },
+  "ジャラン浅草店": {
+   "found": true,
+   "raw_text": "9のつく日",
+   "days": [],
+   "patterns": [
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3463601/"
+  },
+  "トワーズ西八店": {
+   "found": true,
+   "raw_text": "0のつく日、、6のつく日、、8のつく日、、月と日がゾロ目の日",
+   "days": [],
+   "patterns": [
+    "0のつく日",
+    "6のつく日",
+    "8のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3466165/"
+  },
+  "ライオン": {
+   "found": true,
+   "raw_text": "10日",
+   "days": [
+    10
+   ],
+   "patterns": [],
+   "source_url": "https://min-repo.com/3465517/"
+  },
+  "トワーズ東久留米店": {
+   "found": true,
+   "raw_text": "0のつく日、、8のつく日",
+   "days": [],
+   "patterns": [
+    "0のつく日",
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3463492/"
+  },
+  "三栄ホール": {
+   "found": true,
+   "raw_text": "3のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日"
+   ],
+   "source_url": "https://min-repo.com/3463682/"
+  },
+  "スーパーセブン西八王子店": {
+   "found": true,
+   "raw_text": "7のつく日",
+   "days": [],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3461911/"
+  },
+  "トワーズ羽村店": {
+   "found": true,
+   "raw_text": "0のつく日、、8のつく日",
+   "days": [],
+   "patterns": [
+    "0のつく日",
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3463582/"
+  },
+  "メッセ西葛西": {
+   "found": true,
+   "raw_text": "7のつく日、、11日、、22日、、月と日がゾロ目の日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [
+    "7のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3465107/"
+  },
+  "アムディ亀有": {
+   "found": true,
+   "raw_text": "9のつく日",
+   "days": [],
+   "patterns": [
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3460747/"
+  },
+  "グランドホール西高島平店": {
+   "found": true,
+   "raw_text": "3のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日"
+   ],
+   "source_url": "https://min-repo.com/3448870/"
+  },
+  "エスパス日拓新大久保駅前店": {
+   "found": true,
+   "raw_text": "7のつく日、、8のつく日、、24日、、月と日がゾロ目の日",
+   "days": [
+    24
+   ],
+   "patterns": [
+    "7のつく日",
+    "8のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3465028/"
+  },
+  "阿佐ヶ谷オーシャン": {
+   "found": true,
+   "raw_text": "8のつく日",
+   "days": [],
+   "patterns": [
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3459441/"
+  },
+  "チャレンジャー野津田": {
+   "found": true,
+   "raw_text": "5のつく日、、20日",
+   "days": [
+    20
+   ],
+   "patterns": [
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3452666/"
+  },
+  "ニュースター一ツ家店": {
+   "found": true,
+   "raw_text": "4のつく日",
+   "days": [],
+   "patterns": [
+    "4のつく日"
+   ],
+   "source_url": "https://min-repo.com/3463827/"
+  },
+  "グランドシップ": {
+   "found": true,
+   "raw_text": "3のつく日、、7のつく日、、第5土曜日、、第5日曜日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "7のつく日",
+    "第5土曜日",
+    "第5日曜日"
+   ],
+   "source_url": "https://min-repo.com/3465532/"
+  },
+  "コア21": {
+   "found": true,
+   "raw_text": "2のつく日、、1日、、11日、、21日",
+   "days": [
+    1,
+    11,
+    21
+   ],
+   "patterns": [
+    "2のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464569/"
+  },
+  "コスモ光が丘店": {
+   "found": true,
+   "raw_text": "5のつく日",
+   "days": [],
+   "patterns": [
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3452792/"
+  },
+  "みとや錦糸町南口店": {
+   "found": true,
+   "raw_text": "4のつく日",
+   "days": [],
+   "patterns": [
+    "4のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465907/"
+  },
+  "スパークルV": {
+   "found": true,
+   "raw_text": "5のつく日",
+   "days": [],
+   "patterns": [
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3461527/"
+  },
+  "123笹塚店": {
+   "found": true,
+   "raw_text": "1のつく日",
+   "days": [],
+   "patterns": [
+    "1のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465484/"
+  },
+  "やすだひばりヶ丘店": {
+   "found": true,
+   "raw_text": "5のつく日、、8のつく日",
+   "days": [],
+   "patterns": [
+    "5のつく日",
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465396/"
+  },
+  "メッセ昭島店": {
+   "found": true,
+   "raw_text": "7のつく日",
+   "days": [],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465895/"
+  },
+  "やすだ清水町店": {
+   "found": true,
+   "raw_text": "7のつく日",
+   "days": [],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465368/"
+  },
+  "メッセ南千住店": {
+   "found": true,
+   "raw_text": "0のつく日、、7のつく日、、月と日がゾロ目の日",
+   "days": [],
+   "patterns": [
+    "0のつく日",
+    "7のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3465029/"
+  },
+  "巣鴨会館": {
+   "found": true,
+   "raw_text": "5のつく日、、7のつく日、、11日、、22日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [
+    "5のつく日",
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465102/"
+  },
+  "BBステーション日暮里店": {
+   "found": true,
+   "raw_text": "2のつく日、、5のつく日、、土曜日",
+   "days": [],
+   "patterns": [
+    "2のつく日",
+    "5のつく日",
+    "土曜日"
+   ],
+   "source_url": "https://min-repo.com/3456927/"
+  },
+  "遊劇場3": {
+   "found": true,
+   "raw_text": "3のつく日、、第2土曜日、、第4土曜日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "第2土曜日",
+    "第4土曜日"
+   ],
+   "source_url": "https://min-repo.com/3464445/"
+  },
+  "メッセ奥戸店": {
+   "found": true,
+   "raw_text": "7のつく日、、1日、、11日、、21日",
+   "days": [
+    1,
+    11,
+    21
+   ],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464740/"
+  },
+  "メッセ笹塚": {
+   "found": true,
+   "raw_text": "1のつく日、、5のつく日、、7のつく日",
+   "days": [],
+   "patterns": [
+    "1のつく日",
+    "5のつく日",
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464868/"
+  },
+  "パーラースーパーセブン新中野店": {
+   "found": true,
+   "raw_text": "5のつく日、、7のつく日、、29日、、土曜日",
+   "days": [
+    29
+   ],
+   "patterns": [
+    "5のつく日",
+    "7のつく日",
+    "土曜日"
+   ],
+   "source_url": "https://min-repo.com/3463069/"
+  },
+  "YASUDA5": {
+   "found": true,
+   "raw_text": "5のつく日、、8のつく日、、26日",
+   "days": [
+    26
+   ],
+   "patterns": [
+    "5のつく日",
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3461489/"
+  },
+  "キコーナ蒲田店": {
+   "found": true,
+   "raw_text": "3のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3461023/"
+  },
+  "ジャンジャンマールゴット調布国領駅前店": {
+   "found": true,
+   "raw_text": "5のつく日、、0のつく日、、月と日がゾロ目の日",
+   "days": [],
+   "patterns": [
+    "5のつく日",
+    "0のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3465017/"
+  },
+  "SAP日野": {
+   "found": true,
+   "raw_text": "2のつく日、、8のつく日、、木曜日",
+   "days": [],
+   "patterns": [
+    "2のつく日",
+    "8のつく日",
+    "木曜日"
+   ],
+   "source_url": "https://min-repo.com/3459227/"
+  },
+  "キューデン東口店": {
+   "found": true,
+   "raw_text": "9のつく日",
+   "days": [],
+   "patterns": [
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3460841/"
+  },
+  "パーラーディオス下赤塚本店": {
+   "found": true,
+   "raw_text": "0のつく日",
+   "days": [],
+   "patterns": [
+    "0のつく日"
+   ],
+   "source_url": "https://min-repo.com/3462916/"
+  },
+  "デルパラ10南大沢店": {
+   "found": true,
+   "raw_text": "0のつく日",
+   "days": [],
+   "patterns": [
+    "0のつく日"
+   ],
+   "source_url": "https://min-repo.com/3463207/"
+  },
+  "メッセ高円寺店": {
+   "found": true,
+   "raw_text": "5のつく日、、7のつく日、、8のつく日、、0のつく日、、月と日がゾロ目の日",
+   "days": [],
+   "patterns": [
+    "5のつく日",
+    "7のつく日",
+    "8のつく日",
+    "0のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3465224/"
+  },
+  "メッセ三鷹店": {
+   "found": true,
+   "raw_text": "0のつく日、、7のつく日",
+   "days": [],
+   "patterns": [
+    "0のつく日",
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464753/"
+  },
+  "トワーズ青梅IC店": {
+   "found": true,
+   "raw_text": "0のつく日、、8のつく日",
+   "days": [],
+   "patterns": [
+    "0のつく日",
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3463567/"
+  },
+  "サンパレス環七大杉店": {
+   "found": true,
+   "raw_text": "2のつく日、、10日、、20日",
+   "days": [
+    10,
+    20
+   ],
+   "patterns": [
+    "2のつく日"
+   ],
+   "source_url": "https://min-repo.com/3463200/"
+  },
+  "ゴードン祖師谷店": {
+   "found": true,
+   "raw_text": "5のつく日、、10日",
+   "days": [
+    10
+   ],
+   "patterns": [
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465108/"
+  },
+  "メッセ武蔵境店": {
+   "found": true,
+   "raw_text": "0のつく日、、5のつく日、、7のつく日、、1日、、2日、、11日、、21日、、月と日がゾロ目の日",
+   "days": [
+    1,
+    2,
+    11,
+    21
+   ],
+   "patterns": [
+    "0のつく日",
+    "5のつく日",
+    "7のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3465085/"
+  },
+  "メッセ竹の塚": {
+   "found": true,
+   "raw_text": "7のつく日、、11日、、22日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465161/"
+  },
+  "パーラースーパーセブン新高円寺店": {
+   "found": true,
+   "raw_text": "7のつく日",
+   "days": [],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465665/"
+  },
+  "ベラジオ東十条店": {
+   "found": true,
+   "raw_text": "0のつく日、、6のつく日",
+   "days": [],
+   "patterns": [
+    "0のつく日",
+    "6のつく日"
+   ],
+   "source_url": "https://min-repo.com/3463057/"
+  },
+  "ジャンジャンマールゴット分倍河原駅前": {
+   "found": true,
+   "raw_text": "5のつく日、、0のつく日、、月と日がゾロ目の日",
+   "days": [],
+   "patterns": [
+    "5のつく日",
+    "0のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3465018/"
+  },
+  "メッセ西荻窪店": {
+   "found": true,
+   "raw_text": "4のつく日、、5のつく日、、7のつく日、、0のつく日",
+   "days": [],
+   "patterns": [
+    "4のつく日",
+    "5のつく日",
+    "7のつく日",
+    "0のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464763/"
+  },
+  "プライム平井": {
+   "found": true,
+   "raw_text": "4のつく日",
+   "days": [],
+   "patterns": [
+    "4のつく日"
+   ],
+   "source_url": "https://min-repo.com/3462675/"
+  },
+  "ジャンボ": {
+   "found": true,
+   "raw_text": "第1土曜日、、第2土曜日、、第3土曜日",
+   "days": [],
+   "patterns": [
+    "第1土曜日",
+    "第2土曜日",
+    "第3土曜日"
+   ],
+   "source_url": "https://min-repo.com/3457154/"
+  },
+  "パラッツォ秋津店": {
+   "found": true,
+   "raw_text": "2のつく日、、8のつく日",
+   "days": [],
+   "patterns": [
+    "2のつく日",
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3459241/"
+  },
+  "ニュー太平": {
+   "found": true,
+   "raw_text": "4のつく日",
+   "days": [],
+   "patterns": [
+    "4のつく日"
+   ],
+   "source_url": "https://min-repo.com/3451431/"
+  },
+  "キコーナ新宿三丁目店": {
+   "found": true,
+   "raw_text": "3のつく日、、8のつく日、、土曜日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "8のつく日",
+    "土曜日"
+   ],
+   "source_url": "https://min-repo.com/3465533/"
+  },
+  "グランポート青物横丁店": {
+   "found": true,
+   "raw_text": "22日",
+   "days": [
+    22
+   ],
+   "patterns": [],
+   "source_url": "https://min-repo.com/3464780/"
+  },
+  "パラッツォ志村店": {
+   "found": true,
+   "raw_text": "2のつく日、、8のつく日",
+   "days": [],
+   "patterns": [
+    "2のつく日",
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3460925/"
+  },
+  "新世界": {
+   "found": true,
+   "raw_text": "情報募集中",
+   "days": [],
+   "patterns": [
+    "情報募集中"
+   ],
+   "source_url": "https://min-repo.com/3460950/"
+  },
+  "将軍下赤塚店": {
+   "found": true,
+   "raw_text": "6のつく日",
+   "days": [],
+   "patterns": [
+    "6のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464660/"
+  },
+  "将軍葛西店": {
+   "found": true,
+   "raw_text": "6のつく日",
+   "days": [],
+   "patterns": [
+    "6のつく日"
+   ],
+   "source_url": "https://min-repo.com/3462736/"
+  },
+  "ピーアーク北千住": {
+   "found": true,
+   "raw_text": "6のつく日、、月と日がゾロ目の日、、11日、、22日、、第3土曜日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [
+    "6のつく日",
+    "月と日がゾロ目の日",
+    "第3土曜日"
+   ],
+   "source_url": "https://min-repo.com/3465104/"
+  },
+  "コーシン神田店": {
+   "found": true,
+   "raw_text": "5のつく日、、第2金曜日、、最終金曜日",
+   "days": [],
+   "patterns": [
+    "5のつく日",
+    "第2金曜日",
+    "最終金曜日"
+   ],
+   "source_url": "https://min-repo.com/3453368/"
+  },
+  "ニューグランド貫井店": {
+   "found": true,
+   "raw_text": "15日、、16日、、17日",
+   "days": [
+    15,
+    16,
+    17
+   ],
+   "patterns": [],
+   "source_url": "https://min-repo.com/3464754/"
+  },
+  "ジアス南大沢": {
+   "found": true,
+   "raw_text": "11日、、22日、、月と日がゾロ目の日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3465642/"
+  },
+  "カレイド下北沢店": {
+   "found": true,
+   "raw_text": "0のつく日、、5のつく日、、16日",
+   "days": [
+    16
+   ],
+   "patterns": [
+    "0のつく日",
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3462841/"
+  },
+  "戸越ミナト": {
+   "found": true,
+   "raw_text": "6のつく日、、1日、、11日、、21日",
+   "days": [
+    1,
+    11,
+    21
+   ],
+   "patterns": [
+    "6のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464494/"
+  },
+  "アミューズメントパークジュラク2": {
+   "found": true,
+   "raw_text": "8のつく日",
+   "days": [],
+   "patterns": [
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3462460/"
+  },
+  "オリエントヴィーナスホール": {
+   "found": true,
+   "raw_text": "7のつく日",
+   "days": [],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464716/"
+  },
+  "ウインベル・イースト・スロット": {
+   "found": true,
+   "raw_text": "3のつく日、、月と日がゾロ目の日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3464623/"
+  },
+  "コンサートホール荒川": {
+   "found": true,
+   "raw_text": "7のつく日、、月と日がゾロ目の日",
+   "days": [],
+   "patterns": [
+    "7のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3465164/"
+  },
+  "TOHO池袋店": {
+   "found": true,
+   "raw_text": "情報募集中",
+   "days": [],
+   "patterns": [
+    "情報募集中"
+   ],
+   "source_url": "https://min-repo.com/3453058/"
+  },
+  "出玉王田無店": {
+   "found": true,
+   "raw_text": "4のつく日、、11日",
+   "days": [
+    11
+   ],
+   "patterns": [
+    "4のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465091/"
+  },
+  "メッセ扇店": {
+   "found": true,
+   "raw_text": "7のつく日",
+   "days": [],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3462786/"
+  },
+  "オリエンタルパサージュ自由が丘": {
+   "found": true,
+   "raw_text": "8のつく日、、14日",
+   "days": [
+    14
+   ],
+   "patterns": [
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3462614/"
+  },
+  "カレイド経堂店": {
+   "found": true,
+   "raw_text": "16日、、月と日がゾロ目の日、、第2土曜日、、第4土曜日",
+   "days": [
+    16
+   ],
+   "patterns": [
+    "月と日がゾロ目の日",
+    "第2土曜日",
+    "第4土曜日"
+   ],
+   "source_url": "https://min-repo.com/3464525/"
+  },
+  "スマートプレゴ池袋": {
+   "found": true,
+   "raw_text": "5のつく日",
+   "days": [],
+   "patterns": [
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464901/"
+  },
+  "パラッツォ千川店": {
+   "found": true,
+   "raw_text": "2のつく日、、8のつく日",
+   "days": [],
+   "patterns": [
+    "2のつく日",
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3459118/"
+  },
+  "コンサートホール野方": {
+   "found": true,
+   "raw_text": "情報募集中",
+   "days": [],
+   "patterns": [
+    "情報募集中"
+   ],
+   "source_url": "https://min-repo.com/3456886/"
+  },
+  "ニュー今津屋入谷店": {
+   "found": true,
+   "raw_text": "6のつく日、、月と日がゾロ目の日",
+   "days": [],
+   "patterns": [
+    "6のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3465101/"
+  },
+  "アバンザ十条": {
+   "found": true,
+   "raw_text": "7のつく日、、11日、、22日、、月と日がゾロ目の日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [
+    "7のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3464463/"
+  },
+  "プラザ515": {
+   "found": true,
+   "raw_text": "5のつく日",
+   "days": [],
+   "patterns": [
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464593/"
+  },
+  "国際センター高田馬場店": {
+   "found": true,
+   "raw_text": "5のつく日、、月と日がゾロ目の日、、第1土曜日",
+   "days": [],
+   "patterns": [
+    "5のつく日",
+    "月と日がゾロ目の日",
+    "第1土曜日"
+   ],
+   "source_url": "https://min-repo.com/3464491/"
+  },
+  "ベルシティザシティ雑色店": {
+   "found": true,
+   "raw_text": "5のつく日、、8のつく日",
+   "days": [],
+   "patterns": [
+    "5のつく日",
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464605/"
+  },
+  "ピーアーク竹ノ塚スタジオ": {
+   "found": true,
+   "raw_text": "3のつく日、、7のつく日、、第1土曜日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "7のつく日",
+    "第1土曜日"
+   ],
+   "source_url": "https://min-repo.com/3461293/"
+  },
+  "コンサートホール北千住": {
+   "found": true,
+   "raw_text": "7のつく日、、月と日がゾロ目の日",
+   "days": [],
+   "patterns": [
+    "7のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3464677/"
+  },
+  "コンサートホールエフ成増": {
+   "found": true,
+   "raw_text": "2のつく日、、7のつく日、、1日、、11日、、21日",
+   "days": [
+    1,
+    11,
+    21
+   ],
+   "patterns": [
+    "2のつく日",
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465270/"
+  },
+  "DAS小山": {
+   "found": true,
+   "raw_text": "0のつく日、、5のつく日",
+   "days": [],
+   "patterns": [
+    "0のつく日",
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3462566/"
+  },
+  "マルホン": {
+   "found": true,
+   "raw_text": "0のつく日、、28日、、土曜日",
+   "days": [
+    28
+   ],
+   "patterns": [
+    "0のつく日",
+    "土曜日"
+   ],
+   "source_url": "https://min-repo.com/3464391/"
+  },
+  "金時大森駅東口店": {
+   "found": true,
+   "raw_text": "5のつく日、、11日",
+   "days": [
+    11
+   ],
+   "patterns": [
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464437/"
+  },
+  "門前仲町スターダスト": {
+   "found": true,
+   "raw_text": "8のつく日",
+   "days": [],
+   "patterns": [
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3458982/"
+  },
+  "ミリオン平和台16号店": {
+   "found": true,
+   "raw_text": "16日",
+   "days": [
+    16
+   ],
+   "patterns": [],
+   "source_url": "https://min-repo.com/3465823/"
+  },
+  "ニュー今津屋船堀店": {
+   "found": true,
+   "raw_text": "7のつく日",
+   "days": [],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3460714/"
+  },
+  "ミリオン高円寺22号店": {
+   "found": true,
+   "raw_text": "11日、、22日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [],
+   "source_url": "https://min-repo.com/3464438/"
+  },
+  "大井ニュー東京東口店": {
+   "found": true,
+   "raw_text": "7のつく日、、11日、、22日、、第3土曜日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [
+    "7のつく日",
+    "第3土曜日"
+   ],
+   "source_url": "https://min-repo.com/3457264/"
+  },
+  "オークラ新中野店": {
+   "found": true,
+   "raw_text": "8のつく日、、最終土曜日",
+   "days": [],
+   "patterns": [
+    "8のつく日",
+    "最終土曜日"
+   ],
+   "source_url": "https://min-repo.com/3458984/"
+  },
+  "ウエスタン葛西店": {
+   "found": true,
+   "raw_text": "5のつく日、、1日、、11日、、21日",
+   "days": [
+    1,
+    11,
+    21
+   ],
+   "patterns": [
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465804/"
+  },
+  "みとや神田西口店": {
+   "found": true,
+   "raw_text": "4のつく日",
+   "days": [],
+   "patterns": [
+    "4のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464642/"
+  },
+  "キングNo.1世田谷店": {
+   "found": true,
+   "raw_text": "1のつく日、、7のつく日",
+   "days": [],
+   "patterns": [
+    "1のつく日",
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3445486/"
+  },
+  "楽園渋谷駅前店": {
+   "found": true,
+   "raw_text": "11日、、22日、、月と日がゾロ目の日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3464496/"
+  },
+  "ジャラン高島平店": {
+   "found": true,
+   "raw_text": "5のつく日、、9のつく日、、27日",
+   "days": [
+    27
+   ],
+   "patterns": [
+    "5のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464962/"
+  },
+  "みとや錦糸町北口店": {
+   "found": true,
+   "raw_text": "4のつく日、、月と日がゾロ目の日",
+   "days": [],
+   "patterns": [
+    "4のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3465094/"
+  },
+  "レイトギャップ": {
+   "found": true,
+   "raw_text": "6のつく日",
+   "days": [],
+   "patterns": [
+    "6のつく日"
+   ],
+   "source_url": "https://min-repo.com/3455046/"
+  },
+  "ヒロキ蒲田西口店": {
+   "found": true,
+   "raw_text": "6のつく日",
+   "days": [],
+   "patterns": [
+    "6のつく日"
+   ],
+   "source_url": "https://min-repo.com/3455233/"
+  },
+  "ミリオン石神井公園店スロット館": {
+   "found": true,
+   "raw_text": "7のつく日",
+   "days": [],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464444/"
+  },
+  "エスパス日拓赤坂見附駅前新館": {
+   "found": true,
+   "raw_text": "7のつく日、、22日、、土曜日",
+   "days": [
+    22
+   ],
+   "patterns": [
+    "7のつく日",
+    "土曜日"
+   ],
+   "source_url": "https://min-repo.com/3462534/"
+  },
+  "楽園渋谷道玄坂店": {
+   "found": true,
+   "raw_text": "11日、、22日、、月と日がゾロ目の日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3464401/"
+  },
+  "楽園アメ横店": {
+   "found": true,
+   "raw_text": "11日、、22日、、月と日がゾロ目の日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3464495/"
+  },
+  "ジャラン五反田店": {
+   "found": true,
+   "raw_text": "3のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465407/"
+  },
+  "エスパス1300新小岩北口駅前店": {
+   "found": true,
+   "raw_text": "3のつく日、、7のつく日、、9のつく日、、17日、、18日",
+   "days": [
+    17,
+    18
+   ],
+   "patterns": [
+    "3のつく日",
+    "7のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464580/"
+  },
+  "エスパス日拓秋葉原駅前店": {
+   "found": true,
+   "raw_text": "6のつく日、、1日、、11日、、22日、、25日、、月と日がゾロ目の日、、月の最終日、、土曜日、、日曜日",
+   "days": [
+    1,
+    11,
+    22,
+    25
+   ],
+   "patterns": [
+    "6のつく日",
+    "月と日がゾロ目の日",
+    "月の最終日",
+    "土曜日",
+    "日曜日"
+   ],
+   "source_url": "https://min-repo.com/3464918/"
+  },
+  "エムディー目黒": {
+   "found": true,
+   "raw_text": "0のつく日、、3のつく日、、6のつく日、、29日",
+   "days": [
+    29
+   ],
+   "patterns": [
+    "0のつく日",
+    "3のつく日",
+    "6のつく日"
+   ],
+   "source_url": "https://min-repo.com/3462510/"
+  },
+  "金時京急蒲田店": {
+   "found": true,
+   "raw_text": "5のつく日、、20日",
+   "days": [
+    20
+   ],
+   "patterns": [
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3454654/"
+  },
+  "つつじヶ丘ワールド": {
+   "found": true,
+   "raw_text": "月と日がゾロ目の日、、第3金曜日",
+   "days": [],
+   "patterns": [
+    "月と日がゾロ目の日",
+    "第3金曜日"
+   ],
+   "source_url": "https://min-repo.com/3464421/"
+  },
+  "金時蒲田東口店": {
+   "found": true,
+   "raw_text": "3のつく日、、5のつく日、、9のつく日、、月と日がゾロ目の日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "5のつく日",
+    "9のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3464439/"
+  },
+  "フォーチュンお花茶屋店": {
+   "found": true,
+   "raw_text": "4のつく日、、第3日曜日",
+   "days": [],
+   "patterns": [
+    "4のつく日",
+    "第3日曜日"
+   ],
+   "source_url": "https://min-repo.com/3462498/"
+  },
+  "ウエスタン西葛西店": {
+   "found": true,
+   "raw_text": "1日、、11日、、21日、、月と日がゾロ目の日",
+   "days": [
+    1,
+    11,
+    21
+   ],
+   "patterns": [
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3464403/"
+  },
+  "ウエスタン環七南葛西店": {
+   "found": true,
+   "raw_text": "1日、、11日、、21日",
+   "days": [
+    1,
+    11,
+    21
+   ],
+   "patterns": [],
+   "source_url": "https://min-repo.com/3464383/"
+  },
+  "クリエ府中西原店": {
+   "found": true,
+   "raw_text": "3のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464506/"
+  },
+  "大山オーシャン": {
+   "found": true,
+   "raw_text": "8のつく日",
+   "days": [],
+   "patterns": [
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464549/"
+  },
+  "エスパス日拓渋谷駅前新館": {
+   "found": true,
+   "raw_text": "7のつく日、、5日、、11日、、22日、、月と日がゾロ目の日、、日曜日",
+   "days": [
+    5,
+    11,
+    22
+   ],
+   "patterns": [
+    "7のつく日",
+    "月と日がゾロ目の日",
+    "日曜日"
+   ],
+   "source_url": "https://min-repo.com/3464923/"
+  },
+  "練馬オーシャン": {
+   "found": true,
+   "raw_text": "8のつく日",
+   "days": [],
+   "patterns": [
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464546/"
+  },
+  "みとや大森町店": {
+   "found": true,
+   "raw_text": "4のつく日、、7のつく日",
+   "days": [],
+   "patterns": [
+    "4のつく日",
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464702/"
+  },
+  "ハイパージアス立川": {
+   "found": true,
+   "raw_text": "5のつく日、、11日、、22日、、月と日がゾロ目の日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [
+    "5のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3464435/"
+  },
+  "レッドロック学芸大学駅前店": {
+   "found": true,
+   "raw_text": "6のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "6のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3461070/"
+  },
+  "エスパス日拓西武新宿駅前": {
+   "found": true,
+   "raw_text": "7のつく日、、1日、、16日、、月と日がゾロ目の日、、土曜日、、日曜日",
+   "days": [
+    1,
+    16
+   ],
+   "patterns": [
+    "7のつく日",
+    "月と日がゾロ目の日",
+    "土曜日",
+    "日曜日"
+   ],
+   "source_url": "https://min-repo.com/3464727/"
+  },
+  "フルハウス戸越公園店": {
+   "found": true,
+   "raw_text": "6のつく日、、11日、、22日、、月と日がゾロ目の日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [
+    "6のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3464420/"
+  },
+  "BIGディッパー東中野店": {
+   "found": true,
+   "raw_text": "7のつく日、、1日、、19日、、28日、、月と日がゾロ目の日",
+   "days": [
+    1,
+    19,
+    28
+   ],
+   "patterns": [
+    "7のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3464400/"
+  },
+  "スロットエランドール田無店": {
+   "found": true,
+   "raw_text": "3のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3462648/"
+  },
+  "楽園池袋店": {
+   "found": true,
+   "raw_text": "11日、、22日、、月と日がゾロ目の日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3464414/"
+  },
+  "キコーナ府中店": {
+   "found": true,
+   "raw_text": "3のつく日、、8のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "8のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3460540/"
+  },
+  "エスパス日拓上野本館": {
+   "found": true,
+   "raw_text": "7のつく日、、1日、、11日、、21日、、22日、、25日、、月と日がゾロ目の日、、第1土曜日",
+   "days": [
+    1,
+    11,
+    21,
+    22,
+    25
+   ],
+   "patterns": [
+    "7のつく日",
+    "月と日がゾロ目の日",
+    "第1土曜日"
+   ],
+   "source_url": "https://min-repo.com/3464870/"
+  },
+  "エスパス日拓上野新館": {
+   "found": true,
+   "raw_text": "4のつく日、、7のつく日、、月と日がゾロ目の日",
+   "days": [],
+   "patterns": [
+    "4のつく日",
+    "7のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3464921/"
+  },
+  "ドキわくランド中河原駅前店": {
+   "found": true,
+   "raw_text": "0のつく日、、8のつく日",
+   "days": [],
+   "patterns": [
+    "0のつく日",
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3463730/"
+  },
+  "キューデン・アネックス": {
+   "found": true,
+   "raw_text": "9のつく日、、15日、、土曜日",
+   "days": [
+    15
+   ],
+   "patterns": [
+    "9のつく日",
+    "土曜日"
+   ],
+   "source_url": "https://min-repo.com/3464751/"
+  },
+  "BIGディッパー木場店": {
+   "found": true,
+   "raw_text": "8のつく日",
+   "days": [],
+   "patterns": [
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3450846/"
+  },
+  "アミューズ浅草店": {
+   "found": true,
+   "raw_text": "5のつく日、、9のつく日、、11日、、22日、、月と日がゾロ目の日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [
+    "5のつく日",
+    "9のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3464361/"
+  },
+  "オータ東久留米店": {
+   "found": true,
+   "raw_text": "0のつく日",
+   "days": [],
+   "patterns": [
+    "0のつく日"
+   ],
+   "source_url": "https://min-repo.com/3462393/"
+  },
+  "フルハウス中延店": {
+   "found": true,
+   "raw_text": "0のつく日、、5のつく日",
+   "days": [],
+   "patterns": [
+    "0のつく日",
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3462381/"
+  },
+  "DAS東十条店": {
+   "found": true,
+   "raw_text": "0のつく日、、6のつく日、、土曜日",
+   "days": [],
+   "patterns": [
+    "0のつく日",
+    "6のつく日",
+    "土曜日"
+   ],
+   "source_url": "https://min-repo.com/3463387/"
+  },
+  "パーラーコスミック八王子2号店": {
+   "found": true,
+   "raw_text": "5のつく日、、1日、、11日、、21日",
+   "days": [
+    1,
+    11,
+    21
+   ],
+   "patterns": [
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464357/"
+  },
+  "キコーナ平井店": {
+   "found": true,
+   "raw_text": "0のつく日、、3のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "0のつく日",
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465550/"
+  },
+  "グランパ中野": {
+   "found": true,
+   "raw_text": "8のつく日、、1日、、11日、、22日、、29日、、第1土曜日、、第3土曜日",
+   "days": [
+    1,
+    11,
+    22,
+    29
+   ],
+   "patterns": [
+    "8のつく日",
+    "第1土曜日",
+    "第3土曜日"
+   ],
+   "source_url": "https://min-repo.com/3458532/"
+  },
+  "アイランド秋葉原店": {
+   "found": true,
+   "raw_text": "6のつく日、、8のつく日、、9のつく日、、0のつく日、、月と日がゾロ目の日、、11日、、月の最終日",
+   "days": [
+    11
+   ],
+   "patterns": [
+    "6のつく日",
+    "8のつく日",
+    "9のつく日",
+    "0のつく日",
+    "月と日がゾロ目の日",
+    "月の最終日"
+   ],
+   "source_url": "https://min-repo.com/3464369/"
+  },
+  "アスカ秩父寺尾店": {
+   "found": true,
+   "raw_text": "8のつく日",
+   "days": [],
+   "patterns": [
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3460318/"
+  },
+  "アリーナ鶴瀬店": {
+   "found": true,
+   "raw_text": "5のつく日",
+   "days": [],
+   "patterns": [
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3453785/"
+  },
+  "アスカ狭山店": {
+   "found": true,
+   "raw_text": "8のつく日",
+   "days": [],
+   "patterns": [
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3459286/"
+  },
+  "パチンコプラザラカータ大宮本店": {
+   "found": true,
+   "raw_text": "5のつく日、、6のつく日",
+   "days": [],
+   "patterns": [
+    "5のつく日",
+    "6のつく日"
+   ],
+   "source_url": "https://min-repo.com/3456071/"
+  },
+  "スロットキング南浦和": {
+   "found": true,
+   "raw_text": "第1土曜日、、第3土曜日",
+   "days": [],
+   "patterns": [
+    "第1土曜日",
+    "第3土曜日"
+   ],
+   "source_url": "https://min-repo.com/3457259/"
+  },
+  "ナビ上尾店": {
+   "found": true,
+   "raw_text": "8のつく日",
+   "days": [],
+   "patterns": [
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3459709/"
+  },
+  "SAPみずほ台": {
+   "found": true,
+   "raw_text": "6のつく日、、11日",
+   "days": [
+    11
+   ],
+   "patterns": [
+    "6のつく日"
+   ],
+   "source_url": "https://min-repo.com/3465728/"
+  },
+  "ベルシティザシティ南浦和店": {
+   "found": true,
+   "raw_text": "8のつく日",
+   "days": [],
+   "patterns": [
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3458596/"
+  },
+  "MGM浦和店": {
+   "found": true,
+   "raw_text": "5のつく日、、6のつく日",
+   "days": [],
+   "patterns": [
+    "5のつく日",
+    "6のつく日"
+   ],
+   "source_url": "https://min-repo.com/3455933/"
+  },
+  "アスカ蕨駅前店": {
+   "found": true,
+   "raw_text": "8のつく日",
+   "days": [],
+   "patterns": [
+    "8のつく日"
+   ],
+   "source_url": "https://min-repo.com/3459829/"
+  },
+  "エスタディオ東松山": {
+   "found": true,
+   "raw_text": "3のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日"
+   ],
+   "source_url": "https://min-repo.com/3450649/"
+  },
+  "コンサートホール岩槻": {
+   "found": true,
+   "raw_text": "5のつく日",
+   "days": [],
+   "patterns": [
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3454119/"
+  },
+  "アイオン入間店": {
+   "found": true,
+   "raw_text": "3のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3460676/"
+  },
+  "ニューヨークP-1": {
+   "found": true,
+   "raw_text": "土曜日、、日曜日",
+   "days": [],
+   "patterns": [
+    "土曜日",
+    "日曜日"
+   ],
+   "source_url": "https://min-repo.com/3460214/"
+  },
+  "エスパス日拓高田馬場本店": {
+   "found": true,
+   "raw_text": "5のつく日、、7のつく日、、8のつく日、、21日、、月と日がゾロ目の日、、第1土曜日、、第2土曜日、、第3土曜日",
+   "days": [
+    21
+   ],
+   "patterns": [
+    "5のつく日",
+    "7のつく日",
+    "8のつく日",
+    "月と日がゾロ目の日",
+    "第1土曜日",
+    "第2土曜日",
+    "第3土曜日"
+   ],
+   "source_url": "https://min-repo.com/3465014/"
+  },
+  "オーパス・ワンアネックス立石店": {
+   "found": true,
+   "raw_text": "1日、、11日、、21日、、最終土曜日",
+   "days": [
+    1,
+    11,
+    21
+   ],
+   "patterns": [
+    "最終土曜日"
+   ],
+   "source_url": "https://min-repo.com/3465470/"
+  },
+  "プラザ西台": {
+   "found": true,
+   "raw_text": "情報募集中",
+   "days": [],
+   "patterns": [
+    "情報募集中"
+   ],
+   "source_url": "https://min-repo.com/3460832/"
+  },
+  "オーパス・ワン立石店": {
+   "found": true,
+   "raw_text": "1日、、11日、、21日",
+   "days": [
+    1,
+    11,
+    21
+   ],
+   "patterns": [],
+   "source_url": "https://min-repo.com/3465371/"
+  },
+  "ガイアネクスト東小金井店": {
+   "found": true,
+   "raw_text": "3のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3460675/"
+  },
+  "サンラッキー三ノ輪店": {
+   "found": true,
+   "raw_text": "3のつく日、、5のつく日、、7のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "5のつく日",
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3457785/"
+  },
+  "トワーズ四谷店": {
+   "found": true,
+   "raw_text": "6のつく日、、月と日がゾロ目の日、、11日、、22日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [
+    "6のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3466085/"
+  },
+  "サンラッキー野方店": {
+   "found": true,
+   "raw_text": "3のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日"
+   ],
+   "source_url": "https://min-repo.com/3448872/"
+  },
+  "ドキわくランド聖蹟桜ヶ丘店": {
+   "found": true,
+   "raw_text": "5のつく日",
+   "days": [],
+   "patterns": [
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3453764/"
+  },
+  "SANCO梅島店": {
+   "found": true,
+   "raw_text": "3のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464658/"
+  },
+  "アサヒ幡ヶ谷2号店": {
+   "found": true,
+   "raw_text": "2のつく日",
+   "days": [],
+   "patterns": [
+    "2のつく日"
+   ],
+   "source_url": "https://min-repo.com/3456787/"
+  },
+  "パーラーアサヒ": {
+   "found": true,
+   "raw_text": "1日、、11日、、21日",
+   "days": [
+    1,
+    11,
+    21
+   ],
+   "patterns": [],
+   "source_url": "https://min-repo.com/3445061/"
+  },
+  "SAP立川店": {
+   "found": true,
+   "raw_text": "4のつく日、、7のつく日、、16日、、11日、、第1土曜日",
+   "days": [
+    16,
+    11
+   ],
+   "patterns": [
+    "4のつく日",
+    "7のつく日",
+    "第1土曜日"
+   ],
+   "source_url": "https://min-repo.com/3464873/"
+  },
+  "K-1赤羽店": {
+   "found": true,
+   "raw_text": "1日、、11日、、21日",
+   "days": [
+    1,
+    11,
+    21
+   ],
+   "patterns": [],
+   "source_url": "https://min-repo.com/3464930/"
+  },
+  "ピーアーク北千住SSS": {
+   "found": true,
+   "raw_text": "6のつく日",
+   "days": [],
+   "patterns": [
+    "6のつく日"
+   ],
+   "source_url": "https://min-repo.com/3455307/"
+  },
+  "コンサートホール調布": {
+   "found": true,
+   "raw_text": "7のつく日",
+   "days": [],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3462669/"
+  },
+  "アイオン西葛西店": {
+   "found": true,
+   "raw_text": "3のつく日、、9のつく日",
+   "days": [],
+   "patterns": [
+    "3のつく日",
+    "9のつく日"
+   ],
+   "source_url": "https://min-repo.com/3460599/"
+  },
+  "国際センター中村橋店": {
+   "found": true,
+   "raw_text": "日曜日",
+   "days": [],
+   "patterns": [
+    "日曜日"
+   ],
+   "source_url": "https://min-repo.com/3464426/"
+  },
+  "王子龍龍": {
+   "found": true,
+   "raw_text": "7のつく日",
+   "days": [],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3457735/"
+  },
+  "スパークル亀戸店": {
+   "found": true,
+   "raw_text": "7のつく日",
+   "days": [],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3457523/"
+  },
+  "エスパス日拓新宿歌舞伎町店": {
+   "found": true,
+   "raw_text": "7のつく日、、1日、、11日、、23日、、月と日がゾロ目の日、、土曜日",
+   "days": [
+    1,
+    11,
+    23
+   ],
+   "patterns": [
+    "7のつく日",
+    "月と日がゾロ目の日",
+    "土曜日"
+   ],
+   "source_url": "https://min-repo.com/3464977/"
+  },
+  "MGM綾瀬西口店": {
+   "found": true,
+   "raw_text": "6のつく日",
+   "days": [],
+   "patterns": [
+    "6のつく日"
+   ],
+   "source_url": "https://min-repo.com/3454804/"
+  },
+  "オーパス・ワン恵比寿店": {
+   "found": true,
+   "raw_text": "1日、、11日、、21日、、23日",
+   "days": [
+    1,
+    11,
+    21,
+    23
+   ],
+   "patterns": [],
+   "source_url": "https://min-repo.com/3465495/"
+  },
+  "楽園町田店": {
+   "found": true,
+   "raw_text": "11日、、22日、、月と日がゾロ目の日、、26日",
+   "days": [
+    11,
+    22,
+    26
+   ],
+   "patterns": [
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3464417/"
+  },
+  "楽園蒲田店": {
+   "found": true,
+   "raw_text": "11日、、22日、、月と日がゾロ目の日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3464432/"
+  },
+  "ガリレオ": {
+   "found": true,
+   "raw_text": "8のつく日、、月と日がゾロ目の日、、土曜日",
+   "days": [],
+   "patterns": [
+    "8のつく日",
+    "月と日がゾロ目の日",
+    "土曜日"
+   ],
+   "source_url": "https://min-repo.com/3465536/"
+  },
+  "マイニチWOW´ON": {
+   "found": true,
+   "raw_text": "12日、、21日",
+   "days": [
+    12,
+    21
+   ],
+   "patterns": [],
+   "source_url": "https://min-repo.com/3466349/"
+  },
+  "ダイヤモンド本店": {
+   "found": true,
+   "raw_text": "7のつく日、、月と日がゾロ目の日",
+   "days": [],
+   "patterns": [
+    "7のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3465811/"
+  },
+  "コンサートホール志村": {
+   "found": true,
+   "raw_text": "7のつく日",
+   "days": [],
+   "patterns": [
+    "7のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464825/"
+  },
+  "みとや鶯谷M-2店": {
+   "found": true,
+   "raw_text": "4のつく日",
+   "days": [],
+   "patterns": [
+    "4のつく日"
+   ],
+   "source_url": "https://min-repo.com/3464894/"
+  },
+  "オーパス・ワン成瀬店": {
+   "found": true,
+   "raw_text": "1日、、11日、、21日",
+   "days": [
+    1,
+    11,
+    21
+   ],
+   "patterns": [],
+   "source_url": "https://min-repo.com/3465481/"
+  },
+  "エンジェル本店": {
+   "found": true,
+   "raw_text": "1日、、2日、、11日、、21日",
+   "days": [
+    1,
+    2,
+    11,
+    21
+   ],
+   "patterns": [],
+   "source_url": "https://min-repo.com/3466119/"
+  },
+  "スパークル府中": {
+   "found": true,
+   "raw_text": "6のつく日、、11日、、22日、、月と日がゾロ目の日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [
+    "6のつく日",
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3465399/"
+  },
+  "ダイナム西日暮里スロット館": {
+   "found": true,
+   "raw_text": "5のつく日、、1日",
+   "days": [
+    1
+   ],
+   "patterns": [
+    "5のつく日"
+   ],
+   "source_url": "https://min-repo.com/3453715/"
+  },
+  "楽園立川店": {
+   "found": true,
+   "raw_text": "11日、、22日、、月と日がゾロ目の日",
+   "days": [
+    11,
+    22
+   ],
+   "patterns": [
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3464457/"
+  },
+  "SAP北野": {
+   "found": true,
+   "raw_text": "6のつく日",
+   "days": [],
+   "patterns": [
+    "6のつく日"
+   ],
+   "source_url": "https://min-repo.com/3454588/"
+  },
+  "楽園大宮店": {
+   "found": true,
+   "raw_text": "1日、、11日、、22日、、月と日がゾロ目の日",
+   "days": [
+    1,
+    11,
+    22
+   ],
+   "patterns": [
+    "月と日がゾロ目の日"
+   ],
+   "source_url": "https://min-repo.com/3465806/"
   }
  }
 }
