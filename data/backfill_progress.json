@@ -6,8 +6,8 @@
  },
  "123n東雲店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-15T23:56:50.355295",
-  "newest_processed_date": "2026-02-24",
+  "last_synced_at": "2026-11-16T05:41:50.573516",
+  "newest_processed_date": "2026-03-02",
   "oldest_processed_date": "2025-10-12",
   "status": "done"
  },
@@ -66,8 +66,8 @@
  },
  "BIGディッパー木場店": {
   "days_done": 112,
-  "last_synced_at": "2026-11-15T23:36:01.369446",
-  "newest_processed_date": "2026-11-14",
+  "last_synced_at": "2026-11-16T05:39:51.255947",
+  "newest_processed_date": "2026-11-15",
   "oldest_processed_date": "2026-07-24",
   "status": "done"
  },
@@ -461,7 +461,7 @@
  },
  "アイランド秋葉原店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-15T23:34:15.665782",
+  "last_synced_at": "2026-11-16T05:38:38.451319",
   "newest_processed_date": "2026-11-15",
   "oldest_processed_date": "2025-11-12",
   "status": "done"
@@ -508,7 +508,7 @@
  },
  "アスカ蕨駅前店": {
   "days_done": 192,
-  "last_synced_at": "2026-11-15T23:56:48.441381",
+  "last_synced_at": "2026-11-16T05:41:49.758877",
   "newest_processed_date": "2026-11-08",
   "oldest_processed_date": "2022-12-08",
   "status": "done"
@@ -721,7 +721,7 @@
  },
  "エスパス日拓高田馬場本店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-15T23:35:16.861779",
+  "last_synced_at": "2026-11-16T05:39:16.574943",
   "newest_processed_date": "2026-11-15",
   "oldest_processed_date": "2025-11-13",
   "status": "done"
@@ -746,10 +746,10 @@
   "status": "done"
  },
  "エンジェル本店": {
-  "days_done": 281,
+  "days_done": 294,
   "last_synced_at": "2026-11-16T02:27:28.389048",
   "newest_processed_date": "2026-11-11",
-  "oldest_processed_date": "2023-05-17",
+  "oldest_processed_date": "2023-05-04",
   "status": "in_progress"
  },
  "オリエンタルパサージュ自由が丘": {
@@ -824,7 +824,7 @@
  },
  "オーパス・ワンアネックス立石店": {
   "days_done": 233,
-  "last_synced_at": "2026-11-15T23:35:22.458599",
+  "last_synced_at": "2026-11-16T05:39:16.959940",
   "newest_processed_date": "2026-11-11",
   "oldest_processed_date": "2023-04-21",
   "status": "done"
@@ -911,7 +911,7 @@
  },
  "ガイア大塚北口店": {
   "days_done": 361,
-  "last_synced_at": "2026-11-16T00:37:29.094859",
+  "last_synced_at": "2026-11-16T05:42:58.032060",
   "newest_processed_date": "2026-11-14",
   "oldest_processed_date": "2025-09-27",
   "status": "done"
@@ -1014,7 +1014,7 @@
  },
  "キューデン・アネックス": {
   "days_done": 365,
-  "last_synced_at": "2026-11-15T23:35:56.414784",
+  "last_synced_at": "2026-11-16T05:39:50.789680",
   "newest_processed_date": "2026-11-15",
   "oldest_processed_date": "2025-11-07",
   "status": "done"
@@ -1426,7 +1426,7 @@
  },
  "スーパーセブン西八王子店": {
   "days_done": 116,
-  "last_synced_at": "2026-11-15T23:35:05.273675",
+  "last_synced_at": "2026-11-16T05:39:14.586968",
   "newest_processed_date": "2026-11-15",
   "oldest_processed_date": "2026-07-01",
   "status": "done"
@@ -1439,15 +1439,15 @@
   "status": "done"
  },
  "ダイナム西日暮里スロット館": {
-  "days_done": 179,
+  "days_done": 192,
   "last_synced_at": "2026-11-16T03:29:59.844944",
   "newest_processed_date": "2026-11-15",
-  "oldest_processed_date": "2021-05-01",
+  "oldest_processed_date": "2021-01-15",
   "status": "in_progress"
  },
  "ダイヤモンド本店": {
   "days_done": 50,
-  "last_synced_at": "2026-11-16T00:37:28.052503",
+  "last_synced_at": "2026-11-16T05:42:57.173243",
   "newest_processed_date": "2026-11-11",
   "oldest_processed_date": "2025-07-22",
   "status": "done"
@@ -1527,7 +1527,7 @@
  },
  "トワーズ羽村店": {
   "days_done": 163,
-  "last_synced_at": "2026-11-15T23:35:09.902261",
+  "last_synced_at": "2026-11-16T05:39:15.117967",
   "newest_processed_date": "2026-11-10",
   "oldest_processed_date": "2024-04-28",
   "status": "done"
@@ -1541,7 +1541,7 @@
  },
  "トワーズ青梅IC店": {
   "days_done": 187,
-  "last_synced_at": "2026-11-15T23:56:03.191378",
+  "last_synced_at": "2026-11-16T05:41:15.668597",
   "newest_processed_date": "2026-11-10",
   "oldest_processed_date": "2024-04-22",
   "status": "done"
@@ -1692,8 +1692,8 @@
  },
  "パチンコプラザ-ラ・カータ浦和店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-15T23:56:14.259523",
-  "newest_processed_date": "2022-09-15",
+  "last_synced_at": "2026-11-16T05:41:17.122217",
+  "newest_processed_date": "2022-10-15",
   "oldest_processed_date": "2022-08-25",
   "status": "done"
  },
@@ -1750,10 +1750,10 @@
   "status": "pending"
  },
  "パチンコ弘城東口店": {
-  "days_done": 123,
-  "last_synced_at": "2026-11-15T23:55:28.697078",
-  "newest_processed_date": "2025-10-11",
-  "oldest_processed_date": "2026-07-16",
+  "days_done": 133,
+  "last_synced_at": "2026-11-16T05:40:42.909446",
+  "newest_processed_date": "2025-10-16",
+  "oldest_processed_date": "2026-07-06",
   "status": "in_progress"
  },
  "パラッツォ三郷中央店": {
@@ -1793,7 +1793,7 @@
  },
  "パラッツォ葛西店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-15T23:56:05.956430",
+  "last_synced_at": "2026-11-16T05:41:16.504624",
   "newest_processed_date": "2026-11-15",
   "next_url": "https://min-repo.com/2652341/",
   "status": "done"
@@ -1907,10 +1907,10 @@
   "status": "done"
  },
  "ビックディッパー新橋2号店": {
-  "days_done": 144,
+  "days_done": 157,
   "last_synced_at": "2026-11-16T04:59:02.763243",
   "newest_processed_date": "2025-10-21",
-  "oldest_processed_date": "2026-06-24",
+  "oldest_processed_date": "2026-06-11",
   "status": "in_progress"
  },
  "ビックディッパー花小金井店": {
@@ -2016,8 +2016,8 @@
  },
  "ピーアーク草加ピーくんタウン": {
   "days_done": 365,
-  "last_synced_at": "2026-11-15T23:36:03.472035",
-  "newest_processed_date": "2026-03-06",
+  "last_synced_at": "2026-11-16T05:40:08.644334",
+  "newest_processed_date": "2026-03-13",
   "oldest_processed_date": "2025-10-16",
   "status": "done"
  },
@@ -2527,7 +2527,7 @@
  },
  "メッセ西葛西": {
   "days_done": 365,
-  "last_synced_at": "2026-11-15T23:35:10.739974",
+  "last_synced_at": "2026-11-16T05:39:15.826143",
   "newest_processed_date": "2026-11-15",
   "oldest_processed_date": "2025-10-31",
   "status": "done"
@@ -2600,15 +2600,15 @@
  },
  "ヴィーナス南水元1号店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-15T23:34:23.069793",
-  "newest_processed_date": "2025-12-18",
+  "last_synced_at": "2026-11-16T05:38:39.130653",
+  "newest_processed_date": "2025-12-25",
   "oldest_processed_date": "2025-11-12",
   "status": "done"
  },
  "三ノ輪UNO": {
   "days_done": 365,
-  "last_synced_at": "2026-11-15T23:36:02.740410",
-  "newest_processed_date": "2026-11-14",
+  "last_synced_at": "2026-11-16T05:40:03.058535",
+  "newest_processed_date": "2026-11-15",
   "oldest_processed_date": "2025-10-02",
   "status": "done"
  },
@@ -2804,8 +2804,8 @@
  },
  "楽園大山店": {
   "days_done": 365,
-  "last_synced_at": "2026-11-15T23:57:25.302697",
-  "newest_processed_date": "2025-12-07",
+  "last_synced_at": "2026-11-16T05:42:23.992032",
+  "newest_processed_date": "2025-12-13",
   "oldest_processed_date": "2025-11-12",
   "status": "done"
  },
@@ -2867,8 +2867,8 @@
  },
  "清瀬UNO": {
   "days_done": 365,
-  "last_synced_at": "2026-11-15T23:36:02.106554",
-  "newest_processed_date": "2026-11-14",
+  "last_synced_at": "2026-11-16T05:39:57.042673",
+  "newest_processed_date": "2026-11-15",
   "next_url": "https://min-repo.com/2629101/",
   "status": "done"
  },
@@ -2881,7 +2881,7 @@
  },
  "秋葉原UNO": {
   "days_done": 365,
-  "last_synced_at": "2026-11-15T23:34:59.617434",
+  "last_synced_at": "2026-11-16T05:39:14.227538",
   "newest_processed_date": "2026-11-15",
   "next_url": "https://min-repo.com/2653808/",
   "status": "done"
@@ -2984,8 +2984,8 @@
  },
  "遊劇場ⅱ": {
   "days_done": 365,
-  "last_synced_at": "2026-11-15T23:35:24.091097",
-  "newest_processed_date": "2026-03-07",
+  "last_synced_at": "2026-11-16T05:39:17.686841",
+  "newest_processed_date": "2026-03-14",
   "oldest_processed_date": "2025-10-04",
   "status": "done"
  },
