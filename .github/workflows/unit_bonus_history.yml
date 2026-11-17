@@ -1,8 +1,11 @@
 name: Scrape unit bonus history (BB/RB)
 
+# 自動実行は一時停止中: 新規IP(GitHub Actions)からでも全ホールで空
+# レスポンスが続く現象を確認した(2026-11-17)。同一IPのレート制限では
+# 説明がつかないため、本日のセッション全体での大量アクセスによる
+# サイト側のより広範な防御的状態を疑っている。手動実行(workflow_dispatch)
+# で検証してから、問題ないと確認できたらscheduleを復活させる。
 on:
-  schedule:
-    - cron: "*/10 * * * *"
   workflow_dispatch: {}
 
 concurrency:
