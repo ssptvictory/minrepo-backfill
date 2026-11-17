@@ -53,7 +53,9 @@ RUN_ID = os.environ.get("GITHUB_RUN_ID") or f"local{int(time.time())}"
 
 TIME_BUDGET_SECONDS = int(os.environ.get("UNIT_BONUS_TIME_BUDGET", "600"))
 REFRESH_INTERVAL_DAYS = 7  # 1台あたりこの日数以上経っていたら再取得対象にする
-REQUEST_DELAY = 2.0
+REQUEST_DELAY = 3.0
+MAX_UNITS_PER_HALL_PER_RUN = 3  # 1回の実行で1ホールにつき処理する台数の上限
+MAX_CONSECUTIVE_EMPTY = 2  # 空レスポンスがこの回数連続したらそのホールを切り上げる
 
 _start_time = time.time()
 
@@ -204,6 +206,21 @@ def load_target_units():
     return df[["hall_name", "machine_name", "unit_number"]].drop_duplicates()
 
 
+FLUSH_INTERVAL_SECONDS = 60
+
+
+def flush(progress, hall_article_url, unit_last_fetched, collected_rows, shard_path):
+    """長時間(ローカルで数時間)実行する場合、途中でクラッシュ/中断しても
+    その時点までの成果が失われないよう、定期的に進捗とデータを書き出す。"""
+    progress["hall_article_url"] = hall_article_url
+    progress["unit_last_fetched"] = unit_last_fetched
+    save_progress(progress)
+    if collected_rows:
+        df_out = pd.DataFrame(collected_rows)
+        table = pa.Table.from_pandas(df_out, preserve_index=False)
+        pq.write_table(table, shard_path, compression="zstd", compression_level=15)
+
+
 def run():
     SHARDS_DIR.mkdir(parents=True, exist_ok=True)
     print("対象(ホール,機種,台番号)読み込み中...")
@@ -216,6 +233,8 @@ def run():
 
     today_str = date.today().isoformat()
     collected_rows = []
+    shard_path = SHARDS_DIR / f"shard_{RUN_ID}.parquet"
+    last_flush = time.time()
 
     halls = targets["hall_name"].unique().tolist()
     random.shuffle(halls)  # 特定ホールに偏らないようにする
@@ -254,6 +273,12 @@ def run():
             units_to_fetch.append(row)
         if not units_to_fetch:
             continue
+        # 1ホールへの連続アクセスが続くと、このサイトのレート制限は数分単位で
+        # 回復しないことが分かっている(backfill_minrepo_full.pyの既知の挙動と
+        # 同じ)。そのため1回の巡回では少数の台だけ処理し、残りは次回以降の
+        # 実行(GitHub Actionsは10分おきなのでその頃には回復している想定)に
+        # 回す。これにより多くのホールを薄く回すことになる。
+        units_to_fetch = units_to_fetch[:MAX_UNITS_PER_HALL_PER_RUN]
 
         # ?num=ページはベース記事ページのBot対策チャレンジを解決済みでないと
         # 空レスポンスになるため、このホールの台を処理する前に一度ウォームアップする
@@ -264,14 +289,19 @@ def run():
             continue
         time.sleep(REQUEST_DELAY + random.random())
 
+        consecutive_empty = 0
         for row in units_to_fetch:
             if time_left() <= 0:
+                break
+            if consecutive_empty >= MAX_CONSECUTIVE_EMPTY:
+                print(f"  [{hall_name}] 空レスポンスが連続({consecutive_empty}回)のため、このホールを切り上げ次へ")
                 break
             key = f"{hall_name}|{row['unit_number']}"
             url = f"{article_url.split('?')[0]}?num={row['unit_number']}"
             try:
                 resp = fetch(url, referer=article_url)
                 parsed = parse_unit_page(resp.text)
+                consecutive_empty = 0 if parsed else consecutive_empty + 1
                 for p in parsed:
                     play_date = parse_date_label(p.pop("date_label"))
                     if play_date is None:
@@ -283,26 +313,23 @@ def run():
                         "play_date": play_date,
                         **p,
                     })
-                unit_last_fetched[key] = today_str
+                if parsed:
+                    unit_last_fetched[key] = today_str
+                else:
+                    # 空レスポンス(レート制限の疑い)はdone扱いにせず、次回すぐ再試行できるようにする
+                    unit_last_fetched.pop(key, None)
                 print(f"  [{hall_name}] 台{row['unit_number']} {row['machine_name'][:20]} -> {len(parsed)}日分")
             except Exception as e:
                 print(f"  ! [{hall_name}] 台{row['unit_number']} 失敗: {e}")
             time.sleep(REQUEST_DELAY + random.random())
 
-    progress["hall_article_url"] = hall_article_url
-    progress["unit_last_fetched"] = unit_last_fetched
-    save_progress(progress)
+            if time.time() - last_flush >= FLUSH_INTERVAL_SECONDS:
+                flush(progress, hall_article_url, unit_last_fetched, collected_rows, shard_path)
+                last_flush = time.time()
+                print(f"  [定期保存] 累計{len(collected_rows)}行, 台{len(unit_last_fetched)}件処理済み")
 
-    if collected_rows:
-        df_out = pd.DataFrame(collected_rows)
-        shard_path = SHARDS_DIR / f"shard_{RUN_ID}.parquet"
-        table = pa.Table.from_pandas(df_out, preserve_index=False)
-        pq.write_table(table, shard_path, compression="zstd", compression_level=15)
-        print(f"\n保存: {shard_path.name} ({len(df_out)}行)")
-    else:
-        print("\n今回収集した行なし")
-
-    done_units = sum(1 for v in unit_last_fetched.values() if v == today_str or v)
+    flush(progress, hall_article_url, unit_last_fetched, collected_rows, shard_path)
+    print(f"\n保存: {shard_path.name} ({len(collected_rows)}行)" if collected_rows else "\n今回収集した行なし")
     print(f"累計取得済み台数: {len(unit_last_fetched)} / {len(targets)}")
 
 
