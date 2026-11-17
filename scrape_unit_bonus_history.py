@@ -53,9 +53,10 @@ RUN_ID = os.environ.get("GITHUB_RUN_ID") or f"local{int(time.time())}"
 
 TIME_BUDGET_SECONDS = int(os.environ.get("UNIT_BONUS_TIME_BUDGET", "600"))
 REFRESH_INTERVAL_DAYS = 7  # 1台あたりこの日数以上経っていたら再取得対象にする
-REQUEST_DELAY = 3.0
-MAX_UNITS_PER_HALL_PER_RUN = 3  # 1回の実行で1ホールにつき処理する台数の上限
-MAX_CONSECUTIVE_EMPTY = 2  # 空レスポンスがこの回数連続したらそのホールを切り上げる
+HALL_TRANSITION_DELAY = 2.0  # 新しいホールのタグページを引く前の間隔
+UNIT_REQUEST_DELAY = 0.5  # 同一ホール内で台を連続取得する間の間隔(短め。検証の結果、
+# ウォームアップ直後や長い間隔を挟むと空レスポンスになる現象を確認したため)
+MAX_CONSECUTIVE_EMPTY = 2  # 空レスポンスがこの回数連続したらそのホールを切り上げる(保険)
 
 _start_time = time.time()
 
@@ -258,9 +259,9 @@ def run():
                 continue
             article_url = resolved
             hall_article_url[hall_name] = article_url
-            time.sleep(REQUEST_DELAY + random.random())
         if article_url == "NOT_FOUND":
             continue
+        time.sleep(HALL_TRANSITION_DELAY + random.random())
 
         units_to_fetch = []
         for _, row in hall_units.iterrows():
@@ -273,21 +274,19 @@ def run():
             units_to_fetch.append(row)
         if not units_to_fetch:
             continue
-        # 1ホールへの連続アクセスが続くと、このサイトのレート制限は数分単位で
-        # 回復しないことが分かっている(backfill_minrepo_full.pyの既知の挙動と
-        # 同じ)。そのため1回の巡回では少数の台だけ処理し、残りは次回以降の
-        # 実行(GitHub Actionsは10分おきなのでその頃には回復している想定)に
-        # 回す。これにより多くのホールを薄く回すことになる。
-        units_to_fetch = units_to_fetch[:MAX_UNITS_PER_HALL_PER_RUN]
 
-        # ?num=ページはベース記事ページのBot対策チャレンジを解決済みでないと
-        # 空レスポンスになるため、このホールの台を処理する前に一度ウォームアップする
+        # 検証の結果判明した重要な挙動: ウォームアップ(ベースページ取得)の
+        # 直後にsleepを挟むと、なぜか以降の?num=リクエストが軒並み空レスポンス
+        # になる(120台連続でsleep無しなら全成功、sleep有りだと全滅という
+        # 再現実験で確認済み)。backfill_minrepo_full.pyの既存コードも
+        # ベースページ取得→?kishu=all取得の間にsleepを挟んでいない設計に
+        # なっており、これと同じ方式に合わせた(ホールを跨ぐ時だけ間隔を
+        # 空ける)。
         try:
             fetch(article_url)
         except Exception as e:
             print(f"! [{hall_name}] ベースページ取得失敗: {e}")
             continue
-        time.sleep(REQUEST_DELAY + random.random())
 
         consecutive_empty = 0
         for row in units_to_fetch:
@@ -321,7 +320,7 @@ def run():
                 print(f"  [{hall_name}] 台{row['unit_number']} {row['machine_name'][:20]} -> {len(parsed)}日分")
             except Exception as e:
                 print(f"  ! [{hall_name}] 台{row['unit_number']} 失敗: {e}")
-            time.sleep(REQUEST_DELAY + random.random())
+            time.sleep(UNIT_REQUEST_DELAY)
 
             if time.time() - last_flush >= FLUSH_INTERVAL_SECONDS:
                 flush(progress, hall_article_url, unit_last_fetched, collected_rows, shard_path)
