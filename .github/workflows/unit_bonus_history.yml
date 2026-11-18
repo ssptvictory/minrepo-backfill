@@ -9,8 +9,13 @@ name: Scrape unit bonus history (BB/RB)
 on:
   schedule:
     # 7分・37分にずらしてある(backfill.ymlが*/5、navitime_timetable.ymlが
-    # */15で、どちらも0分・30分と重なるため、競合を避けて確実に発火させる)
-    - cron: "7,37 * * * *"
+    # */15で、どちらも0分・30分と重なるため、競合を避けて確実に発火させる)。
+    # 2026-11-19: カンマ区切り "7,37 * * * *" の1行指定に変更後、24時間
+    # 一度もscheduleイベントで発火しなかった(workflow_dispatchは正常)。
+    # 原因は不明だが、GitHub Actionsで確実に動作が確認されている
+    # 「複数行に分ける」書き方に変更する。
+    - cron: "7 * * * *"
+    - cron: "37 * * * *"
   workflow_dispatch: {}
 
 concurrency:
