@@ -8,7 +8,9 @@ name: Scrape unit bonus history (BB/RB)
 # ただし新しいワークフローなので頻度は控えめ(30分おき)にしておく。
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    # 7分・37分にずらしてある(backfill.ymlが*/5、navitime_timetable.ymlが
+    # */15で、どちらも0分・30分と重なるため、競合を避けて確実に発火させる)
+    - cron: "7,37 * * * *"
   workflow_dispatch: {}
 
 concurrency:
