@@ -22,7 +22,8 @@ SECONDS超過で中断・次回再開」方式にする。各台ページには�
 出力:
   data/unit_bonus_shards/shard_<run_id>.parquet
     列: hall_name, machine_name, unit_number, play_date, diff, games,
-        bb, rb, out_rate
+        bb, rb, slump_graph(当日分のみ、JSON文字列化した日中差枚推移の
+        配列。過去日分はNone。末尾の値がdiffとほぼ一致することを確認済み)
   data/unit_bonus_progress.json
     ホールごとの最新記事URL解決状況、台ごとの最終取得日時
 """
@@ -175,11 +176,25 @@ def parse_unit_page(html: str):
                 today_bb = parse_number(tds[0].get_text(strip=True))
                 today_rb = parse_number(tds[1].get_text(strip=True))
 
+    # スランプグラフ(Chart.jsのdata配列)は当日の日中の差枚推移そのもの
+    # (末尾の値が当日diffとほぼ一致することを確認済み)。過去日分は
+    # このページには無く、当日分のみ取得できる。
+    slump_graph = None
+    m = re.search(r"data:\s*\[([^\]]+)\]\s*,\s*fill", html)
+    if m:
+        try:
+            slump_graph = [int(x.strip()) for x in m.group(1).split(",") if x.strip()]
+        except ValueError:
+            slump_graph = None
+
     if today_label and (today_diff is not None or today_bb is not None):
         rows_out.append({
             "date_label": today_label, "diff": today_diff, "games": today_games,
             "bb": today_bb, "rb": today_rb,
+            "slump_graph": json.dumps(slump_graph) if slump_graph else None,
         })
+    for h in history_rows:
+        h["slump_graph"] = None
     rows_out.extend(history_rows)
     return rows_out
 
