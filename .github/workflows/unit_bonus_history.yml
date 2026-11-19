@@ -4,18 +4,15 @@ name: Scrape unit bonus history (BB/RB)
 # リクエスト間にsleepを挟むと空レスポンスになる現象があり、同一IP/
 # 新規IPどちらでも再現していた。sleepを除去(backfill_minrepo_full.py
 # と同じ、ウォームアップ→本番取得を間隔を空けず連続で行う方式)した
-# ところ解消したため、毎日のbackfill.ymlと同様に自動実行に戻す。
-# ただし新しいワークフローなので頻度は控えめ(30分おき)にしておく。
+# ところ解消したため、自動実行に戻す。
 on:
-  schedule:
-    # 7分・37分にずらしてある(backfill.ymlが*/5、navitime_timetable.ymlが
-    # */15で、どちらも0分・30分と重なるため、競合を避けて確実に発火させる)。
-    # 2026-11-19: カンマ区切り "7,37 * * * *" の1行指定に変更後、24時間
-    # 一度もscheduleイベントで発火しなかった(workflow_dispatchは正常)。
-    # 原因は不明だが、GitHub Actionsで確実に動作が確認されている
-    # 「複数行に分ける」書き方に変更する。
-    - cron: "7 * * * *"
-    - cron: "37 * * * *"
+  # 2026-11-19: scheduleトリガーはGitHub Actions全体の混雑(主にラウンド
+  # した分での高負荷)により数時間〜10時間おきにしか発火せず、7分/37分
+  # オフセットや複数行cronに変えても改善しなかった。backfill.yml(*/5分で
+  # 安定して発火している)の完了をトリガーにする方式に切り替える。
+  workflow_run:
+    workflows: ["Backfill min-repo data"]
+    types: [completed]
   workflow_dispatch: {}
 
 concurrency:
@@ -27,6 +24,9 @@ permissions:
 
 jobs:
   scrape:
+    # workflow_runはbackfill.ymlの成否にかかわらず発火するため、
+    # 失敗/キャンセル時は素通りさせず手動実行時だけ別途許可する。
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
