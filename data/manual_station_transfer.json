@@ -1,0 +1,139 @@
+[
+  {
+    "station": "横浜",
+    "line_a": "JR線",
+    "line_b": "京急線",
+    "walk_minutes_min": 1,
+    "walk_minutes_max": 3,
+    "note": "専用の連絡改札利用の場合",
+    "source": "web_search"
+  },
+  {
+    "station": "横浜",
+    "line_a": "東急東横線・みなとみらい線",
+    "line_b": "JR線",
+    "walk_minutes_min": 4,
+    "walk_minutes_max": 5,
+    "note": "北改札・中央北改札からJR連絡へ向かうと早い",
+    "source": "web_search"
+  },
+  {
+    "station": "横浜",
+    "line_a": "京急線",
+    "line_b": "横浜市営地下鉄ブルーライン",
+    "walk_minutes_min": 4,
+    "walk_minutes_max": 5,
+    "note": "京急の中央改札から地下鉄ブルーラインの改札へ移動",
+    "source": "web_search"
+  },
+  {
+    "station": "横浜",
+    "line_a": "JR線・東急線",
+    "line_b": "相鉄線",
+    "walk_minutes_min": 5,
+    "walk_minutes_max": 7,
+    "note": "相鉄線は1階に改札があり、JRや東急からは少し距離がある",
+    "source": "web_search"
+  },
+  {
+    "station": "有楽町",
+    "line_a": "JR線",
+    "line_b": "東京メトロ有楽町線",
+    "walk_minutes_min": 4,
+    "walk_minutes_max": 5,
+    "note": "wadattsu261.comで確認済み、双方向とも同程度",
+    "source": "wadattsu261.com"
+  },
+  {
+    "station": "蒲田",
+    "line_a": "JR京浜東北線",
+    "line_b": "東急池上線・東急多摩川線",
+    "walk_minutes_min": 1,
+    "walk_minutes_max": 3,
+    "note": "改札を出てすぐ隣接",
+    "source": "web_search_user"
+  },
+  {
+    "station": "蒲田",
+    "line_a": "JR・東急蒲田駅",
+    "line_b": "京急蒲田駅",
+    "walk_minutes_min": 10,
+    "walk_minutes_max": 12,
+    "note": "別駅扱い、距離約700〜800m、徒歩または商店街経由",
+    "source": "web_search_user",
+    "is_different_station_name": true
+  },
+  {
+    "station": "代々木",
+    "line_a": "JR山手線・中央・総武線",
+    "line_b": "都営大江戸線",
+    "walk_minutes_min": 3,
+    "walk_minutes_max": 5,
+    "note": "北口利用時",
+    "source": "web_search_user"
+  },
+  {
+    "station": "代々木",
+    "line_a": "JR代々木駅",
+    "line_b": "小田急小田原線・南新宿駅",
+    "walk_minutes_min": 4,
+    "walk_minutes_max": 5,
+    "note": "別駅扱い、専用の連絡通路はなく地上を徒歩で移動",
+    "source": "web_search_user",
+    "is_different_station_name": true
+  },
+  {
+    "station": "綾瀬",
+    "line_a": "東京メトロ千代田線",
+    "line_b": "JR常磐線各駅停車",
+    "walk_minutes_min": 1,
+    "walk_minutes_max": 2,
+    "note": "同一ホームまたは向かい側のホームでの乗り換え",
+    "source": "web_search_user"
+  },
+  {
+    "station": "西船橋",
+    "line_a": "JR総武線",
+    "line_b": "東京メトロ東西線・東葉高速線",
+    "walk_minutes_min": 1,
+    "walk_minutes_max": 3,
+    "note": "ホームが隣り合っておりスムーズ(1分半〜3分)",
+    "source": "web_search_user"
+  },
+  {
+    "station": "西船橋",
+    "line_a": "JR武蔵野線・京葉線",
+    "line_b": "総武線・東京メトロ東西線",
+    "walk_minutes_min": 3,
+    "walk_minutes_max": 5,
+    "note": "コンコースの移動や混雑を含む",
+    "source": "web_search_user"
+  },
+  {
+    "station": "小竹向原",
+    "line_a": "東京メトロ(和光市方面)",
+    "line_b": "西武有楽町線(練馬方面)",
+    "walk_minutes_min": 1,
+    "walk_minutes_max": 2,
+    "note": "同一ホームでの対面乗り換え",
+    "source": "web_search_user"
+  },
+  {
+    "station": "小竹向原",
+    "line_a": "和光市・西武線方面ホーム",
+    "line_b": "新木場・渋谷方面ホーム(副都心線・有楽町線)",
+    "walk_minutes_min": 2,
+    "walk_minutes_max": 3,
+    "note": "上下階を階段・エスカレーターで移動する場合",
+    "source": "web_search_user"
+  },
+  {
+    "station": "浅草",
+    "line_a": "都営浅草線",
+    "line_b": "東京メトロ銀座線",
+    "walk_minutes_min": 3,
+    "walk_minutes_max": 5,
+    "note": "雷門方面改札を使い、地下通路で移動(地上出入りなし)",
+    "source": "web_search_user"
+  }
+]

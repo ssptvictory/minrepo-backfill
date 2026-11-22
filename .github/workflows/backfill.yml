@@ -1,0 +1,52 @@
+name: Backfill min-repo data
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: backfill
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run backfill
+        run: python3 backfill_minrepo_full.py
+
+      - name: Update heartbeat (keeps scheduled workflow active)
+        run: date -u +"%Y-%m-%dT%H:%M:%SZ" > last_run.txt
+
+      - name: Commit data and heartbeat
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add last_run.txt data/
+          git diff --cached --quiet || git commit -m "chore: backfill run $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
+          if ! git pull --rebase; then
+            # Parquet(バイナリ)はgitでマージできずコンフリクトすることがある。
+            # 稀なタイミング被りで起きるケースなので、この回の分は諦めて
+            # リモートの最新状態に合わせ、ジョブは失敗扱いにしない
+            # (次回以降の実行は各店舗の保存済み進捗から普通に再開される)。
+            echo "::warning::pull --rebase failed (likely binary conflict in a parquet file). Discarding this run's commit and syncing to remote instead."
+            git rebase --abort || true
+            git reset --hard origin/main
+            exit 0
+          fi
+          git push

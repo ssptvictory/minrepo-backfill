@@ -1,0 +1,46 @@
+name: Scrape slotana777 daily schedule
+
+on:
+  schedule:
+    # 毎日 UTC 15:00 = JST 翌0:00 に実行(P-WORLDと同じタイミング)
+    - cron: "0 15 * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: slotana-schedule
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run slotana777 date-page scraper
+        run: python3 slotana_date_scraper.py
+
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/slotana_schedule.parquet data/slotana_progress.json
+          git diff --cached --quiet || git commit -m "chore: slotana777 schedule scrape $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
+          if ! git pull --rebase; then
+            echo "::warning::pull --rebase failed (likely binary conflict in a parquet file). Discarding this run's commit and syncing to remote instead."
+            git rebase --abort || true
+            git reset --hard origin/main
+            exit 0
+          fi
+          git push

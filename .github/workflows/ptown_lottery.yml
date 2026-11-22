@@ -1,0 +1,46 @@
+name: Scrape p-town hall entry rules (lottery info)
+
+on:
+  schedule:
+    # パチ7と同じく変化が少ない情報のため週1回(JST月曜朝9時半=UTC日曜深夜0時30分)
+    - cron: "30 0 * * 1"
+  workflow_dispatch: {}
+
+concurrency:
+  group: ptown-lottery
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run p-town lottery/rules scraper
+        run: python3 ptown_lottery_scraper.py
+
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ptown_hall_rules.parquet data/ptown_hall_ids.json
+          git diff --cached --quiet || git commit -m "chore: p-town hall rules refresh $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
+          if ! git pull --rebase; then
+            echo "::warning::pull --rebase failed (likely binary conflict in a parquet file). Discarding this run's commit and syncing to remote instead."
+            git rebase --abort || true
+            git reset --hard origin/main
+            exit 0
+          fi
+          git push

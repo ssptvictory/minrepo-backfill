@@ -1,0 +1,53 @@
+name: Scrape NAVITIME train timetables
+
+on:
+  schedule:
+    # Crawl-delay:10を守るため1回の実行で25分ほどかけてゆっくり進める。
+    # 15分おきに起動(cron-job.orgからも叩く前提)、concurrencyで多重起動は防ぐ
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: navitime-timetable
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run NAVITIME timetable scraper
+        run: python3 navitime_timetable_scraper.py
+
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/navitime_shards/ data/navitime_lines.json data/navitime_stations.json
+          git diff --cached --quiet || git commit -m "chore: NAVITIME timetable scrape $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
+          # 各runは自分のGITHUB_RUN_IDだけのユニークなshardファイルに書くので
+          # 他ワークフロー(backfill.yml等)のコミットと衝突することは原理上ない。
+          # それでもpush競合(同時実行)に備えて軽くリトライする。
+          for attempt in 1 2 3; do
+            if git pull --rebase && git push; then
+              exit 0
+            fi
+            echo "::warning::push attempt $attempt failed, retrying"
+            git rebase --abort || true
+            sleep 5
+          done
+          echo "::error::failed to push after retries"
+          exit 1

@@ -1,0 +1,60 @@
+name: Scrape unit bonus history (BB/RB)
+
+# 2026-11-17: 原因判明。ウォームアップ(ベースページ取得)の直後や
+# リクエスト間にsleepを挟むと空レスポンスになる現象があり、同一IP/
+# 新規IPどちらでも再現していた。sleepを除去(backfill_minrepo_full.py
+# と同じ、ウォームアップ→本番取得を間隔を空けず連続で行う方式)した
+# ところ解消したため、自動実行に戻す。
+on:
+  # 2026-11-19: scheduleトリガーはGitHub Actions全体の混雑(主にラウンド
+  # した分での高負荷)により数時間〜10時間おきにしか発火せず、7分/37分
+  # オフセットや複数行cronに変えても改善しなかった。backfill.yml(*/5分で
+  # 安定して発火している)の完了をトリガーにする方式に切り替える。
+  workflow_run:
+    workflows: ["Backfill min-repo data"]
+    types: [completed]
+  workflow_dispatch: {}
+
+concurrency:
+  group: unit_bonus_history
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    # workflow_runはbackfill.ymlの成否にかかわらず発火するため、
+    # 失敗/キャンセル時は素通りさせず手動実行時だけ別途許可する。
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      UNIT_BONUS_TIME_BUDGET: "700"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scraper
+        run: python3 scrape_unit_bonus_history.py
+
+      - name: Commit data and progress
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/unit_bonus_shards/ data/unit_bonus_progress.json
+          git diff --cached --quiet || git commit -m "chore: unit bonus history scrape $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
+          if ! git pull --rebase; then
+            echo "::warning::pull --rebase failed (likely binary conflict). Discarding this run's commit and syncing to remote instead."
+            git rebase --abort || true
+            git reset --hard origin/main
+            exit 0
+          fi
+          git push
