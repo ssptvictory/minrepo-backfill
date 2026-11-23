@@ -25,6 +25,7 @@ DAYS_BACKで控えめに設定し、GitHub Actionsでの繰り返し実行に乗
     列: ホールごとの{status, oldest_processed_date, days_done}
 """
 import glob
+import hashlib
 import json
 import os
 import random
@@ -41,12 +42,17 @@ from scrape_unit_bonus_history import parse_unit_page, parse_number
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 SHARDS_DIR = SCRIPT_DIR / "data" / "unit_bonus_shards"
-PROGRESS_PATH = SCRIPT_DIR / "data" / "unit_bonus_backfill_progress.json"
 RUN_ID = os.environ.get("GITHUB_RUN_ID") or f"local{int(time.time())}"
+
+# 並列実行時、全シャードが同じ進捗ファイルを奪い合ってcommit時に衝突する
+# のを避けるため、シャードごとに別ファイルにする。
+SHARD_INDEX = int(os.environ.get("UNIT_BONUS_SHARD_INDEX", "0"))
+SHARD_COUNT = int(os.environ.get("UNIT_BONUS_SHARD_COUNT", "1"))
+PROGRESS_PATH = SCRIPT_DIR / "data" / f"unit_bonus_backfill_progress_shard{SHARD_INDEX}.json"
 
 TIME_BUDGET_SECONDS = int(os.environ.get("UNIT_BONUS_BACKFILL_TIME_BUDGET", "600"))
 HALL_TIME_BUDGET_SECONDS = 90  # 1ホールにこの秒数以上かけたら見切りをつけて次のホールへ
-DAYS_BACK = 180  # 1ホールにつき最大これだけ遡る(全台個別リクエストが必要なため365日は非現実的)
+DAYS_BACK = 365  # 1年分
 UNIT_REQUEST_DELAY = 0.5
 MAX_CONSECUTIVE_EMPTY = 2
 
@@ -55,6 +61,12 @@ _start_time = time.time()
 
 def time_left():
     return TIME_BUDGET_SECONDS - (time.time() - _start_time)
+
+
+def stable_hash(s: str) -> int:
+    """組み込みhash()はプロセスごとに変わる(PYTHONHASHSEED)ため、並列シャード
+    分割には使えない。全プロセスで同じ結果になる決定的なハッシュを使う。"""
+    return int(hashlib.md5(s.encode("utf-8")).hexdigest(), 16)
 
 
 def load_progress():
@@ -98,10 +110,15 @@ def run():
     progress = load_progress()
     today = date.today()
     collected_rows = []
-    shard_path = SHARDS_DIR / f"backfill_shard_{RUN_ID}.parquet"
+    shard_path = SHARDS_DIR / f"backfill_shard_s{SHARD_INDEX}_{RUN_ID}.parquet"
     last_flush = time.time()
 
-    halls = targets["hall_name"].unique().tolist()
+    all_halls = targets["hall_name"].unique().tolist()
+    if SHARD_COUNT > 1:
+        halls = [h for h in all_halls if stable_hash(h) % SHARD_COUNT == SHARD_INDEX]
+        print(f"シャード {SHARD_INDEX}/{SHARD_COUNT}: 対象ホール数 {len(halls)}/{len(all_halls)}")
+    else:
+        halls = all_halls
     random.shuffle(halls)
 
     for hall_name in halls:

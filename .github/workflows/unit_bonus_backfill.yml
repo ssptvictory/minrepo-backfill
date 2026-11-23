@@ -1,21 +1,25 @@
 name: Backfill unit bonus history (BB/RB, past dates)
 
-# 既存のunit_bonus_history.ymlは最新記事のみを見る定期更新用。
-# このワークフローは過去の記事アーカイブ(ホールごとに数ヶ月〜1年超)を
-# 遡ってBB/RBを取得する一回限りの遡及バックフィル用で、進捗が無くなる
-# (全ホールdone)まで繰り返し実行される想定。
-# schedule:トリガーはGitHub Actions混雑で不安定なため使わず、既存の
-# backfill.yml(*/5分で安定稼働)の完了をトリガーにする。
+# 1年分を1週間以内に取得する必要があるため、1プロセス・5分おきの
+# workflow_run連鎖(既存のBackfill min-repo dataに相乗り)方式では
+# スピードが全く足りない(その方式だと概算5〜6ヵ月かかる)。
+# そのため、24並列シャード(ホールをハッシュで24分割)× 1ジョブ最大
+# 315分(GitHub Actionsの6時間ハードリミット内)の長時間ジョブに変更し、
+# 自分自身の完了をトリガーにして連続的に回し続ける
+# (schedule:はGitHub Actions混雑で不安定なため使わない。かつ既存の
+# Backfill min-repo dataへの相乗りだと5分おきの発火間隔に対して
+# 1ジョブ5時間超では詰まってしまうため、今回は自己連鎖にする)。
+#
+# 並列実行時は進捗ファイル・shard出力ファイルがシャードごとに分かれて
+# いる(backfill_unit_bonus_history.py側で対応済み)ため、コミット時の
+# 衝突は実際のファイル差分としては発生しないはずだが、24並列が同時に
+# pushしようとするタイミング競合はあり得るため、コミットはリトライする。
 
 on:
   workflow_run:
-    workflows: ["Backfill min-repo data"]
+    workflows: ["Backfill unit bonus history (BB/RB, past dates)"]
     types: [completed]
   workflow_dispatch: {}
-
-concurrency:
-  group: unit_bonus_backfill
-  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -23,10 +27,19 @@ permissions:
 jobs:
   backfill:
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+    concurrency:
+      group: unit_bonus_backfill_shard_${{ matrix.shard }}
+      cancel-in-progress: false
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 345
     env:
-      UNIT_BONUS_BACKFILL_TIME_BUDGET: "700"
+      UNIT_BONUS_BACKFILL_TIME_BUDGET: "18900"
+      UNIT_BONUS_SHARD_INDEX: ${{ matrix.shard }}
+      UNIT_BONUS_SHARD_COUNT: "24"
     steps:
       - uses: actions/checkout@v4
 
@@ -40,17 +53,24 @@ jobs:
       - name: Run backfill
         run: python3 backfill_unit_bonus_history.py
 
-      - name: Commit data and progress
+      - name: Commit data and progress (with retry, since many shards push concurrently)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/unit_bonus_shards/ data/unit_bonus_backfill_progress.json
-          git diff --cached --quiet || git commit -m "chore: unit bonus history backfill $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-
-          if ! git pull --rebase; then
-            echo "::warning::pull --rebase failed (likely binary conflict). Discarding this run's commit and syncing to remote instead."
-            git rebase --abort || true
-            git reset --hard origin/main
+          git add data/unit_bonus_shards/ "data/unit_bonus_backfill_progress_shard${{ matrix.shard }}.json"
+          if git diff --cached --quiet; then
+            echo "変更なし、コミットをスキップ"
             exit 0
           fi
-          git push
+          git commit -m "chore: unit bonus history backfill shard ${{ matrix.shard }} $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
+          for i in 1 2 3 4 5 6 7 8; do
+            if git pull --rebase && git push; then
+              echo "push成功(試行$i回目)"
+              exit 0
+            fi
+            echo "push失敗、リトライします(試行$i回目)"
+            git rebase --abort || true
+            sleep $((RANDOM % 20 + 5))
+          done
+          echo "::warning::複数回リトライしても push できませんでした。このシャードの今回分の成果は次回の実行で再取得されます(oldest_processed_dateがコミットされていないため)"
