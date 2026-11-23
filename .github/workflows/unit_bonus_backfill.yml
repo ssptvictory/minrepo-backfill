@@ -1,0 +1,56 @@
+name: Backfill unit bonus history (BB/RB, past dates)
+
+# 既存のunit_bonus_history.ymlは最新記事のみを見る定期更新用。
+# このワークフローは過去の記事アーカイブ(ホールごとに数ヶ月〜1年超)を
+# 遡ってBB/RBを取得する一回限りの遡及バックフィル用で、進捗が無くなる
+# (全ホールdone)まで繰り返し実行される想定。
+# schedule:トリガーはGitHub Actions混雑で不安定なため使わず、既存の
+# backfill.yml(*/5分で安定稼働)の完了をトリガーにする。
+
+on:
+  workflow_run:
+    workflows: ["Backfill min-repo data"]
+    types: [completed]
+  workflow_dispatch: {}
+
+concurrency:
+  group: unit_bonus_backfill
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  backfill:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      UNIT_BONUS_BACKFILL_TIME_BUDGET: "700"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run backfill
+        run: python3 backfill_unit_bonus_history.py
+
+      - name: Commit data and progress
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/unit_bonus_shards/ data/unit_bonus_backfill_progress.json
+          git diff --cached --quiet || git commit -m "chore: unit bonus history backfill $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
+          if ! git pull --rebase; then
+            echo "::warning::pull --rebase failed (likely binary conflict). Discarding this run's commit and syncing to remote instead."
+            git rebase --abort || true
+            git reset --hard origin/main
+            exit 0
+          fi
+          git push
