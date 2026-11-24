@@ -56,6 +56,7 @@ HISTORY_DAYS = 10
 REQUEST_DELAY = 1.0          # 秒。これに0〜0.5秒のゆらぎを足す
 MAX_CONSECUTIVE_EMPTY = 3    # 空レスポンス(レート制限の疑い)の連続回数
 NO_TABLE_LIMIT = 5           # 1記事の最初からBB/RB表の無い台がこの数続いたら、その記事(店舗)を飛ばす
+MAX_CONSECUTIVE_DEAD_HALLS = 3  # 既存データの無い店舗で空が続くのは店舗側の事情とみなすが、3店続いたらレート制限扱い
 RATE_LIMIT_PAUSE = 120
 COVERED_SHARE = 0.8          # 既存データで台の8割以上が取れている日はカバー済みとみなす
 FLUSH_INTERVAL_SECONDS = 60
@@ -187,6 +188,7 @@ def run():
 
     shard_path = SHARDS_DIR / f"backfill_{RUN_ID}_{CHUNK}.parquet"
     rows, pairs_cache = [], {}
+    consecutive_dead = 0
     last_flush = time.time()
     n_requests = 0
 
@@ -239,7 +241,7 @@ def run():
 
         print(f"  [{hall}] 記事{art_date}を取得中({len(units)}台)")
         empty, pages, no_table, hist_dates = 0, 0, 0, {}
-        aborted = no_bbrb = False
+        aborted = no_bbrb = dead_hall = False
         for unit, machine in units.items():
             if time_left() <= 0:
                 aborted = True
@@ -263,6 +265,11 @@ def run():
                 continue
             if blocked:
                 empty += 1
+                if empty == MAX_CONSECUTIVE_EMPTY and pages == 0 and not covered_map.get(hall):
+                    # 既存データが1件も無い店舗で最初から空が続く=店舗側の事情
+                    # (毎日の収集でも取れていない)。レート制限とはみなさず対象外にする。
+                    dead_hall = True
+                    break
                 if empty == MAX_CONSECUTIVE_EMPTY:
                     print(f"  ! 空レスポンスが{empty}回連続。{RATE_LIMIT_PAUSE}秒待機")
                     time.sleep(RATE_LIMIT_PAUSE)
@@ -290,6 +297,17 @@ def run():
 
         if aborted:
             break  # この記事は未完了扱い(covered_oldestを進めない)。次回やり直す
+        if dead_hall:
+            consecutive_dead += 1
+            if consecutive_dead >= MAX_CONSECUTIVE_DEAD_HALLS:
+                # 店舗をまたいで空が続く=本当にレート制限の可能性が高い
+                print(f"  ! 空レスポンスの店舗が{consecutive_dead}店続いたため打ち切り、{COOLDOWN_HOURS}時間休止します")
+                start_cooldown()
+                break
+            state["status"] = "no_data"
+            print(f"  [{hall}] 個別台ページが空で、既存データも無いため対象外にします")
+            continue
+        consecutive_dead = 0
         if no_bbrb:
             if not covered_map.get(hall):
                 # 毎日の収集でも1件も取れていない=この店舗はBB/RBを掲載していない
