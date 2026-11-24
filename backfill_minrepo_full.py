@@ -10,9 +10,10 @@ data/配下の変更をコミット・プッシュする想定(ワークフロ�
 出力ファイル:
   data/backfill_progress.json          店舗ごとの進捗状態
   data/daily_unit_data/YYYY-MM.parquet 月ごとの台データ(zstd圧縮、列指向)
-    列: hall_name, play_date, machine_name, unit_number, diff, games
-    (出率は games*3 と diff から復元できるため保存しない。実データで
-     誤差ゼロを確認済み: out_rate = round((games*3+diff)/(games*3)*100, 1))
+    列: hall_name, play_date, machine_name, unit_number, diff, games, site_out_rate
+    (site_out_rateはサイト表示の出率そのもの。2026-11-24以降に取得した行のみ
+     値が入り、それ以前の行はNaN。games*3とdiffからの復元値と表示値が
+     本当に一致するかを全件で検証するため保存するようにした)
 
 パイロット検証(pilot_backfill_minrepo.py)で確認した以下の対策を組み込んでいる:
   - Bot対策のJSチャレンジ2種への対応
@@ -198,6 +199,7 @@ def queue_unit_data(hall_name, play_date, unit_rows):
             "unit_number": r["unit_number"],
             "diff": r["diff"],
             "games": r["games"],
+            "site_out_rate": r.get("site_out_rate"),
         })
 
 
@@ -339,12 +341,18 @@ def parse_all_units_table(html: str):
             games = int(games_text) if games_text not in ("", "-") else None
         except ValueError:
             games = None
+        out_rate_text = cells[4].get_text(strip=True).replace(",", "").replace("%", "")
+        try:
+            site_out_rate = float(out_rate_text) if out_rate_text not in ("", "-") else None
+        except ValueError:
+            site_out_rate = None
 
         rows_out.append({
             "machine_name": machine_name,
             "unit_number": int(unit_number_text),
             "diff": diff,
             "games": games,
+            "site_out_rate": site_out_rate,
         })
 
     return rows_out
