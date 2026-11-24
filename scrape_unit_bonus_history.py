@@ -223,7 +223,13 @@ def load_target_units():
     # BB/RB 333,061行中114,445行)。台ごとに最新日の機種だけを対象にする。
     df = df.sort_values("play_date").drop_duplicates(["hall_name", "unit_number"], keep="last")
     df = df[df["machine_name"].isin(target_names)]
-    return df[["hall_name", "machine_name", "unit_number"]]
+    df = df.merge(lookup[["machine_name", "category"]].drop_duplicates("machine_name"), on="machine_name", how="left")
+    return df[["hall_name", "machine_name", "unit_number", "category"]]
+
+
+# スランプグラフはAT機(category="at")の設定判別用にだけ使う(2026-11-24決定)。
+# BB/RBで判別できるAタイプ・ART機では保存しない。
+SLUMP_CATEGORIES = {"at"}
 
 
 FLUSH_INTERVAL_SECONDS = 60
@@ -324,6 +330,8 @@ def run():
                     play_date = parse_date_label(p.pop("date_label"))
                     if play_date is None:
                         continue
+                    if row.get("category") not in SLUMP_CATEGORIES:
+                        p["slump_graph"] = None
                     collected_rows.append({
                         "hall_name": hall_name,
                         "machine_name": row["machine_name"],

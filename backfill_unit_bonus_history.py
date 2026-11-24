@@ -1,36 +1,35 @@
-"""
-unit_bonus_history(BB/REG)の過去データを遡って取得する。
+"""BB/RB(個別台ページ ?num=)の過去分を、全ホール横並びで遡って取得する。
 
-これまでのscrape_unit_bonus_history.pyは「最新記事の個別台ページ(?num=)」
-だけを見ていたため、各台につき当日+過去10日分しか蓄積できず、収集開始
-(2026-10-02)以降の分しか積み上がらなかった。しかし実際には、min-repo.comの
-古い記事(?num=台番号ページ)にもその記事の日付時点のBB/RB実績が載っている
-ことが確認できた(backfill_minrepo_full.pyが使っている「過去の結果」一覧
-=get_date_url_listで、数ヶ月前の記事に遡れることは既に実証済み)。
-
-本スクリプトは、backfill_minrepo_full.pyと同じ「ホール単位でoldest_processed_
-dateを進捗管理しながら過去の記事を遡る」方式で、各過去記事の対象台個別
-ページを取得し、BB/RB等をshardとして保存する。
-
-注意: ?kishu=all(全台一覧)ページにはBB/RB列が無い(機種/台番/差枚/G数/
-出率のみ)ことを確認済みのため、diff/games backfillのような1ホール1
-リクエストでの効率化はできず、台ごとに個別リクエストが必要(既存の
-scrape_unit_bonus_history.pyと同じ制約)。そのため遡る日数は365日ではなく
-DAYS_BACKで控えめに設定し、GitHub Actionsでの繰り返し実行に乗せて
-じわじわ進める想定。
+方針(2026-11-24):
+- 全ホールを「いちばん浅いホールから1記事ずつ」進める(幅優先)。
+  先に全ホールの直近1か月がそろい、その後さらに古い日付へ進む。
+- 既存のunit_bonus_shardsで既にカバーされている日は取らない。
+  各ホールの「ここより新しい日はカバー済み」という境界(covered_oldest)を
+  初回に既存データから決め、そこから過去へ進む。
+- 個別台ページには、その記事の日付+過去10日分(BB/RB付き)の表がある。
+  古い記事のページにも過去10日表が付いていれば、1記事で11日分取れるので
+  11日おきに記事を選ぶ。付いていなければ1日ずつ進む(実行時に自動判定)。
+- 取得する台は、その記事の日付〜10日前の全台一覧(daily_unit_data)で
+  Aタイプ・ART(category bonus/art)だった台番号。機種名はその時点の
+  一覧のものを入れる(分析側でも全台一覧の機種名に付け替える)。
+- サイトへの配慮: 取得は1本ずつ(並列にしない)、リクエスト間隔は1秒以上。
+  空レスポンス(レート制限)が続いたら2分待ち、それでも続けば今回の実行を
+  打ち切って data/.unit_bonus_rate_limited を作る(ワークフローは再起動を
+  急がず、定期起動に任せる)。
+- スランプグラフはAT機(category="at")専用なので、ここでは保存しない。
 
 出力:
-  data/unit_bonus_shards/backfill_shard_<run_id>.parquet (既存と同じ列構成)
+  data/unit_bonus_shards/backfill_<run_id>_<chunk>.parquet (既存と同じ列構成)
   data/unit_bonus_backfill_progress.json
-    列: ホールごとの{status, oldest_processed_date, days_done}
+    ホールごとの {status, covered_oldest, articles_done}
 """
 import glob
-import hashlib
+import heapq
 import json
 import os
 import random
 import time
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 import pandas as pd
@@ -38,189 +37,243 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 from backfill_minrepo_full import fetch, get_date_url_list, parse_date_from_label
-from scrape_unit_bonus_history import parse_unit_page, parse_number
+from scrape_unit_bonus_history import parse_unit_page
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-SHARDS_DIR = SCRIPT_DIR / "data" / "unit_bonus_shards"
+DATA_DIR = SCRIPT_DIR / "data"
+SHARDS_DIR = DATA_DIR / "unit_bonus_shards"
+PROGRESS_PATH = DATA_DIR / "unit_bonus_backfill_progress.json"
+RATE_LIMIT_MARKER = DATA_DIR / ".unit_bonus_rate_limited"
 RUN_ID = os.environ.get("GITHUB_RUN_ID") or f"local{int(time.time())}"
+CHUNK = os.environ.get("UNIT_BONUS_BACKFILL_CHUNK", "0")
 
-# 並列実行時、全シャードが同じ進捗ファイルを奪い合ってcommit時に衝突する
-# のを避けるため、シャードごとに別ファイルにする。
-SHARD_INDEX = int(os.environ.get("UNIT_BONUS_SHARD_INDEX", "0"))
-SHARD_COUNT = int(os.environ.get("UNIT_BONUS_SHARD_COUNT", "1"))
-PROGRESS_PATH = SCRIPT_DIR / "data" / f"unit_bonus_backfill_progress_shard{SHARD_INDEX}.json"
+TIME_BUDGET_SECONDS = int(os.environ.get("UNIT_BONUS_BACKFILL_TIME_BUDGET", "1800"))
+DAYS_BACK = int(os.environ.get("UNIT_BONUS_BACKFILL_DAYS_BACK", "365"))
+TARGET_CATEGORIES = {"bonus", "art"}
+HISTORY_DAYS = 10
+REQUEST_DELAY = 1.0          # 秒。これに0〜0.5秒のゆらぎを足す
+MAX_CONSECUTIVE_EMPTY = 3
+RATE_LIMIT_PAUSE = 120
+COVERED_SHARE = 0.8          # 既存データで台の8割以上が取れている日はカバー済みとみなす
+FLUSH_INTERVAL_SECONDS = 60
 
-TIME_BUDGET_SECONDS = int(os.environ.get("UNIT_BONUS_BACKFILL_TIME_BUDGET", "600"))
-HALL_TIME_BUDGET_SECONDS = 90  # 1ホールにこの秒数以上かけたら見切りをつけて次のホールへ
-DAYS_BACK = 365  # 1年分
-UNIT_REQUEST_DELAY = 0.5
-MAX_CONSECUTIVE_EMPTY = 2
-
-_start_time = time.time()
+_start = time.time()
 
 
 def time_left():
-    return TIME_BUDGET_SECONDS - (time.time() - _start_time)
+    return TIME_BUDGET_SECONDS - (time.time() - _start)
 
 
-def stable_hash(s: str) -> int:
-    """組み込みhash()はプロセスごとに変わる(PYTHONHASHSEED)ため、並列シャード
-    分割には使えない。全プロセスで同じ結果になる決定的なハッシュを使う。"""
-    return int(hashlib.md5(s.encode("utf-8")).hexdigest(), 16)
+def polite_sleep():
+    time.sleep(REQUEST_DELAY + random.random() * 0.5)
+
+
+def load_lineup():
+    """(hall, play_date) -> その日のbonus/art台の {unit_number: machine_name}"""
+    lookup = pd.read_parquet(DATA_DIR / "machine_type_lookup.parquet")
+    names = set(lookup[lookup["category"].isin(TARGET_CATEGORIES)]["machine_name"])
+    since = (date.today() - timedelta(days=DAYS_BACK + HISTORY_DAYS + 5)).strftime("%Y-%m")
+    dfs = []
+    for f in sorted(glob.glob(str(DATA_DIR / "daily_unit_data" / "*.parquet"))):
+        if Path(f).stem < since:
+            continue
+        d = pd.read_parquet(f, columns=["hall_name", "play_date", "machine_name", "unit_number"])
+        dfs.append(d[d["machine_name"].isin(names)])
+    df = pd.concat(dfs, ignore_index=True)
+    df["play_date"] = pd.to_datetime(df["play_date"]).dt.date
+    return df
+
+
+def covered_dates(lineup, existing):
+    """{hall: 既存データで台の8割以上がそろっている日の集合}"""
+    have = existing.groupby(["hall_name", "play_date"]).size().rename("have")
+    need = lineup.groupby(["hall_name", "play_date"]).size().rename("need")
+    cov = pd.concat([need, have], axis=1).fillna(0)
+    cov = cov[cov["have"] >= cov["need"] * COVERED_SHARE].reset_index()
+    return {h: set(g["play_date"]) for h, g in cov.groupby("hall_name")}
+
+
+def initial_covered_oldest(lineup, covered):
+    """直近の未カバー日(毎日の収集scrape_unit_bonus_history.pyが7日ごとの
+    取り直しで埋める分)は飛ばし、既存データの連続したカバー期間の最古日を
+    境界にする。既存データが無いホールは今日。"""
+    out = {}
+    for hall in lineup["hall_name"].unique():
+        days = sorted(covered.get(hall, ()), reverse=True)
+        if not days:
+            out[hall] = date.today().isoformat()
+            continue
+        oldest = days[0]
+        hall_days = sorted({d for d in lineup.loc[lineup["hall_name"] == hall, "play_date"] if d <= days[0]},
+                           reverse=True)
+        for d in hall_days:
+            if d not in covered[hall]:
+                break
+            oldest = d
+        out[hall] = oldest.isoformat()
+    return out
+
+
+def load_existing_keys():
+    files = glob.glob(str(DATA_DIR / "unit_bonus_shards" / "*.parquet"))
+    dfs = [pd.read_parquet(f, columns=["hall_name", "unit_number", "play_date"]) for f in files]
+    if not dfs:
+        return pd.DataFrame({"hall_name": [], "unit_number": [], "play_date": []})
+    df = pd.concat(dfs, ignore_index=True).drop_duplicates()
+    df["play_date"] = pd.to_datetime(df["play_date"]).dt.date
+    return df
 
 
 def load_progress():
     if PROGRESS_PATH.exists():
-        return json.load(open(PROGRESS_PATH))
+        return json.load(open(PROGRESS_PATH, encoding="utf-8"))
     return {}
 
 
-def save_progress(progress):
+def save(progress, rows, shard_path):
     json.dump(progress, open(PROGRESS_PATH, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-
-
-def load_target_units():
-    lookup_path = SCRIPT_DIR / "data" / "machine_type_lookup.parquet"
-    lookup = pd.read_parquet(lookup_path)
-    target_names = set(lookup[lookup["category"].isin(["bonus", "art"])]["machine_name"])
-
-    dfs = [pd.read_parquet(f) for f in glob.glob(str(SCRIPT_DIR / "data" / "daily_unit_data" / "2026-1*.parquet"))]
-    df = pd.concat(dfs, ignore_index=True)
-    # 台入替えがあった台を旧機種・新機種で二重に取得しないよう、台ごとに
-    # 最新日の機種だけを対象にする(scrape_unit_bonus_history.pyと同じ修正)。
-    df = df.sort_values("play_date").drop_duplicates(["hall_name", "unit_number"], keep="last")
-    df = df[df["machine_name"].isin(target_names)]
-    return df[["hall_name", "machine_name", "unit_number"]]
-
-
-FLUSH_INTERVAL_SECONDS = 60
-
-
-def flush(progress, collected_rows, shard_path):
-    save_progress(progress)
-    if collected_rows:
-        df_out = pd.DataFrame(collected_rows)
-        table = pa.Table.from_pandas(df_out, preserve_index=False)
-        pq.write_table(table, shard_path, compression="zstd", compression_level=15)
+    if rows:
+        pq.write_table(pa.Table.from_pandas(pd.DataFrame(rows), preserve_index=False),
+                       shard_path, compression="zstd", compression_level=15)
 
 
 def run():
     SHARDS_DIR.mkdir(parents=True, exist_ok=True)
-    print("対象(ホール,機種,台番号)読み込み中...")
-    targets = load_target_units()
-    print(f"対象件数: {len(targets)}")
-
-    progress = load_progress()
+    RATE_LIMIT_MARKER.unlink(missing_ok=True)
     today = date.today()
-    collected_rows = []
-    shard_path = SHARDS_DIR / f"backfill_shard_s{SHARD_INDEX}_{RUN_ID}.parquet"
+    limit_date = today - timedelta(days=DAYS_BACK)
+
+    print("全台一覧(bonus/art)読み込み中...")
+    lineup = load_lineup()
+    lineup_idx = {k: dict(zip(g["unit_number"], g["machine_name"]))
+                  for k, g in lineup.groupby(["hall_name", "play_date"])}
+    progress = load_progress()
+    print("既存データのカバー状況を算出中...")
+    covered_map = covered_dates(lineup, load_existing_keys())
+    new_halls = [h for h in lineup["hall_name"].unique() if h not in progress]
+    if new_halls:
+        print(f"初回のカバー境界を既存データから算出中({len(new_halls)}ホール)...")
+        init = initial_covered_oldest(lineup[lineup["hall_name"].isin(new_halls)], covered_map)
+        for h in new_halls:
+            progress[h] = {"status": "in_progress", "covered_oldest": init.get(h, today.isoformat()),
+                           "articles_done": 0}
+
+    # 幅優先: covered_oldestが新しい(=まだ浅い)ホールから1記事ずつ
+    heap = [(-date.fromisoformat(s["covered_oldest"]).toordinal(), h)
+            for h, s in progress.items() if s["status"] == "in_progress"]
+    heapq.heapify(heap)
+    print(f"対象ホール {len(heap)} / 完了 {sum(s['status'] == 'done' for s in progress.values())}")
+
+    shard_path = SHARDS_DIR / f"backfill_{RUN_ID}_{CHUNK}.parquet"
+    rows, pairs_cache = [], {}
     last_flush = time.time()
+    n_requests = 0
 
-    all_halls = targets["hall_name"].unique().tolist()
-    if SHARD_COUNT > 1:
-        halls = [h for h in all_halls if stable_hash(h) % SHARD_COUNT == SHARD_INDEX]
-        print(f"シャード {SHARD_INDEX}/{SHARD_COUNT}: 対象ホール数 {len(halls)}/{len(all_halls)}")
-    else:
-        halls = all_halls
-    random.shuffle(halls)
-
-    for hall_name in halls:
-        if time_left() <= 0:
-            break
-        state = progress.setdefault(hall_name, {"status": "pending", "days_done": 0, "oldest_processed_date": None})
-        if state["status"] in ("done", "not_found"):
-            continue
-
-        hall_start = time.time()
-
-        def hall_time_left():
-            return HALL_TIME_BUDGET_SECONDS - (time.time() - hall_start)
-
-        pairs = get_date_url_list(hall_name)
-        if pairs is False:
-            print(f"  ! [{hall_name}] タグページ取得が一時的に失敗。次回再試行")
-            continue
-        if pairs is None or not pairs:
-            state["status"] = "not_found"
-            print(f"  ! [{hall_name}] タグページ/一覧が見つかりません")
-            continue
-
-        oldest_processed = state.get("oldest_processed_date")
-        oldest_processed_date = date.fromisoformat(oldest_processed) if oldest_processed else None
-
-        dated_pairs = []
-        for date_text, href in pairs:
-            d = parse_date_from_label(date_text, today)
-            if d is None:
-                continue
-            if oldest_processed_date is not None and d >= oldest_processed_date:
-                continue
-            dated_pairs.append((d, href))
-        dated_pairs.sort(key=lambda x: x[0], reverse=True)
-
-        if not dated_pairs:
+    while heap and time_left() > 0:
+        _, hall = heapq.heappop(heap)
+        state = progress[hall]
+        covered = date.fromisoformat(state["covered_oldest"])
+        if covered <= limit_date:
             state["status"] = "done"
-            print(f"  [{hall_name}] 一覧を使い切ったため終了({state['days_done']}日分)")
             continue
 
-        hall_units = targets[targets["hall_name"] == hall_name]
-        time.sleep(1.0 + random.random())
-
-        for d, href in dated_pairs:
-            if state["days_done"] >= DAYS_BACK:
-                state["status"] = "done"
-                break
-            if time_left() <= 0 or hall_time_left() <= 0:
-                break
-
-            article_url = href if href.startswith("http") else f"https://min-repo.com{href}"
-            try:
-                fetch(article_url)  # ウォームアップ(sleepを挟まず直後に本番取得する既存の作法に合わせる)
-            except Exception as e:
-                print(f"  ! [{hall_name}] {d} ベースページ取得失敗: {e}")
+        if hall not in pairs_cache:
+            polite_sleep()
+            pairs = get_date_url_list(hall)
+            n_requests += 1
+            if pairs is False:
+                print(f"  ! [{hall}] 記事一覧の取得に一時失敗。次回再試行")
                 continue
+            if not pairs:
+                state["status"] = "not_found"
+                continue
+            dated = [(parse_date_from_label(t, today), h) for t, h in pairs]
+            pairs_cache[hall] = sorted([(d, h) for d, h in dated if d], reverse=True)
+        # 境界より古く、まだカバーされていない日の記事のうち最新のもの
+        already = covered_map.get(hall, set())
+        older = [(d, h) for d, h in pairs_cache[hall] if d < covered and d not in already]
+        if not older:
+            state["status"] = "done"
+            print(f"  [{hall}] 記事一覧を使い切ったので完了")
+            continue
 
-            consecutive_empty = 0
-            day_rows = 0
-            for _, row in hall_units.iterrows():
-                if consecutive_empty >= MAX_CONSECUTIVE_EMPTY:
-                    print(f"    [{hall_name}] {d} 空レスポンス連続のためこの日は切り上げ")
+        art_date, href = older[0]
+        article_url = href if href.startswith("http") else f"https://min-repo.com{href}"
+        window = [art_date - timedelta(days=i) for i in range(HISTORY_DAYS + 1)]
+        units = {}
+        for d in reversed(window):  # 新しい日の機種名で上書き
+            units.update(lineup_idx.get((hall, d), {}))
+        if not units:
+            state["covered_oldest"] = art_date.isoformat()
+            heapq.heappush(heap, (-art_date.toordinal(), hall))
+            continue
+
+        try:
+            polite_sleep()
+            fetch(article_url)
+            n_requests += 1
+        except Exception as e:
+            print(f"  ! [{hall}] {art_date} 記事取得失敗: {e}")
+            continue
+
+        empty, pages, hist_dates = 0, 0, {}
+        aborted = False
+        for unit, machine in units.items():
+            if time_left() <= 0:
+                aborted = True
+                break
+            polite_sleep()
+            try:
+                resp = fetch(f"{article_url.split('?')[0]}?num={unit}", referer=article_url)
+                n_requests += 1
+                parsed = parse_unit_page(resp.text)
+            except Exception:
+                parsed = []
+            if not parsed:
+                empty += 1
+                if empty == MAX_CONSECUTIVE_EMPTY:
+                    print(f"  ! 空レスポンスが{empty}回連続。{RATE_LIMIT_PAUSE}秒待機")
+                    time.sleep(RATE_LIMIT_PAUSE)
+                elif empty >= MAX_CONSECUTIVE_EMPTY * 2:
+                    print("  ! 待機後も空レスポンスが続くため、今回の実行を打ち切ります")
+                    RATE_LIMIT_MARKER.touch()
+                    aborted = True
                     break
-                url = f"{article_url.split('?')[0]}?num={row['unit_number']}"
-                try:
-                    resp = fetch(url, referer=article_url)
-                    parsed = parse_unit_page(resp.text)
-                    consecutive_empty = 0 if parsed else consecutive_empty + 1
-                    # 遡っている記事自体の日付(d)に対応する行だけを採用する
-                    # (当日欄のみ。過去10日欄が付いていても二重取得を避けるため無視)
-                    for p in parsed[:1]:
-                        collected_rows.append({
-                            "hall_name": hall_name,
-                            "machine_name": row["machine_name"],
-                            "unit_number": row["unit_number"],
-                            "play_date": d.isoformat(),
-                            "diff": p.get("diff"),
-                            "games": p.get("games"),
-                            "bb": p.get("bb"),
-                            "rb": p.get("rb"),
-                            "slump_graph": p.get("slump_graph"),
-                        })
-                        day_rows += 1
-                except Exception:
-                    pass
-                time.sleep(UNIT_REQUEST_DELAY)
+                continue
+            empty = 0
+            pages += 1
+            for p in parsed:
+                # 日付は記事の日付を基準に解決する(年をまたぐ過去記事でも正しくなる)
+                d = parse_date_from_label(p["date_label"], art_date)
+                if d is None or d > art_date or d >= covered or d < limit_date:
+                    continue
+                if d < art_date:
+                    hist_dates[d] = hist_dates.get(d, 0) + 1
+                rows.append({"hall_name": hall, "machine_name": machine, "unit_number": int(unit),
+                             "play_date": d.isoformat(), "diff": p.get("diff"), "games": p.get("games"),
+                             "bb": p.get("bb"), "rb": p.get("rb"), "slump_graph": None})
+            if time.time() - last_flush >= FLUSH_INTERVAL_SECONDS:
+                save(progress, rows, shard_path)
+                last_flush = time.time()
 
-                if time.time() - last_flush >= FLUSH_INTERVAL_SECONDS:
-                    flush(progress, collected_rows, shard_path)
-                    last_flush = time.time()
+        if aborted:
+            break  # この記事は未完了扱い(covered_oldestを進めない)。次回やり直す
 
-            print(f"  [{hall_name}] {d}: {day_rows}/{len(hall_units)}台")
-            state["days_done"] = state.get("days_done", 0) + 1
-            state["oldest_processed_date"] = d.isoformat()
-            state["status"] = "in_progress"
+        # 過去10日表が半数以上の台に付いていた最古の日まで進める。無ければ記事の日まで。
+        common = [d for d, c in hist_dates.items() if c >= max(1, pages // 2)]
+        new_covered = min(common) if common else art_date
+        state["covered_oldest"] = new_covered.isoformat()
+        state["articles_done"] = state.get("articles_done", 0) + 1
+        state["last_step_days"] = (covered - new_covered).days
+        print(f"  [{hall}] 記事{art_date}: {pages}/{len(units)}台, 過去表{'あり' if common else 'なし'} "
+              f"→ {new_covered}まで取得済み")
+        heapq.heappush(heap, (-new_covered.toordinal(), hall))
 
-    flush(progress, collected_rows, shard_path)
-    print(f"\n保存: {shard_path.name} ({len(collected_rows)}行)" if collected_rows else "\n今回収集した行なし")
+    save(progress, rows, shard_path)
+    done = sum(s["status"] != "in_progress" for s in progress.values())
+    print(f"\n今回: {n_requests}リクエスト, {len(rows)}行 / ホール完了 {done}/{len(progress)}")
+    depth = pd.Series({h: (today - date.fromisoformat(s["covered_oldest"])).days for h, s in progress.items()})
+    print(f"遡った日数(ホール別): 最小{depth.min()}日 / 中央値{int(depth.median())}日 / 最大{depth.max()}日")
 
 
 if __name__ == "__main__":

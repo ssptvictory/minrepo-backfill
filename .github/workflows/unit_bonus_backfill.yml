@@ -1,45 +1,34 @@
 name: Backfill unit bonus history (BB/RB, past dates)
 
-# 1年分を1週間以内に取得する必要があるため、1プロセス・5分おきの
-# workflow_run連鎖(既存のBackfill min-repo dataに相乗り)方式では
-# スピードが全く足りない(その方式だと概算5〜6ヵ月かかる)。
-# そのため、24並列シャード(ホールをハッシュで24分割)× 1ジョブ最大
-# 315分(GitHub Actionsの6時間ハードリミット内)の長時間ジョブに変更し、
-# 自分自身の完了をトリガーにして連続的に回し続ける
-# (schedule:はGitHub Actions混雑で不安定なため使わない。かつ既存の
-# Backfill min-repo dataへの相乗りだと5分おきの発火間隔に対して
-# 1ジョブ5時間超では詰まってしまうため、今回は自己連鎖にする)。
-#
-# 並列実行時は進捗ファイル・shard出力ファイルがシャードごとに分かれて
-# いる(backfill_unit_bonus_history.py側で対応済み)ため、コミット時の
-# 衝突は実際のファイル差分としては発生しないはずだが、24並列が同時に
-# pushしようとするタイミング競合はあり得るため、コミットはリトライする。
+# BB/RB過去分の取得(2026-11-24から最優先で開始)。
+# - サイトへの負荷を抑えるため並列にせず1ジョブずつ(concurrencyで多重起動を防ぐ)。
+# - 1ジョブ内で45分ずつ区切って実行し、区切りごとにcommit/pushする
+#   (途中で落ちても失うのは最大45分ぶん)。
+# - ジョブの最後に自分自身をworkflow_dispatchで起動し直して連続稼働する
+#   (workflow_runの自己連鎖は3段までしか続かないため使わない)。
+# - レート制限が続いて打ち切った場合は起動し直さず、下のscheduleで
+#   数時間後に再開する。
 
 on:
-  workflow_run:
-    workflows: ["Backfill unit bonus history (BB/RB, past dates)"]
-    types: [completed]
   workflow_dispatch: {}
+  schedule:
+    - cron: "23 */6 * * *"
 
 permissions:
   contents: write
+  actions: write
+
+concurrency:
+  group: unit_bonus_backfill
+  cancel-in-progress: false
 
 jobs:
   backfill:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
-    strategy:
-      fail-fast: false
-      matrix:
-        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
-    concurrency:
-      group: unit_bonus_backfill_shard_${{ matrix.shard }}
-      cancel-in-progress: false
     runs-on: ubuntu-latest
-    timeout-minutes: 345
+    timeout-minutes: 340
     env:
-      UNIT_BONUS_BACKFILL_TIME_BUDGET: "18900"
-      UNIT_BONUS_SHARD_INDEX: ${{ matrix.shard }}
-      UNIT_BONUS_SHARD_COUNT: "24"
+      UNIT_BONUS_BACKFILL_TIME_BUDGET: "2700"
+      UNIT_BONUS_BACKFILL_DAYS_BACK: "365"
     steps:
       - uses: actions/checkout@v4
 
@@ -50,27 +39,37 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run backfill
-        run: python3 backfill_unit_bonus_history.py
-
-      - name: Commit data and progress (with retry, since many shards push concurrently)
+      - name: Run backfill in 45-minute chunks
+        id: run
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/unit_bonus_shards/ "data/unit_bonus_backfill_progress_shard${{ matrix.shard }}.json"
-          if git diff --cached --quiet; then
-            echo "変更なし、コミットをスキップ"
-            exit 0
-          fi
-          git commit -m "chore: unit bonus history backfill shard ${{ matrix.shard }} $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-
-          for i in 1 2 3 4 5 6 7 8; do
-            if git pull --rebase && git push; then
-              echo "push成功(試行$i回目)"
-              exit 0
+          for chunk in 1 2 3 4 5 6; do
+            UNIT_BONUS_BACKFILL_CHUNK=$chunk python3 backfill_unit_bonus_history.py
+            git add data/unit_bonus_shards/ data/unit_bonus_backfill_progress.json
+            if ! git diff --cached --quiet; then
+              git commit -q -m "chore: unit bonus backfill chunk $chunk $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+              for i in 1 2 3 4 5 6 7 8; do
+                if git pull -q --rebase && git push -q; then break; fi
+                git rebase --abort 2>/dev/null || true
+                sleep $((RANDOM % 20 + 5))
+              done
             fi
-            echo "push失敗、リトライします(試行$i回目)"
-            git rebase --abort || true
-            sleep $((RANDOM % 20 + 5))
+            if [ -f data/.unit_bonus_rate_limited ]; then
+              echo "rate_limited=true" >> "$GITHUB_OUTPUT"
+              echo "::warning::レート制限が続いたため今回は打ち切り。scheduleで再開します"
+              break
+            fi
+            remaining=$(python3 -c "import json;p=json.load(open('data/unit_bonus_backfill_progress.json'));print(sum(s['status']=='in_progress' for s in p.values()))")
+            echo "未完了ホール: $remaining"
+            if [ "$remaining" = "0" ]; then
+              echo "finished=true" >> "$GITHUB_OUTPUT"
+              break
+            fi
           done
-          echo "::warning::複数回リトライしても push できませんでした。このシャードの今回分の成果は次回の実行で再取得されます(oldest_processed_dateがコミットされていないため)"
+
+      - name: Restart self
+        if: steps.run.outputs.rate_limited != 'true' && steps.run.outputs.finished != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run unit_bonus_backfill.yml --ref "${{ github.ref_name }}"
