@@ -42,7 +42,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           for chunk in 1 2 3 4 5 6; do
-            UNIT_BONUS_BACKFILL_CHUNK=$chunk python3 backfill_unit_bonus_history.py
+            UNIT_BONUS_BACKFILL_CHUNK=$chunk python3 -u backfill_unit_bonus_history.py
             git add data/unit_bonus_shards/ data/unit_bonus_backfill_progress.json
             [ -f data/unit_bonus_backfill_cooldown.json ] && git add data/unit_bonus_backfill_cooldown.json
             if ! git diff --cached --quiet; then

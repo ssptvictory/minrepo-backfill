@@ -54,7 +54,8 @@ DAYS_BACK = int(os.environ.get("UNIT_BONUS_BACKFILL_DAYS_BACK", "365"))
 TARGET_CATEGORIES = {"bonus", "art"}
 HISTORY_DAYS = 10
 REQUEST_DELAY = 1.0          # 秒。これに0〜0.5秒のゆらぎを足す
-MAX_CONSECUTIVE_EMPTY = 3
+MAX_CONSECUTIVE_EMPTY = 3    # 空レスポンス(レート制限の疑い)の連続回数
+NO_TABLE_LIMIT = 5           # 1記事の最初からBB/RB表の無い台がこの数続いたら、その記事(店舗)を飛ばす
 RATE_LIMIT_PAUSE = 120
 COVERED_SHARE = 0.8          # 既存データで台の8割以上が取れている日はカバー済みとみなす
 FLUSH_INTERVAL_SECONDS = 60
@@ -236,8 +237,9 @@ def run():
             print(f"  ! [{hall}] {art_date} 記事取得失敗: {e}")
             continue
 
-        empty, pages, hist_dates = 0, 0, {}
-        aborted = False
+        print(f"  [{hall}] 記事{art_date}を取得中({len(units)}台)")
+        empty, pages, no_table, hist_dates = 0, 0, 0, {}
+        aborted = no_bbrb = False
         for unit, machine in units.items():
             if time_left() <= 0:
                 aborted = True
@@ -246,10 +248,20 @@ def run():
             try:
                 resp = fetch(f"{article_url.split('?')[0]}?num={unit}", referer=article_url)
                 n_requests += 1
-                parsed = parse_unit_page(resp.text)
-            except Exception:
-                parsed = []
-            if not parsed:
+                blocked = len(resp.text) < 2000  # 0バイト等=レート制限の疑い
+                parsed = [] if blocked else parse_unit_page(resp.text)
+            except Exception as e:
+                print(f"    ! 取得エラー: {e}")
+                blocked, parsed = True, []
+            if not blocked and not parsed:
+                # ページは正常だがBB/RBの表が無い(BB/RBを掲載していない店舗など)
+                empty = 0
+                no_table += 1
+                if pages == 0 and no_table >= NO_TABLE_LIMIT:
+                    no_bbrb = True
+                    break
+                continue
+            if blocked:
                 empty += 1
                 if empty == MAX_CONSECUTIVE_EMPTY:
                     print(f"  ! 空レスポンスが{empty}回連続。{RATE_LIMIT_PAUSE}秒待機")
@@ -278,6 +290,17 @@ def run():
 
         if aborted:
             break  # この記事は未完了扱い(covered_oldestを進めない)。次回やり直す
+        if no_bbrb:
+            if not covered_map.get(hall):
+                # 毎日の収集でも1件も取れていない=この店舗はBB/RBを掲載していない
+                state["status"] = "no_bbrb"
+                print(f"  [{hall}] BB/RBの表が無い台が{no_table}台続き、既存データも無いため対象外にします")
+            else:
+                # 既存データはあるので、この記事だけ表が無かったとみなして次の記事へ
+                state["covered_oldest"] = art_date.isoformat()
+                print(f"  [{hall}] 記事{art_date}はBB/RBの表が無いため飛ばします")
+                heapq.heappush(heap, (-art_date.toordinal(), hall))
+            continue
 
         # 過去10日表が半数以上の台に付いていた最古の日まで進める。無ければ記事の日まで。
         common = [d for d, c in hist_dates.items() if c >= max(1, pages // 2)]
