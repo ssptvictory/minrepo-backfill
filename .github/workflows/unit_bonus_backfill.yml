@@ -9,6 +9,10 @@ name: Backfill unit bonus history (BB/RB, past dates)
 #   (途中で落ちても失うのは最大45分ぶん)。
 # - レート制限で打ち切った場合は2時間の休止期限をcommitし、その間に
 #   起動されても何もせず終了する。
+# - BB/RBが全ホールで3か月分(92日前まで)そろったら、同じ1本の流れで
+#   AT機のスランプ取得(backfill_at_slump.py、機種別ページ)に切り替わる
+#   (2026-11-24決定: AT機は全機種・全台。BB/RBの3か月より前は毎日の
+#   収集分のみ。深さはUNIT_BONUS_BACKFILL_DAYS_BACK/AT_SLUMP_DAYS_BACKで延ばせる)。
 
 on:
   workflow_dispatch: {}
@@ -26,7 +30,9 @@ jobs:
     timeout-minutes: 340
     env:
       UNIT_BONUS_BACKFILL_TIME_BUDGET: "2700"
-      UNIT_BONUS_BACKFILL_DAYS_BACK: "365"
+      UNIT_BONUS_BACKFILL_DAYS_BACK: "92"
+      AT_SLUMP_TIME_BUDGET: "2700"
+      AT_SLUMP_DAYS_BACK: "92"
     steps:
       # workflow_dispatchの既定では「起動された時点」のコミットが取り出される。
       # 待機していた実行が古い進捗で始まらないよう、ブランチの最新を取り出す。
@@ -45,12 +51,24 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          bbrb_remaining() {
+            if [ ! -f data/unit_bonus_backfill_progress.json ]; then echo 1; return; fi
+            python3 -c "import json;p=json.load(open('data/unit_bonus_backfill_progress.json'));print(sum(s['status']=='in_progress' for s in p.values()))"
+          }
           for chunk in 1 2 3 4 5 6; do
-            UNIT_BONUS_BACKFILL_CHUNK=$chunk python3 -u backfill_unit_bonus_history.py
+            if [ "$(bbrb_remaining)" != "0" ]; then
+              task="unit bonus backfill"
+              UNIT_BONUS_BACKFILL_CHUNK=$chunk python3 -u backfill_unit_bonus_history.py
+            else
+              task="AT slump"
+              AT_SLUMP_CHUNK=$chunk python3 -u backfill_at_slump.py
+            fi
             git add data/unit_bonus_shards/ data/unit_bonus_backfill_progress.json
+            [ -d data/at_slump_shards ] && git add data/at_slump_shards/
+            [ -f data/at_slump_progress.json ] && git add data/at_slump_progress.json
             [ -f data/unit_bonus_backfill_cooldown.json ] && git add data/unit_bonus_backfill_cooldown.json
             if ! git diff --cached --quiet; then
-              git commit -q -m "chore: unit bonus backfill chunk $chunk $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+              git commit -q -m "chore: $task chunk $chunk $(date -u +%Y-%m-%dT%H:%M:%SZ)"
               for i in 1 2 3 4 5 6 7 8; do
                 if git pull -q --rebase && git push -q; then break; fi
                 git rebase --abort 2>/dev/null || true
@@ -61,7 +79,5 @@ jobs:
               echo "レート制限(または休止期間中)のため今回は終了"
               break
             fi
-            remaining=$(python3 -c "import json;p=json.load(open('data/unit_bonus_backfill_progress.json'));print(sum(s['status']=='in_progress' for s in p.values()))")
-            echo "未完了ホール: $remaining"
-            if [ "$remaining" = "0" ]; then break; fi
+            echo "BB/RB未完了ホール: $(bbrb_remaining)"
           done
