@@ -321,8 +321,9 @@
  },
  "エスタディオ東松山": {
   "status": "in_progress",
-  "covered_oldest": "2026-11-13",
-  "articles_done": 0
+  "covered_oldest": "2026-11-03",
+  "articles_done": 1,
+  "last_step_days": 10
  },
  "エスパス1300新小岩北口駅前店": {
   "status": "in_progress",
@@ -646,8 +647,9 @@
  },
  "コンサートホール岩槻": {
   "status": "in_progress",
-  "covered_oldest": "2026-11-15",
-  "articles_done": 0
+  "covered_oldest": "2026-11-05",
+  "articles_done": 1,
+  "last_step_days": 10
  },
  "コンサートホール志村": {
   "status": "in_progress",
@@ -741,8 +743,9 @@
  },
  "ジャラン高島平店": {
   "status": "in_progress",
-  "covered_oldest": "2026-11-22",
-  "articles_done": 0
+  "covered_oldest": "2026-11-11",
+  "articles_done": 1,
+  "last_step_days": 11
  },
  "ジャンジャンマールゴット分倍河原駅前": {
   "status": "in_progress",
@@ -805,7 +808,7 @@
   "articles_done": 0
  },
  "ダイナム西日暮里スロット館": {
-  "status": "in_progress",
+  "status": "no_data",
   "covered_oldest": "2026-11-24",
   "articles_done": 0
  },
@@ -1020,7 +1023,7 @@
   "articles_done": 0
  },
  "パーラーオリエント秋川店": {
-  "status": "in_progress",
+  "status": "no_data",
   "covered_oldest": "2026-11-24",
   "articles_done": 0
  },
@@ -1251,8 +1254,9 @@
  },
  "マルハン川越店": {
   "status": "in_progress",
-  "covered_oldest": "2026-11-22",
-  "articles_done": 0
+  "covered_oldest": "2026-11-11",
+  "articles_done": 1,
+  "last_step_days": 11
  },
  "マルハン所沢店": {
   "status": "in_progress",
@@ -1401,8 +1405,9 @@
  },
  "メッセ扇店": {
   "status": "in_progress",
-  "covered_oldest": "2026-11-24",
-  "articles_done": 0
+  "covered_oldest": "2026-11-02",
+  "articles_done": 2,
+  "last_step_days": 11
  },
  "メッセ昭島店": {
   "status": "in_progress",
@@ -1416,8 +1421,9 @@
  },
  "メッセ竹の塚": {
   "status": "in_progress",
-  "covered_oldest": "2026-11-24",
-  "articles_done": 0
+  "covered_oldest": "2026-11-13",
+  "articles_done": 1,
+  "last_step_days": 11
  },
  "メッセ笹塚": {
   "status": "in_progress",
@@ -1426,8 +1432,9 @@
  },
  "メッセ荻窪": {
   "status": "in_progress",
-  "covered_oldest": "2026-11-24",
-  "articles_done": 0
+  "covered_oldest": "2026-11-13",
+  "articles_done": 1,
+  "last_step_days": 11
  },
  "メッセ西荻窪店": {
   "status": "in_progress",
@@ -1846,12 +1853,12 @@
  },
  "スマートプレゴ池袋": {
   "status": "in_progress",
-  "covered_oldest": "2026-11-18",
+  "covered_oldest": "2026-11-07",
   "articles_done": 0
  },
  "ニュークラウン川越2号店": {
   "status": "in_progress",
-  "covered_oldest": "2026-11-24",
+  "covered_oldest": "2026-11-12",
   "articles_done": 0
  },
  "門前仲町スターダスト": {
