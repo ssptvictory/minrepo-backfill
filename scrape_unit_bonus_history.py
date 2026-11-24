@@ -218,8 +218,12 @@ def load_target_units():
 
     dfs = [pd.read_parquet(f) for f in glob.glob(str(SCRIPT_DIR / "data" / "daily_unit_data" / "2026-1*.parquet"))]
     df = pd.concat(dfs, ignore_index=True)
+    # 台入替えがあった台は(ホール,機種,台番号)で重複除去すると旧機種・新機種の
+    # 2行になり、同じ台日を別の機種名で二重保存していた(2026-11-24判明、
+    # BB/RB 333,061行中114,445行)。台ごとに最新日の機種だけを対象にする。
+    df = df.sort_values("play_date").drop_duplicates(["hall_name", "unit_number"], keep="last")
     df = df[df["machine_name"].isin(target_names)]
-    return df[["hall_name", "machine_name", "unit_number"]].drop_duplicates()
+    return df[["hall_name", "machine_name", "unit_number"]]
 
 
 FLUSH_INTERVAL_SECONDS = 60

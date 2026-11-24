@@ -86,8 +86,11 @@ def load_target_units():
 
     dfs = [pd.read_parquet(f) for f in glob.glob(str(SCRIPT_DIR / "data" / "daily_unit_data" / "2026-1*.parquet"))]
     df = pd.concat(dfs, ignore_index=True)
+    # 台入替えがあった台を旧機種・新機種で二重に取得しないよう、台ごとに
+    # 最新日の機種だけを対象にする(scrape_unit_bonus_history.pyと同じ修正)。
+    df = df.sort_values("play_date").drop_duplicates(["hall_name", "unit_number"], keep="last")
     df = df[df["machine_name"].isin(target_names)]
-    return df[["hall_name", "machine_name", "unit_number"]].drop_duplicates()
+    return df[["hall_name", "machine_name", "unit_number"]]
 
 
 FLUSH_INTERVAL_SECONDS = 60
@@ -200,7 +203,7 @@ def run():
                             "games": p.get("games"),
                             "bb": p.get("bb"),
                             "rb": p.get("rb"),
-                            "slump_graph": None,
+                            "slump_graph": p.get("slump_graph"),
                         })
                         day_rows += 1
                 except Exception:
