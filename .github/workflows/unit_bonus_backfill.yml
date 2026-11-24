@@ -1,22 +1,20 @@
 name: Backfill unit bonus history (BB/RB, past dates)
 
 # BB/RB過去分の取得(2026-11-24から最優先で開始)。
-# - サイトへの負荷を抑えるため並列にせず1ジョブずつ(concurrencyで多重起動を防ぐ)。
+# - 起動はcron-job.orgから30分おきにworkflow_dispatch APIを呼ぶ
+#   (Backfill min-repo dataと同じ方式)。
+# - サイトへの負荷を抑えるため並列にせず1ジョブずつ。concurrencyで
+#   実行中1本+待機1本までに抑える(待機中に来た起動は古い待機と入れ替わる)。
 # - 1ジョブ内で45分ずつ区切って実行し、区切りごとにcommit/pushする
 #   (途中で落ちても失うのは最大45分ぶん)。
-# - ジョブの最後に自分自身をworkflow_dispatchで起動し直して連続稼働する
-#   (workflow_runの自己連鎖は3段までしか続かないため使わない)。
-# - レート制限が続いて打ち切った場合は起動し直さず、下のscheduleで
-#   数時間後に再開する。
+# - レート制限で打ち切った場合は2時間の休止期限をcommitし、その間に
+#   起動されても何もせず終了する。
 
 on:
   workflow_dispatch: {}
-  schedule:
-    - cron: "23 */6 * * *"
 
 permissions:
   contents: write
-  actions: write
 
 concurrency:
   group: unit_bonus_backfill
@@ -40,13 +38,13 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run backfill in 45-minute chunks
-        id: run
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           for chunk in 1 2 3 4 5 6; do
             UNIT_BONUS_BACKFILL_CHUNK=$chunk python3 backfill_unit_bonus_history.py
             git add data/unit_bonus_shards/ data/unit_bonus_backfill_progress.json
+            [ -f data/unit_bonus_backfill_cooldown.json ] && git add data/unit_bonus_backfill_cooldown.json
             if ! git diff --cached --quiet; then
               git commit -q -m "chore: unit bonus backfill chunk $chunk $(date -u +%Y-%m-%dT%H:%M:%SZ)"
               for i in 1 2 3 4 5 6 7 8; do
@@ -56,20 +54,10 @@ jobs:
               done
             fi
             if [ -f data/.unit_bonus_rate_limited ]; then
-              echo "rate_limited=true" >> "$GITHUB_OUTPUT"
-              echo "::warning::レート制限が続いたため今回は打ち切り。scheduleで再開します"
+              echo "レート制限(または休止期間中)のため今回は終了"
               break
             fi
             remaining=$(python3 -c "import json;p=json.load(open('data/unit_bonus_backfill_progress.json'));print(sum(s['status']=='in_progress' for s in p.values()))")
             echo "未完了ホール: $remaining"
-            if [ "$remaining" = "0" ]; then
-              echo "finished=true" >> "$GITHUB_OUTPUT"
-              break
-            fi
+            if [ "$remaining" = "0" ]; then break; fi
           done
-
-      - name: Restart self
-        if: steps.run.outputs.rate_limited != 'true' && steps.run.outputs.finished != 'true'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh workflow run unit_bonus_backfill.yml --ref "${{ github.ref_name }}"

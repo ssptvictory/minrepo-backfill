@@ -14,8 +14,8 @@
   一覧のものを入れる(分析側でも全台一覧の機種名に付け替える)。
 - サイトへの配慮: 取得は1本ずつ(並列にしない)、リクエスト間隔は1秒以上。
   空レスポンス(レート制限)が続いたら2分待ち、それでも続けば今回の実行を
-  打ち切って data/.unit_bonus_rate_limited を作る(ワークフローは再起動を
-  急がず、定期起動に任せる)。
+  打ち切り、2時間の休止期限(data/unit_bonus_backfill_cooldown.json)を
+  記録する。期限内にcron-job.orgから起動されても何もせず終了する。
 - スランプグラフはAT機(category="at")専用なので、ここでは保存しない。
 
 出力:
@@ -29,7 +29,7 @@ import json
 import os
 import random
 import time
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -43,7 +43,9 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 DATA_DIR = SCRIPT_DIR / "data"
 SHARDS_DIR = DATA_DIR / "unit_bonus_shards"
 PROGRESS_PATH = DATA_DIR / "unit_bonus_backfill_progress.json"
-RATE_LIMIT_MARKER = DATA_DIR / ".unit_bonus_rate_limited"
+RATE_LIMIT_MARKER = DATA_DIR / ".unit_bonus_rate_limited"  # ワークフローのチャンクループを止める合図(commitしない)
+COOLDOWN_PATH = DATA_DIR / "unit_bonus_backfill_cooldown.json"  # レート制限後の休止期限(commitする)
+COOLDOWN_HOURS = 2
 RUN_ID = os.environ.get("GITHUB_RUN_ID") or f"local{int(time.time())}"
 CHUNK = os.environ.get("UNIT_BONUS_BACKFILL_CHUNK", "0")
 
@@ -137,9 +139,27 @@ def save(progress, rows, shard_path):
                        shard_path, compression="zstd", compression_level=15)
 
 
+def in_cooldown():
+    if not COOLDOWN_PATH.exists():
+        return False
+    until = datetime.fromisoformat(json.load(open(COOLDOWN_PATH))["until"])
+    return datetime.now(timezone.utc) < until
+
+
+def start_cooldown():
+    until = datetime.now(timezone.utc) + timedelta(hours=COOLDOWN_HOURS)
+    json.dump({"until": until.isoformat()}, open(COOLDOWN_PATH, "w"))
+    RATE_LIMIT_MARKER.touch()
+
+
 def run():
     SHARDS_DIR.mkdir(parents=True, exist_ok=True)
     RATE_LIMIT_MARKER.unlink(missing_ok=True)
+    if in_cooldown():
+        # cron-job.orgは数十分おきに起動してくるので、レート制限後はここで休む
+        print("レート制限後の休止期間中のため、何もせず終了します")
+        RATE_LIMIT_MARKER.touch()
+        return
     today = date.today()
     limit_date = today - timedelta(days=DAYS_BACK)
 
@@ -235,8 +255,8 @@ def run():
                     print(f"  ! 空レスポンスが{empty}回連続。{RATE_LIMIT_PAUSE}秒待機")
                     time.sleep(RATE_LIMIT_PAUSE)
                 elif empty >= MAX_CONSECUTIVE_EMPTY * 2:
-                    print("  ! 待機後も空レスポンスが続くため、今回の実行を打ち切ります")
-                    RATE_LIMIT_MARKER.touch()
+                    print(f"  ! 待機後も空レスポンスが続くため打ち切り、{COOLDOWN_HOURS}時間休止します")
+                    start_cooldown()
                     aborted = True
                     break
                 continue
