@@ -12,9 +12,9 @@
 - 取得する台は、その記事の日付〜10日前の全台一覧(daily_unit_data)で
   Aタイプ・ART(category bonus/art)だった台番号。機種名はその時点の
   一覧のものを入れる(分析側でも全台一覧の機種名に付け替える)。
-- サイトへの配慮: 取得は1本ずつ(並列にしない)、リクエスト間隔は1秒以上。
+- サイトへの配慮: 取得は1本ずつ(並列にしない)、リクエスト間隔は3〜4秒。
   空レスポンス(レート制限)が続いたら2分待ち、それでも続けば今回の実行を
-  打ち切り、2時間の休止期限(data/unit_bonus_backfill_cooldown.json)を
+  打ち切り、6時間の休止期限(data/unit_bonus_backfill_cooldown.json)を
   記録する。期限内にcron-job.orgから起動されても何もせず終了する。
 - スランプグラフはAT機(category="at")専用なので、ここでは保存しない。
 
@@ -45,7 +45,7 @@ SHARDS_DIR = DATA_DIR / "unit_bonus_shards"
 PROGRESS_PATH = DATA_DIR / "unit_bonus_backfill_progress.json"
 RATE_LIMIT_MARKER = DATA_DIR / ".unit_bonus_rate_limited"  # ワークフローのチャンクループを止める合図(commitしない)
 COOLDOWN_PATH = DATA_DIR / "unit_bonus_backfill_cooldown.json"  # レート制限後の休止期限(commitする)
-COOLDOWN_HOURS = 2
+COOLDOWN_HOURS = 6  # 2026-11-26: 実行機のIPが約45分・1,100リクエストで制限され、手元のIPは個別台ページだけ2日以上制限が続いたため延長
 RUN_ID = os.environ.get("GITHUB_RUN_ID") or f"local{int(time.time())}"
 CHUNK = os.environ.get("UNIT_BONUS_BACKFILL_CHUNK", "0")
 
@@ -53,7 +53,7 @@ TIME_BUDGET_SECONDS = int(os.environ.get("UNIT_BONUS_BACKFILL_TIME_BUDGET", "180
 DAYS_BACK = int(os.environ.get("UNIT_BONUS_BACKFILL_DAYS_BACK", "365"))
 TARGET_CATEGORIES = {"bonus", "art"}
 HISTORY_DAYS = 10
-REQUEST_DELAY = 1.0          # 秒。これに0〜0.5秒のゆらぎを足す
+REQUEST_DELAY = 3.0          # 秒。これに0〜1秒のゆらぎを足す(約24回/分で制限されたため、約14回/分に落とす)
 MAX_CONSECUTIVE_EMPTY = 3    # 空レスポンス(レート制限の疑い)の連続回数
 NO_TABLE_LIMIT = 5           # 1記事の最初からBB/RB表の無い台がこの数続いたら、その記事(店舗)を飛ばす
 MAX_CONSECUTIVE_DEAD_HALLS = 3  # 既存データの無い店舗で空が続くのは店舗側の事情とみなすが、3店続いたらレート制限扱い
@@ -69,7 +69,7 @@ def time_left():
 
 
 def polite_sleep():
-    time.sleep(REQUEST_DELAY + random.random() * 0.5)
+    time.sleep(REQUEST_DELAY + random.random())
 
 
 def load_lineup():
