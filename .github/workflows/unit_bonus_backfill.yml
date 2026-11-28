@@ -20,8 +20,10 @@ on:
 permissions:
   contents: write
 
+# 2026-11-28: みんレポへのアクセスを1本にするため backfill と同じグループにした。
+# 再開する前に、1日のアクセス上限(backfill_minrepo_full.py の DAILY_REQUEST_CAP)の中での割り振りを決めること。
 concurrency:
-  group: unit_bonus_backfill
+  group: backfill
   cancel-in-progress: false
 
 jobs:
@@ -68,6 +70,7 @@ jobs:
             [ -f data/at_slump_progress.json ] && git add data/at_slump_progress.json
             [ -f data/unit_bonus_backfill_cooldown.json ] && git add data/unit_bonus_backfill_cooldown.json
             [ -f data/minrepo_site_cooldown.json ] && git add data/minrepo_site_cooldown.json
+            [ -f data/minrepo_request_budget.json ] && git add data/minrepo_request_budget.json
             if ! git diff --cached --quiet; then
               git commit -q -m "chore: $task chunk $chunk $(date -u +%Y-%m-%dT%H:%M:%SZ)"
               for i in 1 2 3 4 5 6 7 8; do

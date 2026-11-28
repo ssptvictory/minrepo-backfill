@@ -45,6 +45,7 @@ GitHub Actionsで繰り返し起動し、全店舗が完了するまで少しず
 """
 import csv
 import json
+import os
 import random
 import re
 import time
@@ -121,6 +122,7 @@ def _ensure_challenge_solved(resp: requests.Response):
     """
     m = re.search(r"action=w_scd_n&_ajax_nonce=([a-f0-9]+)", resp.text)
     if m:
+        _count_request()
         _session.post(
             "https://min-repo.com/wp-admin/admin-ajax.php",
             headers=HEADERS,
@@ -139,13 +141,29 @@ def _ensure_challenge_solved(resp: requests.Response):
 
 SITE_COOLDOWN_PATH = DATA_DIR / "minrepo_site_cooldown.json"  # サイト全体の休止期限(全収集スクリプト共通、commitする)
 SITE_ERROR_LIMIT = 5        # サーバーエラー(5xx)がこの回数続いたら、サイトに断られているとみなして全収集を止める
+SITE_SHORT_LIMIT = 6        # 本文の無い短いページがこの回数続いても同じく止める(空ページ=断られているサイン)
 SITE_COOLDOWN_HOURS = 2     # 止めたあと次に1回試すまでの時間(試して5xxが続けばまた止める)
 _consecutive_5xx = 0
+_consecutive_short = 0
+
+# みんレポへのアクセス数の上限(全スクリプト合計、日本時間で数える)。2026-11-28 に一時ブロックされたため設けた。
+# 毎日の更新に要る量は 全台データ 約1,500回/日 + 台ごとのBB/RB 約3,800回/日 の見込み。
+BUDGET_PATH = DATA_DIR / "minrepo_request_budget.json"
+DAILY_REQUEST_CAP = int(os.environ.get("MINREPO_DAILY_CAP", "6000"))
+HOURLY_REQUEST_CAP = int(os.environ.get("MINREPO_HOURLY_CAP", "400"))
 
 
 class SiteUnavailable(BaseException):
-    """サイトが5xxを返し続けている(落ちている、または当方のアクセスを断っている)。この回の取得をやめる合図。
+    """この回の取得をやめる合図(サイトがエラー/空ページを返し続けている、またはアクセス数の上限に達した)。
     店舗・日ごとの `except Exception` で握りつぶされず最上位まで抜けるよう BaseException にしてある。"""
+
+
+class BudgetExhausted(SiteUnavailable):
+    """1日/1時間のアクセス数の上限に達した(サイト側の問題ではないので休止期限は書かない)。"""
+
+
+def jst_now():
+    return datetime.now(timezone.utc) + timedelta(hours=9)
 
 
 def site_cooldown_until():
@@ -156,19 +174,61 @@ def site_cooldown_until():
     return until if until > datetime.now(timezone.utc) else None
 
 
+def _start_site_cooldown(reason: str, url: str):
+    until = datetime.now(timezone.utc) + timedelta(hours=SITE_COOLDOWN_HOURS)
+    SITE_COOLDOWN_PATH.write_text(json.dumps({"until": until.isoformat(), "reason": reason, "last_url": url}, ensure_ascii=False))
+    raise SiteUnavailable(f"{reason}。{until:%m-%d %H:%M}UTCまで全収集を休止")
+
+
+def request_budget():
+    """今日(日本時間)のアクセス数 {"date", "total", "hours": {時: 回数}}"""
+    today = jst_now().date().isoformat()
+    try:
+        b = json.loads(BUDGET_PATH.read_text())
+    except Exception:
+        b = {}
+    return b if b.get("date") == today else {"date": today, "total": 0, "hours": {}}
+
+
+def _count_request():
+    """1回のアクセスを数える。上限を超えるなら送らずに BudgetExhausted を投げる。"""
+    b = request_budget()
+    hour = f"{jst_now().hour:02d}"
+    if b["total"] >= DAILY_REQUEST_CAP:
+        raise BudgetExhausted(f"今日のアクセス上限({DAILY_REQUEST_CAP}回)に達したため終了")
+    if b["hours"].get(hour, 0) >= HOURLY_REQUEST_CAP:
+        raise BudgetExhausted(f"この1時間のアクセス上限({HOURLY_REQUEST_CAP}回)に達したため終了")
+    b["total"] += 1
+    b["hours"][hour] = b["hours"].get(hour, 0) + 1
+    BUDGET_PATH.write_text(json.dumps(b))
+
+
+def _get(url: str, headers: dict) -> requests.Response:
+    _count_request()
+    return _session.get(url, headers=headers, timeout=15)
+
+
 def _note_status(resp: requests.Response, url: str):
     """5xxが続いたら休止期限を書いて SiteUnavailable を投げる。それ以外は従来どおり raise_for_status。"""
     global _consecutive_5xx
     if resp.status_code >= 500:
         _consecutive_5xx += 1
         if _consecutive_5xx >= SITE_ERROR_LIMIT:
-            until = datetime.now(timezone.utc) + timedelta(hours=SITE_COOLDOWN_HOURS)
-            SITE_COOLDOWN_PATH.write_text(json.dumps({
-                "until": until.isoformat(), "reason": f"{resp.status_code}が{_consecutive_5xx}回連続", "last_url": url}))
-            raise SiteUnavailable(f"{resp.status_code}が{_consecutive_5xx}回連続。{until:%m-%d %H:%M}UTCまで全収集を休止")
+            _start_site_cooldown(f"{resp.status_code}が{_consecutive_5xx}回連続", url)
     else:
         _consecutive_5xx = 0
     resp.raise_for_status()
+
+
+def _note_length(resp: requests.Response, url: str):
+    """本文の無い短いページが続いたら(断られているサイン)休止期限を書いて止める。"""
+    global _consecutive_short
+    if len(resp.text) < 2000:
+        _consecutive_short += 1
+        if _consecutive_short >= SITE_SHORT_LIMIT:
+            _start_site_cooldown(f"空のページが{_consecutive_short}回連続", url)
+    else:
+        _consecutive_short = 0
 
 
 def fetch(url: str, referer: str = None, retries: int = 3) -> requests.Response:
@@ -191,17 +251,19 @@ def fetch(url: str, referer: str = None, retries: int = 3) -> requests.Response:
         headers["Referer"] = referer
     resp = None
     for attempt in range(retries):
-        resp = _session.get(url, headers=headers, timeout=15)
+        resp = _get(url, headers)
         _note_status(resp, url)
         resp.encoding = "utf-8"
         if _ensure_challenge_solved(resp):
-            resp = _session.get(url, headers=headers, timeout=15)
+            resp = _get(url, headers)
             _note_status(resp, url)
             resp.encoding = "utf-8"
+        _note_length(resp, url)
         if len(resp.text) >= 2000:
             return resp
-        _session.cookies.clear()
-        time.sleep(6 + attempt * 6 + random.random() * 3)
+        if attempt + 1 < retries:
+            _session.cookies.clear()
+            time.sleep(6 + attempt * 6 + random.random() * 3)
     return resp
 
 
@@ -475,6 +537,25 @@ def process_hall(hall_name: str, state: dict, today: date):
         print(f"  [{hall_name}] {DAYS_BACK}日分に到達したため終了")
 
 
+SYNC_MIN_INTERVAL_HOURS = 3  # 前日分がまだ出ていない店を見に行く間隔
+
+
+def sync_due(state: dict) -> bool:
+    """この店の一覧ページを今見に行く必要があるか。前日(日本時間)分まで取れていれば不要、
+    まだなら前回の確認から SYNC_MIN_INTERVAL_HOURS 以上たっていれば見に行く。"""
+    newest = state.get("newest_processed_date")
+    if newest and date.fromisoformat(newest) >= jst_now().date() - timedelta(days=1):
+        return False
+    last = state.get("last_synced_at")
+    if last:
+        try:
+            if datetime.utcnow() - datetime.fromisoformat(last) < timedelta(hours=SYNC_MIN_INTERVAL_HOURS):
+                return False
+        except ValueError:
+            pass
+    return True
+
+
 def sync_hall(hall_name: str, state: dict, today: date):
     """バックフィル(oldest_processed_date基準の後ろ向き取得)が終わった/進行中の
     店舗について、一覧に新しく増えた日付(今日・昨日の結果など)がないか確認し、
@@ -508,6 +589,12 @@ def sync_hall(hall_name: str, state: dict, today: date):
         new_pairs.append((d, href))
 
     state["last_synced_at"] = datetime.utcnow().isoformat()
+    # この店の最新の記事(台ごとのBB/RBを取る scrape_unit_bonus_history.py が使う。一覧ページを二重に取らないため)
+    dated = [(parse_date_from_label(t, today), h) for t, h in pairs]
+    dated = [(d, h) for d, h in dated if d]
+    if dated:
+        d, h = max(dated)
+        state["latest_article"] = {"date": d.isoformat(), "url": h if h.startswith("http") else f"https://min-repo.com{h}"}
 
     if not new_pairs:
         return
@@ -575,11 +662,14 @@ def run():
         # not_found以外の全店舗が対象。最後にシンクした時刻が古いものを優先することで、
         # 392店舗を何回かの実行に分けて公平に巡回する(全店舗doneになった後は
         # この巡回だけが毎日の新着データ取得を担う)。
+        # 2026-11-28: 以前は毎回(10分おき)全店舗の一覧ページを見に行っていた(推定1日約2万回)。
+        # 前日分まで取れている店はその日はもう見ない、まだの店も SYNC_MIN_INTERVAL_HOURS に1回だけ見る。
         sync_targets = [
             h for h in halls
-            if progress.get(h, {}).get("status") in ("in_progress", "done")
+            if progress.get(h, {}).get("status") in ("in_progress", "done") and sync_due(progress[h])
         ]
         sync_targets.sort(key=lambda h: progress[h].get("last_synced_at") or "")
+        print(f"  確認が必要な店舗: {len(sync_targets)}(前日分まで取得済み・{SYNC_MIN_INTERVAL_HOURS}時間以内に確認済みの店は除外)")
         for hall_name in sync_targets:
             if overall_time_left() <= 0:
                 break

@@ -5,6 +5,7 @@ on:
     - cron: "*/5 * * * *"
   workflow_dispatch: {}
 
+# みんレポにアクセスするワークフローはすべて同じグループにして、同時に2本動かないようにする(2026-11-28)
 concurrency:
   group: backfill
   cancel-in-progress: false
@@ -15,7 +16,7 @@ permissions:
 jobs:
   backfill:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
 
@@ -27,7 +28,15 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run backfill
+        continue-on-error: true
         run: python3 backfill_minrepo_full.py
+
+      # 台ごとのBB/RB(以前は別ワークフロー unit_bonus_history.yml で並行して動いていた)
+      - name: Run unit bonus history (BB/RB)
+        continue-on-error: true
+        env:
+          UNIT_BONUS_TIME_BUDGET: "700"
+        run: python3 scrape_unit_bonus_history.py
 
       - name: Update heartbeat (keeps scheduled workflow active)
         run: date -u +"%Y-%m-%dT%H:%M:%SZ" > last_run.txt

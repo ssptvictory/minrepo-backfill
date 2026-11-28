@@ -13,11 +13,12 @@ SECONDS超過で中断・次回再開」方式にする。各台ページには�
 履歴が載っているため、1台につき週1回程度の頻度での再取得で十分
 (日次更新は不要)。
 
-処理の流れ:
-  1. 対象ホールごとに、タグページ(get_date_url_list)で最新記事URLを
-     解決する(ホールごとに1回、進捗に保存してキャッシュする)
+処理の流れ(2026-11-28 改修、詳細は run() の上のコメント):
+  1. 店ごとの最新記事URLは backfill_minrepo_full.py が backfill_progress.json に残したものを使う
+     (以前は最初に見つけた記事をずっと使っていたため、新しい日が取れなくなっていた)
   2. 最新記事URL + "?num=<台番号>" で個別台ページを取得し、
-     当日表+過去10日間表のBB/RB/合算/差枚/G数をパースする
+     当日表+過去10日間表のBB/RB/合算/差枚/G数をパースする。1台あたり約9日に1回
+  - backfill.yml の中で backfill_minrepo_full.py の後に続けて動く(同時に2本アクセスしないため)
 
 出力:
   data/unit_bonus_shards/shard_<run_id>.parquet
@@ -33,7 +34,7 @@ import os
 import random
 import re
 import time
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 from urllib.parse import quote
 
@@ -53,8 +54,6 @@ PROGRESS_PATH = SCRIPT_DIR / "data" / "unit_bonus_progress.json"
 RUN_ID = os.environ.get("GITHUB_RUN_ID") or f"local{int(time.time())}"
 
 TIME_BUDGET_SECONDS = int(os.environ.get("UNIT_BONUS_TIME_BUDGET", "600"))
-REFRESH_INTERVAL_DAYS = 7  # 1台あたりこの日数以上経っていたら再取得対象にする
-HALL_TRANSITION_DELAY = 2.0  # 新しいホールのタグページを引く前の間隔
 UNIT_REQUEST_DELAY = 0.5  # 同一ホール内で台を連続取得する間の間隔(短め。検証の結果、
 # ウォームアップ直後や長い間隔を挟むと空レスポンスになる現象を確認したため)
 MAX_CONSECUTIVE_EMPTY = 2  # 空レスポンスがこの回数連続したらそのホールを切り上げる(保険)
@@ -247,6 +246,37 @@ def flush(progress, hall_article_url, unit_last_fetched, collected_rows, shard_p
         pq.write_table(table, shard_path, compression="zstd", compression_level=15)
 
 
+# --- 2026-11-28 改修: みんレポの負担を減らす ---
+# 以前は店ごとに最初に見つけた記事をずっと使い(新しい日が取れない)、0.5秒間隔で全台を取っていた
+# (11/26〜27の2日で約2万7千ページ)。今は:
+#   - 店ごとの最新の記事を使う(backfill_minrepo_full.py が一覧ページを見たときに backfill_progress.json に残す)。
+#     まだ最新の記事が分からない店は飛ばす(一覧ページをこちらで取り直さない)
+#   - 1台のページには記事の日+過去10日分が載っているので、前回取った記事の日から REFRESH_DAYS 以上
+#     新しい記事が出ている台だけ取る(=1台あたり約9日に1回)
+#   - 1つの店で一度に取るのは MAX_UNITS_PER_VISIT 台まで、店と店の間は HALL_PAUSE 秒以上空ける
+#   - 本文の無いページが続く店が続いたら、その回はやめる(fetch側でも空ページ6回連続でサイト全体を休止)
+#   - アクセス数の上限(1日/1時間)は fetch() 側で全スクリプト合計で数える
+REFRESH_DAYS = 9
+MAX_UNITS_PER_VISIT = 30
+HALL_PAUSE = 15.0
+MAX_DEAD_HALLS = 4  # 本文の無いページで打ち切った店がこの数続いたら、その回はやめる
+BACKFILL_PROGRESS_PATH = SCRIPT_DIR / "data" / "backfill_progress.json"
+
+
+def latest_articles():
+    """backfill_minrepo_full.py が記録した店ごとの最新記事 {店名: (日付, URL)}"""
+    try:
+        bp = json.load(open(BACKFILL_PROGRESS_PATH, encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    out = {}
+    for hall, s in bp.items():
+        a = (s or {}).get("latest_article") if isinstance(s, dict) else None
+        if a and a.get("url") and a.get("date"):
+            out[hall] = (date.fromisoformat(a["date"]), a["url"])
+    return out
+
+
 def run():
     SHARDS_DIR.mkdir(parents=True, exist_ok=True)
     print("対象(ホール,機種,台番号)読み込み中...")
@@ -256,75 +286,80 @@ def run():
     progress = load_progress()
     hall_article_url = progress["hall_article_url"]
     unit_last_fetched = progress["unit_last_fetched"]
+    # 値の意味を「取った日」から「取れたデータの一番新しい日」に変えた(2026-11-28)。
+    # 古い値は取った日で、古い記事を見ていた台は実際のデータがもっと前で止まっているため、保存済みのBB/RBから求め直す
+    if not progress.get("values_are_article_dates"):
+        newest = {}
+        for f in glob.glob(str(SHARDS_DIR / "*.parquet")):
+            d = pd.read_parquet(f, columns=["hall_name", "unit_number", "play_date"])
+            for (h, n), v in d.groupby(["hall_name", "unit_number"]).play_date.max().items():
+                k = f"{h}|{n}"
+                newest[k] = max(newest.get(k, ""), str(v)[:10])
+        unit_last_fetched.clear()
+        unit_last_fetched.update(newest)
+        progress["values_are_article_dates"] = True
+        print(f"台ごとの取得済みの日を保存済みデータから求め直した: {len(newest)}台")
 
-    today_str = date.today().isoformat()
+    articles = latest_articles()
     collected_rows = []
     shard_path = SHARDS_DIR / f"shard_{RUN_ID}.parquet"
     last_flush = time.time()
+    n_pages = n_units_ok = 0
+    no_article = 0
+    dead_halls = 0
 
-    halls = targets["hall_name"].unique().tolist()
-    random.shuffle(halls)  # 特定ホールに偏らないようにする
+    # データが一番古い台を持つ店から取る(上限の中で取りきれない日があっても、抜けができにくいように)
+    oldest = {}
+    for h, n in zip(targets["hall_name"], targets["unit_number"]):
+        oldest[h] = min(oldest.get(h, "9999"), unit_last_fetched.get(f"{h}|{n}", "0000"))
+    halls = sorted(oldest, key=lambda h: (oldest[h], random.random()))
 
-    for hall_name in halls:
-        if time_left() <= 0:
-            break
-        hall_units = targets[targets["hall_name"] == hall_name]
-
-        article_url = hall_article_url.get(hall_name)
-        if article_url is None:
-            try:
-                resolved = get_latest_article_url(hall_name)
-            except Exception as e:
-                print(f"! [{hall_name}] タグページ取得失敗: {e}")
-                continue
-            if resolved is False:
-                continue  # 一時的失敗、次回再試行
-            if resolved is None:
-                hall_article_url[hall_name] = "NOT_FOUND"
-                continue
-            article_url = resolved
-            hall_article_url[hall_name] = article_url
-        if article_url == "NOT_FOUND":
-            continue
-        time.sleep(HALL_TRANSITION_DELAY + random.random())
-
-        units_to_fetch = []
-        for _, row in hall_units.iterrows():
-            key = f"{hall_name}|{row['unit_number']}"
-            last_fetched = unit_last_fetched.get(key)
-            if last_fetched:
-                days_since = (date.today() - date.fromisoformat(last_fetched)).days
-                if days_since < REFRESH_INTERVAL_DAYS:
-                    continue
-            units_to_fetch.append(row)
-        if not units_to_fetch:
-            continue
-
-        # 検証の結果判明した重要な挙動: ウォームアップ(ベースページ取得)の
-        # 直後にsleepを挟むと、なぜか以降の?num=リクエストが軒並み空レスポンス
-        # になる(120台連続でsleep無しなら全成功、sleep有りだと全滅という
-        # 再現実験で確認済み)。backfill_minrepo_full.pyの既存コードも
-        # ベースページ取得→?kishu=all取得の間にsleepを挟んでいない設計に
-        # なっており、これと同じ方式に合わせた(ホールを跨ぐ時だけ間隔を
-        # 空ける)。
-        try:
-            fetch(article_url)
-        except Exception as e:
-            print(f"! [{hall_name}] ベースページ取得失敗: {e}")
-            continue
-
-        consecutive_empty = 0
-        for row in units_to_fetch:
+    try:
+        for hall_name in halls:
             if time_left() <= 0:
                 break
-            if consecutive_empty >= MAX_CONSECUTIVE_EMPTY:
-                print(f"  [{hall_name}] 空レスポンスが連続({consecutive_empty}回)のため、このホールを切り上げ次へ")
-                break
-            key = f"{hall_name}|{row['unit_number']}"
-            url = f"{article_url.split('?')[0]}?num={row['unit_number']}"
+            if hall_name not in articles:
+                no_article += 1
+                continue
+            art_date, article_url = articles[hall_name]
+            hall_units = targets[targets["hall_name"] == hall_name]
+
+            units_to_fetch = []
+            for _, row in hall_units.iterrows():
+                covered = unit_last_fetched.get(f"{hall_name}|{row['unit_number']}")
+                if covered and (art_date - date.fromisoformat(covered)).days < REFRESH_DAYS:
+                    continue
+                units_to_fetch.append(row)
+            if not units_to_fetch:
+                continue
+            units_to_fetch = units_to_fetch[:MAX_UNITS_PER_VISIT]
+            hall_article_url[hall_name] = article_url
+
+            time.sleep(HALL_PAUSE + random.random() * 5)
+            # ウォームアップ(記事ページ)の直後は間を空けずに台ページを取る(2026-11-17の検証。空けると空ページになる)
             try:
-                resp = fetch(url, referer=article_url)
-                parsed = parse_unit_page(resp.text)
+                fetch(article_url)
+                n_pages += 1
+            except Exception as e:
+                print(f"! [{hall_name}] 記事ページ取得失敗: {e}")
+                continue
+
+            consecutive_empty = got = 0
+            for row in units_to_fetch:
+                if time_left() <= 0:
+                    break
+                if consecutive_empty >= MAX_CONSECUTIVE_EMPTY:
+                    print(f"  [{hall_name}] 中身の無いページが{consecutive_empty}回続いたので、この店は次回に回す")
+                    break
+                key = f"{hall_name}|{row['unit_number']}"
+                url = f"{article_url.split('?')[0]}?num={row['unit_number']}"
+                try:
+                    resp = fetch(url, referer=article_url, retries=1)  # 空でも取り直さない
+                    n_pages += 1
+                    parsed = parse_unit_page(resp.text)
+                except Exception as e:
+                    print(f"  ! [{hall_name}] 台{row['unit_number']} 失敗: {e}")
+                    parsed = []
                 consecutive_empty = 0 if parsed else consecutive_empty + 1
                 for p in parsed:
                     play_date = parse_date_label(p.pop("date_label"))
@@ -332,35 +367,30 @@ def run():
                         continue
                     if row.get("category") not in SLUMP_CATEGORIES:
                         p["slump_graph"] = None
-                    collected_rows.append({
-                        "hall_name": hall_name,
-                        "machine_name": row["machine_name"],
-                        "unit_number": row["unit_number"],
-                        "play_date": play_date,
-                        **p,
-                    })
+                    collected_rows.append({"hall_name": hall_name, "machine_name": row["machine_name"],
+                                           "unit_number": row["unit_number"], "play_date": play_date, **p})
                 if parsed:
-                    unit_last_fetched[key] = today_str
-                else:
-                    # 空レスポンス(レート制限の疑い)はdone扱いにせず、次回すぐ再試行できるようにする
-                    unit_last_fetched.pop(key, None)
-                print(f"  [{hall_name}] 台{row['unit_number']} {row['machine_name'][:20]} -> {len(parsed)}日分")
-            except Exception as e:
-                print(f"  ! [{hall_name}] 台{row['unit_number']} 失敗: {e}")
-            time.sleep(UNIT_REQUEST_DELAY)
+                    unit_last_fetched[key] = art_date.isoformat()
+                    got += 1
+                time.sleep(UNIT_REQUEST_DELAY)
 
-            if time.time() - last_flush >= FLUSH_INTERVAL_SECONDS:
-                flush(progress, hall_article_url, unit_last_fetched, collected_rows, shard_path)
-                last_flush = time.time()
-                print(f"  [定期保存] 累計{len(collected_rows)}行, 台{len(unit_last_fetched)}件処理済み")
+                if time.time() - last_flush >= FLUSH_INTERVAL_SECONDS:
+                    flush(progress, hall_article_url, unit_last_fetched, collected_rows, shard_path)
+                    last_flush = time.time()
+            n_units_ok += got
+            print(f"  [{hall_name}] 記事{art_date}: {got}/{len(units_to_fetch)}台")
+            dead_halls = dead_halls + 1 if got == 0 else 0
+            if dead_halls >= MAX_DEAD_HALLS:
+                print(f"! 中身の無いページで打ち切った店が{dead_halls}店続いたため、今回はここまで")
+                break
+    except SiteUnavailable as e:
+        print(f"! {e}")
 
     flush(progress, hall_article_url, unit_last_fetched, collected_rows, shard_path)
-    print(f"\n保存: {shard_path.name} ({len(collected_rows)}行)" if collected_rows else "\n今回収集した行なし")
+    print(f"\n今回: {n_pages}ページ取得、{n_units_ok}台分 / {len(collected_rows)}行"
+          f" / 最新記事がまだ分からず飛ばした店 {no_article}")
     print(f"累計取得済み台数: {len(unit_last_fetched)} / {len(targets)}")
 
 
 if __name__ == "__main__":
-    try:
-        run()
-    except SiteUnavailable as e:  # みんレポがエラーを返し続けている間は何もせず終了
-        print(f"! {e}")
+    run()

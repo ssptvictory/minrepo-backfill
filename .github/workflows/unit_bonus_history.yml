@@ -10,13 +10,12 @@ on:
   # した分での高負荷)により数時間〜10時間おきにしか発火せず、7分/37分
   # オフセットや複数行cronに変えても改善しなかった。backfill.yml(*/5分で
   # 安定して発火している)の完了をトリガーにする方式に切り替える。
-  workflow_run:
-    workflows: ["Backfill min-repo data"]
-    types: [completed]
+  # 2026-11-28: backfill.yml の中で続けて動かすようにしたため、自動では動かさない(手動実行のみ)。
+  # 同時に2本みんレポへアクセスしないよう、グループも backfill と共通にする。
   workflow_dispatch: {}
 
 concurrency:
-  group: unit_bonus_history
+  group: backfill
   cancel-in-progress: false
 
 permissions:
@@ -26,7 +25,6 @@ jobs:
   scrape:
     # workflow_runはbackfill.ymlの成否にかかわらず発火するため、
     # 失敗/キャンセル時は素通りさせず手動実行時だけ別途許可する。
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
@@ -50,6 +48,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/unit_bonus_shards/ data/unit_bonus_progress.json
           [ -f data/minrepo_site_cooldown.json ] && git add data/minrepo_site_cooldown.json || true
+          [ -f data/minrepo_request_budget.json ] && git add data/minrepo_request_budget.json || true
           git diff --cached --quiet || git commit -m "chore: unit bonus history scrape $(date -u +%Y-%m-%dT%H:%M:%SZ)"
 
           if ! git pull --rebase; then
