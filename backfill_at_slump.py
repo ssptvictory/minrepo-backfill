@@ -34,7 +34,7 @@ import pandas as pd
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-from backfill_minrepo_full import fetch, get_date_url_list, parse_date_from_label
+from backfill_minrepo_full import SiteUnavailable, fetch, get_date_url_list, parse_date_from_label
 from backfill_unit_bonus_history import (RATE_LIMIT_MARKER, MAX_CONSECUTIVE_EMPTY, RATE_LIMIT_PAUSE,
                                          COOLDOWN_HOURS, in_cooldown, start_cooldown, polite_sleep)
 from scrape_unit_bonus_history import parse_number, parse_unit_page
@@ -206,125 +206,131 @@ def run():
     heapq.heapify(heap)
     print(f"対象ホール {len(heap)}")
 
-    while heap and time_left() > 0:
-        _, _, hall = heapq.heappop(heap)
-        state = progress[hall]
-        if hall not in pairs_cache:
-            polite_sleep()
-            pairs = get_date_url_list(hall)
-            n_requests += 1
-            if pairs is False:
-                print(f"  ! [{hall}] 記事一覧の取得に一時失敗。次回再試行")
+    try:
+        while heap and time_left() > 0:
+            _, _, hall = heapq.heappop(heap)
+            state = progress[hall]
+            if hall not in pairs_cache:
+                polite_sleep()
+                pairs = get_date_url_list(hall)
+                n_requests += 1
+                if pairs is False:
+                    print(f"  ! [{hall}] 記事一覧の取得に一時失敗。次回再試行")
+                    continue
+                if not pairs:
+                    state["status"] = "not_found"
+                    continue
+                dated = [(parse_date_from_label(t, today), h) for t, h in pairs]
+                pairs_cache[hall] = sorted([(d, h) for d, h in dated if d], reverse=True)
+                fetched_at[hall] = time.time()
+                task = next_task(state, pairs_cache[hall], today, limit_date)
+                if task:
+                    heapq.heappush(heap, (task[0], task[1], hall))
+                continue  # 一覧を取ったら優先度を付け直して並べ直す
+
+            task = next_task(state, pairs_cache[hall], today, limit_date)
+            if task is None:
+                continue  # 遡り切っても「完了」にはしない(毎日の新しい分を取り続けるため)
+            _, _, art_date, href = task
+            article_url = href if href.startswith("http") else f"https://min-repo.com{href}"
+            machines = lineup.get((hall, art_date))
+            if not machines:
+                if (today - art_date).days <= FRESH_DAYS:
+                    continue  # 全台一覧がまだ無い新しい日。次回以降に回す
+                machines = {}
+
+            if machines:
+                print(f"  [{hall}] 記事{art_date}を取得中({len(machines)}機種)")
+                try:
+                    polite_sleep()
+                    fetch(article_url)
+                    n_requests += 1
+                except Exception as e:
+                    print(f"  ! [{hall}] {art_date} 記事取得失敗: {e}")
+                    continue
+
+            empty, got_units, dead_hall, aborted = 0, 0, False, False
+            base = article_url.split("?")[0]
+            for machine, units in machines.items():
+                if time_left() <= 0:
+                    aborted = True
+                    break
+                polite_sleep()
+                try:
+                    resp = fetch(f"{base}?kishu={quote_plus(machine)}", referer=article_url)
+                    n_requests += 1
+                    blocked = len(resp.text) < 2000
+                    items = [] if blocked else parse_slump_list(resp.text)
+                except Exception as e:
+                    print(f"    ! 取得エラー: {e}")
+                    blocked, items = True, []
+
+                if blocked:
+                    empty += 1
+                    if empty == MAX_CONSECUTIVE_EMPTY and got_units == 0 and state.get("articles_done", 0) == 0:
+                        dead_hall = True
+                        break
+                    if empty == MAX_CONSECUTIVE_EMPTY:
+                        print(f"  ! 空レスポンスが{empty}回連続。{RATE_LIMIT_PAUSE}秒待機")
+                        time.sleep(RATE_LIMIT_PAUSE)
+                    elif empty >= MAX_CONSECUTIVE_EMPTY * 2:
+                        print(f"  ! 待機後も空レスポンスが続くため打ち切り、{COOLDOWN_HOURS}時間休止します")
+                        start_cooldown()
+                        aborted = True
+                        break
+                    continue
+                empty = 0
+
+                if not items:
+                    # グラフ一覧が無い機種(1台のみ等)は個別台ページから当日のスランプを取る
+                    for u in units:
+                        polite_sleep()
+                        try:
+                            r2 = fetch(f"{base}?num={u}", referer=article_url)
+                            n_requests += 1
+                            parsed = [] if len(r2.text) < 2000 else parse_unit_page(r2.text)
+                        except Exception:
+                            parsed = []
+                        for p in parsed:
+                            if parse_date_from_label(p["date_label"], art_date) == art_date:
+                                items.append({"unit_number": int(u), "diff": p.get("diff"), "games": p.get("games"),
+                                              "combined_rate": None, "slump_graph": p.get("slump_graph")})
+                                break
+                for it in items:
+                    rows.append({"hall_name": hall, "play_date": art_date.isoformat(), "machine_name": machine, **it})
+                got_units += len(items)
+                if time.time() - last_flush >= FLUSH_INTERVAL_SECONDS:
+                    save(progress, rows, shard_path)
+                    last_flush = time.time()
+
+            if aborted:
+                break
+            if dead_hall:
+                consecutive_dead += 1
+                if consecutive_dead >= 3:
+                    print(f"  ! 空レスポンスの店舗が{consecutive_dead}店続いたため打ち切り、{COOLDOWN_HOURS}時間休止します")
+                    start_cooldown()
+                    break
+                state["status"] = "no_data"
+                print(f"  [{hall}] 機種別ページが空のため対象外にします")
                 continue
-            if not pairs:
-                state["status"] = "not_found"
-                continue
-            dated = [(parse_date_from_label(t, today), h) for t, h in pairs]
-            pairs_cache[hall] = sorted([(d, h) for d, h in dated if d], reverse=True)
-            fetched_at[hall] = time.time()
+            consecutive_dead = 0
+
+            newest = date.fromisoformat(state["newest_done"]) if state.get("newest_done") else None
+            oldest = date.fromisoformat(state["oldest_done"]) if state.get("oldest_done") else None
+            state["newest_done"] = max(art_date, newest).isoformat() if newest else art_date.isoformat()
+            state["oldest_done"] = min(art_date, oldest).isoformat() if oldest else art_date.isoformat()
+            state["articles_done"] = state.get("articles_done", 0) + 1
+            if machines:
+                print(f"  [{hall}] 記事{art_date}: {got_units}台分")
             task = next_task(state, pairs_cache[hall], today, limit_date)
             if task:
                 heapq.heappush(heap, (task[0], task[1], hall))
-            continue  # 一覧を取ったら優先度を付け直して並べ直す
 
-        task = next_task(state, pairs_cache[hall], today, limit_date)
-        if task is None:
-            continue  # 遡り切っても「完了」にはしない(毎日の新しい分を取り続けるため)
-        _, _, art_date, href = task
-        article_url = href if href.startswith("http") else f"https://min-repo.com{href}"
-        machines = lineup.get((hall, art_date))
-        if not machines:
-            if (today - art_date).days <= FRESH_DAYS:
-                continue  # 全台一覧がまだ無い新しい日。次回以降に回す
-            machines = {}
-
-        if machines:
-            print(f"  [{hall}] 記事{art_date}を取得中({len(machines)}機種)")
-            try:
-                polite_sleep()
-                fetch(article_url)
-                n_requests += 1
-            except Exception as e:
-                print(f"  ! [{hall}] {art_date} 記事取得失敗: {e}")
-                continue
-
-        empty, got_units, dead_hall, aborted = 0, 0, False, False
-        base = article_url.split("?")[0]
-        for machine, units in machines.items():
-            if time_left() <= 0:
-                aborted = True
-                break
-            polite_sleep()
-            try:
-                resp = fetch(f"{base}?kishu={quote_plus(machine)}", referer=article_url)
-                n_requests += 1
-                blocked = len(resp.text) < 2000
-                items = [] if blocked else parse_slump_list(resp.text)
-            except Exception as e:
-                print(f"    ! 取得エラー: {e}")
-                blocked, items = True, []
-
-            if blocked:
-                empty += 1
-                if empty == MAX_CONSECUTIVE_EMPTY and got_units == 0 and state.get("articles_done", 0) == 0:
-                    dead_hall = True
-                    break
-                if empty == MAX_CONSECUTIVE_EMPTY:
-                    print(f"  ! 空レスポンスが{empty}回連続。{RATE_LIMIT_PAUSE}秒待機")
-                    time.sleep(RATE_LIMIT_PAUSE)
-                elif empty >= MAX_CONSECUTIVE_EMPTY * 2:
-                    print(f"  ! 待機後も空レスポンスが続くため打ち切り、{COOLDOWN_HOURS}時間休止します")
-                    start_cooldown()
-                    aborted = True
-                    break
-                continue
-            empty = 0
-
-            if not items:
-                # グラフ一覧が無い機種(1台のみ等)は個別台ページから当日のスランプを取る
-                for u in units:
-                    polite_sleep()
-                    try:
-                        r2 = fetch(f"{base}?num={u}", referer=article_url)
-                        n_requests += 1
-                        parsed = [] if len(r2.text) < 2000 else parse_unit_page(r2.text)
-                    except Exception:
-                        parsed = []
-                    for p in parsed:
-                        if parse_date_from_label(p["date_label"], art_date) == art_date:
-                            items.append({"unit_number": int(u), "diff": p.get("diff"), "games": p.get("games"),
-                                          "combined_rate": None, "slump_graph": p.get("slump_graph")})
-                            break
-            for it in items:
-                rows.append({"hall_name": hall, "play_date": art_date.isoformat(), "machine_name": machine, **it})
-            got_units += len(items)
-            if time.time() - last_flush >= FLUSH_INTERVAL_SECONDS:
-                save(progress, rows, shard_path)
-                last_flush = time.time()
-
-        if aborted:
-            break
-        if dead_hall:
-            consecutive_dead += 1
-            if consecutive_dead >= 3:
-                print(f"  ! 空レスポンスの店舗が{consecutive_dead}店続いたため打ち切り、{COOLDOWN_HOURS}時間休止します")
-                start_cooldown()
-                break
-            state["status"] = "no_data"
-            print(f"  [{hall}] 機種別ページが空のため対象外にします")
-            continue
-        consecutive_dead = 0
-
-        newest = date.fromisoformat(state["newest_done"]) if state.get("newest_done") else None
-        oldest = date.fromisoformat(state["oldest_done"]) if state.get("oldest_done") else None
-        state["newest_done"] = max(art_date, newest).isoformat() if newest else art_date.isoformat()
-        state["oldest_done"] = min(art_date, oldest).isoformat() if oldest else art_date.isoformat()
-        state["articles_done"] = state.get("articles_done", 0) + 1
-        if machines:
-            print(f"  [{hall}] 記事{art_date}: {got_units}台分")
-        task = next_task(state, pairs_cache[hall], today, limit_date)
-        if task:
-            heapq.heappush(heap, (task[0], task[1], hall))
+    except SiteUnavailable as e:
+        # みんレポがエラーを返し続けている(落ちている/断られている)。ここまでの分を保存して、ワークフローのチャンクも止める
+        print(f"! {e}")
+        RATE_LIMIT_MARKER.touch()
 
     save(progress, rows, shard_path)
     save_article_cache(pairs_cache, fetched_at)

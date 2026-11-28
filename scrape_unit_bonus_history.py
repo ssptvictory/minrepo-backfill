@@ -45,7 +45,7 @@ from bs4 import BeautifulSoup
 # min-repo.com向けの、セッション維持+Bot対策JSチャレンジ解決込みのfetch()を
 # backfill_minrepo_full.pyから再利用する(同じサイト向けに既に動作確認済みの
 # ロジックのため、重複実装しない)。
-from backfill_minrepo_full import fetch
+from backfill_minrepo_full import SiteUnavailable, fetch
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 SHARDS_DIR = SCRIPT_DIR / "data" / "unit_bonus_shards"
@@ -360,4 +360,7 @@ def run():
 
 
 if __name__ == "__main__":
-    run()
+    try:
+        run()
+    except SiteUnavailable as e:  # みんレポがエラーを返し続けている間は何もせず終了
+        print(f"! {e}")

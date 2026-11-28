@@ -36,7 +36,7 @@ import pandas as pd
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-from backfill_minrepo_full import fetch, get_date_url_list, parse_date_from_label
+from backfill_minrepo_full import SiteUnavailable, fetch, get_date_url_list, parse_date_from_label
 from scrape_unit_bonus_history import parse_unit_page
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -192,143 +192,153 @@ def run():
     last_flush = time.time()
     n_requests = 0
 
-    while heap and time_left() > 0:
-        _, hall = heapq.heappop(heap)
-        state = progress[hall]
-        covered = date.fromisoformat(state["covered_oldest"])
-        if covered <= limit_date:
-            state["status"] = "done"
-            continue
-
-        if hall not in pairs_cache:
-            polite_sleep()
-            pairs = get_date_url_list(hall)
-            n_requests += 1
-            if pairs is False:
-                print(f"  ! [{hall}] 記事一覧の取得に一時失敗。次回再試行")
+    try:
+        while heap and time_left() > 0:
+            _, hall = heapq.heappop(heap)
+            state = progress[hall]
+            covered = date.fromisoformat(state["covered_oldest"])
+            if covered <= limit_date:
+                state["status"] = "done"
                 continue
-            if not pairs:
-                state["status"] = "not_found"
-                continue
-            dated = [(parse_date_from_label(t, today), h) for t, h in pairs]
-            pairs_cache[hall] = sorted([(d, h) for d, h in dated if d], reverse=True)
-        # 境界より古く、まだカバーされていない日の記事のうち最新のもの
-        already = covered_map.get(hall, set())
-        older = [(d, h) for d, h in pairs_cache[hall] if d < covered and d not in already]
-        if not older:
-            state["status"] = "done"
-            print(f"  [{hall}] 記事一覧を使い切ったので完了")
-            continue
 
-        art_date, href = older[0]
-        article_url = href if href.startswith("http") else f"https://min-repo.com{href}"
-        window = [art_date - timedelta(days=i) for i in range(HISTORY_DAYS + 1)]
-        units = {}
-        for d in reversed(window):  # 新しい日の機種名で上書き
-            units.update(lineup_idx.get((hall, d), {}))
-        if not units:
-            state["covered_oldest"] = art_date.isoformat()
-            heapq.heappush(heap, (-art_date.toordinal(), hall))
-            continue
-
-        try:
-            polite_sleep()
-            fetch(article_url)
-            n_requests += 1
-        except Exception as e:
-            print(f"  ! [{hall}] {art_date} 記事取得失敗: {e}")
-            continue
-
-        print(f"  [{hall}] 記事{art_date}を取得中({len(units)}台)")
-        empty, pages, no_table, hist_dates = 0, 0, 0, {}
-        aborted = no_bbrb = dead_hall = False
-        for unit, machine in units.items():
-            if time_left() <= 0:
-                aborted = True
-                break
-            polite_sleep()
-            try:
-                resp = fetch(f"{article_url.split('?')[0]}?num={unit}", referer=article_url)
+            if hall not in pairs_cache:
+                polite_sleep()
+                try:
+                    pairs = get_date_url_list(hall)
+                except Exception as e:  # 1店舗の一覧ページだけのエラー(404・単発の500など)。続けて5xxならSiteUnavailableで止まる
+                    print(f"  ! [{hall}] 記事一覧の取得エラー: {e}。次回再試行")
+                    continue
                 n_requests += 1
-                blocked = len(resp.text) < 2000  # 0バイト等=レート制限の疑い
-                parsed = [] if blocked else parse_unit_page(resp.text)
-            except Exception as e:
-                print(f"    ! 取得エラー: {e}")
-                blocked, parsed = True, []
-            if not blocked and not parsed:
-                # ページは正常だがBB/RBの表が無い(BB/RBを掲載していない店舗など)
-                empty = 0
-                no_table += 1
-                if pages == 0 and no_table >= NO_TABLE_LIMIT:
-                    no_bbrb = True
-                    break
+                if pairs is False:
+                    print(f"  ! [{hall}] 記事一覧の取得に一時失敗。次回再試行")
+                    continue
+                if not pairs:
+                    state["status"] = "not_found"
+                    continue
+                dated = [(parse_date_from_label(t, today), h) for t, h in pairs]
+                pairs_cache[hall] = sorted([(d, h) for d, h in dated if d], reverse=True)
+            # 境界より古く、まだカバーされていない日の記事のうち最新のもの
+            already = covered_map.get(hall, set())
+            older = [(d, h) for d, h in pairs_cache[hall] if d < covered and d not in already]
+            if not older:
+                state["status"] = "done"
+                print(f"  [{hall}] 記事一覧を使い切ったので完了")
                 continue
-            if blocked:
-                empty += 1
-                if empty == MAX_CONSECUTIVE_EMPTY and pages == 0 and not covered_map.get(hall):
-                    # 既存データが1件も無い店舗で最初から空が続く=店舗側の事情
-                    # (毎日の収集でも取れていない)。レート制限とはみなさず対象外にする。
-                    dead_hall = True
-                    break
-                if empty == MAX_CONSECUTIVE_EMPTY:
-                    print(f"  ! 空レスポンスが{empty}回連続。{RATE_LIMIT_PAUSE}秒待機")
-                    time.sleep(RATE_LIMIT_PAUSE)
-                elif empty >= MAX_CONSECUTIVE_EMPTY * 2:
-                    print(f"  ! 待機後も空レスポンスが続くため打ち切り、{COOLDOWN_HOURS}時間休止します")
-                    start_cooldown()
+
+            art_date, href = older[0]
+            article_url = href if href.startswith("http") else f"https://min-repo.com{href}"
+            window = [art_date - timedelta(days=i) for i in range(HISTORY_DAYS + 1)]
+            units = {}
+            for d in reversed(window):  # 新しい日の機種名で上書き
+                units.update(lineup_idx.get((hall, d), {}))
+            if not units:
+                state["covered_oldest"] = art_date.isoformat()
+                heapq.heappush(heap, (-art_date.toordinal(), hall))
+                continue
+
+            try:
+                polite_sleep()
+                fetch(article_url)
+                n_requests += 1
+            except Exception as e:
+                print(f"  ! [{hall}] {art_date} 記事取得失敗: {e}")
+                continue
+
+            print(f"  [{hall}] 記事{art_date}を取得中({len(units)}台)")
+            empty, pages, no_table, hist_dates = 0, 0, 0, {}
+            aborted = no_bbrb = dead_hall = False
+            for unit, machine in units.items():
+                if time_left() <= 0:
                     aborted = True
                     break
-                continue
-            empty = 0
-            pages += 1
-            for p in parsed:
-                # 日付は記事の日付を基準に解決する(年をまたぐ過去記事でも正しくなる)
-                d = parse_date_from_label(p["date_label"], art_date)
-                if d is None or d > art_date or d >= covered or d < limit_date:
+                polite_sleep()
+                try:
+                    resp = fetch(f"{article_url.split('?')[0]}?num={unit}", referer=article_url)
+                    n_requests += 1
+                    blocked = len(resp.text) < 2000  # 0バイト等=レート制限の疑い
+                    parsed = [] if blocked else parse_unit_page(resp.text)
+                except Exception as e:
+                    print(f"    ! 取得エラー: {e}")
+                    blocked, parsed = True, []
+                if not blocked and not parsed:
+                    # ページは正常だがBB/RBの表が無い(BB/RBを掲載していない店舗など)
+                    empty = 0
+                    no_table += 1
+                    if pages == 0 and no_table >= NO_TABLE_LIMIT:
+                        no_bbrb = True
+                        break
                     continue
-                if d < art_date:
-                    hist_dates[d] = hist_dates.get(d, 0) + 1
-                rows.append({"hall_name": hall, "machine_name": machine, "unit_number": int(unit),
-                             "play_date": d.isoformat(), "diff": p.get("diff"), "games": p.get("games"),
-                             "bb": p.get("bb"), "rb": p.get("rb"), "slump_graph": None})
-            if time.time() - last_flush >= FLUSH_INTERVAL_SECONDS:
-                save(progress, rows, shard_path)
-                last_flush = time.time()
+                if blocked:
+                    empty += 1
+                    if empty == MAX_CONSECUTIVE_EMPTY and pages == 0 and not covered_map.get(hall):
+                        # 既存データが1件も無い店舗で最初から空が続く=店舗側の事情
+                        # (毎日の収集でも取れていない)。レート制限とはみなさず対象外にする。
+                        dead_hall = True
+                        break
+                    if empty == MAX_CONSECUTIVE_EMPTY:
+                        print(f"  ! 空レスポンスが{empty}回連続。{RATE_LIMIT_PAUSE}秒待機")
+                        time.sleep(RATE_LIMIT_PAUSE)
+                    elif empty >= MAX_CONSECUTIVE_EMPTY * 2:
+                        print(f"  ! 待機後も空レスポンスが続くため打ち切り、{COOLDOWN_HOURS}時間休止します")
+                        start_cooldown()
+                        aborted = True
+                        break
+                    continue
+                empty = 0
+                pages += 1
+                for p in parsed:
+                    # 日付は記事の日付を基準に解決する(年をまたぐ過去記事でも正しくなる)
+                    d = parse_date_from_label(p["date_label"], art_date)
+                    if d is None or d > art_date or d >= covered or d < limit_date:
+                        continue
+                    if d < art_date:
+                        hist_dates[d] = hist_dates.get(d, 0) + 1
+                    rows.append({"hall_name": hall, "machine_name": machine, "unit_number": int(unit),
+                                 "play_date": d.isoformat(), "diff": p.get("diff"), "games": p.get("games"),
+                                 "bb": p.get("bb"), "rb": p.get("rb"), "slump_graph": None})
+                if time.time() - last_flush >= FLUSH_INTERVAL_SECONDS:
+                    save(progress, rows, shard_path)
+                    last_flush = time.time()
 
-        if aborted:
-            break  # この記事は未完了扱い(covered_oldestを進めない)。次回やり直す
-        if dead_hall:
-            consecutive_dead += 1
-            if consecutive_dead >= MAX_CONSECUTIVE_DEAD_HALLS:
-                # 店舗をまたいで空が続く=本当にレート制限の可能性が高い
-                print(f"  ! 空レスポンスの店舗が{consecutive_dead}店続いたため打ち切り、{COOLDOWN_HOURS}時間休止します")
-                start_cooldown()
-                break
-            state["status"] = "no_data"
-            print(f"  [{hall}] 個別台ページが空で、既存データも無いため対象外にします")
-            continue
-        consecutive_dead = 0
-        if no_bbrb:
-            if not covered_map.get(hall):
-                # 毎日の収集でも1件も取れていない=この店舗はBB/RBを掲載していない
-                state["status"] = "no_bbrb"
-                print(f"  [{hall}] BB/RBの表が無い台が{no_table}台続き、既存データも無いため対象外にします")
-            else:
-                # 既存データはあるので、この記事だけ表が無かったとみなして次の記事へ
-                state["covered_oldest"] = art_date.isoformat()
-                print(f"  [{hall}] 記事{art_date}はBB/RBの表が無いため飛ばします")
-                heapq.heappush(heap, (-art_date.toordinal(), hall))
-            continue
+            if aborted:
+                break  # この記事は未完了扱い(covered_oldestを進めない)。次回やり直す
+            if dead_hall:
+                consecutive_dead += 1
+                if consecutive_dead >= MAX_CONSECUTIVE_DEAD_HALLS:
+                    # 店舗をまたいで空が続く=本当にレート制限の可能性が高い
+                    print(f"  ! 空レスポンスの店舗が{consecutive_dead}店続いたため打ち切り、{COOLDOWN_HOURS}時間休止します")
+                    start_cooldown()
+                    break
+                state["status"] = "no_data"
+                print(f"  [{hall}] 個別台ページが空で、既存データも無いため対象外にします")
+                continue
+            consecutive_dead = 0
+            if no_bbrb:
+                if not covered_map.get(hall):
+                    # 毎日の収集でも1件も取れていない=この店舗はBB/RBを掲載していない
+                    state["status"] = "no_bbrb"
+                    print(f"  [{hall}] BB/RBの表が無い台が{no_table}台続き、既存データも無いため対象外にします")
+                else:
+                    # 既存データはあるので、この記事だけ表が無かったとみなして次の記事へ
+                    state["covered_oldest"] = art_date.isoformat()
+                    print(f"  [{hall}] 記事{art_date}はBB/RBの表が無いため飛ばします")
+                    heapq.heappush(heap, (-art_date.toordinal(), hall))
+                continue
 
-        # 過去10日表が半数以上の台に付いていた最古の日まで進める。無ければ記事の日まで。
-        common = [d for d, c in hist_dates.items() if c >= max(1, pages // 2)]
-        new_covered = min(common) if common else art_date
-        state["covered_oldest"] = new_covered.isoformat()
-        state["articles_done"] = state.get("articles_done", 0) + 1
-        state["last_step_days"] = (covered - new_covered).days
-        print(f"  [{hall}] 記事{art_date}: {pages}/{len(units)}台, 過去表{'あり' if common else 'なし'} "
-              f"→ {new_covered}まで取得済み")
-        heapq.heappush(heap, (-new_covered.toordinal(), hall))
+            # 過去10日表が半数以上の台に付いていた最古の日まで進める。無ければ記事の日まで。
+            common = [d for d, c in hist_dates.items() if c >= max(1, pages // 2)]
+            new_covered = min(common) if common else art_date
+            state["covered_oldest"] = new_covered.isoformat()
+            state["articles_done"] = state.get("articles_done", 0) + 1
+            state["last_step_days"] = (covered - new_covered).days
+            print(f"  [{hall}] 記事{art_date}: {pages}/{len(units)}台, 過去表{'あり' if common else 'なし'} "
+                  f"→ {new_covered}まで取得済み")
+            heapq.heappush(heap, (-new_covered.toordinal(), hall))
+
+    except SiteUnavailable as e:
+        # みんレポがエラーを返し続けている(落ちている/断られている)。ここまでの分を保存して、ワークフローのチャンクも止める
+        print(f"! {e}")
+        RATE_LIMIT_MARKER.touch()
 
     save(progress, rows, shard_path)
     done = sum(s["status"] != "in_progress" for s in progress.values())

@@ -67,6 +67,7 @@ jobs:
             [ -d data/at_slump_shards ] && git add data/at_slump_shards/
             [ -f data/at_slump_progress.json ] && git add data/at_slump_progress.json
             [ -f data/unit_bonus_backfill_cooldown.json ] && git add data/unit_bonus_backfill_cooldown.json
+            [ -f data/minrepo_site_cooldown.json ] && git add data/minrepo_site_cooldown.json
             if ! git diff --cached --quiet; then
               git commit -q -m "chore: $task chunk $chunk $(date -u +%Y-%m-%dT%H:%M:%SZ)"
               for i in 1 2 3 4 5 6 7 8; do

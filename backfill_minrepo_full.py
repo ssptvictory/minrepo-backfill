@@ -49,7 +49,7 @@ import random
 import re
 import time
 from collections import defaultdict
-from datetime import date, datetime
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import quote
 
@@ -137,6 +137,40 @@ def _ensure_challenge_solved(resp: requests.Response):
     return False
 
 
+SITE_COOLDOWN_PATH = DATA_DIR / "minrepo_site_cooldown.json"  # サイト全体の休止期限(全収集スクリプト共通、commitする)
+SITE_ERROR_LIMIT = 5        # サーバーエラー(5xx)がこの回数続いたら、サイトに断られているとみなして全収集を止める
+SITE_COOLDOWN_HOURS = 2     # 止めたあと次に1回試すまでの時間(試して5xxが続けばまた止める)
+_consecutive_5xx = 0
+
+
+class SiteUnavailable(BaseException):
+    """サイトが5xxを返し続けている(落ちている、または当方のアクセスを断っている)。この回の取得をやめる合図。
+    店舗・日ごとの `except Exception` で握りつぶされず最上位まで抜けるよう BaseException にしてある。"""
+
+
+def site_cooldown_until():
+    try:
+        until = datetime.fromisoformat(json.loads(SITE_COOLDOWN_PATH.read_text())["until"])
+    except Exception:
+        return None
+    return until if until > datetime.now(timezone.utc) else None
+
+
+def _note_status(resp: requests.Response, url: str):
+    """5xxが続いたら休止期限を書いて SiteUnavailable を投げる。それ以外は従来どおり raise_for_status。"""
+    global _consecutive_5xx
+    if resp.status_code >= 500:
+        _consecutive_5xx += 1
+        if _consecutive_5xx >= SITE_ERROR_LIMIT:
+            until = datetime.now(timezone.utc) + timedelta(hours=SITE_COOLDOWN_HOURS)
+            SITE_COOLDOWN_PATH.write_text(json.dumps({
+                "until": until.isoformat(), "reason": f"{resp.status_code}が{_consecutive_5xx}回連続", "last_url": url}))
+            raise SiteUnavailable(f"{resp.status_code}が{_consecutive_5xx}回連続。{until:%m-%d %H:%M}UTCまで全収集を休止")
+    else:
+        _consecutive_5xx = 0
+    resp.raise_for_status()
+
+
 def fetch(url: str, referer: str = None, retries: int = 3) -> requests.Response:
     """Bot対策のJSチャレンジを解決しつつページを取得する。
 
@@ -149,17 +183,20 @@ def fetch(url: str, referer: str = None, retries: int = 3) -> requests.Response:
     数分単位では回復しない」ケースが確認できたため、深追いせず早めに見切りを
     つけて呼び出し元(process_hall)に判断を戻す値に減らしてある。
     """
+    until = site_cooldown_until()
+    if until:  # どのスクリプトからでも、休止中はアクセスしない
+        raise SiteUnavailable(f"みんレポ休止中({until:%m-%d %H:%M}UTCまで)")
     headers = dict(HEADERS)
     if referer:
         headers["Referer"] = referer
     resp = None
     for attempt in range(retries):
         resp = _session.get(url, headers=headers, timeout=15)
-        resp.raise_for_status()
+        _note_status(resp, url)
         resp.encoding = "utf-8"
         if _ensure_challenge_solved(resp):
             resp = _session.get(url, headers=headers, timeout=15)
-            resp.raise_for_status()
+            _note_status(resp, url)
             resp.encoding = "utf-8"
         if len(resp.text) >= 2000:
             return resp
@@ -513,6 +550,10 @@ def sync_hall(hall_name: str, state: dict, today: date):
 
 
 def run():
+    until = site_cooldown_until()
+    if until:
+        print(f"みんレポがエラーを返し続けたため {until:%m-%d %H:%M}UTC まで休止中。今回はアクセスしません")
+        return
     today = date.today()
     halls = load_halls()
     progress = load_progress()
@@ -547,6 +588,8 @@ def run():
                 sync_hall(hall_name, state, today)
             except Exception as e:
                 print(f"! [sync:{hall_name}] で失敗: {e}")
+    except SiteUnavailable as e:
+        print(f"! {e}")
     finally:
         # 時間切れ・例外のいずれでも、ここまでに取得できた分は必ず保存する
         print("=== 取得データをParquetへ保存 ===")

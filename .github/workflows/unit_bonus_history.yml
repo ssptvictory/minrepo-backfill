@@ -49,6 +49,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/unit_bonus_shards/ data/unit_bonus_progress.json
+          [ -f data/minrepo_site_cooldown.json ] && git add data/minrepo_site_cooldown.json || true
           git diff --cached --quiet || git commit -m "chore: unit bonus history scrape $(date -u +%Y-%m-%dT%H:%M:%SZ)"
 
           if ! git pull --rebase; then

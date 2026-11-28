@@ -200,4 +200,7 @@ def run():
 
 
 if __name__ == "__main__":
-    run()
+    try:
+        run()
+    except bf.SiteUnavailable as e:  # みんレポがエラーを返し続けている間は何もせず終了
+        print(f"! {e}")
