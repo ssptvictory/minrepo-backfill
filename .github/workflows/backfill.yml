@@ -38,6 +38,14 @@ jobs:
           UNIT_BONUS_TIME_BUDGET: "700"
         run: python3 scrape_unit_bonus_history.py
 
+      # 推薦地域の店だけのスランプグラフ(ACCESS_POLICY.md)。みんレポへのアクセスが安定してから AREA_SLUMP_ENABLED を "1" にする
+      - name: Run area slump graphs
+        continue-on-error: true
+        env:
+          AREA_SLUMP_ENABLED: "0"
+          AREA_SLUMP_TIME_BUDGET: "240"
+        run: python3 scrape_area_slump.py
+
       - name: Update heartbeat (keeps scheduled workflow active)
         run: date -u +"%Y-%m-%dT%H:%M:%SZ" > last_run.txt
 

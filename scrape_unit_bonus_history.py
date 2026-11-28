@@ -308,11 +308,16 @@ def run():
     no_article = 0
     dead_halls = 0
 
-    # データが一番古い台を持つ店から取る(上限の中で取りきれない日があっても、抜けができにくいように)
+    # 推薦する地域の店(priority_halls.json)を先に、その中でデータが一番古い台を持つ店から取る
+    # (上限の中で取りきれない日があっても、抜けができにくいように。2026-11-29 地域優先を追加)
+    try:
+        priority = set(json.load(open(SCRIPT_DIR / "data" / "priority_halls.json", encoding="utf-8"))["halls"])
+    except (OSError, ValueError, KeyError):
+        priority = set()
     oldest = {}
     for h, n in zip(targets["hall_name"], targets["unit_number"]):
         oldest[h] = min(oldest.get(h, "9999"), unit_last_fetched.get(f"{h}|{n}", "0000"))
-    halls = sorted(oldest, key=lambda h: (oldest[h], random.random()))
+    halls = sorted(oldest, key=lambda h: (h not in priority, oldest[h], random.random()))
 
     try:
         for hall_name in halls:
